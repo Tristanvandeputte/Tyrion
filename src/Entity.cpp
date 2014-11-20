@@ -20,6 +20,8 @@ Entity::~Entity() {
 
 Entity::Entity(double x,double y):x_pos(x),y_pos(y){}
 
+Entity::Entity(double x,double y,double speed ,int health, int damage):x_pos(x),y_pos(y),speed(speed),health(health),damage(damage){}
+
 sf::Sprite Entity::draw(){}
 
 

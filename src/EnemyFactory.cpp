@@ -34,7 +34,7 @@ shared_ptr<sfml::Enemy> makeEntity(){
 		  x_pos = (rand() % 6) - 3;
 		  health = 2;
 		  damage = 1;
-		  speed = 0.1
+		  speed = 0.1;
 		  type = EnemyType::BasicEnemy;
 	      break;
 	   case 1 :
@@ -51,6 +51,7 @@ shared_ptr<sfml::Enemy> makeEntity(){
 	   default :
 	      cout << "Invalid enemy" << endl;
 	   }
-	Enemy(double x,double y,double speed ,int health, int damage,type);
+	shared_ptr<sfml::Enemy> p_ptr(new sfml::Enemy(x_pos,y_pos,speed , health, damage,type));
+	return p_ptr;
 	
 }

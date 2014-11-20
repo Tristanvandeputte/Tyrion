@@ -18,7 +18,6 @@ BulletFactory::~BulletFactory() {
 
 shared_ptr<sfml::Bullet> BulletFactory::makeBullet(double x, double y,BulletType type, Status status ){
 	string texturespot;
-	cout<<x<<endl;
 	if(type==BulletType::BasicBullet){
 		texturespot="BasicEnemy1.png";
 	}

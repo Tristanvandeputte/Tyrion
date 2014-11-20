@@ -18,11 +18,13 @@ Enemy::~Enemy() {
 	// TODO Auto-generated destructor stub
 }
 
+Enemy::Enemy(double x,double y,double speed ,int health, int damage,EnemyType type):Entity(x,y,speed,health,damage),type(type){}
+
+
 } /* namespace ty */
 
 namespace sfml {
 
-Enemy::Enemy(double x,double y,double speed ,int health, int damage,EnemyType type):x_pos(x),y_pos(y),speed(speed),health(health),damage(damage),type(type){}
 
 Enemy::Enemy() {
 	// TODO Auto-generated constructor stub
@@ -32,5 +34,8 @@ Enemy::Enemy() {
 Enemy::~Enemy() {
 	// TODO Auto-generated destructor stub
 }
+
+Enemy::Enemy(double x,double y,double speed ,int health, int damage,EnemyType type):ty::Enemy(x,y,speed,health,damage,type){}
+
 
 } /* namespace sfml */

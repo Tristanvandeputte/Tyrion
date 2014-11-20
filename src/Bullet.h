@@ -14,6 +14,7 @@
 #include <iostream>
 #include <memory>
 #include <unistd.h>
+
 enum class BulletType{BasicBullet,SpecialBullet,BPBullet};
 enum class Status{Ally,Enemy};
 

@@ -34,7 +34,8 @@ public:
 	Entity();
 	virtual ~Entity();
 	virtual sf::Sprite draw();
-	Entity(double x,double y); //constructor uitbreiden
+	Entity(double x,double y);
+	Entity(double x,double y,double speed ,int health, int damage);
 	void moveRight(double amount);
 	void moveLeft(double amount);
 	void moveUp(double amount);

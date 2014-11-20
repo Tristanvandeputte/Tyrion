@@ -16,7 +16,9 @@ src/CMakeFiles/game.dir/BulletFactory.cpp.o
 src/CMakeFiles/game.dir/Enemy.cpp.o
  /home/uauser/Desktop/Tyrian/src/Enemy.cpp
  /home/uauser/Desktop/Tyrian/src/Enemy.h
+ /home/uauser/Desktop/Tyrian/src/EnemyFactory.h
  /home/uauser/Desktop/Tyrian/src/Entity.h
+ /home/uauser/Desktop/Tyrian/src/EntityFactory.h
 src/CMakeFiles/game.dir/EnemyFactory.cpp.o
  /home/uauser/Desktop/Tyrian/src/Enemy.h
  /home/uauser/Desktop/Tyrian/src/EnemyFactory.cpp
@@ -33,6 +35,7 @@ src/CMakeFiles/game.dir/Game.cpp.o
  /home/uauser/Desktop/Tyrian/src/Bullet.h
  /home/uauser/Desktop/Tyrian/src/BulletFactory.h
  /home/uauser/Desktop/Tyrian/src/Enemy.h
+ /home/uauser/Desktop/Tyrian/src/EnemyFactory.h
  /home/uauser/Desktop/Tyrian/src/Entity.h
  /home/uauser/Desktop/Tyrian/src/EntityFactory.h
  /home/uauser/Desktop/Tyrian/src/Game.cpp
@@ -68,6 +71,7 @@ src/CMakeFiles/game.dir/World.cpp.o
  /home/uauser/Desktop/Tyrian/src/Bullet.h
  /home/uauser/Desktop/Tyrian/src/BulletFactory.h
  /home/uauser/Desktop/Tyrian/src/Enemy.h
+ /home/uauser/Desktop/Tyrian/src/EnemyFactory.h
  /home/uauser/Desktop/Tyrian/src/Entity.h
  /home/uauser/Desktop/Tyrian/src/EntityFactory.h
  /home/uauser/Desktop/Tyrian/src/Player.h
@@ -78,6 +82,7 @@ src/CMakeFiles/game.dir/main.cpp.o
  /home/uauser/Desktop/Tyrian/src/Bullet.h
  /home/uauser/Desktop/Tyrian/src/BulletFactory.h
  /home/uauser/Desktop/Tyrian/src/Enemy.h
+ /home/uauser/Desktop/Tyrian/src/EnemyFactory.h
  /home/uauser/Desktop/Tyrian/src/Entity.h
  /home/uauser/Desktop/Tyrian/src/EntityFactory.h
  /home/uauser/Desktop/Tyrian/src/Game.h

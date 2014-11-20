@@ -15,7 +15,9 @@ src/CMakeFiles/game.dir/BulletFactory.cpp.o: ../src/EntityFactory.h
 
 src/CMakeFiles/game.dir/Enemy.cpp.o: ../src/Enemy.cpp
 src/CMakeFiles/game.dir/Enemy.cpp.o: ../src/Enemy.h
+src/CMakeFiles/game.dir/Enemy.cpp.o: ../src/EnemyFactory.h
 src/CMakeFiles/game.dir/Enemy.cpp.o: ../src/Entity.h
+src/CMakeFiles/game.dir/Enemy.cpp.o: ../src/EntityFactory.h
 
 src/CMakeFiles/game.dir/EnemyFactory.cpp.o: ../src/Enemy.h
 src/CMakeFiles/game.dir/EnemyFactory.cpp.o: ../src/EnemyFactory.cpp
@@ -32,6 +34,7 @@ src/CMakeFiles/game.dir/EntityFactory.cpp.o: ../src/EntityFactory.h
 src/CMakeFiles/game.dir/Game.cpp.o: ../src/Bullet.h
 src/CMakeFiles/game.dir/Game.cpp.o: ../src/BulletFactory.h
 src/CMakeFiles/game.dir/Game.cpp.o: ../src/Enemy.h
+src/CMakeFiles/game.dir/Game.cpp.o: ../src/EnemyFactory.h
 src/CMakeFiles/game.dir/Game.cpp.o: ../src/Entity.h
 src/CMakeFiles/game.dir/Game.cpp.o: ../src/EntityFactory.h
 src/CMakeFiles/game.dir/Game.cpp.o: ../src/Game.cpp
@@ -67,6 +70,7 @@ src/CMakeFiles/game.dir/StopWatch.cpp.o: ../src/StopWatch.h
 src/CMakeFiles/game.dir/World.cpp.o: ../src/Bullet.h
 src/CMakeFiles/game.dir/World.cpp.o: ../src/BulletFactory.h
 src/CMakeFiles/game.dir/World.cpp.o: ../src/Enemy.h
+src/CMakeFiles/game.dir/World.cpp.o: ../src/EnemyFactory.h
 src/CMakeFiles/game.dir/World.cpp.o: ../src/Entity.h
 src/CMakeFiles/game.dir/World.cpp.o: ../src/EntityFactory.h
 src/CMakeFiles/game.dir/World.cpp.o: ../src/Player.h
@@ -77,6 +81,7 @@ src/CMakeFiles/game.dir/World.cpp.o: ../src/World.h
 src/CMakeFiles/game.dir/main.cpp.o: ../src/Bullet.h
 src/CMakeFiles/game.dir/main.cpp.o: ../src/BulletFactory.h
 src/CMakeFiles/game.dir/main.cpp.o: ../src/Enemy.h
+src/CMakeFiles/game.dir/main.cpp.o: ../src/EnemyFactory.h
 src/CMakeFiles/game.dir/main.cpp.o: ../src/Entity.h
 src/CMakeFiles/game.dir/main.cpp.o: ../src/EntityFactory.h
 src/CMakeFiles/game.dir/main.cpp.o: ../src/Game.h

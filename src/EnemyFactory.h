@@ -12,11 +12,13 @@
 #include "Enemy.h" 
 #include <stdlib.h>
 #include <time.h> 
+#include <memory>
+#include <SFML/Graphics.hpp>
 
 namespace sfml{
 	class Enemy;
 }
-class enum EnemyType ;
+//class enum EnemyType ;
 
 class EnemyFactory: public EntityFactory {
 public:
