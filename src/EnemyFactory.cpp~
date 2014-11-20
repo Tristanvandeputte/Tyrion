@@ -1,0 +1,18 @@
+/*
+ * EnemyFactory.cpp
+ *
+ *  Created on: Nov 13, 2014
+ *      Author: uauser
+ */
+
+#include "EntityFactory.h"
+
+EnemyFactory::EnemyFactory() {
+	// TODO Auto-generated constructor stub
+
+}
+
+EnemyFactory::~EnemyFactory() {
+	// TODO Auto-generated destructor stub
+}
+

@@ -1,0 +1,42 @@
+/*
+ * Player.h
+ *
+ *  Created on: Nov 13, 2014
+ *      Author: uauser
+ */
+
+#ifndef PLAYER_H_
+#define PLAYER_H_
+
+#include "Entity.h"
+
+namespace ty {
+
+class Player: public Entity {
+public:
+	Player();
+	virtual ~Player();
+};
+
+} /* namespace ty */
+
+namespace sfml {
+
+class Player: public ty::Player {
+public:
+	Player();
+	virtual ~Player();
+
+};
+
+class BasisPlayer: public Player {
+public:
+	Player();
+	virtual ~Player();
+
+};
+
+
+} /* namespace sfml */
+#endif /* PLAYER_H_ */
+

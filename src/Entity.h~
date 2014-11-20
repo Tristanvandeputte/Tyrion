@@ -1,0 +1,25 @@
+/*
+ * Entity.h
+ *
+ *  Created on: Nov 13, 2014
+ *      Author: uauser
+ */
+
+#ifndef ENTITY_H_
+#define ENTITY_H_
+
+namespace ty {
+
+class Entity {
+protected:
+	int x_pos;
+	int y_pos;
+public:
+	Entity();
+	virtual ~Entity();
+	virtual Sprite draw();
+};
+
+} /* namespace ty */
+
+#endif /* ENTITY_H_ */
