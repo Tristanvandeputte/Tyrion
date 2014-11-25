@@ -29,7 +29,7 @@ class World: public Entity {
 private:
 	std::vector<EntityPtr> all_entities;
 	//all the Entiies is this game world
-	EntityFactory p_fac;
+	EntityFactory p_fac;;
 	//Player Factory
 	EntityFactory b_fac;
 	//Bullet Factory
@@ -39,6 +39,7 @@ private:
 	//A pointer to the current player
 public:
 	World();
+	World(EntityFactory p_fac,EntityFactory b_fac,EntityFactory e_fac);
 	virtual ~World();
 	std::vector<EntityPtr> getEntities();
 	void startPlayer();

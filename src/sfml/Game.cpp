@@ -17,13 +17,18 @@ Game::~Game() {
 }
 
 void Game::run(){
+	cout<<"hah"<<endl;
 	
 	game_world.startPlayer();
+	cout<<"hah"<<endl;
 	
 	shared_ptr<sf::RenderWindow> window(new sf::RenderWindow(sf::VideoMode(640,480), "Tyrian"));
+	cout<<"hah"<<endl;
 	window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 , 0) );
+	cout<<"hah"<<endl;
 	window->setMouseCursorVisible(false);
 	window->setFramerateLimit(60);
+	cout<<"hah"<<endl;
 	while (window->isOpen())
 	{
 		sf::Event event;
@@ -63,7 +68,7 @@ void Game::run(){
 		//game_world.getCurrentPlayer()->move();
 
 		// kan ook nog meer naar binnen
-
+/*
 		for(EntityPtr e_ptr : game_world.getEntities()){
 			if(e_ptr != game_world.getCurrentPlayer()){
 				e_ptr->draw();
@@ -71,7 +76,7 @@ void Game::run(){
 		}
 		
 		game_world.getCurrentPlayer()->draw();
-		
+		*/
 		
 		window->display();
 	}

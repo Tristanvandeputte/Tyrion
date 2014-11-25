@@ -24,7 +24,7 @@ class EntityFactory {
 public:
 	EntityFactory();
 	virtual ~EntityFactory();
-	EntityPtr makePlayer(double x, double y, std::string texturespot,EntityFactory bullet_factory);
+	virtual EntityPtr makePlayer(double x, double y, std::string texturespot,EntityFactory bullet_factory);
 	EntityPtr makeBullet(double x, double y, BulletType type,Status status);
 	EntityPtr makeEnemy(double x, double y, BulletType type,Status status,EntityFactory bullet_factory);
 };

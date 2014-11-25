@@ -14,6 +14,8 @@ World::World() {
 
 }
 
+World(EntityFactory p_fac,EntityFactory b_fac,EntityFactory e_fac):p_fac(p_fac),b_fac(b_fac),e_fac(e_fac){}
+
 World::~World() {
 	// TODO Auto-generated destructor stub
 }
@@ -23,8 +25,11 @@ std::vector<EntityPtr> World::getEntities(){
 }
 
 void World::startPlayer(){
+	cout<<"made player"<<endl;
 	current_player = p_fac.makePlayer(0.0,0.0,"imageedit_1_7403900101.png",b_fac);
+	cout<<"made player"<<endl;
 	all_entities.push_back(current_player);
+	cout<<"made player"<<endl;
 }
 
 EntityPtr World::getCurrentPlayer(){

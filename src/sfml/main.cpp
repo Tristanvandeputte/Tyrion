@@ -10,6 +10,7 @@
 using namespace std;
 
 int main(){
+	cout<<"kekekekek"<<endl;
 	Game this_game;
 	this_game.run();
 	

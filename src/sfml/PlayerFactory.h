@@ -21,7 +21,7 @@ class PlayerFactory: public EntityFactory {
 public:
 	PlayerFactory();
 	virtual ~PlayerFactory();
-	shared_ptr<ty::Entity> make_Player(double x, double y, std::string texturespot,EntityFactory bullet_factory);
+	EntityPtr makePlayer(double x, double y, std::string texturespot,EntityFactory bullet_factory) override;
 };
 
 #endif /* PLAYERFACTORY_H_ */
