@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uauser/Desktop/Tyrian
+CMAKE_SOURCE_DIR = /home/uauser/Desktop/Tyrion
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uauser/Desktop/Tyrian
+CMAKE_BINARY_DIR = /home/uauser/Desktop/Tyrion
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -113,14 +113,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/uauser/Desktop/Tyrian && $(CMAKE_COMMAND) -E cmake_progress_start /home/uauser/Desktop/Tyrian/CMakeFiles /home/uauser/Desktop/Tyrian/src/CMakeFiles/progress.marks
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uauser/Desktop/Tyrian/CMakeFiles 0
+	cd /home/uauser/Desktop/Tyrion && $(CMAKE_COMMAND) -E cmake_progress_start /home/uauser/Desktop/Tyrion/CMakeFiles /home/uauser/Desktop/Tyrion/src/CMakeFiles/progress.marks
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uauser/Desktop/Tyrion/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -129,22 +129,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/uauser/Desktop/Tyrian && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/uauser/Desktop/Tyrion && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/game.dir/rule:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/game.dir/rule
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/game.dir/rule
 .PHONY : src/CMakeFiles/game.dir/rule
 
 # Convenience name for target.
@@ -153,272 +153,406 @@ game: src/CMakeFiles/game.dir/rule
 
 # fast build rule for target.
 game/fast:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/build
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/build
 .PHONY : game/fast
 
-Bullet.o: Bullet.cpp.o
-.PHONY : Bullet.o
+# Convenience name for target.
+src/CMakeFiles/gamelogic.dir/rule:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/gamelogic.dir/rule
+.PHONY : src/CMakeFiles/gamelogic.dir/rule
+
+# Convenience name for target.
+gamelogic: src/CMakeFiles/gamelogic.dir/rule
+.PHONY : gamelogic
+
+# fast build rule for target.
+gamelogic/fast:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/build
+.PHONY : gamelogic/fast
+
+gamelogic/Bullet.o: gamelogic/Bullet.cpp.o
+.PHONY : gamelogic/Bullet.o
 
 # target to build an object file
-Bullet.cpp.o:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Bullet.cpp.o
-.PHONY : Bullet.cpp.o
+gamelogic/Bullet.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Bullet.cpp.o
+.PHONY : gamelogic/Bullet.cpp.o
 
-Bullet.i: Bullet.cpp.i
-.PHONY : Bullet.i
+gamelogic/Bullet.i: gamelogic/Bullet.cpp.i
+.PHONY : gamelogic/Bullet.i
 
 # target to preprocess a source file
-Bullet.cpp.i:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Bullet.cpp.i
-.PHONY : Bullet.cpp.i
+gamelogic/Bullet.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Bullet.cpp.i
+.PHONY : gamelogic/Bullet.cpp.i
 
-Bullet.s: Bullet.cpp.s
-.PHONY : Bullet.s
+gamelogic/Bullet.s: gamelogic/Bullet.cpp.s
+.PHONY : gamelogic/Bullet.s
 
 # target to generate assembly for a file
-Bullet.cpp.s:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Bullet.cpp.s
-.PHONY : Bullet.cpp.s
+gamelogic/Bullet.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Bullet.cpp.s
+.PHONY : gamelogic/Bullet.cpp.s
 
-BulletFactory.o: BulletFactory.cpp.o
-.PHONY : BulletFactory.o
+gamelogic/Enemy.o: gamelogic/Enemy.cpp.o
+.PHONY : gamelogic/Enemy.o
 
 # target to build an object file
-BulletFactory.cpp.o:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/BulletFactory.cpp.o
-.PHONY : BulletFactory.cpp.o
+gamelogic/Enemy.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.o
+.PHONY : gamelogic/Enemy.cpp.o
 
-BulletFactory.i: BulletFactory.cpp.i
-.PHONY : BulletFactory.i
+gamelogic/Enemy.i: gamelogic/Enemy.cpp.i
+.PHONY : gamelogic/Enemy.i
 
 # target to preprocess a source file
-BulletFactory.cpp.i:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/BulletFactory.cpp.i
-.PHONY : BulletFactory.cpp.i
+gamelogic/Enemy.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.i
+.PHONY : gamelogic/Enemy.cpp.i
 
-BulletFactory.s: BulletFactory.cpp.s
-.PHONY : BulletFactory.s
+gamelogic/Enemy.s: gamelogic/Enemy.cpp.s
+.PHONY : gamelogic/Enemy.s
 
 # target to generate assembly for a file
-BulletFactory.cpp.s:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/BulletFactory.cpp.s
-.PHONY : BulletFactory.cpp.s
+gamelogic/Enemy.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.s
+.PHONY : gamelogic/Enemy.cpp.s
 
-Entity.o: Entity.cpp.o
-.PHONY : Entity.o
+gamelogic/Entity.o: gamelogic/Entity.cpp.o
+.PHONY : gamelogic/Entity.o
 
 # target to build an object file
-Entity.cpp.o:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Entity.cpp.o
-.PHONY : Entity.cpp.o
+gamelogic/Entity.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Entity.cpp.o
+.PHONY : gamelogic/Entity.cpp.o
 
-Entity.i: Entity.cpp.i
-.PHONY : Entity.i
+gamelogic/Entity.i: gamelogic/Entity.cpp.i
+.PHONY : gamelogic/Entity.i
 
 # target to preprocess a source file
-Entity.cpp.i:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Entity.cpp.i
-.PHONY : Entity.cpp.i
+gamelogic/Entity.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Entity.cpp.i
+.PHONY : gamelogic/Entity.cpp.i
 
-Entity.s: Entity.cpp.s
-.PHONY : Entity.s
+gamelogic/Entity.s: gamelogic/Entity.cpp.s
+.PHONY : gamelogic/Entity.s
 
 # target to generate assembly for a file
-Entity.cpp.s:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Entity.cpp.s
-.PHONY : Entity.cpp.s
+gamelogic/Entity.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Entity.cpp.s
+.PHONY : gamelogic/Entity.cpp.s
 
-EntityFactory.o: EntityFactory.cpp.o
-.PHONY : EntityFactory.o
+gamelogic/EntityFactory.o: gamelogic/EntityFactory.cpp.o
+.PHONY : gamelogic/EntityFactory.o
 
 # target to build an object file
-EntityFactory.cpp.o:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/EntityFactory.cpp.o
-.PHONY : EntityFactory.cpp.o
+gamelogic/EntityFactory.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.o
+.PHONY : gamelogic/EntityFactory.cpp.o
 
-EntityFactory.i: EntityFactory.cpp.i
-.PHONY : EntityFactory.i
+gamelogic/EntityFactory.i: gamelogic/EntityFactory.cpp.i
+.PHONY : gamelogic/EntityFactory.i
 
 # target to preprocess a source file
-EntityFactory.cpp.i:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/EntityFactory.cpp.i
-.PHONY : EntityFactory.cpp.i
+gamelogic/EntityFactory.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.i
+.PHONY : gamelogic/EntityFactory.cpp.i
 
-EntityFactory.s: EntityFactory.cpp.s
-.PHONY : EntityFactory.s
+gamelogic/EntityFactory.s: gamelogic/EntityFactory.cpp.s
+.PHONY : gamelogic/EntityFactory.s
 
 # target to generate assembly for a file
-EntityFactory.cpp.s:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/EntityFactory.cpp.s
-.PHONY : EntityFactory.cpp.s
+gamelogic/EntityFactory.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.s
+.PHONY : gamelogic/EntityFactory.cpp.s
 
-Game.o: Game.cpp.o
-.PHONY : Game.o
+gamelogic/Player.o: gamelogic/Player.cpp.o
+.PHONY : gamelogic/Player.o
 
 # target to build an object file
-Game.cpp.o:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Game.cpp.o
-.PHONY : Game.cpp.o
+gamelogic/Player.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.o
+.PHONY : gamelogic/Player.cpp.o
 
-Game.i: Game.cpp.i
-.PHONY : Game.i
+gamelogic/Player.i: gamelogic/Player.cpp.i
+.PHONY : gamelogic/Player.i
 
 # target to preprocess a source file
-Game.cpp.i:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Game.cpp.i
-.PHONY : Game.cpp.i
+gamelogic/Player.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.i
+.PHONY : gamelogic/Player.cpp.i
 
-Game.s: Game.cpp.s
-.PHONY : Game.s
+gamelogic/Player.s: gamelogic/Player.cpp.s
+.PHONY : gamelogic/Player.s
 
 # target to generate assembly for a file
-Game.cpp.s:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Game.cpp.s
-.PHONY : Game.cpp.s
+gamelogic/Player.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.s
+.PHONY : gamelogic/Player.cpp.s
 
-KeyBoard.o: KeyBoard.cpp.o
-.PHONY : KeyBoard.o
+gamelogic/World.o: gamelogic/World.cpp.o
+.PHONY : gamelogic/World.o
 
 # target to build an object file
-KeyBoard.cpp.o:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/KeyBoard.cpp.o
-.PHONY : KeyBoard.cpp.o
+gamelogic/World.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.o
+.PHONY : gamelogic/World.cpp.o
 
-KeyBoard.i: KeyBoard.cpp.i
-.PHONY : KeyBoard.i
+gamelogic/World.i: gamelogic/World.cpp.i
+.PHONY : gamelogic/World.i
 
 # target to preprocess a source file
-KeyBoard.cpp.i:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/KeyBoard.cpp.i
-.PHONY : KeyBoard.cpp.i
+gamelogic/World.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.i
+.PHONY : gamelogic/World.cpp.i
 
-KeyBoard.s: KeyBoard.cpp.s
-.PHONY : KeyBoard.s
+gamelogic/World.s: gamelogic/World.cpp.s
+.PHONY : gamelogic/World.s
 
 # target to generate assembly for a file
-KeyBoard.cpp.s:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/KeyBoard.cpp.s
-.PHONY : KeyBoard.cpp.s
+gamelogic/World.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.s
+.PHONY : gamelogic/World.cpp.s
 
-Player.o: Player.cpp.o
-.PHONY : Player.o
+sfml/Bullet.o: sfml/Bullet.cpp.o
+.PHONY : sfml/Bullet.o
 
 # target to build an object file
-Player.cpp.o:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Player.cpp.o
-.PHONY : Player.cpp.o
+sfml/Bullet.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Bullet.cpp.o
+.PHONY : sfml/Bullet.cpp.o
 
-Player.i: Player.cpp.i
-.PHONY : Player.i
+sfml/Bullet.i: sfml/Bullet.cpp.i
+.PHONY : sfml/Bullet.i
 
 # target to preprocess a source file
-Player.cpp.i:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Player.cpp.i
-.PHONY : Player.cpp.i
+sfml/Bullet.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Bullet.cpp.i
+.PHONY : sfml/Bullet.cpp.i
 
-Player.s: Player.cpp.s
-.PHONY : Player.s
+sfml/Bullet.s: sfml/Bullet.cpp.s
+.PHONY : sfml/Bullet.s
 
 # target to generate assembly for a file
-Player.cpp.s:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/Player.cpp.s
-.PHONY : Player.cpp.s
+sfml/Bullet.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Bullet.cpp.s
+.PHONY : sfml/Bullet.cpp.s
 
-PlayerFactory.o: PlayerFactory.cpp.o
-.PHONY : PlayerFactory.o
+sfml/BulletFactory.o: sfml/BulletFactory.cpp.o
+.PHONY : sfml/BulletFactory.o
 
 # target to build an object file
-PlayerFactory.cpp.o:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/PlayerFactory.cpp.o
-.PHONY : PlayerFactory.cpp.o
+sfml/BulletFactory.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o
+.PHONY : sfml/BulletFactory.cpp.o
 
-PlayerFactory.i: PlayerFactory.cpp.i
-.PHONY : PlayerFactory.i
+sfml/BulletFactory.i: sfml/BulletFactory.cpp.i
+.PHONY : sfml/BulletFactory.i
 
 # target to preprocess a source file
-PlayerFactory.cpp.i:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/PlayerFactory.cpp.i
-.PHONY : PlayerFactory.cpp.i
+sfml/BulletFactory.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.i
+.PHONY : sfml/BulletFactory.cpp.i
 
-PlayerFactory.s: PlayerFactory.cpp.s
-.PHONY : PlayerFactory.s
+sfml/BulletFactory.s: sfml/BulletFactory.cpp.s
+.PHONY : sfml/BulletFactory.s
 
 # target to generate assembly for a file
-PlayerFactory.cpp.s:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/PlayerFactory.cpp.s
-.PHONY : PlayerFactory.cpp.s
+sfml/BulletFactory.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.s
+.PHONY : sfml/BulletFactory.cpp.s
 
-StopWatch.o: StopWatch.cpp.o
-.PHONY : StopWatch.o
+sfml/Enemy.o: sfml/Enemy.cpp.o
+.PHONY : sfml/Enemy.o
 
 # target to build an object file
-StopWatch.cpp.o:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/StopWatch.cpp.o
-.PHONY : StopWatch.cpp.o
+sfml/Enemy.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Enemy.cpp.o
+.PHONY : sfml/Enemy.cpp.o
 
-StopWatch.i: StopWatch.cpp.i
-.PHONY : StopWatch.i
+sfml/Enemy.i: sfml/Enemy.cpp.i
+.PHONY : sfml/Enemy.i
 
 # target to preprocess a source file
-StopWatch.cpp.i:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/StopWatch.cpp.i
-.PHONY : StopWatch.cpp.i
+sfml/Enemy.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Enemy.cpp.i
+.PHONY : sfml/Enemy.cpp.i
 
-StopWatch.s: StopWatch.cpp.s
-.PHONY : StopWatch.s
+sfml/Enemy.s: sfml/Enemy.cpp.s
+.PHONY : sfml/Enemy.s
 
 # target to generate assembly for a file
-StopWatch.cpp.s:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/StopWatch.cpp.s
-.PHONY : StopWatch.cpp.s
+sfml/Enemy.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Enemy.cpp.s
+.PHONY : sfml/Enemy.cpp.s
 
-World.o: World.cpp.o
-.PHONY : World.o
+sfml/EnemyFactory.o: sfml/EnemyFactory.cpp.o
+.PHONY : sfml/EnemyFactory.o
 
 # target to build an object file
-World.cpp.o:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/World.cpp.o
-.PHONY : World.cpp.o
+sfml/EnemyFactory.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o
+.PHONY : sfml/EnemyFactory.cpp.o
 
-World.i: World.cpp.i
-.PHONY : World.i
+sfml/EnemyFactory.i: sfml/EnemyFactory.cpp.i
+.PHONY : sfml/EnemyFactory.i
 
 # target to preprocess a source file
-World.cpp.i:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/World.cpp.i
-.PHONY : World.cpp.i
+sfml/EnemyFactory.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.i
+.PHONY : sfml/EnemyFactory.cpp.i
 
-World.s: World.cpp.s
-.PHONY : World.s
+sfml/EnemyFactory.s: sfml/EnemyFactory.cpp.s
+.PHONY : sfml/EnemyFactory.s
 
 # target to generate assembly for a file
-World.cpp.s:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/World.cpp.s
-.PHONY : World.cpp.s
+sfml/EnemyFactory.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.s
+.PHONY : sfml/EnemyFactory.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+sfml/Game.o: sfml/Game.cpp.o
+.PHONY : sfml/Game.o
 
 # target to build an object file
-main.cpp.o:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/main.cpp.o
-.PHONY : main.cpp.o
+sfml/Game.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Game.cpp.o
+.PHONY : sfml/Game.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+sfml/Game.i: sfml/Game.cpp.i
+.PHONY : sfml/Game.i
 
 # target to preprocess a source file
-main.cpp.i:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/main.cpp.i
-.PHONY : main.cpp.i
+sfml/Game.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Game.cpp.i
+.PHONY : sfml/Game.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+sfml/Game.s: sfml/Game.cpp.s
+.PHONY : sfml/Game.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	cd /home/uauser/Desktop/Tyrian && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/main.cpp.s
-.PHONY : main.cpp.s
+sfml/Game.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Game.cpp.s
+.PHONY : sfml/Game.cpp.s
+
+sfml/KeyBoard.o: sfml/KeyBoard.cpp.o
+.PHONY : sfml/KeyBoard.o
+
+# target to build an object file
+sfml/KeyBoard.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/KeyBoard.cpp.o
+.PHONY : sfml/KeyBoard.cpp.o
+
+sfml/KeyBoard.i: sfml/KeyBoard.cpp.i
+.PHONY : sfml/KeyBoard.i
+
+# target to preprocess a source file
+sfml/KeyBoard.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/KeyBoard.cpp.i
+.PHONY : sfml/KeyBoard.cpp.i
+
+sfml/KeyBoard.s: sfml/KeyBoard.cpp.s
+.PHONY : sfml/KeyBoard.s
+
+# target to generate assembly for a file
+sfml/KeyBoard.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/KeyBoard.cpp.s
+.PHONY : sfml/KeyBoard.cpp.s
+
+sfml/Player.o: sfml/Player.cpp.o
+.PHONY : sfml/Player.o
+
+# target to build an object file
+sfml/Player.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Player.cpp.o
+.PHONY : sfml/Player.cpp.o
+
+sfml/Player.i: sfml/Player.cpp.i
+.PHONY : sfml/Player.i
+
+# target to preprocess a source file
+sfml/Player.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Player.cpp.i
+.PHONY : sfml/Player.cpp.i
+
+sfml/Player.s: sfml/Player.cpp.s
+.PHONY : sfml/Player.s
+
+# target to generate assembly for a file
+sfml/Player.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Player.cpp.s
+.PHONY : sfml/Player.cpp.s
+
+sfml/PlayerFactory.o: sfml/PlayerFactory.cpp.o
+.PHONY : sfml/PlayerFactory.o
+
+# target to build an object file
+sfml/PlayerFactory.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o
+.PHONY : sfml/PlayerFactory.cpp.o
+
+sfml/PlayerFactory.i: sfml/PlayerFactory.cpp.i
+.PHONY : sfml/PlayerFactory.i
+
+# target to preprocess a source file
+sfml/PlayerFactory.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.i
+.PHONY : sfml/PlayerFactory.cpp.i
+
+sfml/PlayerFactory.s: sfml/PlayerFactory.cpp.s
+.PHONY : sfml/PlayerFactory.s
+
+# target to generate assembly for a file
+sfml/PlayerFactory.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.s
+.PHONY : sfml/PlayerFactory.cpp.s
+
+sfml/StopWatch.o: sfml/StopWatch.cpp.o
+.PHONY : sfml/StopWatch.o
+
+# target to build an object file
+sfml/StopWatch.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/StopWatch.cpp.o
+.PHONY : sfml/StopWatch.cpp.o
+
+sfml/StopWatch.i: sfml/StopWatch.cpp.i
+.PHONY : sfml/StopWatch.i
+
+# target to preprocess a source file
+sfml/StopWatch.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/StopWatch.cpp.i
+.PHONY : sfml/StopWatch.cpp.i
+
+sfml/StopWatch.s: sfml/StopWatch.cpp.s
+.PHONY : sfml/StopWatch.s
+
+# target to generate assembly for a file
+sfml/StopWatch.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/StopWatch.cpp.s
+.PHONY : sfml/StopWatch.cpp.s
+
+sfml/main.o: sfml/main.cpp.o
+.PHONY : sfml/main.o
+
+# target to build an object file
+sfml/main.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/main.cpp.o
+.PHONY : sfml/main.cpp.o
+
+sfml/main.i: sfml/main.cpp.i
+.PHONY : sfml/main.i
+
+# target to preprocess a source file
+sfml/main.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/main.cpp.i
+.PHONY : sfml/main.cpp.i
+
+sfml/main.s: sfml/main.cpp.s
+.PHONY : sfml/main.s
+
+# target to generate assembly for a file
+sfml/main.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/main.cpp.s
+.PHONY : sfml/main.cpp.s
 
 # Help Target
 help:
@@ -428,44 +562,60 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... game"
+	@echo "... gamelogic"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... Bullet.o"
-	@echo "... Bullet.i"
-	@echo "... Bullet.s"
-	@echo "... BulletFactory.o"
-	@echo "... BulletFactory.i"
-	@echo "... BulletFactory.s"
-	@echo "... Entity.o"
-	@echo "... Entity.i"
-	@echo "... Entity.s"
-	@echo "... EntityFactory.o"
-	@echo "... EntityFactory.i"
-	@echo "... EntityFactory.s"
-	@echo "... Game.o"
-	@echo "... Game.i"
-	@echo "... Game.s"
-	@echo "... KeyBoard.o"
-	@echo "... KeyBoard.i"
-	@echo "... KeyBoard.s"
-	@echo "... Player.o"
-	@echo "... Player.i"
-	@echo "... Player.s"
-	@echo "... PlayerFactory.o"
-	@echo "... PlayerFactory.i"
-	@echo "... PlayerFactory.s"
-	@echo "... StopWatch.o"
-	@echo "... StopWatch.i"
-	@echo "... StopWatch.s"
-	@echo "... World.o"
-	@echo "... World.i"
-	@echo "... World.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... gamelogic/Bullet.o"
+	@echo "... gamelogic/Bullet.i"
+	@echo "... gamelogic/Bullet.s"
+	@echo "... gamelogic/Enemy.o"
+	@echo "... gamelogic/Enemy.i"
+	@echo "... gamelogic/Enemy.s"
+	@echo "... gamelogic/Entity.o"
+	@echo "... gamelogic/Entity.i"
+	@echo "... gamelogic/Entity.s"
+	@echo "... gamelogic/EntityFactory.o"
+	@echo "... gamelogic/EntityFactory.i"
+	@echo "... gamelogic/EntityFactory.s"
+	@echo "... gamelogic/Player.o"
+	@echo "... gamelogic/Player.i"
+	@echo "... gamelogic/Player.s"
+	@echo "... gamelogic/World.o"
+	@echo "... gamelogic/World.i"
+	@echo "... gamelogic/World.s"
+	@echo "... sfml/Bullet.o"
+	@echo "... sfml/Bullet.i"
+	@echo "... sfml/Bullet.s"
+	@echo "... sfml/BulletFactory.o"
+	@echo "... sfml/BulletFactory.i"
+	@echo "... sfml/BulletFactory.s"
+	@echo "... sfml/Enemy.o"
+	@echo "... sfml/Enemy.i"
+	@echo "... sfml/Enemy.s"
+	@echo "... sfml/EnemyFactory.o"
+	@echo "... sfml/EnemyFactory.i"
+	@echo "... sfml/EnemyFactory.s"
+	@echo "... sfml/Game.o"
+	@echo "... sfml/Game.i"
+	@echo "... sfml/Game.s"
+	@echo "... sfml/KeyBoard.o"
+	@echo "... sfml/KeyBoard.i"
+	@echo "... sfml/KeyBoard.s"
+	@echo "... sfml/Player.o"
+	@echo "... sfml/Player.i"
+	@echo "... sfml/Player.s"
+	@echo "... sfml/PlayerFactory.o"
+	@echo "... sfml/PlayerFactory.i"
+	@echo "... sfml/PlayerFactory.s"
+	@echo "... sfml/StopWatch.o"
+	@echo "... sfml/StopWatch.i"
+	@echo "... sfml/StopWatch.s"
+	@echo "... sfml/main.o"
+	@echo "... sfml/main.i"
+	@echo "... sfml/main.s"
 .PHONY : help
 
 
@@ -477,6 +627,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/uauser/Desktop/Tyrian && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/uauser/Desktop/Tyrion && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

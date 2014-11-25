@@ -1,0 +1,21 @@
+/*
+ * Player.cpp
+ *
+ *  Created on: Nov 25, 2014
+ *      Author: uauser
+ */
+
+#include "Player.h"
+
+namespace sfml {
+
+Player::Player() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Player::~Player() {
+	// TODO Auto-generated destructor stub
+}
+
+} /* namespace sfml */

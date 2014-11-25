@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uauser/Desktop/Tyrian
+CMAKE_SOURCE_DIR = /home/uauser/Desktop/Tyrion
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uauser/Desktop/Tyrian
+CMAKE_BINARY_DIR = /home/uauser/Desktop/Tyrion
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -113,9 +113,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uauser/Desktop/Tyrian/CMakeFiles /home/uauser/Desktop/Tyrian/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uauser/Desktop/Tyrion/CMakeFiles /home/uauser/Desktop/Tyrion/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uauser/Desktop/Tyrian/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uauser/Desktop/Tyrion/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -155,6 +155,19 @@ game/fast:
 	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/build
 .PHONY : game/fast
 
+#=============================================================================
+# Target rules for targets named gamelogic
+
+# Build rule for target.
+gamelogic: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gamelogic
+.PHONY : gamelogic
+
+# fast build rule for target.
+gamelogic/fast:
+	$(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/build
+.PHONY : gamelogic/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -168,6 +181,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... game"
+	@echo "... gamelogic"
 .PHONY : help
 
 

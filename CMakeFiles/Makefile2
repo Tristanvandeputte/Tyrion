@@ -50,20 +50,22 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uauser/Desktop/Tyrian
+CMAKE_SOURCE_DIR = /home/uauser/Desktop/Tyrion
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uauser/Desktop/Tyrian
+CMAKE_BINARY_DIR = /home/uauser/Desktop/Tyrion
 
 #=============================================================================
 # Directory level rules for directory src
 
 # Convenience name for "all" pass in the directory.
 src/all: src/CMakeFiles/game.dir/all
+src/all: src/CMakeFiles/gamelogic.dir/all
 .PHONY : src/all
 
 # Convenience name for "clean" pass in the directory.
 src/clean: src/CMakeFiles/game.dir/clean
+src/clean: src/CMakeFiles/gamelogic.dir/clean
 .PHONY : src/clean
 
 # Convenience name for "preinstall" pass in the directory.
@@ -74,10 +76,10 @@ src/preinstall:
 # Target rules for target src/CMakeFiles/game.dir
 
 # All Build rule for target.
-src/CMakeFiles/game.dir/all:
+src/CMakeFiles/game.dir/all: src/CMakeFiles/gamelogic.dir/all
 	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/depend
 	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrian/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles  1 2 3 4 5 6 7 8 9 10
 	@echo "Built target game"
 .PHONY : src/CMakeFiles/game.dir/all
 
@@ -87,9 +89,9 @@ all: src/CMakeFiles/game.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uauser/Desktop/Tyrian/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uauser/Desktop/Tyrion/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/game.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uauser/Desktop/Tyrian/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uauser/Desktop/Tyrion/CMakeFiles 0
 .PHONY : src/CMakeFiles/game.dir/rule
 
 # Convenience name for target.
@@ -103,6 +105,41 @@ src/CMakeFiles/game.dir/clean:
 
 # clean rule for target.
 clean: src/CMakeFiles/game.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/gamelogic.dir
+
+# All Build rule for target.
+src/CMakeFiles/gamelogic.dir/all:
+	$(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/depend
+	$(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles  11 12 13 14 15 16
+	@echo "Built target gamelogic"
+.PHONY : src/CMakeFiles/gamelogic.dir/all
+
+# Include target in all.
+all: src/CMakeFiles/gamelogic.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/gamelogic.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uauser/Desktop/Tyrion/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/gamelogic.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/uauser/Desktop/Tyrion/CMakeFiles 0
+.PHONY : src/CMakeFiles/gamelogic.dir/rule
+
+# Convenience name for target.
+gamelogic: src/CMakeFiles/gamelogic.dir/rule
+.PHONY : gamelogic
+
+# clean rule for target.
+src/CMakeFiles/gamelogic.dir/clean:
+	$(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/clean
+.PHONY : src/CMakeFiles/gamelogic.dir/clean
+
+# clean rule for target.
+clean: src/CMakeFiles/gamelogic.dir/clean
 .PHONY : clean
 
 #=============================================================================

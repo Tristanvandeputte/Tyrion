@@ -43,4 +43,5 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/game.dir/DependInfo.cmake"
+  "src/CMakeFiles/gamelogic.dir/DependInfo.cmake"
   )

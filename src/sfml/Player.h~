@@ -1,0 +1,21 @@
+/*
+ * Player.h
+ *
+ *  Created on: Nov 25, 2014
+ *      Author: uauser
+ */
+
+#ifndef PLAYER_H_
+#define PLAYER_H_
+
+namespace sfml {
+
+class Player {
+public:
+	Player();
+	virtual ~Player();
+};
+
+} /* namespace sfml */
+
+#endif /* PLAYER_H_ */

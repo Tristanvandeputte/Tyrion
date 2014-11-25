@@ -1,11 +1,11 @@
 # Set a list of source files
-set(SRC_LIST KeyBoard.cpp Player.cpp Game.cpp World.cpp Entity.cpp PlayerFactory.cpp EntityFactory.cpp StopWatch.cpp Bullet.cpp BulletFactory.cpp)
+set(SRC_LIST sfml/KeyBoard.cpp sfml/Player.cpp sfml/Game.cpp sfml/PlayerFactory.cpp  sfml/StopWatch.cpp sfml/Bullet.cpp sfml/BulletFactory.cpp sfml/Enemy.cpp sfml/EnemyFactory.cpp )
 
 # Set a list of library files
-#set(LIB_LIST )
+set(LIB_LIST gamelogic/Player.cpp gamelogic/World.cpp gamelogic/Entity.cpp gamelogic/Bullet.cpp gamelogic/EntityFactory.cpp gamelogic/Enemy.cpp)
 
 # Add a executable that should be built
-add_executable(${EXECUTABLE_NAME} main.cpp ${SRC_LIST})
+add_executable(${EXECUTABLE_NAME} sfml/main.cpp ${SRC_LIST})
 
 # Detect and add SFML
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/CMakeModule/" ${CMAKE_MODULE_PATH}) # aanpassen afh van waar sfml search zich bevind
@@ -22,7 +22,7 @@ endif()
 #target_link_libraries(${EXECUTABLE_NAME} gamelogic)
 
 # Set install targets for when we run 'make install'
-install(TARGETS ${EXECUTABLE_NAME} #gamelogic
+install(TARGETS ${EXECUTABLE_NAME} gamelogic
     RUNTIME DESTINATION ${PROJECT_SOURCE_DIR}/bin
     ARCHIVE DESTINATION ${PROJECT_SOURCE_DIR}/lib
     LIBRARY DESTINATION ${PROJECT_SOURCE_DIR}/lib)
