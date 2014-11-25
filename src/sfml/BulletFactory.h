@@ -25,7 +25,7 @@ private:
 public:
 	BulletFactory();
 	virtual ~BulletFactory();
-	shared_ptr<sfml::Bullet> makeBullet(double x, double y,BulletType type,Status status);
+	shared_ptr<ty::Entity> makeBullet(double x, double y,BulletType type,Status status);
 };
 
 #endif /* BULLETFACTORY_H_ */

@@ -16,7 +16,7 @@ BulletFactory::~BulletFactory() {
 	// TODO Auto-generated destructor stub
 }
 
-shared_ptr<sfml::Bullet> BulletFactory::makeBullet(double x, double y,BulletType type, Status status ){
+shared_ptr<ty::Entity> BulletFactory::makeBullet(double x, double y,BulletType type, Status status ){
 	string texturespot;
 	if(type==BulletType::BasicBullet){
 		texturespot="BasicEnemy1.png";

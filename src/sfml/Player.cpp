@@ -14,7 +14,7 @@ Player::Player() {
 
 }
 
-Player::Player(double x,double y, string texture_location):ty::Player(x,y),texture_location(texture_location){
+Player::Player(double x,double y, string texture_location,EntityFactory bullet_factory):ty::Player(x,y),texture_location(texture_location),bullet_factory(bullet_factory){
 	//cout<<"FUKKKK"<<endl;
 	sf::Texture texture;
 	char cwd[1024];
