@@ -39,7 +39,7 @@ void World::makeBullet(double x,double y,BulletType type,Status status){
 
 
 void World::movePlayerRight(double amount){
-	int real_amount=amount;
+	double real_amount=amount;
 	if(current_player->getX()+amount+current_player->getRadius()>4){
 		real_amount += (4-current_player->getX()-current_player->getRadius());
 	}
@@ -47,7 +47,7 @@ void World::movePlayerRight(double amount){
 }
 
 void World::movePlayerLeft(double amount){
-	int real_amount=amount;
+	double real_amount=amount;
 	if(current_player->getX()-amount-current_player->getRadius()<-4){
 		real_amount += (4+current_player->getX()-current_player->getRadius());
 	}
@@ -55,7 +55,7 @@ void World::movePlayerLeft(double amount){
 }
 
 void World::movePlayerUp(double amount){
-	int real_amount=amount;
+	double real_amount=amount;
 	if(current_player->getY()+amount+current_player->getRadius()>3){
 		real_amount += (3-current_player->getY()-current_player->getRadius());
 	}
@@ -63,7 +63,7 @@ void World::movePlayerUp(double amount){
 }
 
 void World::movePlayerDown(double amount){
-	int real_amount=amount;
+	double real_amount=amount;
 	if(current_player->getY()-amount-current_player->getRadius()<-3){
 		real_amount += (3+current_player->getY()-current_player->getRadius());
 	}

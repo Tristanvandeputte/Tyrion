@@ -17,6 +17,7 @@ namespace sfml {
 
 class Enemy: public ty::Enemy {
 private:
+	static std::map<string,Texture> all_textures;
 	shared_ptr<RenderWindow> window;
 public:
 	Enemy();

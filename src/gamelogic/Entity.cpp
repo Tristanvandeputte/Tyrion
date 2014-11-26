@@ -23,20 +23,23 @@ Entity::Entity(double x,double y):x_pos(x),y_pos(y){}
 Entity::Entity(double x,double y,double speed ,int health, int damage):x_pos(x),y_pos(y),speed(speed),health(health),damage(damage){}
 
 void Entity::draw(){
-	cout<<"kkkkkk"<<endl;
 }
 
 
 void Entity::moveRight(double amount){
+	cout<<" amount "<<amount<<" speed "<<speed<<endl;
 	x_pos += amount*speed;
 }
 void Entity::moveLeft(double amount){
+	cout<<" amount "<<amount<<" speed "<<speed<<endl;
 	x_pos -= amount*speed;
 }
 void Entity::moveUp(double amount){
+	cout<<" amount "<<amount<<" speed "<<speed<<endl;
 	y_pos += amount*speed;
 }
 void Entity::moveDown(double amount){
+	cout<<" amount "<<amount<<" speed "<<speed<<endl;
 	y_pos -= amount*speed;
 }
 void Entity::move(double deltaT){}

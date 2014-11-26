@@ -88,18 +88,6 @@ memory
 SFML/Graphics.hpp
 -
 
-/home/uauser/Desktop/Tyrion/src/sfml/Enemy.h
-../gamelogic/Enemy.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
-SFML/Graphics.hpp
--
-memory
--
-
-/home/uauser/Desktop/Tyrion/src/sfml/EnemyFactory.cpp
-EnemyFactory.h
-/home/uauser/Desktop/Tyrion/src/sfml/EnemyFactory.h
-
 /home/uauser/Desktop/Tyrion/src/sfml/EnemyFactory.h
 ../gamelogic/EntityFactory.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
@@ -169,14 +157,10 @@ SFML/Graphics.hpp
 -
 
 /home/uauser/Desktop/Tyrion/src/sfml/StopWatch.h
-
-/home/uauser/Desktop/Tyrion/src/sfml/main.cpp
-SFML/Graphics.hpp
--
 iostream
 -
-unistd.h
+ctime
 -
-Game.h
-/home/uauser/Desktop/Tyrion/src/sfml/Game.h
+chrono
+-
 

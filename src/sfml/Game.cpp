@@ -40,11 +40,11 @@ void Game::run(){
 				window->close();
 			}
 		}
-
+		
 		window->clear();
 		
 		//INPUT
-		int deltaT=1; //
+		double deltaT=clock.getTime(); //
 		
 		if(input.checkKeyBoardInput(KeyPressed::Right)){
 			game_world.movePlayerRight(deltaT);

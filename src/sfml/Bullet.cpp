@@ -23,7 +23,7 @@ Bullet::Bullet(double x,double y,BulletType type,std::string texture_location,St
 	}
 	//texture.update(image); NODIG VR BEWEGING DENK K
 	texture.setSmooth(true); //smooth
-	this_tex=texture;
+	all_textures[texture_location]=texture;
 }
 
 Bullet::~Bullet() {
@@ -31,7 +31,7 @@ Bullet::~Bullet() {
 }
 void Bullet::draw(){
 		sf::Sprite sprite;
-		sprite.setTexture(this_tex);
+		sprite.setTexture(all_textures[texture_location]);
 		sprite.setPosition(sf::Vector2f((x_pos*80.0)+320.0-(sprite.getGlobalBounds().width/4), (-1.0*y_pos*80.0)+240.0-(sprite.getGlobalBounds().height/4)));
 		sprite.scale(sf::Vector2f(0.7f, 0.7f));
 		window->draw(sprite);

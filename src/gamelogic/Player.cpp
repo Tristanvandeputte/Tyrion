@@ -20,7 +20,7 @@ Player::~Player() {
 
 Player::Player(double x,double y,EntityFactory* bullet_factory,Entity* parent):Entity(x,y),bullet_factory(bullet_factory),parent(parent){
 	b_type = BulletType::BasicBullet;
-	speed = 0.12;
+	speed = 5.0;
 }
 
 void Player::draw(){

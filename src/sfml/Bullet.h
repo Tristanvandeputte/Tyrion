@@ -17,6 +17,7 @@ namespace sfml {
 
 class Bullet: public ty::Bullet {
 private:
+	static std::map<string,Texture> all_textures;
 	shared_ptr<RenderWindow> window;
 	std::string texture_location;
 	sf::Texture this_tex;
