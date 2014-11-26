@@ -13,7 +13,7 @@ Bullet::Bullet() {
 
 }
 
-Bullet::Bullet(double x,double y,BulletType type,std::string texture_location,Status status):ty::Bullet(x,y,type,status),texture_location(texture_location){
+Bullet::Bullet(double x,double y,BulletType type,std::string texture_location,Status status,shared_ptr<RenderWindow> window):ty::Bullet(x,y,type,status),texture_location(texture_location),window(window){
 	sf::Texture texture;
 	char cwd[1024];
 	getcwd(cwd,sizeof(cwd));

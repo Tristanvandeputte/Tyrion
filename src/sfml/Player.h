@@ -29,7 +29,7 @@ private:
 	string texture_location; //imageedit_1_7403900101.png
 public:
 	Player();
-	Player(double x,double y, string texture_location, EntityFactory* bullet_factory, Entity* parent);
+	Player(double x,double y, string texture_location, EntityFactory* bullet_factory, Entity* parent,shared_ptr<RenderWindow> window);
 	virtual ~Player();
 	void draw() override;
 

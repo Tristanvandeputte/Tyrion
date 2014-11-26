@@ -16,10 +16,9 @@ PlayerFactory::~PlayerFactory() {
 	// TODO Auto-generated destructor stub
 }
 
-PlayerFactory::PlayerFactory(shared_ptr<RenderWindow> window):window:(window){}
+PlayerFactory::PlayerFactory(shared_ptr<RenderWindow> window):window(window){}
 
 EntityPtr PlayerFactory::makePlayer(double x, double y, std::string texturespot,EntityFactory* bullet_factory, ty::Entity* parent){
-	cout<<"makin playah"<<endl;
-	shared_ptr<sfml::Player> p_ptr(new sfml::Player(x,y,texturespot,bullet_factory, parent));
+	shared_ptr<sfml::Player> p_ptr(new sfml::Player(x,y,texturespot,bullet_factory, parent,window));
 	return p_ptr;
 }

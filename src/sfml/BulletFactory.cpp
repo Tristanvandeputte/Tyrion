@@ -17,7 +17,7 @@ BulletFactory::~BulletFactory() {
 }
 
 
-BulletFactory::EnemyFactory(shared_ptr<RenderWindow> window):window(window){
+BulletFactory::BulletFactory(shared_ptr<RenderWindow> window):window(window){
 	
 }
 
@@ -26,7 +26,7 @@ shared_ptr<ty::Entity> BulletFactory::makeBullet(double x, double y,BulletType t
 	if(type==BulletType::BasicBullet){
 		texturespot="BasicEnemy1.png";
 	}
-	shared_ptr<sfml::Bullet> p_ptr(new sfml::Bullet(x,y,type,texturespot,status));
+	shared_ptr<sfml::Bullet> p_ptr(new sfml::Bullet(x,y,type,texturespot,status,window));
 	//created_bullets.push_back(p_ptr);
 	return p_ptr;
 }

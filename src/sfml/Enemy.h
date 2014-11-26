@@ -11,15 +11,16 @@
 #include "../gamelogic/Enemy.h"
 #include <SFML/Graphics.hpp>
 #include <memory>
+using namespace sf;
 
 namespace sfml {
 
 class Enemy: public ty::Enemy {
 private:
-	shared_ptr<sf::RenderWindow> window;
+	shared_ptr<RenderWindow> window;
 public:
 	Enemy();
-	Enemy(double x,double y,double speed ,int health, int damage,EnemyType type, EntityFactory* bullet_factory, Entity* parent);
+	Enemy(double x,double y,double speed ,int health, int damage,EnemyType type, EntityFactory* bullet_factory, Entity* parent,shared_ptr<RenderWindow> window);
 	virtual ~Enemy();
 };
 

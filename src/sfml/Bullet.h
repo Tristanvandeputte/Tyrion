@@ -11,17 +11,18 @@
 #include "../gamelogic/EntityFactory.h"
 #include "../gamelogic/Bullet.h"
 #include <SFML/Graphics.hpp>
+using namespace sf;
 
 namespace sfml {
 
 class Bullet: public ty::Bullet {
 private:
-	shared_ptr<sf::RenderWindow> window;
+	shared_ptr<RenderWindow> window;
 	std::string texture_location;
 	sf::Texture this_tex;
 public:
 	Bullet();
-	Bullet(double x,double y,BulletType type,std::string texture_location,Status status);
+	Bullet(double x,double y,BulletType type,std::string texture_location,Status status,shared_ptr<RenderWindow> window);
 	virtual ~Bullet();
 	void draw();
 };

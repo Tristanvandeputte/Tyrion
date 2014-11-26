@@ -28,6 +28,7 @@ private:
 	ty::World game_world;
 	StopWatch clock;
 	KeyBoard input;
+	RenderWindow window;
 public:
 	Game();
 	virtual ~Game();

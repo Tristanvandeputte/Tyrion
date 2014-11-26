@@ -18,7 +18,7 @@ EnemyFactory::~EnemyFactory() {
 }
 
 
-shared_ptr<sfml::Enemy> makeEnemy(double x, double y, BulletType type,Status status,EntityFactory* bullet_factory,Entity* parent){
+shared_ptr<Entity> EnemyFactory::makeEnemy(double x, double y, BulletType type,Status status,EntityFactory* bullet_factory,Entity* parent){
 	srand (time(NULL));
 	double radius{0};
 	double x_pos;
@@ -54,7 +54,7 @@ shared_ptr<sfml::Enemy> makeEnemy(double x, double y, BulletType type,Status sta
 	   default :
 	      cout << "Invalid enemy" << endl;
 	   }
-	shared_ptr<sfml::Enemy> p_ptr(new sfml::Enemy(x_pos,y_pos,speed , health, damage,enemy_type,bullet_factory,parentptr));
+	shared_ptr<sfml::Enemy> p_ptr(new sfml::Enemy(x_pos,y_pos,speed , health, damage,enemy_type,bullet_factory,parentptr,window));
 	return p_ptr;
 	
 }
