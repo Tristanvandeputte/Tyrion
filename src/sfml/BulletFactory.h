@@ -14,6 +14,7 @@
 #include <memory>
 #include <SFML/Graphics.hpp>
 using namespace std;
+using namespace sf;
 enum class BulletType;
 enum class Status;
 namespace sfml{
@@ -21,9 +22,11 @@ namespace sfml{
 }
 class BulletFactory : public EntityFactory {
 private: 
+	shared_ptr<RenderWindow> window;
 	vector<shared_ptr<sfml::Bullet> > created_bullets;
 public:
 	BulletFactory();
+	BulletFactory(shared_ptr<RenderWindow> window);
 	virtual ~BulletFactory();
 	shared_ptr<ty::Entity> makeBullet(double x, double y,BulletType type,Status status);
 };

@@ -11,13 +11,14 @@ EnemyFactory::EnemyFactory() {
 	// TODO Auto-generated constructor stub
 
 }
+EnemyFactory::EnemyFactory(shared_ptr<RenderWindow> window):window(window){}
 
 EnemyFactory::~EnemyFactory() {
 	// TODO Auto-generated destructor stub
 }
 
 
-shared_ptr<sfml::Enemy> makeEntity(){
+shared_ptr<sfml::Enemy> makeEnemy(double x, double y, BulletType type,Status status,EntityFactory* bullet_factory,Entity* parent){
 	srand (time(NULL));
 	double radius{0};
 	double x_pos;
@@ -25,7 +26,8 @@ shared_ptr<sfml::Enemy> makeEntity(){
 	double speed;
 	int health;
 	int damage;
-	EnemyType type;
+	Entity* parentptr;
+	EnemyType enemy_type;
 	//choosing a random enemy -> map with enemydata??
 	int enemy_nr = rand() % 1; //# enemies die er zijn
 	switch(enemy_nr){
@@ -35,7 +37,8 @@ shared_ptr<sfml::Enemy> makeEntity(){
 		  health = 2;
 		  damage = 1;
 		  speed = 0.1;
-		  type = EnemyType::BasicEnemy;
+		  enemy_type = EnemyType::BasicEnemy;
+		  parentptr=parent;
 	      break;
 	   case 1 :
 		   cout<<"kekek"<<endl;
@@ -51,7 +54,7 @@ shared_ptr<sfml::Enemy> makeEntity(){
 	   default :
 	      cout << "Invalid enemy" << endl;
 	   }
-	shared_ptr<sfml::Enemy> p_ptr(new sfml::Enemy(x_pos,y_pos,speed , health, damage,type));
+	shared_ptr<sfml::Enemy> p_ptr(new sfml::Enemy(x_pos,y_pos,speed , health, damage,enemy_type,bullet_factory,parentptr));
 	return p_ptr;
 	
 }

@@ -29,17 +29,17 @@ class World: public Entity {
 private:
 	std::vector<EntityPtr> all_entities;
 	//all the Entiies is this game world
-	EntityFactory p_fac;;
+	EntityFactory* p_fac;;
 	//Player Factory
-	EntityFactory b_fac;
+	EntityFactory* b_fac;
 	//Bullet Factory
-	EntityFactory e_fac;
+	EntityFactory* e_fac;
 	//Entity Factory
 	EntityPtr current_player;
 	//A pointer to the current player
 public:
 	World();
-	World(EntityFactory p_fac,EntityFactory b_fac,EntityFactory e_fac);
+	World(EntityFactory* p_fac,EntityFactory* b_fac,EntityFactory* e_fac);
 	virtual ~World();
 	std::vector<EntityPtr> getEntities();
 	void startPlayer();
@@ -54,6 +54,7 @@ public:
 	void update(double deltaT); //collision checks etc, gamelogic
 	void collisionCheck();
 	void createNewEnemy();
+	void draw();
 };
 
 } /* namespace ty */

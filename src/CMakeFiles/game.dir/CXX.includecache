@@ -48,6 +48,10 @@ memory
 unistd.h
 -
 
+/home/uauser/Desktop/Tyrion/src/sfml/Player.cpp
+Player.h
+/home/uauser/Desktop/Tyrion/src/sfml/Player.h
+
 /home/uauser/Desktop/Tyrion/src/sfml/Player.h
 ../gamelogic/Player.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/Player.h
@@ -62,21 +66,5 @@ iostream
 memory
 -
 unistd.h
--
-
-/home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.cpp
-PlayerFactory.h
-/home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.h
-
-/home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.h
-../gamelogic/EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
-../gamelogic/Entity.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
-Player.h
-/home/uauser/Desktop/Tyrion/src/sfml/Player.h
-memory
--
-SFML/Graphics.hpp
 -
 

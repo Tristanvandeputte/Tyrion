@@ -7,6 +7,9 @@
 
 #include "../gamelogic/World.h"
 #include "StopWatch.h"
+#include "PlayerFactory.h"
+#include "BulletFactory.h"
+#include "EnemyFactory.h"
 #include "../gamelogic/World.h"
 #include "KeyBoard.h"
 #include <SFML/Graphics.hpp>
@@ -19,6 +22,9 @@
 
 class Game {
 private:
+	PlayerFactory afac;
+	BulletFactory bfac;
+	EnemyFactory cfac;
 	ty::World game_world;
 	StopWatch clock;
 	KeyBoard input;

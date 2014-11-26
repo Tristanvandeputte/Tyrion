@@ -9,6 +9,8 @@
 //#include "EntityFactory.h"
 using namespace std;
 
+std::map<string,Texture> sfml::Player::all_textures = {};
+
 int main(){
 	cout<<"kekekekek"<<endl;
 	Game this_game;

@@ -14,7 +14,7 @@ World::World() {
 
 }
 
-World(EntityFactory p_fac,EntityFactory b_fac,EntityFactory e_fac):p_fac(p_fac),b_fac(b_fac),e_fac(e_fac){}
+World::World(EntityFactory* p_fac,EntityFactory* b_fac,EntityFactory* e_fac):p_fac(p_fac),b_fac(b_fac),e_fac(e_fac){}
 
 World::~World() {
 	// TODO Auto-generated destructor stub
@@ -25,11 +25,8 @@ std::vector<EntityPtr> World::getEntities(){
 }
 
 void World::startPlayer(){
-	cout<<"made player"<<endl;
-	current_player = p_fac.makePlayer(0.0,0.0,"imageedit_1_7403900101.png",b_fac);
-	cout<<"made player"<<endl;
+	current_player = p_fac->makePlayer(0.0,0.0,"imageedit_1_7403900101.png",b_fac,this);
 	all_entities.push_back(current_player);
-	cout<<"made player"<<endl;
 }
 
 EntityPtr World::getCurrentPlayer(){
@@ -37,7 +34,7 @@ EntityPtr World::getCurrentPlayer(){
 }
 
 void World::makeBullet(double x,double y,BulletType type,Status status){
-	all_entities.push_back(b_fac.makeBullet(x,y,type, status));
+	all_entities.push_back(b_fac->makeBullet(x,y,type, status));
 }
 
 
@@ -95,28 +92,37 @@ void World::update(double deltaT){
 }
 
 void createNewEnemy(){
-	
+
+}
+
+void World::draw(){
+	for(EntityPtr e_ptr : all_entities){
+		if(e_ptr != current_player){
+			e_ptr->draw();
+		}
+	}
+	current_player->draw();
 }
 
 void collisionCheck(){
-//	for(EntityPtr e_ptr : all_entities){
-//		if()
-//		int x1 = 3;  //collision
-//		int y1 = 4;
-//		int x2 = 6;
-//		int y2 = 8;
-//		int radius1 = 3;
-//		int radius2 = 5;
-//
-//		//compare the distance to combined radii
-//		int dx = x2 - x1;
-//		int dy = y2 - y1;
-//		int radii = radius1 + radius2;
-//		if ( ( dx * dx )  + ( dy * dy ) < radii * radii ) 
-//		{
-//			cout<<"player has been hit!!"
-//		}
-//	}
+	//	for(EntityPtr e_ptr : all_entities){
+	//		if()
+	//		int x1 = 3;  //collision
+	//		int y1 = 4;
+	//		int x2 = 6;
+	//		int y2 = 8;
+	//		int radius1 = 3;
+	//		int radius2 = 5;
+	//
+	//		//compare the distance to combined radii
+	//		int dx = x2 - x1;
+	//		int dy = y2 - y1;
+	//		int radii = radius1 + radius2;
+	//		if ( ( dx * dx )  + ( dy * dy ) < radii * radii ) 
+	//		{
+	//			cout<<"player has been hit!!"
+	//		}
+	//	}
 }
 
 } /* namespace ty */

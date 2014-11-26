@@ -16,8 +16,6 @@
 #include <memory>
 #include <unistd.h>
 
-class World;
-
 using namespace sf;
 using namespace std;
 
@@ -25,17 +23,15 @@ namespace sfml {
 
 class Player: public ty::Player {
 private:
-	std::map<string,Texture> all_textures; // voor animaties hier n vector v textures v maken
+	static std::map<string,Texture> all_textures; // voor animaties hier n vector v textures v maken
 	Texture this_tex;
 	shared_ptr<RenderWindow> window;
 	string texture_location; //imageedit_1_7403900101.png
-	EntityFactory bullet_factory;
-	shared_ptr<Entity> parent_world; //?
 public:
 	Player();
-	Player(double x,double y, string texture_location, EntityFactory bullet_factory);
+	Player(double x,double y, string texture_location, EntityFactory* bullet_factory, Entity* parent);
 	virtual ~Player();
-	void draw();
+	void draw() override;
 
 };
 

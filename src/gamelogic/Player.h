@@ -23,11 +23,13 @@ class Player: public Entity {
 protected:
 	shared_ptr<EntityFactory> p_fac;
 	BulletType b_type;
+	Entity* parent;
+	EntityFactory* bullet_factory;
 public:
 	Player();
-	Player(double x,double y);
+	Player(double x,double y,EntityFactory* bullet_factory,Entity* parent);
 	virtual ~Player();
-	void draw();
+	virtual void draw();
 	BulletType Shoot();
 };
 

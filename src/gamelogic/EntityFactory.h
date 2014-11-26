@@ -11,8 +11,8 @@
 #include <memory>
 #include <unistd.h>
 #include "Entity.h"
-
-using EntityPtr = shared_ptr<ty::Entity>;
+using namespace ty;
+using EntityPtr = shared_ptr<Entity>;
 
 enum class BulletType;
 enum class Status;
@@ -24,9 +24,9 @@ class EntityFactory {
 public:
 	EntityFactory();
 	virtual ~EntityFactory();
-	virtual EntityPtr makePlayer(double x, double y, std::string texturespot,EntityFactory bullet_factory);
-	EntityPtr makeBullet(double x, double y, BulletType type,Status status);
-	EntityPtr makeEnemy(double x, double y, BulletType type,Status status,EntityFactory bullet_factory);
+	virtual EntityPtr makePlayer(double x, double y, std::string texturespot,EntityFactory* bullet_factory,Entity* parent);
+	virtual EntityPtr makeBullet(double x, double y, BulletType type,Status status);
+	virtual EntityPtr makeEnemy(double x, double y, BulletType type,Status status,EntityFactory* bullet_factory,Entity* parent);
 };
 
 #endif /* ENTITYFACTORY_H_ */

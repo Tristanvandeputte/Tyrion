@@ -14,14 +14,18 @@
 #include <memory>
 #include <SFML/Graphics.hpp>
 using namespace std;
+using namespace sf;
 namespace sfml{
 	class Player;
 }
 class PlayerFactory: public EntityFactory {
+private:
+	shared_ptr<RenderWindow> window;
 public:
 	PlayerFactory();
+	PlayerFactory(shared_ptr<RenderWindow> window);
 	virtual ~PlayerFactory();
-	EntityPtr makePlayer(double x, double y, std::string texturespot,EntityFactory bullet_factory) override;
+	EntityPtr makePlayer(double x, double y, std::string texturespot,EntityFactory* bullet_factory, ty::Entity* parent) override;
 };
 
 #endif /* PLAYERFACTORY_H_ */

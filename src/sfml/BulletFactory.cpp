@@ -16,6 +16,11 @@ BulletFactory::~BulletFactory() {
 	// TODO Auto-generated destructor stub
 }
 
+
+BulletFactory::EnemyFactory(shared_ptr<RenderWindow> window):window(window){
+	
+}
+
 shared_ptr<ty::Entity> BulletFactory::makeBullet(double x, double y,BulletType type, Status status ){
 	string texturespot;
 	if(type==BulletType::BasicBullet){
