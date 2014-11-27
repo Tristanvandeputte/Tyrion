@@ -31,6 +31,8 @@ private:
 	RenderWindow window;
 public:
 	Game();
+
+	//enemie creation -> inlezen
 	virtual ~Game();
 	void run();
 };

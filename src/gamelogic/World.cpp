@@ -14,7 +14,7 @@ World::World() {
 
 }
 
-World::World(EntityFactory* p_fac,EntityFactory* b_fac,EntityFactory* e_fac):p_fac(p_fac),b_fac(b_fac),e_fac(e_fac){}
+World::World(EntityFactory* p_fac,EntityFactory* b_fac,EntityFactory* e_fac, Enemyvec all_enemy_creations):p_fac(p_fac),b_fac(b_fac),e_fac(e_fac),all_enemy_creations(all_enemy_creations){}
 
 World::~World() {
 	// TODO Auto-generated destructor stub
@@ -37,37 +37,29 @@ void World::makeBullet(double x,double y,BulletType type,Status status){
 	all_entities.push_back(b_fac->makeBullet(x,y,type, status));
 }
 
-
 void World::movePlayerRight(double amount){
-	double real_amount=amount;
-	if(current_player->getX()+amount+current_player->getRadius()>4){
-		real_amount += (4-current_player->getX()-current_player->getRadius());
+	double real_amount=amount*current_player->getSpeed();
+	if(not (current_player->getX()+0.05+current_player->getRadius()>4.0)){
+		current_player->moveRight(amount);
 	}
-	current_player->moveRight(real_amount);
 }
 
 void World::movePlayerLeft(double amount){
-	double real_amount=amount;
-	if(current_player->getX()-amount-current_player->getRadius()<-4){
-		real_amount += (4+current_player->getX()-current_player->getRadius());
+	if(not (current_player->getX()-0.05-current_player->getRadius()<-4.0)){
+		current_player->moveLeft(amount);
 	}
-	current_player->moveLeft(real_amount);
 }
 
 void World::movePlayerUp(double amount){
-	double real_amount=amount;
-	if(current_player->getY()+amount+current_player->getRadius()>3){
-		real_amount += (3-current_player->getY()-current_player->getRadius());
+	if(not (current_player->getY()+0.05+current_player->getRadius()>3.0)){
+		current_player->moveUp(amount);
 	}
-	current_player->moveUp(real_amount);
 }
 
 void World::movePlayerDown(double amount){
-	double real_amount=amount;
-	if(current_player->getY()-amount-current_player->getRadius()<-3){
-		real_amount += (3+current_player->getY()-current_player->getRadius());
+	if(not (current_player->getY()-0.05-current_player->getRadius()<-3.0)){
+		current_player->moveDown(amount);
 	}
-	current_player->moveDown(real_amount);
 }
 
 void World::checkOutOfBounds(){
@@ -84,15 +76,35 @@ void World::checkOutOfBounds(){
 	}
 }
 
+
+
 void World::update(double deltaT){
+	game_time +=deltaT;
+	std::vector<std::tuple<EnemyType,double,double> > create;
+	std::vector<int> to_be_deleted;
+	
+	int count=0;
+	for(auto& to_be_created : all_enemy_creations){
+		if(game_time>=get<0>(to_be_created)){
+			createNewEnemy(get<1>(to_be_created),get<2>(to_be_created),get<3>(to_be_created));
+		}
+		count++;
+	}
+
+	//random enemy generation
+	for(int i : to_be_deleted){
+		all_enemy_creations.erase(all_enemy_creations.begin()+i);
+	}
+	//deleting created enemies
+	
 	for(EntityPtr e_ptr : all_entities){
 		e_ptr->move(1); // deltaT = ???
 	}
 	checkOutOfBounds();
 }
 
-void createNewEnemy(){
-
+void World::createNewEnemy(EnemyType type,double x,double y){
+	//e_fac
 }
 
 void World::draw(){

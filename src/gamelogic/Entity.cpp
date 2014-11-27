@@ -18,34 +18,22 @@ Entity::~Entity() {
 	// TODO Auto-generated destructor stub
 }
 
-Entity::Entity(double x,double y):x_pos(x),y_pos(y){}
+Entity::Entity(Vector position):position(position){}
 
-Entity::Entity(double x,double y,double speed ,int health, int damage):x_pos(x),y_pos(y),speed(speed),health(health),damage(damage){}
+Entity::Entity(Vector position,double speed ,int health, int damage):position(position),speed(speed),health(health),damage(damage){}
 
 void Entity::draw(){
 }
-
-
-void Entity::moveRight(double amount){
-	cout<<" amount "<<amount<<" speed "<<speed<<endl;
-	x_pos += amount*speed;
-}
-void Entity::moveLeft(double amount){
-	cout<<" amount "<<amount<<" speed "<<speed<<endl;
-	x_pos -= amount*speed;
-}
-void Entity::moveUp(double amount){
-	cout<<" amount "<<amount<<" speed "<<speed<<endl;
-	y_pos += amount*speed;
-}
-void Entity::moveDown(double amount){
-	cout<<" amount "<<amount<<" speed "<<speed<<endl;
-	y_pos -= amount*speed;
+void Entity::move(Vector amount){
+	position = position+amount;
 }
 void Entity::move(double deltaT){}
 
 double Entity::getX(){
 	return x_pos;
+}
+double Entity::getSpeed(){
+	return speed;
 }
 double Entity::getY(){
 	return y_pos;

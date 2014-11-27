@@ -24,8 +24,7 @@ class Entity {
 protected:
 	// elke entity pointer naar EntityFactory(vb schip nr bullet) + zijn parent zodat sfml bullets safely geadd kunnen worden
 	double radius{0};
-	double x_pos;
-	double y_pos;
+	Vector position;
 	double speed{0.01};
 	int health;
 	int damage;
@@ -34,14 +33,12 @@ public:
 	Entity();
 	virtual ~Entity();
 	virtual void draw();
-	Entity(double x,double y);
-	Entity(double x,double y,double speed ,int health, int damage);
-	void moveRight(double amount);
-	void moveLeft(double amount);
-	void moveUp(double amount);
-	void moveDown(double amount);
+	Entity(Vector position);
+	Entity(Vector position,double speed ,int health, int damage);
+	void move(Vector amount);
 	virtual BulletType Shoot();
 	double getX();
+	double getSpeed();
 	double getY();
 	double getRadius();
 	virtual void move(double deltaT); // object-specific behaviour
