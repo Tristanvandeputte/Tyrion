@@ -32,8 +32,6 @@ shared_ptr<Entity> EnemyFactory::makeEnemy(double x, double y, BulletType type,S
 	int enemy_nr = rand() % 1; //# enemies die er zijn
 	switch(enemy_nr){
 	   case 0 :
-		  y_pos = 4.5;
-		  x_pos = (rand() % 6) - 3;
 		  health = 2;
 		  damage = 1;
 		  speed = 0.1;
@@ -54,7 +52,9 @@ shared_ptr<Entity> EnemyFactory::makeEnemy(double x, double y, BulletType type,S
 	   default :
 	      cout << "Invalid enemy" << endl;
 	   }
-	shared_ptr<sfml::Enemy> p_ptr(new sfml::Enemy(x_pos,y_pos,speed , health, damage,enemy_type,bullet_factory,parentptr,window));
+
+	Vector pos(x_pos,y_pos);
+	shared_ptr<sfml::Enemy> p_ptr(new sfml::Enemy(pos,speed , health, damage,enemy_type,bullet_factory,parentptr,window));
 	return p_ptr;
 	
 }

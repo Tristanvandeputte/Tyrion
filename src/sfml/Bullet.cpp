@@ -13,7 +13,7 @@ Bullet::Bullet() {
 
 }
 
-Bullet::Bullet(double x,double y,BulletType type,std::string texture_location,Status status,shared_ptr<RenderWindow> window):ty::Bullet(x,y,type,status),texture_location(texture_location),window(window){
+Bullet::Bullet(Vector position,BulletType type,std::string texture_location,Status status,shared_ptr<RenderWindow> window):ty::Bullet(position,type,status),texture_location(texture_location),window(window){
 	sf::Texture texture;
 	char cwd[1024];
 	getcwd(cwd,sizeof(cwd));
@@ -32,7 +32,7 @@ Bullet::~Bullet() {
 void Bullet::draw(){
 		sf::Sprite sprite;
 		sprite.setTexture(all_textures[texture_location]);
-		sprite.setPosition(sf::Vector2f((x_pos*80.0)+320.0-(sprite.getGlobalBounds().width/4), (-1.0*y_pos*80.0)+240.0-(sprite.getGlobalBounds().height/4)));
+		sprite.setPosition(sf::Vector2f((position.getX()*80.0)+320.0-(sprite.getGlobalBounds().width/4), (-1.0*position.getY()*80.0)+240.0-(sprite.getGlobalBounds().height/4)));
 		sprite.scale(sf::Vector2f(0.7f, 0.7f));
 		window->draw(sprite);
 }

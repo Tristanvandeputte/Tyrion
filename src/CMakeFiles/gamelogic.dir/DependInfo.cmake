@@ -9,6 +9,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.cpp" "/home/uauser/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Entity.cpp.o"
   "/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.cpp" "/home/uauser/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.o"
   "/home/uauser/Desktop/Tyrion/src/gamelogic/Player.cpp" "/home/uauser/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.o"
+  "/home/uauser/Desktop/Tyrion/src/gamelogic/Vector.cpp" "/home/uauser/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Vector.cpp.o"
   "/home/uauser/Desktop/Tyrion/src/gamelogic/World.cpp" "/home/uauser/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")

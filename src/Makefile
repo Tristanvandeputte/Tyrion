@@ -290,6 +290,30 @@ gamelogic/Player.cpp.s:
 	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.s
 .PHONY : gamelogic/Player.cpp.s
 
+gamelogic/Vector.o: gamelogic/Vector.cpp.o
+.PHONY : gamelogic/Vector.o
+
+# target to build an object file
+gamelogic/Vector.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Vector.cpp.o
+.PHONY : gamelogic/Vector.cpp.o
+
+gamelogic/Vector.i: gamelogic/Vector.cpp.i
+.PHONY : gamelogic/Vector.i
+
+# target to preprocess a source file
+gamelogic/Vector.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Vector.cpp.i
+.PHONY : gamelogic/Vector.cpp.i
+
+gamelogic/Vector.s: gamelogic/Vector.cpp.s
+.PHONY : gamelogic/Vector.s
+
+# target to generate assembly for a file
+gamelogic/Vector.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Vector.cpp.s
+.PHONY : gamelogic/Vector.cpp.s
+
 gamelogic/World.o: gamelogic/World.cpp.o
 .PHONY : gamelogic/World.o
 
@@ -583,6 +607,9 @@ help:
 	@echo "... gamelogic/Player.o"
 	@echo "... gamelogic/Player.i"
 	@echo "... gamelogic/Player.s"
+	@echo "... gamelogic/Vector.o"
+	@echo "... gamelogic/Vector.i"
+	@echo "... gamelogic/Vector.s"
 	@echo "... gamelogic/World.o"
 	@echo "... gamelogic/World.i"
 	@echo "... gamelogic/World.s"

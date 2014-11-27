@@ -21,7 +21,7 @@ private:
 	shared_ptr<RenderWindow> window;
 public:
 	Enemy();
-	Enemy(double x,double y,double speed ,int health, int damage,EnemyType type, EntityFactory* bullet_factory, Entity* parent,shared_ptr<RenderWindow> window);
+	Enemy(Vector position,double speed ,int health, int damage,EnemyType type, EntityFactory* bullet_factory, Entity* parent,shared_ptr<RenderWindow> window);
 	virtual ~Enemy();
 };
 

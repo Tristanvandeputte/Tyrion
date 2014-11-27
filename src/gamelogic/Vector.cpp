@@ -7,8 +7,6 @@
 
 #include "Vector.h"
 
-namespace ty {
-
 Vector::Vector() {
 	// TODO Auto-generated constructor stub
 
@@ -17,8 +15,6 @@ Vector::Vector() {
 Vector::~Vector() {
 	// TODO Auto-generated destructor stub
 }
-
-} /* namespace ty */
 
 Vector Vector::operator+(const Vector& one){
 	return Vector(x+one.x,y+one.y);
@@ -33,9 +29,9 @@ Vector Vector::operator*(double factor){
 	return Vector(x*factor,y*factor);
 }
 Vector::Vector(double x,double y):x(x),y(y){}
-double getX(){
+double Vector::getX(){
 	return x;
 }
-double getY(){
+double Vector::getY(){
 	return y;
 }

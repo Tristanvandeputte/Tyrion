@@ -24,19 +24,22 @@ Entity::Entity(Vector position,double speed ,int health, int damage):position(po
 
 void Entity::draw(){
 }
-void Entity::move(Vector amount){
-	position = position+amount;
+void Entity::move(Vector move){
+	movement = movement+move;
 }
 void Entity::move(double deltaT){}
 
 double Entity::getX(){
-	return x_pos;
+	return position.getX();
 }
 double Entity::getSpeed(){
 	return speed;
 }
+void Entity::update(double deltaT){
+	position = position+movement*deltaT*speed;
+}
 double Entity::getY(){
-	return y_pos;
+	return position.getY();
 }
 double Entity::getRadius(){
 	return radius;

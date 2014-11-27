@@ -2,7 +2,7 @@
 set(SRC_LIST sfml/KeyBoard.cpp sfml/Player.cpp sfml/Game.cpp sfml/PlayerFactory.cpp  sfml/StopWatch.cpp sfml/Bullet.cpp sfml/BulletFactory.cpp sfml/Enemy.cpp sfml/EnemyFactory.cpp )
 
 # Set a list of library files
-set(LIB_LIST gamelogic/Player.cpp gamelogic/World.cpp gamelogic/Entity.cpp gamelogic/Bullet.cpp gamelogic/EntityFactory.cpp gamelogic/Enemy.cpp)
+set(LIB_LIST gamelogic/Player.cpp gamelogic/World.cpp gamelogic/Entity.cpp gamelogic/Bullet.cpp gamelogic/EntityFactory.cpp gamelogic/Enemy.cpp gamelogic/Vector.cpp)
 
 # Add a executable that should be built
 add_executable(${EXECUTABLE_NAME} sfml/main.cpp ${SRC_LIST})

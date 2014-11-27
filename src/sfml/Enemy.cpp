@@ -19,7 +19,7 @@ Enemy::~Enemy() {
 	// TODO Auto-generated destructor stub
 }
 
-Enemy::Enemy(double x,double y,double speed ,int health, int damage,EnemyType type, EntityFactory* bullet_factory, Entity* parent,shared_ptr<RenderWindow> window):ty::Enemy(x,y,speed,health,damage,type,bullet_factory,parent),window(window){}
+Enemy::Enemy(Vector position,double speed ,int health, int damage,EnemyType type, EntityFactory* bullet_factory, Entity* parent,shared_ptr<RenderWindow> window):ty::Enemy(position,speed,health,damage,type,bullet_factory,parent),window(window){}
 
 
 } /* namespace sfml */

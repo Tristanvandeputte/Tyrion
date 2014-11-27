@@ -40,25 +40,25 @@ void World::makeBullet(double x,double y,BulletType type,Status status){
 void World::movePlayerRight(double amount){
 	double real_amount=amount*current_player->getSpeed();
 	if(not (current_player->getX()+0.05+current_player->getRadius()>4.0)){
-		current_player->moveRight(amount);
+		current_player->move(amount);
 	}
 }
 
 void World::movePlayerLeft(double amount){
 	if(not (current_player->getX()-0.05-current_player->getRadius()<-4.0)){
-		current_player->moveLeft(amount);
+		current_player->move(amount);
 	}
 }
 
 void World::movePlayerUp(double amount){
 	if(not (current_player->getY()+0.05+current_player->getRadius()>3.0)){
-		current_player->moveUp(amount);
+		current_player->move(amount);
 	}
 }
 
 void World::movePlayerDown(double amount){
 	if(not (current_player->getY()-0.05-current_player->getRadius()<-3.0)){
-		current_player->moveDown(amount);
+		current_player->move(amount);
 	}
 }
 
@@ -98,7 +98,7 @@ void World::update(double deltaT){
 	//deleting created enemies
 	
 	for(EntityPtr e_ptr : all_entities){
-		e_ptr->move(1); // deltaT = ???
+		e_ptr->update(deltaT); // deltaT = ???
 	}
 	checkOutOfBounds();
 }

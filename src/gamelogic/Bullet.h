@@ -26,10 +26,10 @@ protected:
 	Status status;
 public:
 	Bullet();
-	Bullet(double x,double y,BulletType type,Status status);
+	Bullet(Vector position,BulletType type,Status status);
 	virtual ~Bullet();
+	void update(double deltaT);
 	virtual void draw();
-	void move(double deltaT);
 };
 
 } /* namespace ty */

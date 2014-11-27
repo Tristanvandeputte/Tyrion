@@ -8,8 +8,6 @@
 #ifndef VECTOR_H_
 #define VECTOR_H_
 
-#include "Entity.h"
-
 class Vector{
 private:
 	double x;

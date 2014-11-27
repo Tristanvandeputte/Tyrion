@@ -4,12 +4,14 @@
 src/CMakeFiles/game.dir/sfml/Bullet.cpp.o: src/gamelogic/Bullet.h
 src/CMakeFiles/game.dir/sfml/Bullet.cpp.o: src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/Bullet.cpp.o: src/gamelogic/EntityFactory.h
+src/CMakeFiles/game.dir/sfml/Bullet.cpp.o: src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/Bullet.cpp.o: src/sfml/Bullet.cpp
 src/CMakeFiles/game.dir/sfml/Bullet.cpp.o: src/sfml/Bullet.h
 
 src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: src/gamelogic/Bullet.h
 src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: src/gamelogic/EntityFactory.h
+src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: src/sfml/Bullet.h
 src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: src/sfml/BulletFactory.cpp
 src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: src/sfml/BulletFactory.h
@@ -18,6 +20,7 @@ src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: src/gamelogic/Bullet.h
 src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: src/gamelogic/Enemy.h
 src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: src/gamelogic/EntityFactory.h
+src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: src/sfml/Enemy.cpp
 src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: src/sfml/Enemy.h
 
@@ -25,6 +28,7 @@ src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: src/gamelogic/Bullet.h
 src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: src/gamelogic/Enemy.h
 src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: src/gamelogic/EntityFactory.h
+src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: src/sfml/Enemy.h
 src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: src/sfml/EnemyFactory.cpp
 src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: src/sfml/EnemyFactory.h
@@ -34,6 +38,7 @@ src/CMakeFiles/game.dir/sfml/Game.cpp.o: src/gamelogic/Enemy.h
 src/CMakeFiles/game.dir/sfml/Game.cpp.o: src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/Game.cpp.o: src/gamelogic/EntityFactory.h
 src/CMakeFiles/game.dir/sfml/Game.cpp.o: src/gamelogic/Player.h
+src/CMakeFiles/game.dir/sfml/Game.cpp.o: src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/Game.cpp.o: src/gamelogic/World.h
 src/CMakeFiles/game.dir/sfml/Game.cpp.o: src/sfml/BulletFactory.h
 src/CMakeFiles/game.dir/sfml/Game.cpp.o: src/sfml/EnemyFactory.h
@@ -51,6 +56,7 @@ src/CMakeFiles/game.dir/sfml/Player.cpp.o: src/gamelogic/Bullet.h
 src/CMakeFiles/game.dir/sfml/Player.cpp.o: src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/Player.cpp.o: src/gamelogic/EntityFactory.h
 src/CMakeFiles/game.dir/sfml/Player.cpp.o: src/gamelogic/Player.h
+src/CMakeFiles/game.dir/sfml/Player.cpp.o: src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/Player.cpp.o: src/sfml/Player.cpp
 src/CMakeFiles/game.dir/sfml/Player.cpp.o: src/sfml/Player.h
 
@@ -58,6 +64,7 @@ src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: src/gamelogic/Bullet.h
 src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: src/gamelogic/EntityFactory.h
 src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: src/gamelogic/Player.h
+src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: src/sfml/Player.h
 src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: src/sfml/PlayerFactory.cpp
 src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: src/sfml/PlayerFactory.h
@@ -70,6 +77,7 @@ src/CMakeFiles/game.dir/sfml/main.cpp.o: src/gamelogic/Enemy.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: src/gamelogic/EntityFactory.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: src/gamelogic/Player.h
+src/CMakeFiles/game.dir/sfml/main.cpp.o: src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: src/gamelogic/World.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: src/sfml/BulletFactory.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: src/sfml/EnemyFactory.h

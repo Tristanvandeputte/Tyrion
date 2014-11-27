@@ -37,6 +37,8 @@ iostream
 -
 map
 -
+Vector.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
 
 /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
 memory
@@ -62,6 +64,8 @@ memory
 unistd.h
 -
 
+/home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
+
 /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
 Entity.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
@@ -80,6 +84,22 @@ tuple
 unistd.h
 -
 
+/home/uauser/Desktop/Tyrion/src/sfml/Bullet.cpp
+Bullet.h
+/home/uauser/Desktop/Tyrion/src/sfml/Bullet.h
+
+/home/uauser/Desktop/Tyrion/src/sfml/Bullet.h
+../gamelogic/EntityFactory.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+../gamelogic/Bullet.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.h
+SFML/Graphics.hpp
+-
+
+/home/uauser/Desktop/Tyrion/src/sfml/BulletFactory.cpp
+BulletFactory.h
+/home/uauser/Desktop/Tyrion/src/sfml/BulletFactory.h
+
 /home/uauser/Desktop/Tyrion/src/sfml/BulletFactory.h
 ../gamelogic/EntityFactory.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
@@ -91,6 +111,22 @@ memory
 -
 SFML/Graphics.hpp
 -
+
+/home/uauser/Desktop/Tyrion/src/sfml/Enemy.cpp
+Enemy.h
+/home/uauser/Desktop/Tyrion/src/sfml/Enemy.h
+
+/home/uauser/Desktop/Tyrion/src/sfml/Enemy.h
+../gamelogic/Enemy.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
+SFML/Graphics.hpp
+-
+memory
+-
+
+/home/uauser/Desktop/Tyrion/src/sfml/EnemyFactory.cpp
+EnemyFactory.h
+/home/uauser/Desktop/Tyrion/src/sfml/EnemyFactory.h
 
 /home/uauser/Desktop/Tyrion/src/sfml/EnemyFactory.h
 ../gamelogic/EntityFactory.h
@@ -132,6 +168,10 @@ SFML/Graphics.hpp
 SFML/Graphics.hpp
 -
 
+/home/uauser/Desktop/Tyrion/src/sfml/Player.cpp
+Player.h
+/home/uauser/Desktop/Tyrion/src/sfml/Player.h
+
 /home/uauser/Desktop/Tyrion/src/sfml/Player.h
 ../gamelogic/Player.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/Player.h
@@ -147,6 +187,10 @@ memory
 -
 unistd.h
 -
+
+/home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.cpp
+PlayerFactory.h
+/home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.h
 
 /home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.h
 ../gamelogic/EntityFactory.h

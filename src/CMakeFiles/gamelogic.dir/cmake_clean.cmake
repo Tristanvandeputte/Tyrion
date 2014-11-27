@@ -5,6 +5,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/gamelogic.dir/gamelogic/Bullet.cpp.o"
   "CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.o"
   "CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.o"
+  "CMakeFiles/gamelogic.dir/gamelogic/Vector.cpp.o"
   "libgamelogic.pdb"
   "libgamelogic.a"
 )

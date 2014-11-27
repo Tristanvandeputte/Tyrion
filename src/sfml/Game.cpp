@@ -51,19 +51,22 @@ void Game::run(){
 		
 		//INPUT
 		double deltaT=clock.getTime(); //
-		
+		double x_mov=0;
+		double y_mov=0;
 		if(input.checkKeyBoardInput(KeyPressed::Right)){
-			game_world.movePlayerRight(deltaT);
+			x_mov++;
 		}
 		if(input.checkKeyBoardInput(KeyPressed::Left)){
-			game_world.movePlayerLeft(deltaT);
+			x_mov--;
 		}
 		if(input.checkKeyBoardInput(KeyPressed::Up)){
-			game_world.movePlayerUp(deltaT);
+			y_mov++;
 		}
 		if(input.checkKeyBoardInput(KeyPressed::Down)){
-			game_world.movePlayerDown(deltaT);
+			y_mov--;
 		}
+		Vector vec(x_mov,y_mov);
+		game_world.getCurrentPlayer()->move(vec);
 		if(input.checkKeyBoardInput(KeyPressed::Space)){
 			game_world.makeBullet(game_world.getCurrentPlayer()->getX(),game_world.getCurrentPlayer()->getY(),game_world.getCurrentPlayer()->Shoot(),Status::Ally);
 		}

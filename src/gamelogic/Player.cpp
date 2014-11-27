@@ -18,7 +18,7 @@ Player::~Player() {
 	// TODO Auto-generated destructor stub
 }
 
-Player::Player(double x,double y,EntityFactory* bullet_factory,Entity* parent):Entity(x,y),bullet_factory(bullet_factory),parent(parent){
+Player::Player(Vector position,EntityFactory* bullet_factory,Entity* parent):Entity(position),bullet_factory(bullet_factory),parent(parent){
 	b_type = BulletType::BasicBullet;
 	speed = 5.0;
 }

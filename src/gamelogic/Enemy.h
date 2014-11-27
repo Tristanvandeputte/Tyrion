@@ -29,7 +29,7 @@ protected:
 	Entity* parent;
 public:
 	Enemy();
-	Enemy(double x,double y,double speed ,int health, int damage,EnemyType type,EntityFactory* bullet_factory, Entity* parent);
+	Enemy(Vector position,double speed ,int health, int damage,EnemyType type,EntityFactory* bullet_factory, Entity* parent);
 	virtual ~Enemy();
 	virtual void draw();
 };

@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include <map>
+#include "Vector.h"
 
 using namespace std;
 
@@ -25,6 +26,7 @@ protected:
 	// elke entity pointer naar EntityFactory(vb schip nr bullet) + zijn parent zodat sfml bullets safely geadd kunnen worden
 	double radius{0};
 	Vector position;
+	Vector movement;
 	double speed{0.01};
 	int health;
 	int damage;
@@ -35,11 +37,12 @@ public:
 	virtual void draw();
 	Entity(Vector position);
 	Entity(Vector position,double speed ,int health, int damage);
-	void move(Vector amount);
+	void move(Vector move);
 	virtual BulletType Shoot();
 	double getX();
 	double getSpeed();
 	double getY();
+	virtual void update(double deltaT);
 	double getRadius();
 	virtual void move(double deltaT); // object-specific behaviour
 };

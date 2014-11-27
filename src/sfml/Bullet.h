@@ -23,7 +23,7 @@ private:
 	sf::Texture this_tex;
 public:
 	Bullet();
-	Bullet(double x,double y,BulletType type,std::string texture_location,Status status,shared_ptr<RenderWindow> window);
+	Bullet(Vector position,BulletType type,std::string texture_location,Status status,shared_ptr<RenderWindow> window);
 	virtual ~Bullet();
 	void draw();
 };

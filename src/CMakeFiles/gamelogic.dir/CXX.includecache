@@ -37,6 +37,8 @@ iostream
 -
 map
 -
+Vector.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
 
 /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
 memory
@@ -45,6 +47,8 @@ unistd.h
 -
 Entity.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
+
+/home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
 
 /home/uauser/Desktop/Tyrion/src/gamelogic/World.cpp
 World.h

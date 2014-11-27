@@ -27,7 +27,7 @@ protected:
 	EntityFactory* bullet_factory;
 public:
 	Player();
-	Player(double x,double y,EntityFactory* bullet_factory,Entity* parent);
+	Player(Vector position,EntityFactory* bullet_factory,Entity* parent);
 	virtual ~Player();
 	virtual void draw();
 	BulletType Shoot();
