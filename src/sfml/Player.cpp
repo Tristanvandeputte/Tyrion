@@ -27,7 +27,6 @@ Player::Player(Vector position, string texture_location,EntityFactory* bullet_fa
 	//texture.update(image); NODIG VR BEWEGING DENK K
 	texture.setSmooth(true); //smooth
 	all_textures[texture_location]=texture;
-	this_tex=texture;
 }
 
 Player::~Player() {

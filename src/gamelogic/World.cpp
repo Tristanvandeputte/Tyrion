@@ -57,11 +57,12 @@ void World::update(double deltaT){
 	game_time +=deltaT;
 	std::vector<std::tuple<EnemyType,double,double> > create;
 	std::vector<int> to_be_deleted;
-	
+
 	int count=0;
 	for(auto& to_be_created : all_enemy_creations){
 		if(game_time>=get<0>(to_be_created)){
 			createNewEnemy(get<1>(to_be_created),get<2>(to_be_created),get<3>(to_be_created));
+			to_be_deleted.push_back(count);
 		}
 		count++;
 	}
@@ -71,15 +72,18 @@ void World::update(double deltaT){
 		all_enemy_creations.erase(all_enemy_creations.begin()+i);
 	}
 	//deleting created enemies
-	
+
 	for(EntityPtr e_ptr : all_entities){
 		e_ptr->update(deltaT); // deltaT = ???
 	}
 	checkOutOfBounds();
+	collisionCheck();
 }
 
 void World::createNewEnemy(EnemyType type,double x,double y){
-	//e_fac
+	EntityPtr one = e_fac->makeEnemy(x,y,type,b_fac,this);
+	cout<<"made dummy"<<endl;
+	all_entities.push_back(one);
 }
 
 void World::draw(){
@@ -92,32 +96,39 @@ void World::draw(){
 }
 
 void World::playerShoots(){
-	EntityPtr one = current_player->Shoot();
-	all_entities.push_back(one);
+	if(current_player->canShoot()){
+		EntityPtr one = current_player->Shoot();
+		all_entities.push_back(one);
+	}
 }
 
-void collisionCheck(){
-	//	for(EntityPtr e_ptr : all_entities){
-	//		if()
-	//		int x1 = 3;  //collision
-	//		int y1 = 4;
-	//		int x2 = 6;
-	//		int y2 = 8;
-	//		int radius1 = 3;
-	//		int radius2 = 5;
-	//
-	//		//compare the distance to combined radii
-	//		int dx = x2 - x1;
-	//		int dy = y2 - y1;
-	//		int radii = radius1 + radius2;
-	//		if ( ( dx * dx )  + ( dy * dy ) < radii * radii ) 
-	//		{
-	//			cout<<"player has been hit!!"
-	//		}
-	//	}
-}
+void World::collisionCheck(){
+	for(EntityPtr e_ptr : all_entities){
+		if(e_ptr->getStatus() == Status::Ally){
+			for(EntityPtr e_ptr2 : all_entities){
+				if(e_ptr2->getStatus() == Status::Enemy){
+					cout<<"enemy"<<endl;
+					int x1 = e_ptr->getPosition().getX();  //collision
+					int y1 = e_ptr->getPosition().getY();
+					int x2 = e_ptr2->getPosition().getX();
+					int y2 = e_ptr2->getPosition().getY();
+					int radius1 = e_ptr->getRadius();
+					int radius2 = e_ptr2->getRadius();
 
-} /* namespace ty */
+					//compare the distance to combined radii
+					int dx = x2 - x1;
+					int dy = y2 - y1;
+					int radii = radius1 + radius2;
+					if ( ( dx * dx )  + ( dy * dy ) < radii * radii ) {
+						cout<<"player has been hit!!"<<endl;
+					}
+				}
+			}
+		}
+	}
+} 
+
+}/* namespace ty */
 
 
 

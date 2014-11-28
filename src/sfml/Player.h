@@ -24,7 +24,6 @@ namespace sfml {
 class Player: public ty::Player {
 private:
 	static std::map<string,Texture> all_textures; // voor animaties hier n vector v textures v maken
-	Texture this_tex;
 	shared_ptr<RenderWindow> window;
 	string texture_location; //imageedit_1_7403900101.png
 public:

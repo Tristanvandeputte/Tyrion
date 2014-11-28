@@ -30,6 +30,7 @@ namespace ty {
 class Entity {
 	// TODO elke sfml klasse moet pointer naar zijn vector hebben
 protected:
+	Status status;
 	// elke entity pointer naar EntityFactory(vb schip nr bullet) + zijn parent zodat sfml bullets safely geadd kunnen worden
 	double radius{0};
 	Vector position;
@@ -51,6 +52,9 @@ public:
 	double getY();
 	virtual void update(double deltaT);  // object-specific behaviour
 	double getRadius();
+	virtual bool canShoot();
+	Vector getPosition();
+	Status getStatus();
 };
 
 } /* namespace ty */

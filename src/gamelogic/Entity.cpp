@@ -46,7 +46,14 @@ double Entity::getY(){
 double Entity::getRadius(){
 	return radius;
 }
+Vector Entity::getPosition(){
+	return position;
+}
+Status Entity::getStatus(){
+	return status;
+}
 
+bool Entity::canShoot(){}
 shared_ptr<Entity> Entity::Shoot(){}
 
 } /* namespace ty */

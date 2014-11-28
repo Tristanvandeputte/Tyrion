@@ -18,43 +18,30 @@ EnemyFactory::~EnemyFactory() {
 }
 
 
-shared_ptr<Entity> EnemyFactory::makeEnemy(double x, double y, BulletType type,Status status,EntityFactory* bullet_factory,Entity* parent){
+shared_ptr<Entity> EnemyFactory::makeEnemy(double x, double y,EnemyType type, EntityFactory* bullet_factory,Entity* parent){
 	srand (time(NULL));
 	double radius{0};
-	double x_pos;
-	double y_pos;
 	double speed;
 	int health;
 	int damage;
 	Entity* parentptr;
-	EnemyType enemy_type;
 	//choosing a random enemy -> map with enemydata??
 	int enemy_nr = rand() % 1; //# enemies die er zijn
-	switch(enemy_nr){
-	   case 0 :
+	switch(type){
+	   case EnemyType::BasicEnemy :
+		  health = 2;
+		  damage = 1;
+		  speed = 0.5;
+		  parentptr=parent;
+	      break;
+	   case EnemyType::ShootingEnemy :
 		  health = 2;
 		  damage = 1;
 		  speed = 0.1;
-		  enemy_type = EnemyType::BasicEnemy;
-		  parentptr=parent;
-	      break;
-	   case 1 :
-		   cout<<"kekek"<<endl;
-	   case 2 :
-	      cout << "Well done" << endl;
-	      break;
-	   case 3 :
-	      cout << "You passed" << endl;
-	      break;
-	   case 4 :
-	      cout << "Better try again" << endl;
-	      break;
-	   default :
-	      cout << "Invalid enemy" << endl;
 	   }
 
-	Vector pos(x_pos,y_pos);
-	shared_ptr<sfml::Enemy> p_ptr(new sfml::Enemy(pos,speed , health, damage,enemy_type,bullet_factory,parentptr,window));
+	Vector pos(x,y);
+	shared_ptr<sfml::Enemy> p_ptr(new sfml::Enemy(pos,speed,health,damage,type,bullet_factory,parentptr,window));
 	return p_ptr;
 	
 }

@@ -24,6 +24,8 @@ protected:
 	BulletType b_type;
 	Entity* parent;
 	EntityFactory* bullet_factory;
+	double shot_cool_down;
+	double base_shot_cool_down;
 public:
 	Player();
 	Player(Vector position,EntityFactory* bullet_factory,Entity* parent);
@@ -32,6 +34,7 @@ public:
 	shared_ptr<Entity> Shoot();
 	void move(Vector vec);
 	void update(double deltaT);
+	bool canShoot();
 };
 
 } /* namespace ty */

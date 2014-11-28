@@ -24,14 +24,12 @@ protected:
 	//BulletFactory b_fac;
 	BulletType type;
 	Status status;
-	double shot_cool_down;
 public:
 	Bullet();
 	Bullet(Vector position,BulletType type,Status status);
 	virtual ~Bullet();
 	void update(double deltaT) override;
 	virtual void draw();
-	void setShotCooldown(double cd);
 };
 
 } /* namespace ty */

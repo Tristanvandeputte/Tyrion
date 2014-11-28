@@ -22,16 +22,21 @@ namespace ty {
 class Enemy: public Entity {
 protected:
 	//soort animationstate om aan te geven wanneer schieten/opzij moven
-	Status status;
 	EnemyType type;
 	BulletType b_type;
 	EntityFactory* bullet_factory;
 	Entity* parent;
+	double shot_cool_down;
+	double base_shot_cool_down;
 public:
 	Enemy();
 	Enemy(Vector position,double speed ,int health, int damage,EnemyType type,EntityFactory* bullet_factory, Entity* parent);
 	virtual ~Enemy();
 	virtual void draw();
+	shared_ptr<Entity> Shoot();
+	//void move(Vector vec);
+	void update(double deltaT);
+	bool canShoot();
 };
 
 } /* namespace ty */

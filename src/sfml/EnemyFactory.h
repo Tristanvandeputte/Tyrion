@@ -27,7 +27,7 @@ public:
 	EnemyFactory();
 	EnemyFactory(shared_ptr<RenderWindow> window);
 	virtual ~EnemyFactory();
-	shared_ptr<Entity> makeEnemy(double x, double y, BulletType type,Status status,EntityFactory* bullet_factory,Entity* parent);
+	shared_ptr<Entity> makeEnemy(double x, double y,EnemyType type, EntityFactory* bullet_factory,Entity* parent);
 };
 
 #endif /* ENEMYFACTORY_H_ */
