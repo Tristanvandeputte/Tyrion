@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.cpp
+Bullet.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.h
+
 /home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.h
 Entity.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
@@ -39,20 +43,26 @@ map
 -
 Vector.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
+vector
+-
+utility
+-
+tuple
+-
+unistd.h
+-
+memory
+-
 
 /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
 memory
 -
 unistd.h
 -
-Entity.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
-
-/home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
-
-/home/uauser/Desktop/Tyrion/src/gamelogic/World.cpp
 World.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
+
+/home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
 
 /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
 Entity.h

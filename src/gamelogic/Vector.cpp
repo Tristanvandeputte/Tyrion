@@ -35,3 +35,9 @@ double Vector::getX(){
 double Vector::getY(){
 	return y;
 }
+void Vector::setX(double X){
+	x=X;
+}
+void Vector::setY(double Y){
+	y=Y;
+}

@@ -22,8 +22,7 @@ void Game::run(){
 	a.push_back(one);
 	//vb enemies
 	
-	
-	cout<<"pff"<<endl;
+
 	shared_ptr<sf::RenderWindow> window(new sf::RenderWindow(sf::VideoMode(640,480), "Tyrian"));
 	afac=PlayerFactory(window);
 	bfac=BulletFactory(window);
@@ -68,7 +67,7 @@ void Game::run(){
 		Vector vec(x_mov,y_mov);
 		game_world.getCurrentPlayer()->move(vec);
 		if(input.checkKeyBoardInput(KeyPressed::Space)){
-			game_world.makeBullet(game_world.getCurrentPlayer()->getX(),game_world.getCurrentPlayer()->getY(),game_world.getCurrentPlayer()->Shoot(),Status::Ally);
+			game_world.playerShoots();
 		}
 		game_world.update(deltaT);
 		//game_world.getCurrentPlayer()->move();

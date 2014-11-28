@@ -37,31 +37,6 @@ void World::makeBullet(double x,double y,BulletType type,Status status){
 	all_entities.push_back(b_fac->makeBullet(x,y,type, status));
 }
 
-void World::movePlayerRight(double amount){
-	double real_amount=amount*current_player->getSpeed();
-	if(not (current_player->getX()+0.05+current_player->getRadius()>4.0)){
-		current_player->move(amount);
-	}
-}
-
-void World::movePlayerLeft(double amount){
-	if(not (current_player->getX()-0.05-current_player->getRadius()<-4.0)){
-		current_player->move(amount);
-	}
-}
-
-void World::movePlayerUp(double amount){
-	if(not (current_player->getY()+0.05+current_player->getRadius()>3.0)){
-		current_player->move(amount);
-	}
-}
-
-void World::movePlayerDown(double amount){
-	if(not (current_player->getY()-0.05-current_player->getRadius()<-3.0)){
-		current_player->move(amount);
-	}
-}
-
 void World::checkOutOfBounds(){
 	std::vector<int> to_be_deleted;
 	int count = 0;
@@ -114,6 +89,11 @@ void World::draw(){
 		}
 	}
 	current_player->draw();
+}
+
+void World::playerShoots(){
+	EntityPtr one = current_player->Shoot();
+	all_entities.push_back(one);
 }
 
 void collisionCheck(){

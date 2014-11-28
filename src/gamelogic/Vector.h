@@ -23,6 +23,8 @@ public:
 	virtual ~Vector();
 	double getX();
 	double getY();
+	void setX(double X);
+	void setY(double Y);
 };
 
 #endif

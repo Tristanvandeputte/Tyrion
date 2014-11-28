@@ -27,7 +27,6 @@ void Entity::draw(){
 void Entity::move(Vector move){
 	movement = movement+move;
 }
-void Entity::move(double deltaT){}
 
 double Entity::getX(){
 	return position.getX();
@@ -36,7 +35,10 @@ double Entity::getSpeed(){
 	return speed;
 }
 void Entity::update(double deltaT){
-	position = position+movement*deltaT*speed;
+	position = position+(movement*deltaT*speed);
+	Vector nullmove(0,0);
+	movement = nullmove;
+	
 }
 double Entity::getY(){
 	return position.getY();
@@ -45,7 +47,7 @@ double Entity::getRadius(){
 	return radius;
 }
 
- BulletType Entity::Shoot(){}
+shared_ptr<Entity> Entity::Shoot(){}
 
 } /* namespace ty */
 

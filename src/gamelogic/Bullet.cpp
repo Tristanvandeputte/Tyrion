@@ -21,17 +21,19 @@ Bullet::~Bullet() {
 void Bullet::draw(){}
 
 Bullet::Bullet(Vector position,BulletType type,Status status):Entity(position),type(type),status(status){
-	speed = 0.5;
+	speed = 7;
 }
 void Bullet::update(double deltaT){
 	if(status == Status::Enemy){
-		Vector mov(0,-1);
+		Vector mov(0,-1*speed*deltaT);
 		move(mov);
 	}
 	else{
-		Vector mov(0,1);
+		Vector mov(0,1*speed*deltaT);
 		move(mov);
 	}
+	position=position+(movement);
+	movement = Vector(0,0);
 }
 
 } /* namespace ty */

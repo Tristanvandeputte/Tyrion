@@ -20,18 +20,17 @@
 #include <tuple>
 #include <unistd.h>
 
-enum class BulletType;
-enum class Status;
-
+enum class EnemyType;
 using EntityPtr = shared_ptr<ty::Entity>;
 using Enemyvec = std::vector<std::tuple<double,EnemyType,double,double> >;
 										//time, enemytype, x, y
+
 
 namespace ty {
 
 class World: public Entity {
 private:
-	std::vector<EntityPtr> all_entities;
+	vector<EntityPtr> all_entities; //world specific
 	//all the Entiies is this game world
 	EntityFactory* p_fac;;
 	//Player Factory
@@ -62,6 +61,7 @@ public:
 	void collisionCheck();
 	void createNewEnemy(EnemyType type,double x,double y);
 	void draw();
+	void playerShoots();
 };
 
 } /* namespace ty */

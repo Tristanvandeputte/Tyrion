@@ -14,7 +14,6 @@
 #include <iostream>
 #include <math.h>
 #include <memory>
-#include <unistd.h>
 
 using namespace std;
 namespace ty {
@@ -30,7 +29,9 @@ public:
 	Player(Vector position,EntityFactory* bullet_factory,Entity* parent);
 	virtual ~Player();
 	virtual void draw();
-	BulletType Shoot();
+	shared_ptr<Entity> Shoot();
+	void move(Vector vec);
+	void update(double deltaT);
 };
 
 } /* namespace ty */

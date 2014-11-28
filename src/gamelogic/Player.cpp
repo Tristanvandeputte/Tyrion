@@ -23,12 +23,29 @@ Player::Player(Vector position,EntityFactory* bullet_factory,Entity* parent):Ent
 	speed = 5.0;
 }
 
-void Player::draw(){
-	cout<<"vvvv"<<endl;
+void Player::draw(){}
+
+
+void Player::update(double deltaT){
+	position = position+(movement*deltaT*speed);
+	if(position.getX()+radius+0.05>4.0){
+			position.setX(4.0-radius-0.05);
+	}
+	if(position.getX()-radius-0.05<-4.0){
+		position.setX(-4+radius+0.05);
+	}
+	if(position.getY()-radius-0.05<-3.0){
+		position.setY(-3+radius+0.05);
+	}
+	if(position.getY()+radius+0.05>3.0){
+		position.setY(3+-radius-0.05);
+	}
+	Vector nullmove(0,0);
+	movement = nullmove;
 }
 
-BulletType Player::Shoot(){
-	return b_type;
+shared_ptr<Entity> Player::Shoot(){
+	return bullet_factory->makeBullet(position.getX(),position.getY(),b_type,Status::Ally);
 }
 
 } /* namespace ty */

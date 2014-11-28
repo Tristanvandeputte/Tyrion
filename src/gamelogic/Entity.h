@@ -11,12 +11,19 @@
 #include <iostream>
 #include <map>
 #include "Vector.h"
+#include <vector>
+#include <utility>
+#include <tuple>
+#include <unistd.h>
+#include <memory>
 
 using namespace std;
 
 enum class BulletType;
 enum class Status;
 class EntityFactory;
+
+
 
 namespace ty {
 
@@ -38,13 +45,12 @@ public:
 	Entity(Vector position);
 	Entity(Vector position,double speed ,int health, int damage);
 	void move(Vector move);
-	virtual BulletType Shoot();
+	virtual shared_ptr<Entity> Shoot();
 	double getX();
 	double getSpeed();
 	double getY();
-	virtual void update(double deltaT);
+	virtual void update(double deltaT);  // object-specific behaviour
 	double getRadius();
-	virtual void move(double deltaT); // object-specific behaviour
 };
 
 } /* namespace ty */
