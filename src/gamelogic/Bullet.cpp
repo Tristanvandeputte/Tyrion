@@ -36,8 +36,12 @@ void Bullet::update(double deltaT){
 	movement = Vector(0,0);
 }
 
-void collide(shared_ptr<Entity> with){
-	with->
+void Bullet::collide(shared_ptr<Entity> with){
+	int damage=0;
+	if(type==BulletType::BasicBullet){
+		damage=1;
+	}
+	with->decreaseHealth(damage);
 }
 
 } /* namespace ty */

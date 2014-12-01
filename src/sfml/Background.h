@@ -22,11 +22,13 @@ private:
 	shared_ptr<RenderWindow> window;
 	sf::Texture this_tex;
 	sf::Sprite sprite;
+	vector<string> texture_spots;
 public:
 	Background();
 	Background(vector<string> texture_spots);
-	virtual ~Bullet();
+	virtual ~Background();
 	void draw();
+	void update(double deltaT) override;
 };
 
 } /* namespace sfml */

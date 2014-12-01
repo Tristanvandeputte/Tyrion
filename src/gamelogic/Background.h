@@ -24,6 +24,7 @@ public:
 	Background(vector<string> texture_positions);
 	virtual ~Background();
 	virtual void draw();
+	virtual void update(double deltaT);
 };
 
 } /* namespace ty */

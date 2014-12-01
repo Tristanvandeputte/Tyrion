@@ -5,12 +5,12 @@
  *      Author: uauser
  */
 
-#ifndef BULLETFACTORY_H_
-#define BULLETFACTORY_H_
+#ifndef BACKGROUNDFACTORY_H_
+#define BACKGROUNDFACTORY_H_
 
 #include "../gamelogic/EntityFactory.h"
 #include "../gamelogic/Entity.h"
-#include "Bullet.h"
+#include "Background.h"
 #include <memory>
 #include <SFML/Graphics.hpp>
 using namespace std;
@@ -20,15 +20,15 @@ enum class Status;
 namespace sfml{
 	class Bullet;
 }
-class BulletFactory : public EntityFactory {
+class BackgroundFactory : public EntityFactory {
 private: 
 	shared_ptr<RenderWindow> window;
 	vector<shared_ptr<sfml::Bullet> > created_bullets;
 public:
-	BulletFactory();
-	BulletFactory(shared_ptr<RenderWindow> window);
-	virtual ~BulletFactory();
-	shared_ptr<ty::Entity> makeBullet(double x, double y,BulletType type,Status status);
+	BackgroundFactory();
+	BackgroundFactory(shared_ptr<RenderWindow> window);
+	virtual ~BackgroundFactory();
+	shared_ptr<ty::Entity> makeBackground(vector<string> texture_spots);
 };
 
-#endif /* BULLETFACTORY_H_ */
+#endif /* BACKGROUNDFACTORY_H_ */

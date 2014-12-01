@@ -58,7 +58,7 @@ shared_ptr<Entity> Entity::Shoot(){}
 
 void Entity::collide(shared_ptr<Entity> with){}
 
-void decreaseHealth(){
+void Entity::decreaseHealth(int damage){
 	health -= damage;
 }
 
