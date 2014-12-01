@@ -30,6 +30,7 @@ public:
 	virtual ~Bullet();
 	void update(double deltaT) override;
 	virtual void draw();
+	void collide(shared_ptr<Entity> with);
 };
 
 } /* namespace ty */

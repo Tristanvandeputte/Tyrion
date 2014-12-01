@@ -55,6 +55,8 @@ public:
 	virtual bool canShoot();
 	Vector getPosition();
 	Status getStatus();
+	void decreaseHealth(int damage);
+	virtual void collide(shared_ptr<Entity> with);
 };
 
 } /* namespace ty */

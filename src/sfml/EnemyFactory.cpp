@@ -41,7 +41,7 @@ shared_ptr<Entity> EnemyFactory::makeEnemy(double x, double y,EnemyType type, En
 	   }
 
 	Vector pos(x,y);
-	shared_ptr<sfml::Enemy> p_ptr(new sfml::Enemy(pos,speed,health,damage,type,bullet_factory,parentptr,window));
+	shared_ptr<sfml::Enemy> p_ptr = make_shared<sfml::Enemy>(pos,speed,health,damage,type,bullet_factory,parentptr,window);
 	return p_ptr;
 	
 }

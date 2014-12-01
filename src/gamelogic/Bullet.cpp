@@ -36,5 +36,9 @@ void Bullet::update(double deltaT){
 	movement = Vector(0,0);
 }
 
+void collide(shared_ptr<Entity> with){
+	with->
+}
+
 } /* namespace ty */
 

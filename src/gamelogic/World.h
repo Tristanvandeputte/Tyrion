@@ -60,7 +60,7 @@ public:
 	void checkOutOfBounds();
 	void update(double deltaT); //collision checks etc, gamelogic
 	void collisionCheck();
-	void setBackground(string texture_location);
+	void setBackground(vector<string> texture_locations);
 	void createNewEnemy(EnemyType type,double x,double y);
 	void draw();
 	void playerShoots();

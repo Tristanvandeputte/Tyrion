@@ -9,6 +9,7 @@
 #define ENTITYFACTORY_H_
 
 #include <memory>
+#include <vector>
 #include <unistd.h>
 #include "World.h"
 
@@ -28,7 +29,7 @@ public:
 	virtual shared_ptr<ty::Entity> makePlayer(double x, double y, std::string texturespot,EntityFactory* bullet_factory,Entity* parent);
 	virtual shared_ptr<ty::Entity> makeBullet(double x, double y, BulletType type,Status status);
 	virtual shared_ptr<ty::Entity> makeEnemy(double x, double y,EnemyType type, EntityFactory* bullet_factory,Entity* parent);
-	virtual shared_ptr<ty::Entity> makeBackground(std::string texturespot);
+	virtual shared_ptr<ty::Entity> makeBackground(std::vector<std::string> texture_locations);
 };
 
 #endif /* ENTITYFACTORY_H_ */

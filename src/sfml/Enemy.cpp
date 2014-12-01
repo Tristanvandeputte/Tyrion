@@ -20,6 +20,7 @@ Enemy::~Enemy() {
 }
 
 Enemy::Enemy(Vector position,double speed ,int health, int damage,EnemyType type, EntityFactory* bullet_factory, Entity* parent,shared_ptr<RenderWindow> window):ty::Enemy(position,speed,health,damage,type,bullet_factory,parent),window(window){
+	status = Status::Enemy;
 	sf::Texture texture;
 	char cwd[1024];
 	getcwd(cwd,sizeof(cwd));
@@ -38,7 +39,7 @@ void Enemy::draw(){
 	sf::Sprite sprite;
 	sprite.setTexture(all_textures[texture_location]);
 	sprite.setPosition(sf::Vector2f((position.getX()*80.0)+320.0-(sprite.getGlobalBounds().width/4), (-1.0*position.getY()*80.0)+240.0-(sprite.getGlobalBounds().height/4)));
-	sprite.scale(sf::Vector2f(0.7f, 0.7f));
+	sprite.scale(sf::Vector2f(1.8f, 1.8f));
 	if(radius==0){
 		radius = std::max((sprite.getGlobalBounds().width/2)/80,(sprite.getGlobalBounds().height/2)/80);
 	}

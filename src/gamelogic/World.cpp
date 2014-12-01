@@ -52,8 +52,8 @@ void World::checkOutOfBounds(){
 }
 
 
-void World::setBackground(string texture_location){
-	background = ba_fac->makeBackground(texture_location);
+void World::setBackground(vector<string> texture_locations){
+	background = ba_fac->makeBackground(texture_locations);
 }
 
 void World::update(double deltaT){
@@ -75,7 +75,8 @@ void World::update(double deltaT){
 
 	//random enemy generation
 	for(int i : to_be_deleted){
-		all_enemy_creations.erase(all_enemy_creations.begin()+i);
+		all_enemy_creations.erase(all_enemy_creations.begin());
+		//enemies zitten geordend in lijst
 	}
 	//deleting created enemies
 
@@ -111,21 +112,32 @@ void World::playerShoots(){
 
 void World::collisionCheck(){
 	for(EntityPtr e_ptr : all_entities){
+		int count=0;
 		if(e_ptr->getStatus() == Status::Ally){
+			//cout<<count<<endl;
+
+			//cout<<"ally.x: "<<e_ptr->getPosition().getX()<<endl;
+			//cout<<"ally.y: "<<e_ptr->getPosition().getY()<<endl;
+			count++;
 			for(EntityPtr e_ptr2 : all_entities){
 				if(e_ptr2->getStatus() == Status::Enemy){
-					cout<<"enemy"<<endl;
-					int x1 = e_ptr->getPosition().getX();  //collision
-					int y1 = e_ptr->getPosition().getY();
-					int x2 = e_ptr2->getPosition().getX();
-					int y2 = e_ptr2->getPosition().getY();
-					int radius1 = e_ptr->getRadius();
-					int radius2 = e_ptr2->getRadius();
+					
+					double x1 = e_ptr->getPosition().getX();  //collision
+					double y1 = e_ptr->getPosition().getY();
+					double x2 = e_ptr2->getPosition().getX();
+					double y2 = e_ptr2->getPosition().getY();
+					//cout<<"enemy.x: "<<x2<<endl;
+					//cout<<"enemy.y: "<<y2<<endl;
+					
+					double radius1 = e_ptr->getRadius();
+					double radius2 = e_ptr2->getRadius();
 
 					//compare the distance to combined radii
-					int dx = x2 - x1;
-					int dy = y2 - y1;
-					int radii = radius1 + radius2;
+					double dx = x2 - x1;
+					double dy = y2 - y1;
+					double radii = radius1 + radius2;
+					//cout<<( dx * dx )  + ( dy * dy )<<endl;
+					//cout<<radii*radii<<endl;
 					if ( ( dx * dx )  + ( dy * dy ) < radii * radii ) {
 						cout<<"player has been hit!!"<<endl;
 					}

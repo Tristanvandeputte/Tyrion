@@ -56,5 +56,11 @@ Status Entity::getStatus(){
 bool Entity::canShoot(){}
 shared_ptr<Entity> Entity::Shoot(){}
 
+void Entity::collide(shared_ptr<Entity> with){}
+
+void decreaseHealth(){
+	health -= damage;
+}
+
 } /* namespace ty */
 

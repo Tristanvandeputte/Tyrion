@@ -22,20 +22,19 @@ void Game::run(){
 	a.push_back(one);
 	//vb enemies
 	
-
 	shared_ptr<sf::RenderWindow> window(new sf::RenderWindow(sf::VideoMode(640,480), "Tyrian"));
 	afac=PlayerFactory(window);
 	bfac=BulletFactory(window);
 	cfac=EnemyFactory(window);
 	bafac=BackgroundFactory(window);
-	game_world.setBackground("Background1.png");
 	game_world = World( &afac, &bfac, &cfac,a,&bafac);
+	vector<string> BG({"shapesx.png"}); //Background1.png
+	game_world.setBackground(BG);
 	game_world.startPlayer();
 	window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 , 0) );
 	//window->setMouseCursorVisible(false);
 	window->setFramerateLimit(60);
 
-	cout<<"pff"<<endl;
 	while (window->isOpen())
 	{
 		sf::Event event;
