@@ -94,27 +94,15 @@ tuple
 unistd.h
 -
 
-/home/uauser/Desktop/Tyrion/src/sfml/Background.h
+/home/uauser/Desktop/Tyrion/src/sfml/Bullet.cpp
+Bullet.h
+/home/uauser/Desktop/Tyrion/src/sfml/Bullet.h
+
+/home/uauser/Desktop/Tyrion/src/sfml/Bullet.h
 ../gamelogic/EntityFactory.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
-../gamelogic/Background.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Background.h
-SFML/Graphics.hpp
--
-
-/home/uauser/Desktop/Tyrion/src/sfml/BackgroundFactory.cpp
-BackgroundFactory.h
-/home/uauser/Desktop/Tyrion/src/sfml/BackgroundFactory.h
-
-/home/uauser/Desktop/Tyrion/src/sfml/BackgroundFactory.h
-../gamelogic/EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
-../gamelogic/Entity.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
-Background.h
-/home/uauser/Desktop/Tyrion/src/sfml/Background.h
-memory
--
+../gamelogic/Bullet.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.h
 SFML/Graphics.hpp
 -
 

@@ -35,7 +35,7 @@ Background::~Background() {
 	// TODO Auto-generated destructor stub
 }
 void Background::draw(){
-		window->draw(sprite);
+		//window->draw(sprite);
 }
 
 void Background::update(double deltaT){}

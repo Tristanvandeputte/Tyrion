@@ -42,6 +42,7 @@ void Bullet::collide(shared_ptr<Entity> with){
 		damage=1;
 	}
 	with->decreaseHealth(damage);
+	cout<<"???"<<endl;
 }
 
 } /* namespace ty */

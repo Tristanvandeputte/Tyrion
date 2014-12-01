@@ -138,8 +138,10 @@ void World::collisionCheck(){
 					double radii = radius1 + radius2;
 					//cout<<( dx * dx )  + ( dy * dy )<<endl;
 					//cout<<radii*radii<<endl;
-					if ( ( dx * dx )  + ( dy * dy ) < radii * radii ) {
+					if ( (( dx * dx )  + ( dy * dy )) < (radii * radii) ) {
 						cout<<"player has been hit!!"<<endl;
+						e_ptr->collide(e_ptr2);
+						e_ptr2->collide(e_ptr);
 					}
 				}
 			}
