@@ -27,10 +27,12 @@ void Game::run(){
 	afac=PlayerFactory(window);
 	bfac=BulletFactory(window);
 	cfac=EnemyFactory(window);
-	game_world = World( &afac, &bfac, &cfac,a);
+	bafac=BackgroundFactory(window);
+	game_world.setBackground("Background1.png");
+	game_world = World( &afac, &bfac, &cfac,a,&bafac);
 	game_world.startPlayer();
 	window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 , 0) );
-	window->setMouseCursorVisible(false);
+	//window->setMouseCursorVisible(false);
 	window->setFramerateLimit(60);
 
 	cout<<"pff"<<endl;

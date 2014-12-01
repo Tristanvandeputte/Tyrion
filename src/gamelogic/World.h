@@ -12,6 +12,7 @@
 #define WORLD_H_
 
 #include "Entity.h"
+#include "Background.h"
 #include "Enemy.h"
 #include "EntityFactory.h"
 #include "Bullet.h"
@@ -30,6 +31,8 @@ namespace ty {
 
 class World: public Entity {
 private:
+	EntityPtr background;
+	//A pointer to the background entity
 	vector<EntityPtr> all_entities; //world specific
 	//all the Entiies is this game world
 	EntityFactory* p_fac;;
@@ -38,6 +41,8 @@ private:
 	//Bullet Factory
 	EntityFactory* e_fac;
 	//Entity Factory
+	EntityFactory* ba_fac;
+	//Background Factory
 	EntityPtr current_player;
 	//A pointer to the current player
 	Enemyvec all_enemy_creations;
@@ -45,20 +50,17 @@ private:
 	double game_time{0};
 public:
 	World();
-	World(EntityFactory* p_fac,EntityFactory* b_fac,EntityFactory* e_fac, Enemyvec all_enemy_creations);
+	World(EntityFactory* p_fac,EntityFactory* b_fac,EntityFactory* e_fac, Enemyvec all_enemy_creations,EntityFactory* ba_fac);
 	virtual ~World();
 	std::vector<EntityPtr> getEntities();
 	void startPlayer();
 	EntityPtr getCurrentPlayer();
 	void makeBullet(double x,double y,BulletType type,Status status);
-	void movePlayerRight(double amount);
-	void movePlayerLeft(double amount);
-	void movePlayerUp(double amount);
-	void movePlayerDown(double amount);
 	void moveEntity(double amount);
 	void checkOutOfBounds();
 	void update(double deltaT); //collision checks etc, gamelogic
 	void collisionCheck();
+	void setBackground(string texture_location);
 	void createNewEnemy(EnemyType type,double x,double y);
 	void draw();
 	void playerShoots();

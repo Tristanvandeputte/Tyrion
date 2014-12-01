@@ -10,7 +10,7 @@
 #include "PlayerFactory.h"
 #include "BulletFactory.h"
 #include "EnemyFactory.h"
-#include "../gamelogic/World.h"
+#include "BackgroundFactory.h"
 #include "KeyBoard.h"
 #include <SFML/Graphics.hpp>
 
@@ -25,6 +25,7 @@ private:
 	PlayerFactory afac;
 	BulletFactory bfac;
 	EnemyFactory cfac;
+	BackgroundFactory bafac;
 	ty::World game_world;
 	StopWatch clock;
 	KeyBoard input;

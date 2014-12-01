@@ -14,7 +14,7 @@ World::World() {
 
 }
 
-World::World(EntityFactory* p_fac,EntityFactory* b_fac,EntityFactory* e_fac, Enemyvec all_enemy_creations):p_fac(p_fac),b_fac(b_fac),e_fac(e_fac),all_enemy_creations(all_enemy_creations){}
+World::World(EntityFactory* p_fac,EntityFactory* b_fac,EntityFactory* e_fac, Enemyvec all_enemy_creations,EntityFactory* ba_fac):p_fac(p_fac),b_fac(b_fac),e_fac(e_fac),all_enemy_creations(all_enemy_creations),ba_fac(ba_fac){}
 
 World::~World() {
 	// TODO Auto-generated destructor stub
@@ -52,11 +52,17 @@ void World::checkOutOfBounds(){
 }
 
 
+void World::setBackground(string texture_location){
+	background = ba_fac->makeBackground(texture_location);
+}
 
 void World::update(double deltaT){
 	game_time +=deltaT;
+	
 	std::vector<std::tuple<EnemyType,double,double> > create;
 	std::vector<int> to_be_deleted;
+	
+	background->update(deltaT);
 
 	int count=0;
 	for(auto& to_be_created : all_enemy_creations){
@@ -87,6 +93,7 @@ void World::createNewEnemy(EnemyType type,double x,double y){
 }
 
 void World::draw(){
+	background->draw();
 	for(EntityPtr e_ptr : all_entities){
 		if(e_ptr != current_player){
 			e_ptr->draw();

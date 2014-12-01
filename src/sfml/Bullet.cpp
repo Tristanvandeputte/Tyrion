@@ -33,7 +33,7 @@ void Bullet::draw(){
 		sf::Sprite sprite;
 		sprite.setTexture(all_textures[texture_location]);
 		sprite.setPosition(sf::Vector2f((position.getX()*80.0)+320.0-(sprite.getGlobalBounds().width/4), (-1.0*position.getY()*80.0)+240.0-(sprite.getGlobalBounds().height/4)));
-		sprite.scale(sf::Vector2f(0.7f, 0.7f));
+		sprite.scale(sf::Vector2f(2.0f, 2.0f));
 		window->draw(sprite);
 }
 

@@ -24,7 +24,7 @@ Enemy::Enemy(Vector position,double speed ,int health, int damage,EnemyType type
 	char cwd[1024];
 	getcwd(cwd,sizeof(cwd));
 	string curdir(cwd);
-	if (!texture.loadFromFile(curdir+"/Remastered Tyrian Graphics/imageedit_1_7403900101.png"/*+texture_location*/)){ //sla het pad op in de objecten, niet de textures.
+	if (!texture.loadFromFile(curdir+"/Remastered Tyrian Graphics/MovingEnemy.png"/*+texture_location*/)){ //sla het pad op in de objecten, niet de textures.
 		cout<<"ERROR IS KILL"<<endl;
 	}
 	//cout<<curdir+"/Remastered Tyrian Graphics/"+texture_location<<endl;

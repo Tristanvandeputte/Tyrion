@@ -11,12 +11,14 @@ using namespace std;
 
 // TODO time en apeed beide use bij collision
 
+// de textures van de verschillende sfml klassen
 std::map<string,Texture> sfml::Player::all_textures = {};
 std::map<string,Texture> sfml::Bullet::all_textures = {};
 std::map<string,Texture> sfml::Enemy::all_textures = {};
+std::map<string,Texture> sfml::Background::all_textures = {};
+
 
 int main(){
-	cout<<"kekekekek"<<endl;
 	Game this_game;
 	this_game.run();
 	

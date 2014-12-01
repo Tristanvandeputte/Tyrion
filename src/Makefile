@@ -170,6 +170,30 @@ gamelogic/fast:
 	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/build
 .PHONY : gamelogic/fast
 
+gamelogic/Background.o: gamelogic/Background.cpp.o
+.PHONY : gamelogic/Background.o
+
+# target to build an object file
+gamelogic/Background.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o
+.PHONY : gamelogic/Background.cpp.o
+
+gamelogic/Background.i: gamelogic/Background.cpp.i
+.PHONY : gamelogic/Background.i
+
+# target to preprocess a source file
+gamelogic/Background.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.i
+.PHONY : gamelogic/Background.cpp.i
+
+gamelogic/Background.s: gamelogic/Background.cpp.s
+.PHONY : gamelogic/Background.s
+
+# target to generate assembly for a file
+gamelogic/Background.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.s
+.PHONY : gamelogic/Background.cpp.s
+
 gamelogic/Bullet.o: gamelogic/Bullet.cpp.o
 .PHONY : gamelogic/Bullet.o
 
@@ -337,6 +361,54 @@ gamelogic/World.s: gamelogic/World.cpp.s
 gamelogic/World.cpp.s:
 	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.s
 .PHONY : gamelogic/World.cpp.s
+
+sfml/Background.o: sfml/Background.cpp.o
+.PHONY : sfml/Background.o
+
+# target to build an object file
+sfml/Background.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Background.cpp.o
+.PHONY : sfml/Background.cpp.o
+
+sfml/Background.i: sfml/Background.cpp.i
+.PHONY : sfml/Background.i
+
+# target to preprocess a source file
+sfml/Background.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Background.cpp.i
+.PHONY : sfml/Background.cpp.i
+
+sfml/Background.s: sfml/Background.cpp.s
+.PHONY : sfml/Background.s
+
+# target to generate assembly for a file
+sfml/Background.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Background.cpp.s
+.PHONY : sfml/Background.cpp.s
+
+sfml/BackgroundFactory.o: sfml/BackgroundFactory.cpp.o
+.PHONY : sfml/BackgroundFactory.o
+
+# target to build an object file
+sfml/BackgroundFactory.cpp.o:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o
+.PHONY : sfml/BackgroundFactory.cpp.o
+
+sfml/BackgroundFactory.i: sfml/BackgroundFactory.cpp.i
+.PHONY : sfml/BackgroundFactory.i
+
+# target to preprocess a source file
+sfml/BackgroundFactory.cpp.i:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.i
+.PHONY : sfml/BackgroundFactory.cpp.i
+
+sfml/BackgroundFactory.s: sfml/BackgroundFactory.cpp.s
+.PHONY : sfml/BackgroundFactory.s
+
+# target to generate assembly for a file
+sfml/BackgroundFactory.cpp.s:
+	cd /home/uauser/Desktop/Tyrion && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.s
+.PHONY : sfml/BackgroundFactory.cpp.s
 
 sfml/Bullet.o: sfml/Bullet.cpp.o
 .PHONY : sfml/Bullet.o
@@ -592,6 +664,9 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... gamelogic/Background.o"
+	@echo "... gamelogic/Background.i"
+	@echo "... gamelogic/Background.s"
 	@echo "... gamelogic/Bullet.o"
 	@echo "... gamelogic/Bullet.i"
 	@echo "... gamelogic/Bullet.s"
@@ -613,6 +688,12 @@ help:
 	@echo "... gamelogic/World.o"
 	@echo "... gamelogic/World.i"
 	@echo "... gamelogic/World.s"
+	@echo "... sfml/Background.o"
+	@echo "... sfml/Background.i"
+	@echo "... sfml/Background.s"
+	@echo "... sfml/BackgroundFactory.o"
+	@echo "... sfml/BackgroundFactory.i"
+	@echo "... sfml/BackgroundFactory.s"
 	@echo "... sfml/Bullet.o"
 	@echo "... sfml/Bullet.i"
 	@echo "... sfml/Bullet.s"

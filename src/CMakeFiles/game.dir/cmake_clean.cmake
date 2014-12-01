@@ -9,6 +9,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/game.dir/sfml/BulletFactory.cpp.o"
   "CMakeFiles/game.dir/sfml/Enemy.cpp.o"
   "CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o"
+  "CMakeFiles/game.dir/sfml/Background.cpp.o"
+  "CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o"
   "game.pdb"
   "game"
 )

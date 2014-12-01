@@ -24,7 +24,7 @@ BulletFactory::BulletFactory(shared_ptr<RenderWindow> window):window(window){
 shared_ptr<ty::Entity> BulletFactory::makeBullet(double x, double y,BulletType type, Status status ){
 	string texturespot;
 	if(type==BulletType::BasicBullet){
-		texturespot="BasicEnemy1.png";
+		texturespot="SmallBullet.png";
 	}
 	Vector pos(x,y);
 	shared_ptr<sfml::Bullet> p_ptr(new sfml::Bullet(pos,type,texturespot,status,window));

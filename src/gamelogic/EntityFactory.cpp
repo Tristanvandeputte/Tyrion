@@ -19,3 +19,4 @@ EntityFactory::~EntityFactory() {
 shared_ptr<ty::Entity> EntityFactory::makePlayer(double x, double y, std::string texturespot,EntityFactory* bullet_factory,Entity* parent){}
 shared_ptr<ty::Entity> EntityFactory::makeBullet(double x, double y, BulletType type,Status status){}
 shared_ptr<ty::Entity> EntityFactory::makeEnemy(double x, double y,EnemyType type, EntityFactory* bullet_factory,Entity* parent){}
+shared_ptr<ty::Entity> EntityFactory::makeBackground(std::string texturespot){}
