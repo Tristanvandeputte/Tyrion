@@ -27,11 +27,11 @@ void Game::run(){
 	bfac=BulletFactory(window);
 	cfac=EnemyFactory(window);
 	bafac=BackgroundFactory(window);
+	window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 , 0) );
 	game_world = World( &afac, &bfac, &cfac,a,&bafac);
 	vector<string> BG({"shapesx.png"}); //Background1.png
 	game_world.setBackground(BG);
 	game_world.startPlayer();
-	window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 , 0) );
 	//window->setMouseCursorVisible(false);
 	window->setFramerateLimit(60);
 
@@ -77,7 +77,7 @@ void Game::run(){
 		// kan ook nog meer naar binnen
 
 		if(game_world.checkGameEnd()){
-			cout<<"n00b"<<endl;
+			cout<<"you lost"<<endl;
 			window->close();
 		}
 		
@@ -87,3 +87,27 @@ void Game::run(){
 	}
 	
 }
+
+//TODO text
+//
+//sf::Text text;
+//
+//// select the font
+//text.setFont(font); // font is a sf::Font
+//
+//// set the string to display
+//text.setString("Hello world");
+//
+//// set the character size
+//text.setCharacterSize(24); // in pixels, not points!
+//
+//// set the color
+//text.setColor(sf::Color::Red);
+//
+//// set the text style
+//text.setStyle(sf::Text::Bold | sf::Text::Underlined);
+//
+//...
+//
+//// inside the main loop, between window.clear() and window.display()
+//window.draw(text);
