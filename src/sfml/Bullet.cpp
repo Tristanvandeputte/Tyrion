@@ -38,7 +38,6 @@ void Bullet::draw(){
 		radius = std::max((sprite.getGlobalBounds().width/2)/80,(sprite.getGlobalBounds().height/2)/80)+0.1;
 	}
 	window->draw(sprite);
-
 }
 
 } /* namespace sfml */

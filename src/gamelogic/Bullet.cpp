@@ -21,6 +21,7 @@ Bullet::~Bullet() {
 void Bullet::draw(){}
 
 Bullet::Bullet(Vector position,BulletType type,Status status):Entity(position),type(type),status(status){
+	health = 1; //bullet heeft 1 health (gaat kapot on-hit of piercet eventueel)
 	speed = 7;
 }
 void Bullet::update(double deltaT){
@@ -28,11 +29,12 @@ void Bullet::update(double deltaT){
 		Vector mov(0,-1*speed*deltaT);
 		move(mov);
 	}
-	else{
+	else if(status == Status::Ally){
 		Vector mov(0,1*speed*deltaT);
 		move(mov);
 	}
 	position=position+(movement);
+	cout<<"movin"<<endl;
 	movement = Vector(0,0);
 }
 
@@ -41,8 +43,8 @@ void Bullet::collide(shared_ptr<Entity> with){
 	if(type==BulletType::BasicBullet){
 		damage=1;
 	}
+	health -=1;
 	with->decreaseHealth(damage);
-	cout<<"???"<<endl;
 }
 
 } /* namespace ty */

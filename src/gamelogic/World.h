@@ -33,7 +33,8 @@ class World: public Entity {
 private:
 	EntityPtr background;
 	//A pointer to the background entity
-	vector<EntityPtr> all_entities; //world specific
+	vector<EntityPtr> ally_entities;
+	vector<EntityPtr> enemy_entities;
 	//all the Entiies is this game world
 	EntityFactory* p_fac;;
 	//Player Factory
@@ -64,6 +65,7 @@ public:
 	void createNewEnemy(EnemyType type,double x,double y);
 	void draw();
 	void playerShoots();
+	void checkDead();
 };
 
 } /* namespace ty */
