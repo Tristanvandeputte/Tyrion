@@ -41,6 +41,12 @@ void Player::draw(){
 	if(radius==0){
 		radius = std::max((sprite.getGlobalBounds().width/2)/80,(sprite.getGlobalBounds().height/2)/80);
 	}
+	if(invincibility_frame>0){
+		sprite.setColor(sf::Color(0, 255, 0, 200));
+	}
+	else{
+		sprite.setColor(sf::Color(255, 255, 255, 200));
+	}
 	window->draw(sprite);
 }
 

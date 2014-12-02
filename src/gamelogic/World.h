@@ -66,6 +66,7 @@ public:
 	void draw();
 	void playerShoots();
 	void checkDead();
+	bool checkGameEnd();
 };
 
 } /* namespace ty */

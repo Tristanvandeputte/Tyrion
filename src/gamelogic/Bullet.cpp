@@ -34,7 +34,6 @@ void Bullet::update(double deltaT){
 		move(mov);
 	}
 	position=position+(movement);
-	cout<<"movin"<<endl;
 	movement = Vector(0,0);
 }
 
@@ -43,7 +42,6 @@ void Bullet::collide(shared_ptr<Entity> with){
 	if(type==BulletType::BasicBullet){
 		damage=1;
 	}
-	health -=1;
 	with->decreaseHealth(damage);
 }
 

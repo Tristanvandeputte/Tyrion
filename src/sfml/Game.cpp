@@ -18,7 +18,7 @@ Game::~Game() {
 
 void Game::run(){
 	Enemyvec a;
-	tuple<double,EnemyType,double,double> one(5.0,EnemyType::BasicEnemy,0.0,2.0);
+	tuple<double,EnemyType,double,double> one(5.0,EnemyType::BasicEnemy,0.0,4.0);
 	a.push_back(one);
 	//vb enemies
 	
@@ -66,6 +66,7 @@ void Game::run(){
 			y_mov--;
 		}
 		Vector vec(x_mov,y_mov);
+		
 		game_world.getCurrentPlayer()->move(vec);
 		if(input.checkKeyBoardInput(KeyPressed::Space)){
 			game_world.playerShoots();
@@ -75,6 +76,11 @@ void Game::run(){
 
 		// kan ook nog meer naar binnen
 
+		if(game_world.checkGameEnd()){
+			cout<<"n00b"<<endl;
+			window->close();
+		}
+		
 		game_world.draw();
 		
 		window->display();

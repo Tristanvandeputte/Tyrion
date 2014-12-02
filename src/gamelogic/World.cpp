@@ -63,7 +63,22 @@ void World::checkOutOfBounds(){
 }
 
 void World::checkDead(){
-	
+	for (auto e_ptr = ally_entities.begin(); e_ptr != ally_entities.end() ;){
+		if ((*e_ptr)->isDead()){
+			e_ptr = ally_entities.erase(e_ptr);
+		}
+		else{
+			++e_ptr;
+		}
+	}
+	for (auto e_ptr = enemy_entities.begin(); e_ptr != enemy_entities.end() ;){
+		if ((*e_ptr)->isDead()){
+			e_ptr = enemy_entities.erase(e_ptr);
+		}
+		else{
+			++e_ptr;
+		}
+	}
 }
 
 void World::setBackground(vector<string> texture_locations){
@@ -98,6 +113,7 @@ void World::update(double deltaT){
 	for(EntityPtr e_ptr : enemy_entities){
 		e_ptr->update(deltaT); // deltaT = ???
 	}
+	checkDead();
 }
 
 void World::createNewEnemy(EnemyType type,double x,double y){
@@ -128,40 +144,29 @@ void World::playerShoots(){
 
 void World::collisionCheck(){
 	for(EntityPtr e_ptr : ally_entities){
-		int count=0;
-		//cout<<count<<endl;
-
-		//cout<<"ally.x: "<<e_ptr->getPosition().getX()<<endl;
-		//cout<<"ally.y: "<<e_ptr->getPosition().getY()<<endl;
-		count++;
 		for(EntityPtr e_ptr2 : enemy_entities){
-
 			double x1 = e_ptr->getPosition().getX();  
 			double y1 = e_ptr->getPosition().getY();
 			double x2 = e_ptr2->getPosition().getX();
 			double y2 = e_ptr2->getPosition().getY();
-			//cout<<"enemy.x: "<<x2<<endl;
-			//cout<<"enemy.y: "<<y2<<endl;
-
 			double radius1 = e_ptr->getRadius();
-			//cout<<"radius1: "<<radius1<<endl;
 			double radius2 = e_ptr2->getRadius();
-			//cout<<"radius1: "<<radius2<<endl;
 
 			//compare the distance to combined radii
 			double dx = x2 - x1;
 			double dy = y2 - y1;
 			double radii = radius1 + radius2;
-			//cout<<( dx * dx )  + ( dy * dy )<<endl;
-			//cout<<radii*radii<<endl;
 			if ( (( dx * dx )  + ( dy * dy )) < (radii * radii) ) {
-				cout<<"collision!!"<<endl;
 				e_ptr->collide(e_ptr2);
 				e_ptr2->collide(e_ptr);
 			}
 		}
 	}
 } 
+
+bool World::checkGameEnd(){
+	return (current_player->isDead());
+}
 
 }/* namespace ty */
 

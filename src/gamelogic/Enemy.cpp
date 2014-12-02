@@ -26,16 +26,15 @@ Enemy::Enemy(Vector position,double speed ,int health, int damage,EnemyType type
 
 void Enemy::draw(){}
 
-} /* namespace ty */
 
-
+void Enemy::collide(shared_ptr<Entity> with){
+	with->decreaseHealth(damage); //touch damage of enemies is 1 standaard
+}
 shared_ptr<Entity> Enemy::Shoot(){
 	shot_cool_down=base_shot_cool_down;
 	return bullet_factory->makeBullet(position.getX(),position.getY(),b_type,Status::Ally);	
 }
-//void Enemy::move(Vector vec){
-//	
-//}
+
 void Enemy::update(double deltaT){
 	Vector basic_enemy_move(0,-1);
 	move(basic_enemy_move);
@@ -53,3 +52,7 @@ bool Enemy::canShoot(){
 	return false;
 	//TODO move to entity?
 }
+
+} /* namespace ty */
+
+

@@ -37,6 +37,7 @@ public:
 	//void move(Vector vec);
 	void update(double deltaT);
 	bool canShoot();
+	void collide(shared_ptr<Entity> with) override;
 };
 
 } /* namespace ty */

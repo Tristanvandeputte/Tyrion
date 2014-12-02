@@ -28,16 +28,17 @@ class EntityFactory;
 namespace ty {
 
 class Entity {
-	// TODO elke sfml klasse moet pointer naar zijn vector hebben
+	// bepaalde entities pointer naar EntityFactory(vb schip nr bullet) + zijn parent zodat sfml bullets safely geadd kunnen worden
 protected:
 	Status status;
-	// elke entity pointer naar EntityFactory(vb schip nr bullet) + zijn parent zodat sfml bullets safely geadd kunnen worden
 	double radius{0};
 	Vector position;
 	Vector movement;
 	double speed{0.01};
 	int health;
-	int damage;
+	int damage{1};
+	double invincibility_frame{0};
+	double base_invincibility_frame{0};
 	
 public:
 	Entity();
@@ -57,6 +58,7 @@ public:
 	Status getStatus();
 	void decreaseHealth(int damage);
 	virtual void collide(shared_ptr<Entity> with);
+	bool isDead();
 };
 
 } /* namespace ty */

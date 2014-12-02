@@ -20,10 +20,12 @@ Player::~Player() {
 
 Player::Player(Vector position,EntityFactory* bullet_factory,Entity* parent):Entity(position),bullet_factory(bullet_factory),parent(parent){
 	b_type = BulletType::BasicBullet;
-	shot_cool_down = 0.5;
-	base_shot_cool_down = 5.0;
+	shot_cool_down = 0;
+	base_shot_cool_down = 2.0;
 	status = Status::Ally;
 	speed = 5.0;
+	base_invincibility_frame = 2.0;
+	health = 3;
 }
 
 void Player::draw(){}
@@ -45,6 +47,9 @@ void Player::update(double deltaT){
 	}
 	Vector nullmove(0,0);
 	movement = nullmove;
+	if(invincibility_frame>0){
+		invincibility_frame -= deltaT;
+	}
 	shot_cool_down-=5*deltaT;
 }
 

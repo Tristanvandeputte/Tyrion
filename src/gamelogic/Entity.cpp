@@ -36,9 +36,11 @@ double Entity::getSpeed(){
 }
 void Entity::update(double deltaT){
 	position = position+(movement*deltaT*speed);
+	if(invincibility_frame>0){
+		invincibility_frame -= deltaT;
+	}
 	Vector nullmove(0,0);
 	movement = nullmove;
-	
 }
 double Entity::getY(){
 	return position.getY();
@@ -53,13 +55,20 @@ Status Entity::getStatus(){
 	return status;
 }
 
+bool Entity::isDead(){
+	return (health <= 0);
+}
+
 bool Entity::canShoot(){}
 shared_ptr<Entity> Entity::Shoot(){}
 
 void Entity::collide(shared_ptr<Entity> with){}
 
 void Entity::decreaseHealth(int damage){
-	health -= damage;
+	if(invincibility_frame <=0){
+		health -= damage;
+		invincibility_frame = base_invincibility_frame;
+	}
 }
 
 } /* namespace ty */
