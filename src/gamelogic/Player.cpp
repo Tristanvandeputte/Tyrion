@@ -18,7 +18,7 @@ Player::~Player() {
 	// TODO Auto-generated destructor stub
 }
 
-Player::Player(Vector position,EntityFactory* bullet_factory,Entity* parent):Entity(position),bullet_factory(bullet_factory),parent(parent){
+Player::Player(Vector position,EntityFactory* bullet_factory,World* parent):Entity(position),bullet_factory(bullet_factory),parent(parent){
 	b_type = BulletType::BasicBullet;
 	shot_cool_down = 0;
 	base_shot_cool_down = 2.0;

@@ -71,5 +71,7 @@ void Entity::decreaseHealth(int damage){
 	}
 }
 
+void push_to_vector(shared_ptr<Entity> bullet){}
+
 } /* namespace ty */
 

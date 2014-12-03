@@ -18,13 +18,12 @@ EnemyFactory::~EnemyFactory() {
 }
 
 
-shared_ptr<Entity> EnemyFactory::makeEnemy(double x, double y,EnemyType type, EntityFactory* bullet_factory,Entity* parent){
+shared_ptr<Entity> EnemyFactory::makeEnemy(double x, double y,EnemyType type, EntityFactory* bullet_factory,World* parent){
 	srand (time(NULL));
 	double radius{0};
 	double speed;
 	int health;
 	int damage;
-	Entity* parentptr;
 	//choosing a random enemy -> map with enemydata??
 	int enemy_nr = rand() % 1; //# enemies die er zijn
 	switch(type){
@@ -32,7 +31,6 @@ shared_ptr<Entity> EnemyFactory::makeEnemy(double x, double y,EnemyType type, En
 		  health = 2;
 		  damage = 1;
 		  speed = 0.5;
-		  parentptr=parent;
 	      break;
 	   case EnemyType::ShootingEnemy :
 		  health = 2;
@@ -41,7 +39,7 @@ shared_ptr<Entity> EnemyFactory::makeEnemy(double x, double y,EnemyType type, En
 	   }
 
 	Vector pos(x,y);
-	shared_ptr<sfml::Enemy> p_ptr = make_shared<sfml::Enemy>(pos,speed,health,damage,type,bullet_factory,parentptr,window);
+	shared_ptr<sfml::Enemy> p_ptr = make_shared<sfml::Enemy>(pos,speed,health,damage,type,bullet_factory,parent,window);
 	return p_ptr;
 	
 }

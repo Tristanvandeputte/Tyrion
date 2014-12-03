@@ -21,6 +21,7 @@ private:
 	shared_ptr<RenderWindow> window;
 	std::string texture_location;
 	sf::Texture this_tex;
+	sf::Sprite sprite;
 public:
 	Bullet();
 	Bullet(Vector position,BulletType type,std::string texture_location,Status status,shared_ptr<RenderWindow> window);

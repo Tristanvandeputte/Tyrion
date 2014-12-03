@@ -22,13 +22,13 @@ class Player: public Entity {
 protected:
 	shared_ptr<EntityFactory> p_fac;
 	BulletType b_type;
-	Entity* parent;
+	World* parent;
 	EntityFactory* bullet_factory;
 	double shot_cool_down;
 	double base_shot_cool_down;
 public:
 	Player();
-	Player(Vector position,EntityFactory* bullet_factory,Entity* parent);
+	Player(Vector position,EntityFactory* bullet_factory,World* parent);
 	virtual ~Player();
 	virtual void draw();
 	shared_ptr<Entity> Shoot();

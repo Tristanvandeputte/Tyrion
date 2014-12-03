@@ -28,7 +28,7 @@ private:
 	string texture_location; //imageedit_1_7403900101.png
 public:
 	Player();
-	Player(Vector position, string texture_location, EntityFactory* bullet_factory, Entity* parent,shared_ptr<RenderWindow> window);
+	Player(Vector position, string texture_location, EntityFactory* bullet_factory, World* parent,shared_ptr<RenderWindow> window);
 	virtual ~Player();
 	void draw() override;
 

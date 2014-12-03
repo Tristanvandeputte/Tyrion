@@ -18,7 +18,7 @@ PlayerFactory::~PlayerFactory() {
 
 PlayerFactory::PlayerFactory(shared_ptr<RenderWindow> window):window(window){}
 
-EntityPtr PlayerFactory::makePlayer(double x, double y, std::string texturespot,EntityFactory* bullet_factory, ty::Entity* parent){
+EntityPtr PlayerFactory::makePlayer(double x, double y, std::string texturespot,EntityFactory* bullet_factory, ty::World* parent){
 	Vector pos(x,y);
 	shared_ptr<sfml::Player> p_ptr = make_shared<sfml::Player>(pos,texturespot,bullet_factory, parent,window);
 	return p_ptr;

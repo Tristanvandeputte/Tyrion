@@ -25,7 +25,7 @@ public:
 	PlayerFactory();
 	PlayerFactory(shared_ptr<RenderWindow> window);
 	virtual ~PlayerFactory();
-	EntityPtr makePlayer(double x, double y, std::string texturespot,EntityFactory* bullet_factory, ty::Entity* parent) override;
+	EntityPtr makePlayer(double x, double y, std::string texturespot,EntityFactory* bullet_factory, ty::World* parent) override;
 };
 
 #endif /* PLAYERFACTORY_H_ */

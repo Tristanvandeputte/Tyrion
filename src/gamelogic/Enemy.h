@@ -15,9 +15,12 @@
 #include <memory>
 #include <unistd.h>
 
+
 enum class EnemyType{BasicEnemy,ShootingEnemy};
 
 namespace ty {
+
+class World;
 
 class Enemy: public Entity {
 protected:
@@ -25,12 +28,12 @@ protected:
 	EnemyType type;
 	BulletType b_type;
 	EntityFactory* bullet_factory;
-	Entity* parent;
+	World* parent;
 	double shot_cool_down;
 	double base_shot_cool_down;
 public:
 	Enemy();
-	Enemy(Vector position,double speed ,int health, int damage,EnemyType type,EntityFactory* bullet_factory, Entity* parent);
+	Enemy(Vector position,double speed ,int health, int damage,EnemyType type,EntityFactory* bullet_factory, World* parent);
 	virtual ~Enemy();
 	virtual void draw();
 	shared_ptr<Entity> Shoot();

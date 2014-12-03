@@ -25,7 +25,7 @@ std::vector<EntityPtr> World::getEntities(){
 }
 
 void World::startPlayer(){
-	current_player = p_fac->makePlayer(0.0,0.0,"imageedit_1_7403900101.png",b_fac,this);
+	current_player = p_fac->makePlayer(0.0,0.0,"Player.png",b_fac,this);
 	ally_entities.push_back(current_player);
 }
 
@@ -46,6 +46,7 @@ void World::makeBullet(double x,double y,BulletType type,Status status){
 void World::checkOutOfBounds(){
 	for (auto e_ptr = ally_entities.begin(); e_ptr != ally_entities.end() ;){
 		if ((*e_ptr)->getX() > 7 || (*e_ptr)->getX() < -7 || (*e_ptr)->getY() > 6 || (*e_ptr)->getY()< -6  ){
+			cout<<"ded"<<endl;
 			e_ptr = ally_entities.erase(e_ptr);
 		}
 		else{
@@ -82,7 +83,8 @@ void World::checkDead(){
 }
 
 void World::setBackground(vector<string> texture_locations){
-	background = ba_fac->makeBackground(texture_locations);
+	EntityPtr bg = ba_fac->makeBackground(texture_locations);
+	background = bg;
 }
 
 void World::update(double deltaT){
@@ -105,20 +107,20 @@ void World::update(double deltaT){
 			++to_be_created;
 		}
 	}
-	//deleting created enemies
 
 	for(EntityPtr e_ptr : ally_entities){
-		e_ptr->update(deltaT); // deltaT = ???
+		e_ptr->update(deltaT);
 	}
 	for(EntityPtr e_ptr : enemy_entities){
-		e_ptr->update(deltaT); // deltaT = ???
+		if(e_ptr !=0){
+			e_ptr->update(deltaT);
+		}
 	}
 	checkDead();
 }
 
 void World::createNewEnemy(EnemyType type,double x,double y){
 	EntityPtr one = e_fac->makeEnemy(x,y,type,b_fac,this);
-	cout<<"made dummy"<<endl;
 	enemy_entities.push_back(one);
 }
 
@@ -166,6 +168,10 @@ void World::collisionCheck(){
 
 bool World::checkGameEnd(){
 	return (current_player->isDead());
+}
+
+void World::push_to_vector(shared_ptr<Entity> bullet){
+	enemy_entities.push_back(bullet);
 }
 
 }/* namespace ty */

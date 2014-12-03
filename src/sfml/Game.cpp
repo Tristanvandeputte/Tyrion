@@ -18,8 +18,24 @@ Game::~Game() {
 
 void Game::run(){
 	Enemyvec a;
-	tuple<double,EnemyType,double,double> one(5.0,EnemyType::BasicEnemy,0.0,4.0);
+	tuple<double,EnemyType,double,double> one(1.0,EnemyType::BasicEnemy,-2,4.0);
+	tuple<double,EnemyType,double,double> two(1.0,EnemyType::BasicEnemy,2,4.0);
+	tuple<double,EnemyType,double,double> three(8.0,EnemyType::BasicEnemy,3.0,4.0);
+	tuple<double,EnemyType,double,double> four(8.0,EnemyType::BasicEnemy,-3.0,4.0);
+	tuple<double,EnemyType,double,double> five(2.0,EnemyType::ShootingEnemy,0.0,4.0);
+	tuple<double,EnemyType,double,double> six(10.0,EnemyType::ShootingEnemy,-1.0,4.0);
+	tuple<double,EnemyType,double,double> seven(10.0,EnemyType::ShootingEnemy,-2.0,4.0);
+	tuple<double,EnemyType,double,double> eight(10.0,EnemyType::ShootingEnemy,2.0,4.0);
+	tuple<double,EnemyType,double,double> nine(10.0,EnemyType::ShootingEnemy,1.0,4.0);
 	a.push_back(one);
+	a.push_back(two);
+	a.push_back(three);
+	a.push_back(four);
+	a.push_back(five);
+	a.push_back(six);
+	a.push_back(seven);
+	a.push_back(eight);
+	a.push_back(nine);
 	//vb enemies
 	
 	shared_ptr<sf::RenderWindow> window(new sf::RenderWindow(sf::VideoMode(640,480), "Tyrian"));
@@ -29,7 +45,7 @@ void Game::run(){
 	bafac=BackgroundFactory(window);
 	window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 , 0) );
 	game_world = World( &afac, &bfac, &cfac,a,&bafac);
-	vector<string> BG({"shapesx.png"}); //Background1.png
+	vector<string> BG({"SmallBullet.png"}); //Background1.png
 	game_world.setBackground(BG);
 	game_world.startPlayer();
 	//window->setMouseCursorVisible(false);

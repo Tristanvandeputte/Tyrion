@@ -19,10 +19,10 @@ class Enemy: public ty::Enemy {
 private:
 	static std::map<string,Texture> all_textures;
 	shared_ptr<RenderWindow> window;
-	string texture_location; //imageedit_1_7403900101.png
+	string texture_location;
 public:
 	Enemy();
-	Enemy(Vector position,double speed ,int health, int damage,EnemyType type, EntityFactory* bullet_factory, Entity* parent,shared_ptr<RenderWindow> window);
+	Enemy(Vector position,double speed ,int health, int damage,EnemyType type, EntityFactory* bullet_factory, World* parent ,shared_ptr<RenderWindow> window);
 	virtual ~Enemy();
 	void draw() override;
 };

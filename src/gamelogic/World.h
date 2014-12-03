@@ -67,6 +67,7 @@ public:
 	void playerShoots();
 	void checkDead();
 	bool checkGameEnd();
+	void push_to_vector(shared_ptr<Entity> bullet);
 };
 
 } /* namespace ty */

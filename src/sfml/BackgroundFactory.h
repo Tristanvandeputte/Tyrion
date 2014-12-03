@@ -23,7 +23,6 @@ namespace sfml{
 class BackgroundFactory : public EntityFactory {
 private: 
 	shared_ptr<RenderWindow> window;
-	vector<shared_ptr<sfml::Bullet> > created_bullets;
 public:
 	BackgroundFactory();
 	BackgroundFactory(shared_ptr<RenderWindow> window);

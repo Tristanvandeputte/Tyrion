@@ -34,7 +34,7 @@ protected:
 	double radius{0};
 	Vector position;
 	Vector movement;
-	double speed{0.01};
+	double speed{5.0};
 	int health;
 	int damage{1};
 	double invincibility_frame{0};

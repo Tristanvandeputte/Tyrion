@@ -25,7 +25,7 @@ private:
 	vector<string> texture_spots;
 public:
 	Background();
-	Background(vector<string> texture_spots);
+	Background(vector<string> texture_spots,shared_ptr<RenderWindow> window);
 	virtual ~Background();
 	void draw();
 	void update(double deltaT) override;

@@ -22,6 +22,6 @@ BackgroundFactory::BackgroundFactory(shared_ptr<RenderWindow> window):window(win
 }
 
 shared_ptr<ty::Entity> BackgroundFactory::makeBackground(vector<string> texture_spots){
-	shared_ptr<sfml::Background> p_ptr = make_shared<sfml::Background>(texture_spots);
+	shared_ptr<sfml::Background> p_ptr = make_shared<sfml::Background>(texture_spots,window);
 	return p_ptr;
 }
