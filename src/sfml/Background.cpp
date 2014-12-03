@@ -41,7 +41,7 @@ void Background::draw(){
 void Background::update(double deltaT){
 	//Vector2f move(1.0f*deltaT, 1.0f*deltaT);
 	//sprite.move(move);
-	Vector mov(0,-0,5*speed*deltaT);
+	Vector mov(0,-0.1*speed*deltaT);
 	move(mov);
 	position=position+(movement);
 	movement = Vector(0,0);

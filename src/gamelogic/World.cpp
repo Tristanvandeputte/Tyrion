@@ -46,7 +46,6 @@ void World::makeBullet(double x,double y,BulletType type,Status status){
 void World::checkOutOfBounds(){
 	for (auto e_ptr = ally_entities.begin(); e_ptr != ally_entities.end() ;){
 		if ((*e_ptr)->getX() > 7 || (*e_ptr)->getX() < -7 || (*e_ptr)->getY() > 6 || (*e_ptr)->getY()< -6  ){
-			cout<<"ded"<<endl;
 			e_ptr = ally_entities.erase(e_ptr);
 		}
 		else{

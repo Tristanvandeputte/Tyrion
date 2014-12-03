@@ -36,6 +36,7 @@ public:
 	//enemie creation -> inlezen
 	virtual ~Game();
 	void run();
+	void menu()
 };
 
 #endif /* GAME_H_ */

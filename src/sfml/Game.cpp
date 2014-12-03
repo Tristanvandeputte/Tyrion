@@ -16,7 +16,45 @@ Game::~Game() {
 	// TODO Auto-generated destructor stub
 }
 
+void Game::menu(){
+	shared_ptr<sf::RenderWindow> menu_window(new sf::RenderWindow(sf::VideoMode(640,480), "Tyrian Menu"));
+	sf::Font font;
+	char cwd[1024];
+	getcwd(cwd,sizeof(cwd));
+	string curdir(cwd);
+	if (!font.loadFromFile(curdir+"/Resources//Spac3 tech free promo.ttf")){ //sla het pad op in de objecten, niet de textures.
+		cout<<"ERROR IS KILL"<<endl;
+	}
+	sf::Text text("Menu:", font);
+	text.setCharacterSize(30);
+	//text.setStyle(sf::Text::Bold);
+	text.setColor(sf::Color::Blue);
+	
+	while (menu_window->isOpen())
+		{
+			sf::Event event;
+			while (menu_window->pollEvent(event))
+			{
+				if (event.type == sf::Event::Closed)
+					menu_window->close();
+				if(input.checkKeyBoardInput(KeyPressed::Escape)){
+					menu_window->close();
+				}
+				if(input.checkKeyBoardInput(KeyPressed::Enter)){
+					run();
+				}
+			}
+
+			menu_window->clear();
+			menu_window->draw(text);
+			menu_window->display();
+		}
+	
+}
+
 void Game::run(){
+
+	shared_ptr<sf::RenderWindow> window(new sf::RenderWindow(sf::VideoMode(640,480), "Tyrian"));
 	Enemyvec a;
 	tuple<double,EnemyType,double,double> one(1.0,EnemyType::BasicEnemy,-2,4.0);
 	tuple<double,EnemyType,double,double> two(1.0,EnemyType::BasicEnemy,2,4.0);
@@ -38,14 +76,13 @@ void Game::run(){
 	a.push_back(nine);
 	//vb enemies
 	
-	shared_ptr<sf::RenderWindow> window(new sf::RenderWindow(sf::VideoMode(640,480), "Tyrian"));
 	afac=PlayerFactory(window);
 	bfac=BulletFactory(window);
 	cfac=EnemyFactory(window);
 	bafac=BackgroundFactory(window);
 	window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 , 0) );
 	game_world = World( &afac, &bfac, &cfac,a,&bafac);
-	vector<string> BG({"SmallBullet.png"}); //Background1.png
+	vector<string> BG({"shapesx.png"}); //Background1.png
 	game_world.setBackground(BG);
 	game_world.startPlayer();
 	//window->setMouseCursorVisible(false);
@@ -62,7 +99,6 @@ void Game::run(){
 				window->close();
 			}
 		}
-		
 		window->clear();
 		
 		//INPUT
@@ -98,7 +134,6 @@ void Game::run(){
 		}
 		
 		game_world.draw();
-		
 		window->display();
 	}
 	
