@@ -25,11 +25,12 @@ void Game::menu(){
 	if (!font.loadFromFile(curdir+"/Resources//Spac3 tech free promo.ttf")){ //sla het pad op in de objecten, niet de textures.
 		cout<<"ERROR IS KILL"<<endl;
 	}
-	sf::Text text("Menu:", font);
-	text.setCharacterSize(30);
+	sf::Text menu_text("menu ", font);
+	menu_text.setCharacterSize(30);
 	//text.setStyle(sf::Text::Bold);
-	text.setColor(sf::Color::Blue);
-	
+	menu_text.setColor(sf::Color::Blue);
+	menu_window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 , 0) );
+	menu_text.setOrigin(-200,-200);
 	while (menu_window->isOpen())
 		{
 			sf::Event event;
@@ -40,20 +41,19 @@ void Game::menu(){
 				if(input.checkKeyBoardInput(KeyPressed::Escape)){
 					menu_window->close();
 				}
-				if(input.checkKeyBoardInput(KeyPressed::Enter)){
+				if(input.checkKeyBoardInput(KeyPressed::Space)){
 					run();
 				}
 			}
-
 			menu_window->clear();
-			menu_window->draw(text);
+			menu_window->draw(menu_text);
 			menu_window->display();
 		}
 	
 }
 
 void Game::run(){
-
+	clock.reset();
 	shared_ptr<sf::RenderWindow> window(new sf::RenderWindow(sf::VideoMode(640,480), "Tyrian"));
 	Enemyvec a;
 	tuple<double,EnemyType,double,double> one(1.0,EnemyType::BasicEnemy,-2,4.0);

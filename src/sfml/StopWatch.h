@@ -21,6 +21,7 @@ public:
 	StopWatch();
 	virtual ~StopWatch();
 	double getTime();
+	void reset();
 };
 
 #endif /* STOPWATCH_H_ */

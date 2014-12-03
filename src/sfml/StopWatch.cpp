@@ -16,6 +16,11 @@ StopWatch::StopWatch() {
 StopWatch::~StopWatch() {
 	// TODO Auto-generated destructor stub
 }
+
+void StopWatch::reset(){
+	previous_time = std::chrono::steady_clock::now();
+}
+
 double StopWatch::getTime(){
 	 auto current_time = std::chrono::steady_clock::now();
 	 auto deltaT =  std::chrono::duration_cast<std::chrono::milliseconds>(current_time-previous_time).count()/1000.0;
