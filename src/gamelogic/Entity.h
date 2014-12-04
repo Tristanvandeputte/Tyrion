@@ -55,6 +55,7 @@ public:
 	double getRadius();
 	virtual bool canShoot();
 	Vector getPosition();
+	void setPosition(Vector new_pos);
 	Status getStatus();
 	void decreaseHealth(int damage);
 	virtual void collide(shared_ptr<Entity> with);

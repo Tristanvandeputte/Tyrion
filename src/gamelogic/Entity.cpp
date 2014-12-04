@@ -51,6 +51,9 @@ double Entity::getRadius(){
 Vector Entity::getPosition(){
 	return position;
 }
+void  Entity::setPosition(Vector new_pos){
+	position = new_pos;
+}
 Status Entity::getStatus(){
 	return status;
 }

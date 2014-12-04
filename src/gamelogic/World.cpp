@@ -82,8 +82,28 @@ void World::checkDead(){
 }
 
 void World::setBackground(vector<string> texture_locations){
-	EntityPtr bg = ba_fac->makeBackground(texture_locations);
-	background = bg;
+	//EntityPtr bg = ba_fac->makeBackground(texture_locations);
+	background_spots = texture_locations;
+}
+
+void World::backgroundPositionCheck(){
+	if(background_tiles.empty()){
+		EntityPtr bg = ba_fac->makeBackground(background_spots[0]);
+		Vector initial_bg_spot(9,0);
+		bg->setPosition(initial_bg_spot);
+		background_tiles.push_back(bg);
+		texturecounter ++;
+	}
+	if(background_tiles[0]->getPosition().getX()<-8.5){
+		EntityPtr bg = ba_fac->makeBackground(background_spots[texturecounter]);
+		Vector bg_spot(background_tiles[0]->getPosition()+8.5,0);
+		bg->setPosition(bg_spot);
+		// deze moet setpos op X vorige
+		background_tiles.push_back(bg);
+	}
+	if(background_tiles[0]->getPosition().getX()<-12){
+		background_tiles.erase(background_tiles.begin());
+	}
 }
 
 void World::update(double deltaT){
@@ -92,7 +112,10 @@ void World::update(double deltaT){
 	std::vector<std::tuple<EnemyType,double,double> > create;
 	std::vector<int> to_be_deleted;
 
-	background->update(deltaT);
+	for(auto& background : background_tiles){
+		background->update(deltaT);
+	}
+	
 
 	checkOutOfBounds();
 	collisionCheck();
@@ -116,6 +139,7 @@ void World::update(double deltaT){
 		}
 	}
 	checkDead();
+	backgroundPositionCheck();
 }
 
 void World::createNewEnemy(EnemyType type,double x,double y){
@@ -124,7 +148,9 @@ void World::createNewEnemy(EnemyType type,double x,double y){
 }
 
 void World::draw(){
-	background->draw();
+	for(auto background : background_tiles){
+		background->draw();
+	}
 	for(EntityPtr e_ptr : enemy_entities){
 			e_ptr->draw();
 	}

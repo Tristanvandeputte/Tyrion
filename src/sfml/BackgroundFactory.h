@@ -27,7 +27,7 @@ public:
 	BackgroundFactory();
 	BackgroundFactory(shared_ptr<RenderWindow> window);
 	virtual ~BackgroundFactory();
-	shared_ptr<ty::Entity> makeBackground(vector<string> texture_spots);
+	shared_ptr<ty::Entity> makeBackground(std::string texturespot);
 };
 
 #endif /* BACKGROUNDFACTORY_H_ */

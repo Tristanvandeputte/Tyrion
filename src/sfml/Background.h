@@ -20,12 +20,10 @@ class Background: public ty::Background {
 private:
 	static std::map<string,Texture> all_textures;
 	shared_ptr<RenderWindow> window;
-	sf::Texture this_tex;
 	sf::Sprite sprite;
-	vector<string> texture_spots;
 public:
 	Background();
-	Background(vector<string> texture_spots,shared_ptr<RenderWindow> window);
+	Background(string texture_spot,shared_ptr<RenderWindow> window);
 	virtual ~Background();
 	void draw();
 	void update(double deltaT) override;

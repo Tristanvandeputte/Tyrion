@@ -20,9 +20,14 @@ Background::~Background() {
 
 void Background::draw(){}
 
-Background::Background(vector<string> texture_positions):texture_positions(texture_positions){}
+Background::Background(string texture_spot):texture_spot(texture_spot){}
 
-void Background::update(double deltaT){}
+void Background::update(double deltaT){
+	Vector mov(0,-0.1*speed*deltaT);
+	move(mov);
+	position=position+(movement);
+	movement = Vector(0,0);
+}
 
 } /* namespace ty */
 

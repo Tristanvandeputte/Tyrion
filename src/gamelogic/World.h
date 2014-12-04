@@ -31,7 +31,9 @@ namespace ty {
 
 class World: public Entity {
 private:
-	EntityPtr background;
+	int texturecounter=0;
+	vector<string> background_spots;
+	vector<EntityPtr> background_tiles;
 	//A pointer to the background entity
 	vector<EntityPtr> ally_entities;
 	vector<EntityPtr> enemy_entities;
@@ -68,6 +70,7 @@ public:
 	void checkDead();
 	bool checkGameEnd();
 	void push_to_vector(shared_ptr<Entity> bullet);
+	void backgroundPositionCheck();
 };
 
 } /* namespace ty */

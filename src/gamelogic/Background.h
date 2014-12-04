@@ -18,10 +18,10 @@ namespace ty {
 
 class Background: public Entity {
 protected:
-	vector<string> texture_positions;
+	string texture_spot;
 public:
 	Background();
-	Background(vector<string> texture_positions);
+	Background(string texture_spot);
 	virtual ~Background();
 	virtual void draw();
 	virtual void update(double deltaT);
