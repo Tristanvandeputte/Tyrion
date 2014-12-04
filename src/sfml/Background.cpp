@@ -16,6 +16,7 @@ Background::Background() {
 Background::Background(string texture_spot,shared_ptr<RenderWindow> window):ty::Background(texture_spot),window(window){
 	position = Vector(0,0);
 	sf::Texture texture;
+	speed = 10;
 	char cwd[1024];
 	getcwd(cwd,sizeof(cwd));
 	string curdir(cwd);
@@ -26,7 +27,6 @@ Background::Background(string texture_spot,shared_ptr<RenderWindow> window):ty::
 	all_textures[texture_spot]=texture;
 	sf::Sprite bg_sprite;
 	bg_sprite.setTexture(all_textures[texture_spot]);
-	bg_sprite.setPosition(sf::Vector2f((position.getX()*80.0)+320.0-(sprite.getGlobalBounds().width/4), (-1.0*position.getY()*80.0)+240.0-(sprite.getGlobalBounds().height/4)));
 	sprite = bg_sprite;
 }
 
@@ -34,7 +34,7 @@ Background::~Background() {
 	// TODO Auto-generated destructor stub
 }
 void Background::draw(){
-	sprite.setPosition(sf::Vector2f((position.getX()*80.0)+320.0-(sprite.getGlobalBounds().width/4), (-1.0*position.getY()*80.0)+240.0-(sprite.getGlobalBounds().height/4)));
+	sprite.setPosition(sf::Vector2f((position.getX()*80.0), (-1.0*position.getY()*80.0)+240.0));
 	window->draw(sprite);
 }
 

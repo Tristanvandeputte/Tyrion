@@ -89,19 +89,22 @@ void World::setBackground(vector<string> texture_locations){
 void World::backgroundPositionCheck(){
 	if(background_tiles.empty()){
 		EntityPtr bg = ba_fac->makeBackground(background_spots[0]);
-		Vector initial_bg_spot(9,0);
+		Vector initial_bg_spot(0,9);
 		bg->setPosition(initial_bg_spot);
 		background_tiles.push_back(bg);
 		texturecounter ++;
 	}
-	if(background_tiles[0]->getPosition().getX()<-8.5){
+	if(background_tiles[0]->getPosition().getY()<3 && background_tiles.size()<2){
+		if(texturecounter>=background_spots.size()){
+			texturecounter=0;
+		}
 		EntityPtr bg = ba_fac->makeBackground(background_spots[texturecounter]);
-		Vector bg_spot(background_tiles[0]->getPosition()+8.5,0);
+		Vector bg_spot(0,background_tiles[0]->getPosition().getY()+12);
 		bg->setPosition(bg_spot);
 		// deze moet setpos op X vorige
 		background_tiles.push_back(bg);
 	}
-	if(background_tiles[0]->getPosition().getX()<-12){
+	if(background_tiles[0]->getPosition().getY()<-3){
 		background_tiles.erase(background_tiles.begin());
 	}
 }
@@ -192,6 +195,9 @@ void World::collisionCheck(){
 } 
 
 bool World::checkGameEnd(){
+	if(current_player->isDead()){
+		texturecounter=0;
+	}
 	return (current_player->isDead());
 }
 

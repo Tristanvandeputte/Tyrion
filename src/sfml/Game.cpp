@@ -82,7 +82,7 @@ void Game::run(){
 	bafac=BackgroundFactory(window);
 	window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 , 0) );
 	game_world = World( &afac, &bfac, &cfac,a,&bafac);
-	vector<string> BG({"shapesx.png"}); //Background1.png
+	vector<string> BG({"Focus-Colors-2-640x960.jpg"}); //Background1.png
 	game_world.setBackground(BG);
 	game_world.startPlayer();
 	//window->setMouseCursorVisible(false);
@@ -103,6 +103,9 @@ void Game::run(){
 		
 		//INPUT
 		double deltaT=clock.getTime(); //
+		if(1/deltaT<20){
+			cout<<1/deltaT<<endl;
+		}
 		double x_mov=0;
 		double y_mov=0;
 		if(input.checkKeyBoardInput(KeyPressed::Right)){

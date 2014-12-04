@@ -1,4 +1,4 @@
-
-make
+cd build
 make install
-./src/game
+cd ../
+./bin/game
