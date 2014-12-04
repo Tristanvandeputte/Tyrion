@@ -17,6 +17,7 @@ Game::~Game() {
 }
 
 void Game::menu(){
+	int selection = 3; //bovenste selection
 	shared_ptr<sf::RenderWindow> menu_window(new sf::RenderWindow(sf::VideoMode(640,480), "Tyrian Menu"));
 	sf::Font font;
 	char cwd[1024];
@@ -25,12 +26,26 @@ void Game::menu(){
 	if (!font.loadFromFile(curdir+"/Resources//Spac3 tech free promo.ttf")){ //sla het pad op in de objecten, niet de textures.
 		cout<<"ERROR IS KILL"<<endl;
 	}
+	
+	// vectors vr text
 	sf::Text menu_text("menu ", font);
-	menu_text.setCharacterSize(30);
+	menu_text.setOrigin(-200,-50);
+	menu_text.setCharacterSize(50);
+	sf::Text play_text("play ", font);
+	play_text.setOrigin(-200,-200);
+	play_text.setCharacterSize(30);
+	sf::Text level_text("level select ", font);
+	level_text.setOrigin(-200,-300);
+	level_text.setCharacterSize(30);
+	sf::Text credits_text("credits ", font);
+	credits_text.setOrigin(-200,-400);
+	credits_text.setCharacterSize(30);
+	sf::Text exit_text("exit ", font);
+	exit_text.setOrigin(-200,-800);
+	exit_text.setCharacterSize(30);
 	//text.setStyle(sf::Text::Bold);
 	menu_text.setColor(sf::Color::Blue);
 	menu_window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 , 0) );
-	menu_text.setOrigin(-200,-200);
 	while (menu_window->isOpen())
 		{
 			sf::Event event;
@@ -47,6 +62,10 @@ void Game::menu(){
 			}
 			menu_window->clear();
 			menu_window->draw(menu_text);
+			menu_window->draw(play_text);
+			menu_window->draw(level_text);
+			menu_window->draw(credits_text);
+			menu_window->draw(exit_text);
 			menu_window->display();
 		}
 	
