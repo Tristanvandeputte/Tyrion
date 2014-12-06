@@ -26,7 +26,7 @@ void Game::menu(){
 	if (!font.loadFromFile(curdir+"/Resources//Spac3 tech free promo.ttf")){ //sla het pad op in de objecten, niet de textures.
 		cout<<"ERROR IS KILL"<<endl;
 	}
-	
+
 	// vectors vr text
 	sf::Text menu_text("menu ", font);
 	menu_text.setOrigin(-200,-50);
@@ -60,6 +60,39 @@ void Game::menu(){
 					run();
 				}
 			}
+			if(input.checkKeyBoardInput(KeyPressed::Right)){
+				//nothing yet
+			}
+			if(input.checkKeyBoardInput(KeyPressed::Left)){
+				//nothing yet
+			}
+			if(input.checkKeyBoardInput(KeyPressed::Up)){
+				selection = (selection+1)%3; // selection 0-3
+			}
+			if(input.checkKeyBoardInput(KeyPressed::Down)){
+				selection = selection--;
+				if(selection<0){
+					selection = 3;
+				}
+			}
+			cout<<selection<<endl;
+			switch (selection){
+				case 0:
+							{
+								Vector2f size{float(exit_text.getGlobalBounds().width),float(exit_text.getGlobalBounds().width)};
+								RectangleShape rect{size};
+								rect.setFillColor(Color::Transparent);
+								rect.setOutlineColor(Color::Red);
+								rect.setOutlineThickness(5);
+								window.draw(rect);
+							}
+				case 1:
+;
+				case 2:
+;
+				case 3:
+;
+			}
 			menu_window->clear();
 			menu_window->draw(menu_text);
 			menu_window->draw(play_text);
@@ -68,7 +101,7 @@ void Game::menu(){
 			menu_window->draw(exit_text);
 			menu_window->display();
 		}
-	
+
 }
 
 void Game::run(){
@@ -94,7 +127,7 @@ void Game::run(){
 	a.push_back(eight);
 	a.push_back(nine);
 	//vb enemies
-	
+
 	afac=PlayerFactory(window);
 	bfac=BulletFactory(window);
 	cfac=EnemyFactory(window);
@@ -119,7 +152,7 @@ void Game::run(){
 			}
 		}
 		window->clear();
-		
+
 		//INPUT
 		double deltaT=clock.getTime(); //
 		if(1/deltaT<20){
@@ -140,7 +173,7 @@ void Game::run(){
 			y_mov--;
 		}
 		Vector vec(x_mov,y_mov);
-		
+
 		game_world.getCurrentPlayer()->move(vec);
 		if(input.checkKeyBoardInput(KeyPressed::Space)){
 			game_world.playerShoots();
@@ -154,11 +187,11 @@ void Game::run(){
 			cout<<"you lost"<<endl;
 			window->close();
 		}
-		
+
 		game_world.draw();
 		window->display();
 	}
-	
+
 }
 
 //TODO text
