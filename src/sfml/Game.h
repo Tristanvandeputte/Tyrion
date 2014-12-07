@@ -22,6 +22,7 @@
 
 class Game {
 private:
+	string selected_level="null";
 	PlayerFactory afac;
 	BulletFactory bfac;
 	EnemyFactory cfac;
@@ -37,6 +38,8 @@ public:
 	virtual ~Game();
 	void run();
 	void menu();
+	void levelSelect();
+	void credits();
 };
 
 #endif /* GAME_H_ */
