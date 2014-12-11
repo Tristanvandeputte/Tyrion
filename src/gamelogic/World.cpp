@@ -118,7 +118,7 @@ void World::update(double deltaT){
 	for(auto& background : background_tiles){
 		background->update(deltaT);
 	}
-	
+
 
 	checkOutOfBounds();
 	collisionCheck();
@@ -175,7 +175,7 @@ void World::playerShoots(){
 void World::collisionCheck(){
 	for(EntityPtr e_ptr : ally_entities){
 		for(EntityPtr e_ptr2 : enemy_entities){
-			double x1 = e_ptr->getPosition().getX();  
+			double x1 = e_ptr->getPosition().getX();
 			double y1 = e_ptr->getPosition().getY();
 			double x2 = e_ptr2->getPosition().getX();
 			double y2 = e_ptr2->getPosition().getY();
@@ -192,7 +192,7 @@ void World::collisionCheck(){
 			}
 		}
 	}
-} 
+}
 
 bool World::checkGameEnd(){
 	if(current_player->isDead()){
@@ -206,17 +206,3 @@ void World::push_to_vector(shared_ptr<Entity> bullet){
 }
 
 }/* namespace ty */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
