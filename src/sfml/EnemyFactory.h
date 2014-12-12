@@ -18,7 +18,6 @@ using namespace sf;
 namespace sfml{
 	class Enemy;
 }
-//class enum EnemyType ;
 
 class EnemyFactory: public EntityFactory {
 private:

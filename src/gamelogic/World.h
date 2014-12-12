@@ -14,6 +14,7 @@
 #include "Entity.h"
 #include "Background.h"
 #include "Enemy.h"
+#include "Powerup.h"
 #include "EntityFactory.h"
 #include "Bullet.h"
 #include <vector>
@@ -25,6 +26,11 @@ enum class EnemyType;
 using EntityPtr = shared_ptr<ty::Entity>;
 using Enemyvec = std::vector<std::tuple<double,EnemyType,double,double> >;
 										//time, enemytype, x, y
+
+enum class PowerupType;
+using Powerupvec = std::vector<std::tuple<double,PowerupType,double,double> >;
+										//time, enemytype, x, y
+
 
 
 namespace ty {

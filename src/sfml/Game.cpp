@@ -17,15 +17,25 @@ Game::~Game() {
 }
 
 void Game::menu(){
-	int selection = 3; //bovenste selection
-	shared_ptr<sf::RenderWindow> menu_window(new sf::RenderWindow(sf::VideoMode(640,480), "Tyrian Menu"));
 	sf::Font font;
+	sf::Texture static_background_texture;
 	char cwd[1024];
 	getcwd(cwd,sizeof(cwd));
 	string curdir(cwd);
 	if (!font.loadFromFile(curdir+"/Resources//Spac3 tech free promo.ttf")){ //sla het pad op in de objecten, niet de textures.
 		cout<<"ERROR IS KILL"<<endl;
 	}
+	if (!static_background_texture.loadFromFile(curdir+"/Remastered Tyrian Graphics//double-moons-in-colorful-starry-sky-640x480.jpg")){
+		cout<<"ERROR IS KILL"<<endl;
+	}
+	static_background_texture.setSmooth(true);
+	sf::Sprite sprite;
+	sprite.setTexture(static_background_texture);
+	sprite.scale(sf::Vector2f(0.45f, 0.45f));
+	
+	int selection = 3; //bovenste selection
+	shared_ptr<sf::RenderWindow> menu_window(new sf::RenderWindow(sf::VideoMode(640,480), "Tyrian Menu"));
+
 
 	// vectors vr text
 	sf::Text menu_text("menu ", font);
@@ -45,7 +55,10 @@ void Game::menu(){
 	exit_text.setCharacterSize(30);
 	menu_text.setColor(sf::Color::Blue);
 	menu_window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 , 0) );
+	clock.reset();
+	double selection_cooldown=0;
 	while (menu_window->isOpen()){
+			double deltaT=clock.getTime();
 			sf::Event event;
 			while (menu_window->pollEvent(event)){
 				if (event.type == sf::Event::Closed)
@@ -54,6 +67,7 @@ void Game::menu(){
 					menu_window->close();
 				}
 				if(input.checkKeyBoardInput(KeyPressed::Space)){
+					menu_window->close();
 					if(selection==3){
 						run();
 					}
@@ -64,7 +78,7 @@ void Game::menu(){
 						//iets v credits
 					}
 					if(selection==0){
-						menu_window->close();
+						//niks openen
 					}
 				}
 			}
@@ -74,17 +88,22 @@ void Game::menu(){
 			if(input.checkKeyBoardInput(KeyPressed::Left)){
 				//nothing yet
 			}
-			if(input.checkKeyBoardInput(KeyPressed::Up)){
+			if(input.checkKeyBoardInput(KeyPressed::Up) && selection_cooldown<=0){
 				selection = (selection+1)%4; // selection 0-3
+				selection_cooldown = 0.2;
 			}
-			if(input.checkKeyBoardInput(KeyPressed::Down)){
+			if(input.checkKeyBoardInput(KeyPressed::Down) && selection_cooldown<=0){
 				selection--;
 				if(selection<0){
 					selection = 3;
 				}
+				selection_cooldown = 0.2;
 			};
-
+			if(selection_cooldown>0){
+				selection_cooldown-=deltaT;
+			}
 			menu_window->clear();
+			menu_window->draw(sprite);
 			menu_window->draw(menu_text);
 			menu_window->draw(play_text);
 			menu_window->draw(level_text);
@@ -99,6 +118,7 @@ void Game::menu(){
 					rect.setOutlineColor(Color::Red);
 					rect.setOutlineThickness(5);
 					rect.setOrigin(exit_text.getOrigin());
+					rect.move(-10,0);
 					menu_window->draw(rect);
 					break;
 				}
@@ -110,6 +130,7 @@ void Game::menu(){
 					rect.setOutlineColor(Color::Red);
 					rect.setOutlineThickness(5);
 					rect.setOrigin(credits_text.getOrigin());
+					rect.move(-10,0);
 					menu_window->draw(rect);
 					break;
 				}
@@ -121,6 +142,7 @@ void Game::menu(){
 					rect.setOutlineColor(Color::Red);
 					rect.setOutlineThickness(5);
 					rect.setOrigin(level_text.getOrigin());
+					rect.move(-10,0);
 					menu_window->draw(rect);
 					break;
 				}
@@ -132,6 +154,7 @@ void Game::menu(){
 					rect.setOutlineColor(Color::Red);
 					rect.setOutlineThickness(5);
 					rect.setOrigin(play_text.getOrigin());
+					rect.move(-10,0);
 					menu_window->draw(rect);
 					break;
 				}
@@ -322,17 +345,16 @@ void Game::run(){
 		sf::Event event;
 		while (window->pollEvent(event))
 		{
-			if (event.type == sf::Event::Closed)
+			if (event.type == sf::Event::Closed || input.checkKeyBoardInput(KeyPressed::Escape)){
 				window->close();
-			if(input.checkKeyBoardInput(KeyPressed::Escape)){
-				window->close();
+				menu();
 			}
 		}
 		window->clear();
 
 		//INPUT
-		double deltaT=clock.getTime(); //
-		if(1/deltaT<20){
+		double deltaT=clock.getTime();
+		if(1/deltaT<30){
 			cout<<1/deltaT<<endl;
 		}
 		double x_mov=0;

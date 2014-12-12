@@ -14,8 +14,12 @@ Powerup::Powerup() {
 
 }
 
+Powerup::Powerup(Vector position,PowerupType p_type,shared_ptr<RenderWindow> window):ty::Powerup(position,p_type),window(window){}
+
 Powerup::~Powerup() {
 	// TODO Auto-generated destructor stub
 }
+
+void Powerup::draw(){}
 
 } /* namespace sfml */

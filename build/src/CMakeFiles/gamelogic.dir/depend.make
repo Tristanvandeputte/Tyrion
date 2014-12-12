@@ -7,6 +7,7 @@ src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o: ../src/gamelogic/Bullet
 src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o: ../src/gamelogic/Enemy.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o: ../src/gamelogic/Entity.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o: ../src/gamelogic/EntityFactory.h
+src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o: ../src/gamelogic/Powerup.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o: ../src/gamelogic/World.h
 
@@ -16,6 +17,7 @@ src/CMakeFiles/gamelogic.dir/gamelogic/Bullet.cpp.o: ../src/gamelogic/Bullet.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Bullet.cpp.o: ../src/gamelogic/Enemy.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Bullet.cpp.o: ../src/gamelogic/Entity.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Bullet.cpp.o: ../src/gamelogic/EntityFactory.h
+src/CMakeFiles/gamelogic.dir/gamelogic/Bullet.cpp.o: ../src/gamelogic/Powerup.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Bullet.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Bullet.cpp.o: ../src/gamelogic/World.h
 
@@ -25,6 +27,7 @@ src/CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.o: ../src/gamelogic/Enemy.cpp
 src/CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.o: ../src/gamelogic/Enemy.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.o: ../src/gamelogic/Entity.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.o: ../src/gamelogic/EntityFactory.h
+src/CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.o: ../src/gamelogic/Powerup.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.o: ../src/gamelogic/World.h
 
@@ -38,6 +41,7 @@ src/CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.o: ../src/gamelogic/Ene
 src/CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.o: ../src/gamelogic/Entity.h
 src/CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.o: ../src/gamelogic/EntityFactory.cpp
 src/CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.o: ../src/gamelogic/EntityFactory.h
+src/CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.o: ../src/gamelogic/Powerup.h
 src/CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.o: ../src/gamelogic/World.h
 
@@ -48,6 +52,7 @@ src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.o: ../src/gamelogic/Entity.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.o: ../src/gamelogic/EntityFactory.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.o: ../src/gamelogic/Player.cpp
 src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.o: ../src/gamelogic/Player.h
+src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.o: ../src/gamelogic/Powerup.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.o: ../src/gamelogic/World.h
 
@@ -69,6 +74,7 @@ src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.o: ../src/gamelogic/Bullet.h
 src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.o: ../src/gamelogic/Enemy.h
 src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.o: ../src/gamelogic/Entity.h
 src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.o: ../src/gamelogic/EntityFactory.h
+src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.o: ../src/gamelogic/Powerup.h
 src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.o: ../src/gamelogic/World.cpp
 src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.o: ../src/gamelogic/World.h

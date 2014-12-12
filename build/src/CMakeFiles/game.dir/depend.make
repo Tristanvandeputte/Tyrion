@@ -6,6 +6,7 @@ src/CMakeFiles/game.dir/sfml/Background.cpp.o: ../src/gamelogic/Bullet.h
 src/CMakeFiles/game.dir/sfml/Background.cpp.o: ../src/gamelogic/Enemy.h
 src/CMakeFiles/game.dir/sfml/Background.cpp.o: ../src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/Background.cpp.o: ../src/gamelogic/EntityFactory.h
+src/CMakeFiles/game.dir/sfml/Background.cpp.o: ../src/gamelogic/Powerup.h
 src/CMakeFiles/game.dir/sfml/Background.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/Background.cpp.o: ../src/gamelogic/World.h
 src/CMakeFiles/game.dir/sfml/Background.cpp.o: ../src/sfml/Background.cpp
@@ -16,6 +17,7 @@ src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o: ../src/gamelogic/Bullet.h
 src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o: ../src/gamelogic/Enemy.h
 src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o: ../src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o: ../src/gamelogic/EntityFactory.h
+src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o: ../src/gamelogic/Powerup.h
 src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o: ../src/gamelogic/World.h
 src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o: ../src/sfml/Background.h
@@ -27,6 +29,7 @@ src/CMakeFiles/game.dir/sfml/Bullet.cpp.o: ../src/gamelogic/Bullet.h
 src/CMakeFiles/game.dir/sfml/Bullet.cpp.o: ../src/gamelogic/Enemy.h
 src/CMakeFiles/game.dir/sfml/Bullet.cpp.o: ../src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/Bullet.cpp.o: ../src/gamelogic/EntityFactory.h
+src/CMakeFiles/game.dir/sfml/Bullet.cpp.o: ../src/gamelogic/Powerup.h
 src/CMakeFiles/game.dir/sfml/Bullet.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/Bullet.cpp.o: ../src/gamelogic/World.h
 src/CMakeFiles/game.dir/sfml/Bullet.cpp.o: ../src/sfml/Bullet.cpp
@@ -37,6 +40,7 @@ src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: ../src/gamelogic/Bullet.h
 src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: ../src/gamelogic/Enemy.h
 src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: ../src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: ../src/gamelogic/EntityFactory.h
+src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: ../src/gamelogic/Powerup.h
 src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: ../src/gamelogic/World.h
 src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: ../src/sfml/Bullet.h
@@ -48,6 +52,7 @@ src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: ../src/gamelogic/Bullet.h
 src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: ../src/gamelogic/Enemy.h
 src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: ../src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: ../src/gamelogic/EntityFactory.h
+src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: ../src/gamelogic/Powerup.h
 src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: ../src/gamelogic/World.h
 src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: ../src/sfml/Enemy.cpp
@@ -58,6 +63,7 @@ src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: ../src/gamelogic/Bullet.h
 src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: ../src/gamelogic/Enemy.h
 src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: ../src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: ../src/gamelogic/EntityFactory.h
+src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: ../src/gamelogic/Powerup.h
 src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: ../src/gamelogic/World.h
 src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: ../src/sfml/Enemy.h
@@ -70,6 +76,7 @@ src/CMakeFiles/game.dir/sfml/Game.cpp.o: ../src/gamelogic/Enemy.h
 src/CMakeFiles/game.dir/sfml/Game.cpp.o: ../src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/Game.cpp.o: ../src/gamelogic/EntityFactory.h
 src/CMakeFiles/game.dir/sfml/Game.cpp.o: ../src/gamelogic/Player.h
+src/CMakeFiles/game.dir/sfml/Game.cpp.o: ../src/gamelogic/Powerup.h
 src/CMakeFiles/game.dir/sfml/Game.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/Game.cpp.o: ../src/gamelogic/World.h
 src/CMakeFiles/game.dir/sfml/Game.cpp.o: ../src/sfml/BackgroundFactory.h
@@ -80,6 +87,7 @@ src/CMakeFiles/game.dir/sfml/Game.cpp.o: ../src/sfml/Game.h
 src/CMakeFiles/game.dir/sfml/Game.cpp.o: ../src/sfml/KeyBoard.h
 src/CMakeFiles/game.dir/sfml/Game.cpp.o: ../src/sfml/Player.h
 src/CMakeFiles/game.dir/sfml/Game.cpp.o: ../src/sfml/PlayerFactory.h
+src/CMakeFiles/game.dir/sfml/Game.cpp.o: ../src/sfml/PowerupFactory.h
 src/CMakeFiles/game.dir/sfml/Game.cpp.o: ../src/sfml/StopWatch.h
 
 src/CMakeFiles/game.dir/sfml/KeyBoard.cpp.o: ../src/sfml/KeyBoard.cpp
@@ -91,6 +99,7 @@ src/CMakeFiles/game.dir/sfml/Player.cpp.o: ../src/gamelogic/Enemy.h
 src/CMakeFiles/game.dir/sfml/Player.cpp.o: ../src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/Player.cpp.o: ../src/gamelogic/EntityFactory.h
 src/CMakeFiles/game.dir/sfml/Player.cpp.o: ../src/gamelogic/Player.h
+src/CMakeFiles/game.dir/sfml/Player.cpp.o: ../src/gamelogic/Powerup.h
 src/CMakeFiles/game.dir/sfml/Player.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/Player.cpp.o: ../src/gamelogic/World.h
 src/CMakeFiles/game.dir/sfml/Player.cpp.o: ../src/sfml/Player.cpp
@@ -102,6 +111,7 @@ src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: ../src/gamelogic/Enemy.h
 src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: ../src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: ../src/gamelogic/EntityFactory.h
 src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: ../src/gamelogic/Player.h
+src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: ../src/gamelogic/Powerup.h
 src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: ../src/gamelogic/World.h
 src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: ../src/sfml/Player.h
@@ -128,6 +138,7 @@ src/CMakeFiles/game.dir/sfml/main.cpp.o: ../src/gamelogic/Enemy.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: ../src/gamelogic/Entity.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: ../src/gamelogic/EntityFactory.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: ../src/gamelogic/Player.h
+src/CMakeFiles/game.dir/sfml/main.cpp.o: ../src/gamelogic/Powerup.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: ../src/gamelogic/World.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: ../src/sfml/BackgroundFactory.h
@@ -137,6 +148,7 @@ src/CMakeFiles/game.dir/sfml/main.cpp.o: ../src/sfml/Game.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: ../src/sfml/KeyBoard.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: ../src/sfml/Player.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: ../src/sfml/PlayerFactory.h
+src/CMakeFiles/game.dir/sfml/main.cpp.o: ../src/sfml/PowerupFactory.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: ../src/sfml/StopWatch.h
 src/CMakeFiles/game.dir/sfml/main.cpp.o: ../src/sfml/main.cpp
 

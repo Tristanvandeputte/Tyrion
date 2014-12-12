@@ -18,6 +18,7 @@ using namespace ty;
 enum class BulletType;
 enum class Status;
 enum class EnemyType;
+enum class PowerupType;
 
 using namespace std;
 
@@ -33,6 +34,7 @@ public:
 	virtual shared_ptr<ty::Entity> makeBullet(double x, double y, BulletType type,Status status);
 	virtual shared_ptr<ty::Entity> makeEnemy(double x, double y,EnemyType type, EntityFactory* bullet_factory,World* parent);
 	virtual shared_ptr<ty::Entity> makeBackground(std::string texturespot);
+	virtual shared_ptr<ty::Entity> makePowerup(Vector position,PowerupType p_type);
 };
 
 #endif /* ENTITYFACTORY_H_ */

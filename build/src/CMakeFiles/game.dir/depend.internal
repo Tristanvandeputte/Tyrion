@@ -7,6 +7,7 @@ src/CMakeFiles/game.dir/sfml/Background.cpp.o
  /home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
  /home/uauser/Desktop/Tyrion/src/sfml/Background.cpp
@@ -17,6 +18,7 @@ src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o
  /home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
  /home/uauser/Desktop/Tyrion/src/sfml/Background.h
@@ -28,6 +30,7 @@ src/CMakeFiles/game.dir/sfml/Bullet.cpp.o
  /home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
  /home/uauser/Desktop/Tyrion/src/sfml/Bullet.cpp
@@ -38,6 +41,7 @@ src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o
  /home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
  /home/uauser/Desktop/Tyrion/src/sfml/Bullet.h
@@ -49,6 +53,7 @@ src/CMakeFiles/game.dir/sfml/Enemy.cpp.o
  /home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
  /home/uauser/Desktop/Tyrion/src/sfml/Enemy.cpp
@@ -59,6 +64,7 @@ src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o
  /home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
  /home/uauser/Desktop/Tyrion/src/sfml/Enemy.h
@@ -71,6 +77,7 @@ src/CMakeFiles/game.dir/sfml/Game.cpp.o
  /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Player.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
  /home/uauser/Desktop/Tyrion/src/sfml/BackgroundFactory.h
@@ -81,6 +88,7 @@ src/CMakeFiles/game.dir/sfml/Game.cpp.o
  /home/uauser/Desktop/Tyrion/src/sfml/KeyBoard.h
  /home/uauser/Desktop/Tyrion/src/sfml/Player.h
  /home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.h
+ /home/uauser/Desktop/Tyrion/src/sfml/PowerupFactory.h
  /home/uauser/Desktop/Tyrion/src/sfml/StopWatch.h
 src/CMakeFiles/game.dir/sfml/KeyBoard.cpp.o
  /home/uauser/Desktop/Tyrion/src/sfml/KeyBoard.cpp
@@ -92,6 +100,7 @@ src/CMakeFiles/game.dir/sfml/Player.cpp.o
  /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Player.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
  /home/uauser/Desktop/Tyrion/src/sfml/Player.cpp
@@ -103,6 +112,7 @@ src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o
  /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Player.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
  /home/uauser/Desktop/Tyrion/src/sfml/Player.h
@@ -129,6 +139,7 @@ src/CMakeFiles/game.dir/sfml/main.cpp.o
  /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Player.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
  /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
  /home/uauser/Desktop/Tyrion/src/sfml/BackgroundFactory.h
@@ -138,5 +149,6 @@ src/CMakeFiles/game.dir/sfml/main.cpp.o
  /home/uauser/Desktop/Tyrion/src/sfml/KeyBoard.h
  /home/uauser/Desktop/Tyrion/src/sfml/Player.h
  /home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.h
+ /home/uauser/Desktop/Tyrion/src/sfml/PowerupFactory.h
  /home/uauser/Desktop/Tyrion/src/sfml/StopWatch.h
  /home/uauser/Desktop/Tyrion/src/sfml/main.cpp

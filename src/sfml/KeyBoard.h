@@ -19,8 +19,8 @@ public:
         static KeyBoard instance;
         return instance;
     }
-	KeyBoard(KeyBoard const&);             
-    void operator=(KeyBoard const&);
+	//KeyBoard(KeyBoard const&);             
+    //void operator=(KeyBoard const&);
 	virtual ~KeyBoard();
 	bool checkKeyBoardInput(KeyPressed input);
 };

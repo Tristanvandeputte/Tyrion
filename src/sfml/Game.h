@@ -11,6 +11,7 @@
 #include "BulletFactory.h"
 #include "EnemyFactory.h"
 #include "BackgroundFactory.h"
+#include "PowerupFactory.h"
 #include "KeyBoard.h"
 #include <SFML/Graphics.hpp>
 
@@ -18,7 +19,7 @@
 #define GAME_H_
 
 // TODO WorldFactory??
-
+using namespace sf;
 
 class Game {
 private:
@@ -29,7 +30,8 @@ private:
 	BackgroundFactory bafac;
 	ty::World game_world;
 	StopWatch clock;
-	KeyBoard input;
+	KeyBoard input=KeyBoard::getInstance();
+	// static function to enforce singelton
 	RenderWindow window;
 public:
 	Game();
