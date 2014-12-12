@@ -8,7 +8,7 @@
 #include "Game.h"
 
 Game::Game() {
-	// TODO Auto-generated constructor stub
+	input=KeyBoard::getInstance();
 
 }
 
@@ -93,7 +93,6 @@ void Game::menu(){
 			switch (selection){
 				case 0:
 				{
-					cout<<"exit"<<endl;
 					Vector2f size{float(exit_text.getGlobalBounds().width)+20,float(exit_text.getGlobalBounds().height)+20};
 					RectangleShape rect{size};
 					rect.setFillColor(Color::Transparent);
@@ -105,7 +104,6 @@ void Game::menu(){
 				}
 				case 1:
 				{
-					cout<<"credits"<<endl;
 					Vector2f size{float(credits_text.getGlobalBounds().width)+20,float(credits_text.getGlobalBounds().height)+20};
 					RectangleShape rect{size};
 					rect.setFillColor(Color::Transparent);
@@ -117,7 +115,6 @@ void Game::menu(){
 				}
 				case 2:
 				{
-					cout<<"level"<<endl;
 					Vector2f size{float(level_text.getGlobalBounds().width)+20,float(level_text.getGlobalBounds().height)+20};
 					RectangleShape rect{size};
 					rect.setFillColor(Color::Transparent);
@@ -129,7 +126,6 @@ void Game::menu(){
 				}
 				case 3:
 				{
-					cout<<"play"<<endl;
 					Vector2f size{float(play_text.getGlobalBounds().width)+20,float(play_text.getGlobalBounds().height)+20};
 					RectangleShape rect{size};
 					rect.setFillColor(Color::Transparent);
@@ -374,27 +370,3 @@ void Game::run(){
 	}
 
 }
-
-//TODO text
-//
-//sf::Text text;
-//
-//// select the font
-//text.setFont(font); // font is a sf::Font
-//
-//// set the string to display
-//text.setString("Hello world");
-//
-//// set the character size
-//text.setCharacterSize(24); // in pixels, not points!
-//
-//// set the color
-//text.setColor(sf::Color::Red);
-//
-//// set the text style
-//text.setStyle(sf::Text::Bold | sf::Text::Underlined);
-//
-//...
-//
-//// inside the main loop, between window.clear() and window.display()
-//window.draw(text);

@@ -328,6 +328,29 @@ src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o.provides: src/CMakeFiles/ga
 
 src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o.provides.build: src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o
 
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.o: src/CMakeFiles/game.dir/flags.make
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.o: ../src/sfml/Powerup.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/sfml/Powerup.cpp.o"
+	cd /home/uauser/Desktop/Tyrion/build/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/sfml/Powerup.cpp.o -c /home/uauser/Desktop/Tyrion/src/sfml/Powerup.cpp
+
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/sfml/Powerup.cpp.i"
+	cd /home/uauser/Desktop/Tyrion/build/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/Desktop/Tyrion/src/sfml/Powerup.cpp > CMakeFiles/game.dir/sfml/Powerup.cpp.i
+
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/sfml/Powerup.cpp.s"
+	cd /home/uauser/Desktop/Tyrion/build/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/Desktop/Tyrion/src/sfml/Powerup.cpp -o CMakeFiles/game.dir/sfml/Powerup.cpp.s
+
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.o.requires:
+.PHONY : src/CMakeFiles/game.dir/sfml/Powerup.cpp.o.requires
+
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.o.provides: src/CMakeFiles/game.dir/sfml/Powerup.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Powerup.cpp.o.provides.build
+.PHONY : src/CMakeFiles/game.dir/sfml/Powerup.cpp.o.provides
+
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.o.provides.build: src/CMakeFiles/game.dir/sfml/Powerup.cpp.o
+
 # Object files for target game
 game_OBJECTS = \
 "CMakeFiles/game.dir/sfml/main.cpp.o" \
@@ -341,7 +364,8 @@ game_OBJECTS = \
 "CMakeFiles/game.dir/sfml/Enemy.cpp.o" \
 "CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o" \
 "CMakeFiles/game.dir/sfml/Background.cpp.o" \
-"CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o"
+"CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o" \
+"CMakeFiles/game.dir/sfml/Powerup.cpp.o"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
@@ -358,6 +382,7 @@ src/game: src/CMakeFiles/game.dir/sfml/Enemy.cpp.o
 src/game: src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o
 src/game: src/CMakeFiles/game.dir/sfml/Background.cpp.o
 src/game: src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o
+src/game: src/CMakeFiles/game.dir/sfml/Powerup.cpp.o
 src/game: src/CMakeFiles/game.dir/build.make
 src/game: /usr/lib/x86_64-linux-gnu/libsfml-system.so
 src/game: /usr/lib/x86_64-linux-gnu/libsfml-window.so
@@ -385,6 +410,7 @@ src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/Enemy.cpp.o.requi
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/Background.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o.requires
+src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/Powerup.cpp.o.requires
 .PHONY : src/CMakeFiles/game.dir/requires
 
 src/CMakeFiles/game.dir/clean:

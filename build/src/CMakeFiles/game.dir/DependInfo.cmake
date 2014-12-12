@@ -14,6 +14,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/uauser/Desktop/Tyrion/src/sfml/KeyBoard.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/game.dir/sfml/KeyBoard.cpp.o"
   "/home/uauser/Desktop/Tyrion/src/sfml/Player.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/game.dir/sfml/Player.cpp.o"
   "/home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o"
+  "/home/uauser/Desktop/Tyrion/src/sfml/Powerup.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/game.dir/sfml/Powerup.cpp.o"
   "/home/uauser/Desktop/Tyrion/src/sfml/StopWatch.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/game.dir/sfml/StopWatch.cpp.o"
   "/home/uauser/Desktop/Tyrion/src/sfml/main.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/game.dir/sfml/main.cpp.o"
   )

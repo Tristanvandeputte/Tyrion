@@ -108,6 +108,17 @@ src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: ../src/sfml/Player.h
 src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: ../src/sfml/PlayerFactory.cpp
 src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: ../src/sfml/PlayerFactory.h
 
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.o: ../src/gamelogic/Background.h
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.o: ../src/gamelogic/Bullet.h
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.o: ../src/gamelogic/Enemy.h
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.o: ../src/gamelogic/Entity.h
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.o: ../src/gamelogic/EntityFactory.h
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.o: ../src/gamelogic/Powerup.h
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.o: ../src/gamelogic/Vector.h
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.o: ../src/gamelogic/World.h
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.o: ../src/sfml/Powerup.cpp
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.o: ../src/sfml/Powerup.h
+
 src/CMakeFiles/game.dir/sfml/StopWatch.cpp.o: ../src/sfml/StopWatch.cpp
 src/CMakeFiles/game.dir/sfml/StopWatch.cpp.o: ../src/sfml/StopWatch.h
 

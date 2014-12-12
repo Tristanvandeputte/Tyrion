@@ -21,8 +21,15 @@ Bullet::~Bullet() {
 void Bullet::draw(){}
 
 Bullet::Bullet(Vector position,BulletType type,Status status):Entity(position),type(type),status(status){
-	health = 1; //bullet heeft 1 health (gaat kapot on-hit of piercet eventueel)
-	speed = 7;
+	if(type==BulletType::BasicBullet){
+		health = 1; //bullet heeft 1 health (gaat kapot on-hit)
+		speed = 5;
+	}
+	if(type==BulletType::SpecialBullet){
+		health = 1; //bullet heeft 1 health (gaat kapot on-hit)
+		speed = 8;
+	}
+	immortal=true;
 }
 void Bullet::update(double deltaT){
 	if(status == Status::Enemy){
@@ -39,8 +46,11 @@ void Bullet::update(double deltaT){
 
 void Bullet::collide(shared_ptr<Entity> with){
 	int damage=0;
-	if(type==BulletType::BasicBullet){
+	if(type==BulletType::BasicBullet || type==BulletType::SpecialBullet){
 		damage=1;
+	}
+	if(with->getImmortal()==false){
+		immortal=false;
 	}
 	with->decreaseHealth(damage);
 }

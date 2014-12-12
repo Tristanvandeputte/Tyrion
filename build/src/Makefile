@@ -314,6 +314,30 @@ gamelogic/Player.cpp.s:
 	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.s
 .PHONY : gamelogic/Player.cpp.s
 
+gamelogic/Powerup.o: gamelogic/Powerup.cpp.o
+.PHONY : gamelogic/Powerup.o
+
+# target to build an object file
+gamelogic/Powerup.cpp.o:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o
+.PHONY : gamelogic/Powerup.cpp.o
+
+gamelogic/Powerup.i: gamelogic/Powerup.cpp.i
+.PHONY : gamelogic/Powerup.i
+
+# target to preprocess a source file
+gamelogic/Powerup.cpp.i:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.i
+.PHONY : gamelogic/Powerup.cpp.i
+
+gamelogic/Powerup.s: gamelogic/Powerup.cpp.s
+.PHONY : gamelogic/Powerup.s
+
+# target to generate assembly for a file
+gamelogic/Powerup.cpp.s:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.s
+.PHONY : gamelogic/Powerup.cpp.s
+
 gamelogic/Vector.o: gamelogic/Vector.cpp.o
 .PHONY : gamelogic/Vector.o
 
@@ -602,6 +626,30 @@ sfml/PlayerFactory.cpp.s:
 	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.s
 .PHONY : sfml/PlayerFactory.cpp.s
 
+sfml/Powerup.o: sfml/Powerup.cpp.o
+.PHONY : sfml/Powerup.o
+
+# target to build an object file
+sfml/Powerup.cpp.o:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Powerup.cpp.o
+.PHONY : sfml/Powerup.cpp.o
+
+sfml/Powerup.i: sfml/Powerup.cpp.i
+.PHONY : sfml/Powerup.i
+
+# target to preprocess a source file
+sfml/Powerup.cpp.i:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Powerup.cpp.i
+.PHONY : sfml/Powerup.cpp.i
+
+sfml/Powerup.s: sfml/Powerup.cpp.s
+.PHONY : sfml/Powerup.s
+
+# target to generate assembly for a file
+sfml/Powerup.cpp.s:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Powerup.cpp.s
+.PHONY : sfml/Powerup.cpp.s
+
 sfml/StopWatch.o: sfml/StopWatch.cpp.o
 .PHONY : sfml/StopWatch.o
 
@@ -682,6 +730,9 @@ help:
 	@echo "... gamelogic/Player.o"
 	@echo "... gamelogic/Player.i"
 	@echo "... gamelogic/Player.s"
+	@echo "... gamelogic/Powerup.o"
+	@echo "... gamelogic/Powerup.i"
+	@echo "... gamelogic/Powerup.s"
 	@echo "... gamelogic/Vector.o"
 	@echo "... gamelogic/Vector.i"
 	@echo "... gamelogic/Vector.s"
@@ -718,6 +769,9 @@ help:
 	@echo "... sfml/PlayerFactory.o"
 	@echo "... sfml/PlayerFactory.i"
 	@echo "... sfml/PlayerFactory.s"
+	@echo "... sfml/Powerup.o"
+	@echo "... sfml/Powerup.i"
+	@echo "... sfml/Powerup.s"
 	@echo "... sfml/StopWatch.o"
 	@echo "... sfml/StopWatch.i"
 	@echo "... sfml/StopWatch.s"

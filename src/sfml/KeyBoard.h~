@@ -13,14 +13,14 @@ enum class KeyPressed{Left,Right,Up,Down,Space,Escape,Null,RightUp,RightDown,Lef
 
 class KeyBoard {
 private:
-	KeyBoard(){}
+        static KeyBoard& getInstance(){
+            static KeyBoard instance;
+            return instance;
+        }
+	KeyBoard();
 public:
-    static KeyBoard& getInstance(){
-        static KeyBoard instance;
-        return instance;
-    }
 	KeyBoard(KeyBoard const&);             
-    void operator=(KeyBoard const&);
+        void operator=(KeyBoard const&);
 	virtual ~KeyBoard();
 	bool checkKeyBoardInput(KeyPressed input);
 };

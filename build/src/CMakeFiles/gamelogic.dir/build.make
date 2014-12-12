@@ -236,6 +236,29 @@ src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o.provides: src/CMakeFiles
 
 src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o.provides.build: src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o
 
+src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o: src/CMakeFiles/gamelogic.dir/flags.make
+src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o: ../src/gamelogic/Powerup.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o"
+	cd /home/uauser/Desktop/Tyrion/build/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o -c /home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.cpp
+
+src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.i"
+	cd /home/uauser/Desktop/Tyrion/build/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.cpp > CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.i
+
+src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.s"
+	cd /home/uauser/Desktop/Tyrion/build/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.cpp -o CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.s
+
+src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o.requires:
+.PHONY : src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o.requires
+
+src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o.provides: src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o.provides.build
+.PHONY : src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o.provides
+
+src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o.provides.build: src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o
+
 # Object files for target gamelogic
 gamelogic_OBJECTS = \
 "CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.o" \
@@ -245,7 +268,8 @@ gamelogic_OBJECTS = \
 "CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.o" \
 "CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.o" \
 "CMakeFiles/gamelogic.dir/gamelogic/Vector.cpp.o" \
-"CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o"
+"CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o" \
+"CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o"
 
 # External object files for target gamelogic
 gamelogic_EXTERNAL_OBJECTS =
@@ -258,6 +282,7 @@ src/libgamelogic.a: src/CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.o
 src/libgamelogic.a: src/CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.o
 src/libgamelogic.a: src/CMakeFiles/gamelogic.dir/gamelogic/Vector.cpp.o
 src/libgamelogic.a: src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o
+src/libgamelogic.a: src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o
 src/libgamelogic.a: src/CMakeFiles/gamelogic.dir/build.make
 src/libgamelogic.a: src/CMakeFiles/gamelogic.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libgamelogic.a"
@@ -276,6 +301,7 @@ src/CMakeFiles/gamelogic.dir/requires: src/CMakeFiles/gamelogic.dir/gamelogic/En
 src/CMakeFiles/gamelogic.dir/requires: src/CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.o.requires
 src/CMakeFiles/gamelogic.dir/requires: src/CMakeFiles/gamelogic.dir/gamelogic/Vector.cpp.o.requires
 src/CMakeFiles/gamelogic.dir/requires: src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o.requires
+src/CMakeFiles/gamelogic.dir/requires: src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o.requires
 .PHONY : src/CMakeFiles/gamelogic.dir/requires
 
 src/CMakeFiles/gamelogic.dir/clean:

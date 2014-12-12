@@ -1,5 +1,5 @@
 # Set a list of source files
-set(SRC_LIST sfml/KeyBoard.cpp sfml/Player.cpp sfml/Game.cpp sfml/PlayerFactory.cpp  sfml/StopWatch.cpp sfml/Bullet.cpp sfml/BulletFactory.cpp sfml/Enemy.cpp sfml/EnemyFactory.cpp sfml/Background.cpp)
+set(SRC_LIST sfml/KeyBoard.cpp sfml/Player.cpp sfml/Game.cpp sfml/PlayerFactory.cpp  sfml/StopWatch.cpp sfml/Bullet.cpp sfml/BulletFactory.cpp sfml/Enemy.cpp sfml/EnemyFactory.cpp sfml/Background.cpp sfml/BackgroundFactory.cpp sfml/Powerup.cpp)
 
 # Set a list of library files
 set(LIB_LIST gamelogic/Player.cpp gamelogic/World.cpp gamelogic/Entity.cpp gamelogic/Bullet.cpp gamelogic/EntityFactory.cpp gamelogic/Enemy.cpp gamelogic/Vector.cpp gamelogic/Background.cpp)

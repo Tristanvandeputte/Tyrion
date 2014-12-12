@@ -51,6 +51,16 @@ src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.o: ../src/gamelogic/Player.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.o: ../src/gamelogic/Vector.h
 src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.o: ../src/gamelogic/World.h
 
+src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o: ../src/gamelogic/Background.h
+src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o: ../src/gamelogic/Bullet.h
+src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o: ../src/gamelogic/Enemy.h
+src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o: ../src/gamelogic/Entity.h
+src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o: ../src/gamelogic/EntityFactory.h
+src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o: ../src/gamelogic/Powerup.cpp
+src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o: ../src/gamelogic/Powerup.h
+src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o: ../src/gamelogic/Vector.h
+src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o: ../src/gamelogic/World.h
+
 src/CMakeFiles/gamelogic.dir/gamelogic/Vector.cpp.o: ../src/gamelogic/Vector.cpp
 src/CMakeFiles/gamelogic.dir/gamelogic/Vector.cpp.o: ../src/gamelogic/Vector.h
 

@@ -10,6 +10,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/gamelogic.dir/gamelogic/Entity.cpp.o"
   "/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.o"
   "/home/uauser/Desktop/Tyrion/src/gamelogic/Player.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.o"
+  "/home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o"
   "/home/uauser/Desktop/Tyrion/src/gamelogic/Vector.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/gamelogic.dir/gamelogic/Vector.cpp.o"
   "/home/uauser/Desktop/Tyrion/src/gamelogic/World.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.o"
   )

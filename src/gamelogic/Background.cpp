@@ -20,7 +20,9 @@ Background::~Background() {
 
 void Background::draw(){}
 
-Background::Background(string texture_spot):texture_spot(texture_spot){}
+Background::Background(string texture_spot):texture_spot(texture_spot){
+	immortal=true;
+}
 
 void Background::update(double deltaT){
 	Vector mov(0,-0.1*speed*deltaT);

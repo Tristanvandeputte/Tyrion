@@ -7,11 +7,6 @@
 
 #include "KeyBoard.h"
 
-KeyBoard::KeyBoard() {
-	// TODO Auto-generated constructor stub
-
-}
-
 KeyBoard::~KeyBoard() {
 	// TODO Auto-generated destructor stub
 }

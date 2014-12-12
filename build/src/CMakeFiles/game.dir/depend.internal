@@ -108,6 +108,17 @@ src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o
  /home/uauser/Desktop/Tyrion/src/sfml/Player.h
  /home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.cpp
  /home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.h
+src/CMakeFiles/game.dir/sfml/Powerup.cpp.o
+ /home/uauser/Desktop/Tyrion/src/gamelogic/Background.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
+ /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
+ /home/uauser/Desktop/Tyrion/src/sfml/Powerup.cpp
+ /home/uauser/Desktop/Tyrion/src/sfml/Powerup.h
 src/CMakeFiles/game.dir/sfml/StopWatch.cpp.o
  /home/uauser/Desktop/Tyrion/src/sfml/StopWatch.cpp
  /home/uauser/Desktop/Tyrion/src/sfml/StopWatch.h

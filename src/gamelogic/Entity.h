@@ -35,6 +35,8 @@ protected:
 	Vector position;
 	Vector movement;
 	double speed{5.0};
+	// bullets, for example, are immortal
+	bool immortal{false};
 	int health;
 	int damage{1};
 	double invincibility_frame{0};
@@ -44,6 +46,7 @@ public:
 	Entity();
 	virtual ~Entity();
 	virtual void draw();
+	void recievePowerUp(shared_ptr<Entity> power_up);
 	Entity(Vector position);
 	Entity(Vector position,double speed ,int health, int damage);
 	void move(Vector move);
@@ -57,6 +60,7 @@ public:
 	Vector getPosition();
 	void setPosition(Vector new_pos);
 	Status getStatus();
+	bool getImmortal();
 	void decreaseHealth(int damage);
 	virtual void collide(shared_ptr<Entity> with);
 	bool isDead();

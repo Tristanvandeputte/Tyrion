@@ -168,6 +168,10 @@ KeyBoard.h
 SFML/Graphics.hpp
 -
 
+/home/uauser/Desktop/Tyrion/src/sfml/KeyBoard.cpp
+KeyBoard.h
+/home/uauser/Desktop/Tyrion/src/sfml/KeyBoard.h
+
 /home/uauser/Desktop/Tyrion/src/sfml/KeyBoard.h
 SFML/Graphics.hpp
 -
@@ -207,4 +211,14 @@ ctime
 -
 chrono
 -
+
+/home/uauser/Desktop/Tyrion/src/sfml/main.cpp
+SFML/Graphics.hpp
+-
+iostream
+-
+unistd.h
+-
+Game.h
+/home/uauser/Desktop/Tyrion/src/sfml/Game.h
 

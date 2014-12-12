@@ -7,6 +7,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.o"
   "CMakeFiles/gamelogic.dir/gamelogic/Vector.cpp.o"
   "CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o"
+  "CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o"
   "libgamelogic.pdb"
   "libgamelogic.a"
 )

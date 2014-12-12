@@ -27,7 +27,9 @@ void Entity::draw(){
 void Entity::move(Vector move){
 	movement = movement+move;
 }
-
+void Entity::recievePowerUp(shared_ptr<Entity> power_up){
+	
+}
 double Entity::getX(){
 	return position.getX();
 }
@@ -57,9 +59,14 @@ void  Entity::setPosition(Vector new_pos){
 Status Entity::getStatus(){
 	return status;
 }
-
+bool Entity::getImmortal(){
+	return immortal;
+}
 bool Entity::isDead(){
-	return (health <= 0);
+	if(not immortal){
+		return (health <= 0);
+	}
+	return false;
 }
 
 bool Entity::canShoot(){}
