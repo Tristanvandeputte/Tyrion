@@ -1,2 +1,2 @@
-/home/tristan/Desktop/Tyrion/src/CMakeFiles/game.dir
-/home/tristan/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir
+/home/uauser/Desktop/Tyrion/src/CMakeFiles/game.dir
+/home/uauser/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir

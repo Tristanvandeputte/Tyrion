@@ -1,4 +1,4 @@
-# Install script for directory: /home/tristan/Desktop/Tyrion/src
+# Install script for directory: /home/uauser/Desktop/Tyrion/src
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,38 +33,38 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  IF(EXISTS "$ENV{DESTDIR}/home/tristan/Desktop/Tyrion/bin/game" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/tristan/Desktop/Tyrion/bin/game")
+  IF(EXISTS "$ENV{DESTDIR}/home/uauser/Desktop/Tyrion/bin/game" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home/uauser/Desktop/Tyrion/bin/game")
     FILE(RPATH_CHECK
-         FILE "$ENV{DESTDIR}/home/tristan/Desktop/Tyrion/bin/game"
+         FILE "$ENV{DESTDIR}/home/uauser/Desktop/Tyrion/bin/game"
          RPATH "")
   ENDIF()
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/tristan/Desktop/Tyrion/bin/game")
+   "/home/uauser/Desktop/Tyrion/bin/game")
   IF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-FILE(INSTALL DESTINATION "/home/tristan/Desktop/Tyrion/bin" TYPE EXECUTABLE FILES "/home/tristan/Desktop/Tyrion/src/game")
-  IF(EXISTS "$ENV{DESTDIR}/home/tristan/Desktop/Tyrion/bin/game" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/tristan/Desktop/Tyrion/bin/game")
+FILE(INSTALL DESTINATION "/home/uauser/Desktop/Tyrion/bin" TYPE EXECUTABLE FILES "/home/uauser/Desktop/Tyrion/src/game")
+  IF(EXISTS "$ENV{DESTDIR}/home/uauser/Desktop/Tyrion/bin/game" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home/uauser/Desktop/Tyrion/bin/game")
     IF(CMAKE_INSTALL_DO_STRIP)
-      EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/tristan/Desktop/Tyrion/bin/game")
+      EXECUTE_PROCESS(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/uauser/Desktop/Tyrion/bin/game")
     ENDIF(CMAKE_INSTALL_DO_STRIP)
   ENDIF()
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/tristan/Desktop/Tyrion/lib/libgamelogic.a")
+   "/home/uauser/Desktop/Tyrion/lib/libgamelogic.a")
   IF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-FILE(INSTALL DESTINATION "/home/tristan/Desktop/Tyrion/lib" TYPE STATIC_LIBRARY FILES "/home/tristan/Desktop/Tyrion/src/libgamelogic.a")
+FILE(INSTALL DESTINATION "/home/uauser/Desktop/Tyrion/lib" TYPE STATIC_LIBRARY FILES "/home/uauser/Desktop/Tyrion/src/libgamelogic.a")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

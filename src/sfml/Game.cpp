@@ -35,15 +35,14 @@ void Game::menu(){
 	play_text.setOrigin(-200,-200);
 	play_text.setCharacterSize(30);
 	sf::Text level_text("level select ", font);
-	level_text.setOrigin(-200,-300);
+	level_text.setOrigin(-200,-250);
 	level_text.setCharacterSize(30);
 	sf::Text credits_text("credits ", font);
-	credits_text.setOrigin(-200,-400);
+	credits_text.setOrigin(-200,-300);
 	credits_text.setCharacterSize(30);
 	sf::Text exit_text("exit ", font);
-	exit_text.setOrigin(-200,-800);
+	exit_text.setOrigin(-200,-350);
 	exit_text.setCharacterSize(30);
-	//text.setStyle(sf::Text::Bold);
 	menu_text.setColor(sf::Color::Blue);
 	menu_window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 , 0) );
 	while (menu_window->isOpen()){
@@ -76,59 +75,71 @@ void Game::menu(){
 				//nothing yet
 			}
 			if(input.checkKeyBoardInput(KeyPressed::Up)){
-				selection = (selection+1)%3; // selection 0-3
+				selection = (selection+1)%4; // selection 0-3
 			}
 			if(input.checkKeyBoardInput(KeyPressed::Down)){
-				selection = selection--;
+				selection--;
 				if(selection<0){
 					selection = 3;
 				}
-			}
-			cout<<selection<<endl;
-			switch (selection){
-				case 0:
-							{
-								Vector2f size{float(exit_text.getGlobalBounds().width),float(exit_text.getGlobalBounds().width)};
-								RectangleShape rect{size};
-								rect.setFillColor(Color::Transparent);
-								rect.setOutlineColor(Color::Red);
-								rect.setOutlineThickness(5);
-								window.draw(rect);
-							}
-				case 1:
-							{
-								Vector2f size{float(credits_text.getGlobalBounds().width),float(credits_text.getGlobalBounds().width)};
-								RectangleShape rect{size};
-								rect.setFillColor(Color::Transparent);
-								rect.setOutlineColor(Color::Red);
-								rect.setOutlineThickness(5);
-								window.draw(rect);
-					 		}
-				case 2:
-							{
-								Vector2f size{float(level_text.getGlobalBounds().width),float(level_text.getGlobalBounds().width)};
-								RectangleShape rect{size};
-								rect.setFillColor(Color::Transparent);
-								rect.setOutlineColor(Color::Red);
-								rect.setOutlineThickness(5);
-								window.draw(rect);
-							}
-				case 3:
-							{
-								Vector2f size{float(play_text.getGlobalBounds().width),float(play_text.getGlobalBounds().width)};
-								RectangleShape rect{size};
-								rect.setFillColor(Color::Transparent);
-								rect.setOutlineColor(Color::Red);
-								rect.setOutlineThickness(5);
-								window.draw(rect);
-							}
-			}
+			};
+
 			menu_window->clear();
 			menu_window->draw(menu_text);
 			menu_window->draw(play_text);
 			menu_window->draw(level_text);
 			menu_window->draw(credits_text);
 			menu_window->draw(exit_text);
+			switch (selection){
+				case 0:
+				{
+					cout<<"exit"<<endl;
+					Vector2f size{float(exit_text.getGlobalBounds().width)+20,float(exit_text.getGlobalBounds().height)+20};
+					RectangleShape rect{size};
+					rect.setFillColor(Color::Transparent);
+					rect.setOutlineColor(Color::Red);
+					rect.setOutlineThickness(5);
+					rect.setOrigin(exit_text.getOrigin());
+					menu_window->draw(rect);
+					break;
+				}
+				case 1:
+				{
+					cout<<"credits"<<endl;
+					Vector2f size{float(credits_text.getGlobalBounds().width)+20,float(credits_text.getGlobalBounds().height)+20};
+					RectangleShape rect{size};
+					rect.setFillColor(Color::Transparent);
+					rect.setOutlineColor(Color::Red);
+					rect.setOutlineThickness(5);
+					rect.setOrigin(credits_text.getOrigin());
+					menu_window->draw(rect);
+					break;
+				}
+				case 2:
+				{
+					cout<<"level"<<endl;
+					Vector2f size{float(level_text.getGlobalBounds().width)+20,float(level_text.getGlobalBounds().height)+20};
+					RectangleShape rect{size};
+					rect.setFillColor(Color::Transparent);
+					rect.setOutlineColor(Color::Red);
+					rect.setOutlineThickness(5);
+					rect.setOrigin(level_text.getOrigin());
+					menu_window->draw(rect);
+					break;
+				}
+				case 3:
+				{
+					cout<<"play"<<endl;
+					Vector2f size{float(play_text.getGlobalBounds().width)+20,float(play_text.getGlobalBounds().height)+20};
+					RectangleShape rect{size};
+					rect.setFillColor(Color::Transparent);
+					rect.setOutlineColor(Color::Red);
+					rect.setOutlineThickness(5);
+					rect.setOrigin(play_text.getOrigin());
+					menu_window->draw(rect);
+					break;
+				}
+			}
 			menu_window->display();
 		}
 }
