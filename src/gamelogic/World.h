@@ -56,7 +56,10 @@ private:
 	//A pointer to the current player
 	Enemyvec all_enemy_creations;
 	Enemyvec reset_all_enemy_creations;
-	//vector that specifies time and enemytype of all the enemies in this world
+	//vector that specifies  spawn time and enemytype of all the enemies in this world
+	Powerupvec all_powerups;
+	Powerupvec reset_all_powerups;
+	//vector that specifies  spawntime and enemytype of all the powerups in this world
 	double game_time{0};
 public:
 	World();
@@ -72,6 +75,7 @@ public:
 	void collisionCheck();
 	void setBackground(vector<string> texture_locations);
 	void createNewEnemy(EnemyType type,double x,double y);
+	void spawnPowerUp(PowerupType type, double x, double y);
 	void draw();
 	void playerShoots();
 	void checkDead();
@@ -80,7 +84,7 @@ public:
 	void backgroundPositionCheck();
 	
 	void reset();
-	void changeLevel(Enemyvec all_enemy_creations,vector<string> texture_locations);
+	void changeLevel(Enemyvec enemy_creations,vector<string> texture_locs);
 };
 
 } /* namespace ty */

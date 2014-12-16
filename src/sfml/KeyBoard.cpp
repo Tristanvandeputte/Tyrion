@@ -30,4 +30,7 @@ bool KeyBoard::checkKeyBoardInput(KeyPressed input){
 	else if (KeyPressed::Space==input){
 		return sf::Keyboard::isKeyPressed(sf::Keyboard::Space);
 	}
+	else if (KeyPressed::P==input){
+		return sf::Keyboard::isKeyPressed(sf::Keyboard::P);
+	}
 }

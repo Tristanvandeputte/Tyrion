@@ -29,6 +29,7 @@ private:
 	PlayerFactory afac;
 	BulletFactory bfac;
 	EnemyFactory cfac;
+	//PowerupFactory pfac;
 	BackgroundFactory bafac;
 	ty::World game_world;
 	StopWatch clock;

@@ -133,6 +133,15 @@ void World::update(double deltaT){
 			++to_be_created;
 		}
 	}
+	for (auto to_be_created = all_powerups.begin(); to_be_created != all_powerups.end();){
+		if (game_time>=get<0>(*to_be_created)){
+			//createNewEnemy(get<1>(*to_be_created),get<2>(*to_be_created),get<3>(*to_be_created));
+			to_be_created = all_powerups.erase(to_be_created);
+		}
+		else{
+			++to_be_created;
+		}
+	}
 
 	for(EntityPtr e_ptr : ally_entities){
 		e_ptr->update(deltaT);
@@ -146,6 +155,9 @@ void World::update(double deltaT){
 	backgroundPositionCheck();
 }
 
+void spawnPowerUp(PowerupType type, double x, double y){
+	
+}
 void World::createNewEnemy(EnemyType type,double x,double y){
 	EntityPtr one = e_fac->makeEnemy(x,y,type,b_fac,this);
 	enemy_entities.push_back(one);
@@ -210,12 +222,15 @@ void World::reset(){
 	all_enemy_creations = reset_all_enemy_creations;
 	ally_entities.clear();
 	enemy_entities.clear();
+	background_tiles.clear();
 	texturecounter = 0;
 	game_time = 0;
 	
 }
-void World::changeLevel(Enemyvec all_enemy_creations,vector<string> texture_locations){
-	
+void World::changeLevel(Enemyvec enemy_creations,vector<string> texture_locs){
+	reset();
+	all_enemy_creations = enemy_creations;
+	background_spots = texture_locs;
 }
 
 }/* namespace ty */

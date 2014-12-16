@@ -9,7 +9,7 @@
 #define KEYBOARD_H_
 #include <SFML/Graphics.hpp>
 
-enum class KeyPressed{Left,Right,Up,Down,Space,Escape,Null,RightUp,RightDown,LeftUp,LeftDown};
+enum class KeyPressed{Left,Right,Up,Down,Space,Escape,Null,RightUp,RightDown,LeftUp,LeftDown,P};
 
 class KeyBoard {
 private:

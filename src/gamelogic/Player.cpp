@@ -60,7 +60,6 @@ bool Player::canShoot(){
 	return false;
 }
 
-
 shared_ptr<Entity> Player::Shoot(){
 	shot_cool_down=base_shot_cool_down;
 	return bullet_factory->makeBullet(position.getX(),position.getY(),b_type,Status::Ally);
