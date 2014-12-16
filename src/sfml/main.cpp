@@ -20,7 +20,7 @@ std::map<string,Texture> sfml::Background::all_textures = {};
 
 int main(){
 	Game this_game;
-	this_game.menu();
+	this_game.run();
 	
     return 0;
 }

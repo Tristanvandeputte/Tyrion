@@ -14,7 +14,9 @@ World::World() {
 
 }
 
-World::World(EntityFactory* p_fac,EntityFactory* b_fac,EntityFactory* e_fac, Enemyvec all_enemy_creations,EntityFactory* ba_fac):p_fac(p_fac),b_fac(b_fac),e_fac(e_fac),all_enemy_creations(all_enemy_creations),ba_fac(ba_fac){}
+World::World(EntityFactory* p_fac,EntityFactory* b_fac,EntityFactory* e_fac, Enemyvec all_enemy_creations,EntityFactory* ba_fac):p_fac(p_fac),b_fac(b_fac),e_fac(e_fac),all_enemy_creations(all_enemy_creations),ba_fac(ba_fac){
+	reset_all_enemy_creations = all_enemy_creations;
+}
 
 World::~World() {
 	// TODO Auto-generated destructor stub
@@ -119,11 +121,10 @@ void World::update(double deltaT){
 		background->update(deltaT);
 	}
 
-
 	checkOutOfBounds();
 	collisionCheck();
 
-	for (auto to_be_created = all_enemy_creations.begin(); to_be_created != all_enemy_creations.end() ;){
+	for (auto to_be_created = all_enemy_creations.begin(); to_be_created != all_enemy_creations.end();){
 		if (game_time>=get<0>(*to_be_created)){
 			createNewEnemy(get<1>(*to_be_created),get<2>(*to_be_created),get<3>(*to_be_created));
 			to_be_created = all_enemy_creations.erase(to_be_created);
@@ -203,6 +204,18 @@ bool World::checkGameEnd(){
 
 void World::push_to_vector(shared_ptr<Entity> bullet){
 	enemy_entities.push_back(bullet);
+}
+
+void World::reset(){
+	all_enemy_creations = reset_all_enemy_creations;
+	ally_entities.clear();
+	enemy_entities.clear();
+	texturecounter = 0;
+	game_time = 0;
+	
+}
+void World::changeLevel(Enemyvec all_enemy_creations,vector<string> texture_locations){
+	
 }
 
 }/* namespace ty */

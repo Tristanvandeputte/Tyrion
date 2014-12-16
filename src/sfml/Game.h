@@ -18,6 +18,8 @@
 #ifndef GAME_H_
 #define GAME_H_
 
+enum class State{Menu,LevelSelect,Run,Credits};
+
 // TODO WorldFactory??
 using namespace sf;
 
@@ -30,6 +32,7 @@ private:
 	BackgroundFactory bafac;
 	ty::World game_world;
 	StopWatch clock;
+	State window_state;
 	KeyBoard input=KeyBoard::getInstance();
 	// static function to enforce singelton
 	RenderWindow window;

@@ -86,6 +86,20 @@ math.h
 memory
 -
 
+/home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
+Entity.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
+Bullet.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.h
+EntityFactory.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+iostream
+-
+memory
+-
+unistd.h
+-
+
 /home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
 
 /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
@@ -95,6 +109,8 @@ Background.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/Background.h
 Enemy.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
+Powerup.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
 EntityFactory.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
 Bullet.h
@@ -108,22 +124,6 @@ tuple
 unistd.h
 -
 
-/home/uauser/Desktop/Tyrion/src/sfml/Background.cpp
-Background.h
-/home/uauser/Desktop/Tyrion/src/sfml/Background.h
-
-/home/uauser/Desktop/Tyrion/src/sfml/Background.h
-../gamelogic/EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
-../gamelogic/Background.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Background.h
-SFML/Graphics.hpp
--
-
-/home/uauser/Desktop/Tyrion/src/sfml/BackgroundFactory.cpp
-BackgroundFactory.h
-/home/uauser/Desktop/Tyrion/src/sfml/BackgroundFactory.h
-
 /home/uauser/Desktop/Tyrion/src/sfml/BackgroundFactory.h
 ../gamelogic/EntityFactory.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
@@ -136,22 +136,6 @@ memory
 SFML/Graphics.hpp
 -
 
-/home/uauser/Desktop/Tyrion/src/sfml/Bullet.cpp
-Bullet.h
-/home/uauser/Desktop/Tyrion/src/sfml/Bullet.h
-
-/home/uauser/Desktop/Tyrion/src/sfml/Bullet.h
-../gamelogic/EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
-../gamelogic/Bullet.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.h
-SFML/Graphics.hpp
--
-
-/home/uauser/Desktop/Tyrion/src/sfml/BulletFactory.cpp
-BulletFactory.h
-/home/uauser/Desktop/Tyrion/src/sfml/BulletFactory.h
-
 /home/uauser/Desktop/Tyrion/src/sfml/BulletFactory.h
 ../gamelogic/EntityFactory.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
@@ -163,22 +147,6 @@ memory
 -
 SFML/Graphics.hpp
 -
-
-/home/uauser/Desktop/Tyrion/src/sfml/Enemy.cpp
-Enemy.h
-/home/uauser/Desktop/Tyrion/src/sfml/Enemy.h
-
-/home/uauser/Desktop/Tyrion/src/sfml/Enemy.h
-../gamelogic/Enemy.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
-SFML/Graphics.hpp
--
-memory
--
-
-/home/uauser/Desktop/Tyrion/src/sfml/EnemyFactory.cpp
-EnemyFactory.h
-/home/uauser/Desktop/Tyrion/src/sfml/EnemyFactory.h
 
 /home/uauser/Desktop/Tyrion/src/sfml/EnemyFactory.h
 ../gamelogic/EntityFactory.h
@@ -211,22 +179,16 @@ EnemyFactory.h
 /home/uauser/Desktop/Tyrion/src/sfml/EnemyFactory.h
 BackgroundFactory.h
 /home/uauser/Desktop/Tyrion/src/sfml/BackgroundFactory.h
+PowerupFactory.h
+/home/uauser/Desktop/Tyrion/src/sfml/PowerupFactory.h
 KeyBoard.h
 /home/uauser/Desktop/Tyrion/src/sfml/KeyBoard.h
 SFML/Graphics.hpp
 -
 
-/home/uauser/Desktop/Tyrion/src/sfml/KeyBoard.cpp
-KeyBoard.h
-/home/uauser/Desktop/Tyrion/src/sfml/KeyBoard.h
-
 /home/uauser/Desktop/Tyrion/src/sfml/KeyBoard.h
 SFML/Graphics.hpp
 -
-
-/home/uauser/Desktop/Tyrion/src/sfml/Player.cpp
-Player.h
-/home/uauser/Desktop/Tyrion/src/sfml/Player.h
 
 /home/uauser/Desktop/Tyrion/src/sfml/Player.h
 ../gamelogic/Player.h
@@ -244,10 +206,6 @@ memory
 unistd.h
 -
 
-/home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.cpp
-PlayerFactory.h
-/home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.h
-
 /home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.h
 ../gamelogic/EntityFactory.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
@@ -260,9 +218,19 @@ memory
 SFML/Graphics.hpp
 -
 
-/home/uauser/Desktop/Tyrion/src/sfml/StopWatch.cpp
-StopWatch.h
-/home/uauser/Desktop/Tyrion/src/sfml/StopWatch.h
+/home/uauser/Desktop/Tyrion/src/sfml/PowerupFactory.h
+../gamelogic/EntityFactory.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+Powerup.h
+/home/uauser/Desktop/Tyrion/src/sfml/Powerup.h
+stdlib.h
+-
+time.h
+-
+memory
+-
+SFML/Graphics.hpp
+-
 
 /home/uauser/Desktop/Tyrion/src/sfml/StopWatch.h
 iostream
@@ -271,14 +239,4 @@ ctime
 -
 chrono
 -
-
-/home/uauser/Desktop/Tyrion/src/sfml/main.cpp
-SFML/Graphics.hpp
--
-iostream
--
-unistd.h
--
-Game.h
-/home/uauser/Desktop/Tyrion/src/sfml/Game.h
 

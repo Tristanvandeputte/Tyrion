@@ -62,10 +62,6 @@ unistd.h
 memory
 -
 
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.cpp
-EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
-
 /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
 memory
 -
@@ -91,6 +87,10 @@ unistd.h
 -
 
 /home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
+
+/home/uauser/Desktop/Tyrion/src/gamelogic/World.cpp
+World.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/World.h
 
 /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
 Entity.h

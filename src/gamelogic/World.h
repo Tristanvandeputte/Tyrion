@@ -55,6 +55,7 @@ private:
 	EntityPtr current_player;
 	//A pointer to the current player
 	Enemyvec all_enemy_creations;
+	Enemyvec reset_all_enemy_creations;
 	//vector that specifies time and enemytype of all the enemies in this world
 	double game_time{0};
 public:
@@ -77,6 +78,9 @@ public:
 	bool checkGameEnd();
 	void push_to_vector(shared_ptr<Entity> bullet);
 	void backgroundPositionCheck();
+	
+	void reset();
+	void changeLevel(Enemyvec all_enemy_creations,vector<string> texture_locations);
 };
 
 } /* namespace ty */
