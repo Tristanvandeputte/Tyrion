@@ -4,6 +4,9 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
+  "/home/uauser/Desktop/Tyrion/src/parsing/compactxml.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/game.dir/parsing/compactxml.cpp.o"
+  "/home/uauser/Desktop/Tyrion/src/parsing/levelparser.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/game.dir/parsing/levelparser.cpp.o"
+  "/home/uauser/Desktop/Tyrion/src/parsing/tinyxml2.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o"
   "/home/uauser/Desktop/Tyrion/src/sfml/Background.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/game.dir/sfml/Background.cpp.o"
   "/home/uauser/Desktop/Tyrion/src/sfml/BackgroundFactory.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o"
   "/home/uauser/Desktop/Tyrion/src/sfml/Bullet.cpp" "/home/uauser/Desktop/Tyrion/build/src/CMakeFiles/game.dir/sfml/Bullet.cpp.o"

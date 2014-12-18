@@ -6,6 +6,7 @@
  */
 
 #include "../gamelogic/World.h"
+#include "../parsing/levelparser.h"
 #include "StopWatch.h"
 #include "PlayerFactory.h"
 #include "BulletFactory.h"
@@ -17,6 +18,9 @@
 
 #ifndef GAME_H_
 #define GAME_H_
+
+class LevelParser;
+class Map;
 
 enum class State{Menu,LevelSelect,Run,Credits};
 
@@ -37,15 +41,15 @@ private:
 	KeyBoard input=KeyBoard::getInstance();
 	// static function to enforce singelton
 	RenderWindow window;
+	vector<Map> levels;
+	LevelParser* parser;
 public:
 	Game();
 
 	//enemie creation -> inlezen
 	virtual ~Game();
 	void run();
-	void menu();
-	void levelSelect();
-	void credits();
+	void parse_levels();
 };
 
 #endif /* GAME_H_ */

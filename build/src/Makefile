@@ -386,6 +386,78 @@ gamelogic/World.cpp.s:
 	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/gamelogic.dir/build.make src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.s
 .PHONY : gamelogic/World.cpp.s
 
+parsing/compactxml.o: parsing/compactxml.cpp.o
+.PHONY : parsing/compactxml.o
+
+# target to build an object file
+parsing/compactxml.cpp.o:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/parsing/compactxml.cpp.o
+.PHONY : parsing/compactxml.cpp.o
+
+parsing/compactxml.i: parsing/compactxml.cpp.i
+.PHONY : parsing/compactxml.i
+
+# target to preprocess a source file
+parsing/compactxml.cpp.i:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/parsing/compactxml.cpp.i
+.PHONY : parsing/compactxml.cpp.i
+
+parsing/compactxml.s: parsing/compactxml.cpp.s
+.PHONY : parsing/compactxml.s
+
+# target to generate assembly for a file
+parsing/compactxml.cpp.s:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/parsing/compactxml.cpp.s
+.PHONY : parsing/compactxml.cpp.s
+
+parsing/levelparser.o: parsing/levelparser.cpp.o
+.PHONY : parsing/levelparser.o
+
+# target to build an object file
+parsing/levelparser.cpp.o:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/parsing/levelparser.cpp.o
+.PHONY : parsing/levelparser.cpp.o
+
+parsing/levelparser.i: parsing/levelparser.cpp.i
+.PHONY : parsing/levelparser.i
+
+# target to preprocess a source file
+parsing/levelparser.cpp.i:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/parsing/levelparser.cpp.i
+.PHONY : parsing/levelparser.cpp.i
+
+parsing/levelparser.s: parsing/levelparser.cpp.s
+.PHONY : parsing/levelparser.s
+
+# target to generate assembly for a file
+parsing/levelparser.cpp.s:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/parsing/levelparser.cpp.s
+.PHONY : parsing/levelparser.cpp.s
+
+parsing/tinyxml2.o: parsing/tinyxml2.cpp.o
+.PHONY : parsing/tinyxml2.o
+
+# target to build an object file
+parsing/tinyxml2.cpp.o:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o
+.PHONY : parsing/tinyxml2.cpp.o
+
+parsing/tinyxml2.i: parsing/tinyxml2.cpp.i
+.PHONY : parsing/tinyxml2.i
+
+# target to preprocess a source file
+parsing/tinyxml2.cpp.i:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.i
+.PHONY : parsing/tinyxml2.cpp.i
+
+parsing/tinyxml2.s: parsing/tinyxml2.cpp.s
+.PHONY : parsing/tinyxml2.s
+
+# target to generate assembly for a file
+parsing/tinyxml2.cpp.s:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.s
+.PHONY : parsing/tinyxml2.cpp.s
+
 sfml/Background.o: sfml/Background.cpp.o
 .PHONY : sfml/Background.o
 
@@ -739,6 +811,15 @@ help:
 	@echo "... gamelogic/World.o"
 	@echo "... gamelogic/World.i"
 	@echo "... gamelogic/World.s"
+	@echo "... parsing/compactxml.o"
+	@echo "... parsing/compactxml.i"
+	@echo "... parsing/compactxml.s"
+	@echo "... parsing/levelparser.o"
+	@echo "... parsing/levelparser.i"
+	@echo "... parsing/levelparser.s"
+	@echo "... parsing/tinyxml2.o"
+	@echo "... parsing/tinyxml2.i"
+	@echo "... parsing/tinyxml2.s"
 	@echo "... sfml/Background.o"
 	@echo "... sfml/Background.i"
 	@echo "... sfml/Background.s"

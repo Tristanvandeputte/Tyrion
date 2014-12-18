@@ -9,26 +9,19 @@
 
 Game::Game() {
 	input=KeyBoard::getInstance();
-
+	parser = new LevelParser();
 }
 
 Game::~Game() {
 	// TODO Auto-generated destructor stub
 }
 
-void Game::menu(){}
-
-
-
-void Game::levelSelect(){
-	// alles hier wordt bepaald door t inlezen
-
-}
-void Game::credits(){
-	// scrollende naam/namen
+void Game::parse_levels(){
+	levels = parser->createMaps("./src/parsing/maps.xml");
 }
 
 void Game::run(){
+	parse_levels();
 	window_state = State::Menu;
 	clock.reset();
 	// MENU STUFF
@@ -235,7 +228,7 @@ void Game::run(){
 				selection_cooldown = 0.2;
 			};
 			
-			cout<<sf::Mouse::getPosition().x<<" "<<sf::Mouse::getPosition().y<<endl;
+			//cout<<sf::Mouse::getPosition().x<<" "<<sf::Mouse::getPosition().y<<endl;
 			if(sf::Mouse::getPosition().x>240 && sf::Mouse::getPosition().x<370 && sf::Mouse::getPosition().y>200 && sf::Mouse::getPosition().y<300){
 				cout<<"kek"<<endl;	
 				selection = 3;
