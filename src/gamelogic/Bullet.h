@@ -14,16 +14,13 @@
 #include <memory>
 #include <unistd.h>
 
-enum class BulletType{BasicBullet,SpecialBullet,BPBullet};
-enum class Status{Ally,Enemy};
-
 namespace ty {
 
 class Bullet: public Entity {
 protected:
 	//BulletFactory b_fac;
-	BulletType type;
-	Status status;
+	BulletType type = BulletType::BasicBullet;
+	Status status = Status::Foe;
 public:
 	Bullet();
 	Bullet(Vector position,BulletType type,Status status);

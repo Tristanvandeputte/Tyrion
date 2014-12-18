@@ -20,24 +20,23 @@
 using namespace std;
 
 enum class BulletType;
-enum class Status;
+enum class Status{Ally,Foe};
+enum class BulletType{BasicBullet,SpecialBullet,BPBullet};
 class EntityFactory;
-
-
 
 namespace ty {
 
 class Entity {
 	// bepaalde entities pointer naar EntityFactory(vb schip nr bullet) + zijn parent zodat sfml bullets safely geadd kunnen worden
 protected:
-	Status status;
+	Status status=Status::Foe;
 	double radius{0};
-	Vector position;
-	Vector movement;
+	Vector position{0,0};
+	Vector movement{1,1};
 	double speed{5.0};
 	// bullets, for example, are immortal
 	bool immortal{false};
-	int health;
+	int health{1};
 	int damage{1};
 	double invincibility_frame{0};
 	double base_invincibility_frame{0};

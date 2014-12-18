@@ -22,6 +22,7 @@ void Background::draw(){}
 
 Background::Background(string texture_spot):texture_spot(texture_spot){
 	immortal=true;
+	position = Vector{0,9};
 }
 
 void Background::update(double deltaT){

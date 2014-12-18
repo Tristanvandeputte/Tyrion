@@ -27,6 +27,14 @@ Player::Player(Vector position, string texture_location,EntityFactory* bullet_fa
 	//texture.update(image); NODIG VR BEWEGING DENK K
 	texture.setSmooth(true); //smooth
 	all_textures[texture_location]=texture;
+	//sf::Sprite sprite;
+	sprite.setTexture(all_textures[texture_location]);	if(radius==0){
+		radius = std::max((sprite.getGlobalBounds().width/2)/80,(sprite.getGlobalBounds().height/2)/80);
+	}
+	sprite.scale(sf::Vector2f(0.7f, 0.7f));
+	cout<<"regplayer   "<<position.getX()<<"  "<<position.getY()<<endl;
+	cout<<"playersfml  "<<(position.getX()*80.0)+320.0-(sprite.getGlobalBounds().width/4)<<"    "<<(-1.0*position.getY()*80.0)+240.0-(sprite.getGlobalBounds().height/4)<<endl;	
+	
 }
 
 Player::~Player() {
@@ -34,13 +42,7 @@ Player::~Player() {
 }
 
 void Player::draw(){
-	sf::Sprite sprite;
-	sprite.setTexture(all_textures[texture_location]);
 	sprite.setPosition(sf::Vector2f((position.getX()*80.0)+320.0-(sprite.getGlobalBounds().width/4), (-1.0*position.getY()*80.0)+240.0-(sprite.getGlobalBounds().height/4)));
-	sprite.scale(sf::Vector2f(0.7f, 0.7f));
-	if(radius==0){
-		radius = std::max((sprite.getGlobalBounds().width/2)/80,(sprite.getGlobalBounds().height/2)/80);
-	}
 	if(invincibility_frame>0){
 		sprite.setColor(sf::Color(0, 255, 0, 200));
 	}

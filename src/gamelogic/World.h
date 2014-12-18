@@ -37,7 +37,7 @@ namespace ty {
 
 class World: public Entity {
 private:
-	int texturecounter=0;
+	int texturecounter{0};
 	vector<string> background_spots;
 	vector<EntityPtr> background_tiles;
 	//A pointer to the background entity

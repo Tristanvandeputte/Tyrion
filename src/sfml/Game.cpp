@@ -88,7 +88,7 @@ void Game::run(){
 	// RUN STUFF
 	shared_ptr<sf::RenderWindow> window(new sf::RenderWindow(sf::VideoMode(640,480), "Tyrian Menu"));
 	window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 ,0) );
-	Enemyvec a;
+	Enemyvec a;/*
 	tuple<double,EnemyType,double,double> one(1.0,EnemyType::BasicEnemy,-2,4.0);
 	tuple<double,EnemyType,double,double> two(1.0,EnemyType::BasicEnemy,2,4.0);
 	tuple<double,EnemyType,double,double> three(8.0,EnemyType::BasicEnemy,3.0,4.0);
@@ -106,7 +106,7 @@ void Game::run(){
 	a.push_back(six);
 	a.push_back(seven);
 	a.push_back(eight);
-	a.push_back(nine);
+	a.push_back(nine);*/
 	vector<string> BG({"Focus-Colors-2-640x960.jpg"}); //Background1.png
 	afac=PlayerFactory(window);
 	bfac=BulletFactory(window);
@@ -126,15 +126,24 @@ void Game::run(){
 	int amount_of_levels = levels.size();
 	
 	while (window->isOpen()){
-		if(reset){
-			clock.reset();
-			reset = false;
-		}
 		double deltaT=clock.getTime();
 		if(selection_cooldown>0){
 			selection_cooldown-=deltaT;
 		}
+		// Current selected level
+		sf::Text current_level_text("current level: "+levels[current_level_loaded].map_name, font);
+		current_level_text.setOrigin(-300,-20);
+		current_level_text.setCharacterSize(20);
+		
+		// GAME LOOP
 		if(window_state == State::Run){
+			if(reset){
+				clock.reset();
+				game_world.reset();
+				game_world.startPlayer();
+				reset = false;
+			}
+			
 			sf::Event event;
 			while (window->pollEvent(event)){
 				if (event.type == sf::Event::Closed || input.checkKeyBoardInput(KeyPressed::Escape)){
@@ -159,8 +168,8 @@ void Game::run(){
 			if(paused){
 				deltaT = 0;
 			}
-			if(1/deltaT<30){
-				cout<<1/deltaT<<endl;
+			if(true){
+				//cout<<1/deltaT<<endl;
 			}
 			double x_mov=0;
 			double y_mov=0;
@@ -178,9 +187,8 @@ void Game::run(){
 			}
 			Vector vec(x_mov,y_mov);
 
-			if(selection_cooldown<=0){
-				game_world.getCurrentPlayer()->move(vec);
-			}
+			game_world.getCurrentPlayer()->move(vec);
+			
 			if(input.checkKeyBoardInput(KeyPressed::Space)){
 				game_world.playerShoots();
 			}
@@ -208,8 +216,6 @@ void Game::run(){
 					if(selection==3){
 						window_state = State::Run;
 						window->setTitle("Tyrian");
-						game_world.reset();
-						game_world.startPlayer();
 						reset = true;
 
 						selection_cooldown = 0.2;
@@ -258,7 +264,6 @@ void Game::run(){
 
 			//cout<<sf::Mouse::getPosition().x<<" "<<sf::Mouse::getPosition().y<<endl;
 			if(sf::Mouse::getPosition().x>240 && sf::Mouse::getPosition().x<370 && sf::Mouse::getPosition().y>200 && sf::Mouse::getPosition().y<300){
-				cout<<"kek"<<endl;	
 				selection = 3;
 
 			}
@@ -362,6 +367,10 @@ void Game::run(){
 			rect.setOutlineThickness(5);
 			rect.setOrigin(levels_text[selectedlevel].getOrigin());
 			rect.move(-10,0);
+			
+			window->draw(current_level_text);
+			
+
 			window->draw(rect);
 			window->display();
 		}

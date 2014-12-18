@@ -106,8 +106,17 @@ void World::backgroundPositionCheck(){
 		// deze moet setpos op X vorige
 		background_tiles.push_back(bg);
 	}
-	if(background_tiles[0]->getPosition().getY()<-3){
+
+	//cout<<"0:  "<<background_tiles[0]->getPosition().getY()<<endl;
+	//cout<<background_tiles[0]->getPosition().getY()<<endl;
+	if(background_tiles[0]->getPosition().getY()<-3 || background_tiles[0]->getPosition().getY()>100){
 		background_tiles.erase(background_tiles.begin());
+	}
+	if(background_tiles.size()>1){
+		//cout<<"1:  "<<background_tiles[1]->getPosition().getY()<<endl;
+		if(background_tiles[1]->getPosition().getY()<-3 || background_tiles[1]->getPosition().getY()>100){
+			background_tiles.erase(background_tiles.begin()+1);
+		}
 	}
 }
 
@@ -156,7 +165,7 @@ void World::update(double deltaT){
 }
 
 void spawnPowerUp(PowerupType type, double x, double y){
-	
+
 }
 void World::createNewEnemy(EnemyType type,double x,double y){
 	EntityPtr one = e_fac->makeEnemy(x,y,type,b_fac,this);
@@ -168,9 +177,11 @@ void World::draw(){
 		background->draw();
 	}
 	for(EntityPtr e_ptr : enemy_entities){
-			e_ptr->draw();
+		e_ptr->draw();
 	}
 	for(EntityPtr e_ptr : ally_entities){
+		if(e_ptr.get() == nullptr){
+		}
 		if(e_ptr != current_player){
 			e_ptr->draw();
 		}
@@ -180,8 +191,7 @@ void World::draw(){
 
 void World::playerShoots(){
 	if(current_player->canShoot()){
-		EntityPtr one = current_player->Shoot();
-		ally_entities.push_back(one);
+		ally_entities.push_back(current_player->Shoot());
 	}
 }
 
@@ -223,9 +233,9 @@ void World::reset(){
 	ally_entities.clear();
 	enemy_entities.clear();
 	background_tiles.clear();
+	current_player = nullptr;
 	texturecounter = 0;
 	game_time = 0;
-	
 }
 void World::changeLevel(Enemyvec enemy_creations,vector<string> texture_locs){
 	reset();

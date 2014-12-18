@@ -21,7 +21,7 @@ Player::~Player() {
 Player::Player(Vector position,EntityFactory* bullet_factory,World* parent):Entity(position),bullet_factory(bullet_factory),parent(parent){
 	b_type = BulletType::BasicBullet;
 	shot_cool_down = 0;
-	base_shot_cool_down = 2.0;
+	base_shot_cool_down = 1.0;
 	status = Status::Ally;
 	speed = 5.0;
 	base_invincibility_frame = 2.0;
@@ -45,12 +45,16 @@ void Player::update(double deltaT){
 	if(position.getY()+radius+0.05>3.0){
 		position.setY(3+-radius-0.05);
 	}
+	//cout<<position.getX()<<"   "<<position.getY()<<endl;
 	Vector nullmove(0,0);
 	movement = nullmove;
 	if(invincibility_frame>0){
 		invincibility_frame -= deltaT;
 	}
-	shot_cool_down-=5*deltaT;
+	if(shot_cool_down>=0){
+		shot_cool_down-=5*deltaT;
+	}
+	//cout<<shot_cool_down<<endl;
 }
 
 bool Player::canShoot(){
@@ -62,6 +66,7 @@ bool Player::canShoot(){
 
 shared_ptr<Entity> Player::Shoot(){
 	shot_cool_down=base_shot_cool_down;
+	cout<<position.getX()<<"    "<<position.getY()<<endl;
 	return bullet_factory->makeBullet(position.getX(),position.getY(),b_type,Status::Ally);
 }
 } /* namespace ty */

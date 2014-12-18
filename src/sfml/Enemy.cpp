@@ -20,7 +20,7 @@ Enemy::~Enemy() {
 }
 
 Enemy::Enemy(Vector position,double speed ,int health, int damage,EnemyType type, EntityFactory* bullet_factory, World* parent,shared_ptr<RenderWindow> window):ty::Enemy(position,speed,health,damage,type,bullet_factory,parent),window(window){
-	status = Status::Enemy;
+	//status = Status::Foe;
 	sf::Texture texture;
 	char cwd[1024];
 	getcwd(cwd,sizeof(cwd));

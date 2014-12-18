@@ -21,7 +21,7 @@ Enemy::~Enemy() {
 Enemy::Enemy(Vector position,double speed ,int health, int damage,EnemyType type,EntityFactory* bullet_factory, World* parent):Entity(position,speed,health,damage),type(type),bullet_factory(bullet_factory),parent(parent){
 	shot_cool_down=5.0;
 	base_shot_cool_down = 5.0;
-	status == Status::Enemy;
+	status = Status::Foe;
 	if(type == EnemyType::BasicEnemy ){
 		speed = 10;
 	}
@@ -39,7 +39,7 @@ void Enemy::collide(shared_ptr<Entity> with){
 
 shared_ptr<Entity> Enemy::Shoot(){
 	shot_cool_down=base_shot_cool_down;
-	return bullet_factory->makeBullet(position.getX(),position.getY(),b_type,Status::Enemy);	
+	return bullet_factory->makeBullet(position.getX(),position.getY(),b_type,Status::Foe);	
 }
 
 void Enemy::update(double deltaT){

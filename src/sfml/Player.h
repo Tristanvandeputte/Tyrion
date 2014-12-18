@@ -26,6 +26,7 @@ private:
 	static std::map<string,Texture> all_textures; // voor animaties hier n vector v textures v maken
 	shared_ptr<RenderWindow> window;
 	string texture_location; //imageedit_1_7403900101.png
+	Sprite sprite;
 public:
 	Player();
 	Player(Vector position, string texture_location, EntityFactory* bullet_factory, World* parent,shared_ptr<RenderWindow> window);

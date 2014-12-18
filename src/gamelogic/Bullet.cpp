@@ -21,6 +21,7 @@ Bullet::~Bullet() {
 void Bullet::draw(){}
 
 Bullet::Bullet(Vector position,BulletType type,Status status):Entity(position),type(type),status(status){
+	health = 1;
 	if(type==BulletType::BasicBullet){
 		health = 1; //bullet heeft 1 health (gaat kapot on-hit)
 		speed = 5;
@@ -32,7 +33,7 @@ Bullet::Bullet(Vector position,BulletType type,Status status):Entity(position),t
 	immortal=true;
 }
 void Bullet::update(double deltaT){
-	if(status == Status::Enemy){
+	if(status == Status::Foe){
 		Vector mov(0,-1*speed*deltaT);
 		move(mov);
 	}
@@ -51,8 +52,12 @@ void Bullet::collide(shared_ptr<Entity> with){
 	}
 	if(with->getImmortal()==false){
 		immortal=false;
+		with->decreaseHealth(damage);
 	}
-	with->decreaseHealth(damage);
+	if(with->getImmortal()==true){
+		//nothing
+	}
+	
 }
 
 } /* namespace ty */

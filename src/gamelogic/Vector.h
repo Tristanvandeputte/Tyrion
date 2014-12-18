@@ -10,8 +10,8 @@
 
 class Vector{
 private:
-	double x;
-	double y;
+	double x{0};
+	double y{0};
 public:
 	//operator(const Vector& one);
 	Vector operator+(const Vector& one);

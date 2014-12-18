@@ -25,12 +25,12 @@ class World;
 class Enemy: public Entity {
 protected:
 	//soort animationstate om aan te geven wanneer schieten/opzij moven
-	EnemyType type;
-	BulletType b_type;
+	EnemyType type = EnemyType::BasicEnemy;
+	BulletType b_type = BulletType::BasicBullet;
 	EntityFactory* bullet_factory;
 	World* parent;
-	double shot_cool_down;
-	double base_shot_cool_down;
+	double shot_cool_down{1};
+	double base_shot_cool_down{1};
 public:
 	Enemy();
 	Enemy(Vector position,double speed ,int health, int damage,EnemyType type,EntityFactory* bullet_factory, World* parent);
