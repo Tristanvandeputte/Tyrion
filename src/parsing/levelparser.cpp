@@ -65,6 +65,7 @@ vector<Map> LevelParser::createMaps(string file_name){
     	 this_map.enemies = all_enemies;
     	 this_map.map_name = name;
     	 this_map.powerups = all_powerups;
+    	 all_maps.push_back(this_map);
     }
     return all_maps;
 }

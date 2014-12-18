@@ -62,6 +62,29 @@ void Game::run(){
 	exit_text.setCharacterSize(30);
 	menu_text.setColor(sf::Color::Blue);
 
+	// LEVEL SELECT TEXT
+	sf::Text level_text_2("level select ", font);
+	level_text_2.setOrigin(-100,-50);
+	level_text_2.setCharacterSize(50);
+	level_text_2.setColor(sf::Color::Blue);
+
+	
+	vector<sf::Text> levels_text;
+	int levelcount = 0;
+	for(auto level : levels){
+		levelcount++;
+		sf::Text new_text(level.map_name, font);
+		new_text.setOrigin(-100,-80-(50*levelcount));
+		new_text.setCharacterSize(20);
+		//new_text.setColor(sf::Color::Red);
+		levels_text.push_back(new_text);
+	}
+	// CREDITS TEXT
+	sf::Text tristan("tristan ", font);
+	tristan.setOrigin(-60,-80);
+	tristan.setCharacterSize(100);
+
+	
 	// RUN STUFF
 	shared_ptr<sf::RenderWindow> window(new sf::RenderWindow(sf::VideoMode(640,480), "Tyrian Menu"));
 	window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 ,0) );
@@ -98,6 +121,10 @@ void Game::run(){
 	window->setFramerateLimit(60);
 	bool reset = false;
 	bool paused = false;
+	int current_level_loaded=0;
+	int selectedlevel = 0;
+	int amount_of_levels = levels.size();
+	
 	while (window->isOpen()){
 		if(reset){
 			clock.reset();
@@ -191,7 +218,8 @@ void Game::run(){
 						// in functie steken
 					}
 					if(selection==2){
-						//iets v level select
+						window->setTitle("Level Select");
+						window_state = State::LevelSelect;
 					}
 					if(selection==1){
 						window->setTitle("Credits");
@@ -226,18 +254,18 @@ void Game::run(){
 					selection = 3;
 				}
 				selection_cooldown = 0.2;
-			};
-			
+			}
+
 			//cout<<sf::Mouse::getPosition().x<<" "<<sf::Mouse::getPosition().y<<endl;
 			if(sf::Mouse::getPosition().x>240 && sf::Mouse::getPosition().x<370 && sf::Mouse::getPosition().y>200 && sf::Mouse::getPosition().y<300){
 				cout<<"kek"<<endl;	
 				selection = 3;
-				
+
 			}
 			if(sf::Mouse::getPosition().x>370 && event.mouseButton.x<240){}
 			if(sf::Mouse::getPosition().x>370 && event.mouseButton.x<240){}
 			if(sf::Mouse::getPosition().x>200 && event.mouseButton.x<245){}
-			
+
 			window->clear();
 			window->draw(sprite);
 			window->draw(menu_text);
@@ -298,12 +326,46 @@ void Game::run(){
 			window->display();
 		}
 		else if(window_state == State::LevelSelect){
-
+			sf::Event event;
+			while (window->pollEvent(event)){
+				if (event.type == sf::Event::Closed || input.checkKeyBoardInput(KeyPressed::Escape)){
+					window_state = State::Menu;
+					window->setTitle("Tyrian Menu");
+					clock.reset();
+				}
+				if(input.checkKeyBoardInput(KeyPressed::Space) && selection_cooldown<=0){
+					current_level_loaded = selectedlevel; 
+				}
+			}
+			if(input.checkKeyBoardInput(KeyPressed::Up) && selection_cooldown<=0){
+				selectedlevel = (selection-1)%amount_of_levels; // selection 0-3
+				selection_cooldown = 0.2;
+			}
+			if(input.checkKeyBoardInput(KeyPressed::Down) && selection_cooldown<=0){
+				selectedlevel++;
+				if(selectedlevel>amount_of_levels){
+					selectedlevel = 0;
+				}
+				selection_cooldown = 0.2;
+			}
+			//amount_of_levels;
+			window->clear();
+			window->draw(sprite);
+			window->draw(level_text_2);
+			for(auto level_name : levels_text){
+				window->draw(level_name);
+			}
+			Vector2f size{float(levels_text[selectedlevel].getGlobalBounds().width)+20,float(levels_text[selectedlevel].getGlobalBounds().height)+10};
+			RectangleShape rect{size};
+			rect.setFillColor(Color::Transparent);
+			rect.setOutlineColor(Color::Red);
+			rect.setOutlineThickness(5);
+			rect.setOrigin(levels_text[selectedlevel].getOrigin());
+			rect.move(-10,0);
+			window->draw(rect);
+			window->display();
 		}
 		else if(window_state == State::Credits){
-			sf::Text tristan("tristan ", font);
-			tristan.setOrigin(-60,-80);
-			tristan.setCharacterSize(100);
 			sf::Event event;
 			while (window->pollEvent(event)){
 				if (event.type == sf::Event::Closed || input.checkKeyBoardInput(KeyPressed::Escape)){
