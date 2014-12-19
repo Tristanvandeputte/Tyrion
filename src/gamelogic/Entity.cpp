@@ -30,6 +30,9 @@ void Entity::move(Vector move){
 void Entity::recievePowerUp(shared_ptr<Entity> power_up){
 	
 }
+int Entity::getPoints(){
+	return points_worth;
+}
 double Entity::getX(){
 	return position.getX();
 }

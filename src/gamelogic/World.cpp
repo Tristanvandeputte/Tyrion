@@ -75,6 +75,7 @@ void World::checkDead(){
 	}
 	for (auto e_ptr = enemy_entities.begin(); e_ptr != enemy_entities.end() ;){
 		if ((*e_ptr)->isDead()){
+			score += (*e_ptr)->getPoints();
 			e_ptr = enemy_entities.erase(e_ptr);
 		}
 		else{
@@ -236,6 +237,7 @@ void World::reset(){
 	current_player = nullptr;
 	texturecounter = 0;
 	game_time = 0;
+	score = 0;
 }
 void World::changeLevel(Enemyvec enemy_creations,vector<string> texture_locs){
 	all_enemy_creations = enemy_creations;

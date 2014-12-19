@@ -24,9 +24,11 @@ Enemy::Enemy(Vector position,double speed ,int health, int damage,EnemyType type
 	status = Status::Foe;
 	if(type == EnemyType::BasicEnemy ){
 		speed = 10;
+		points_worth = 10;
 	}
 	if(type == EnemyType::ShootingEnemy ){
 		speed = 10;
+		points_worth = 20;
 	}
 }
 

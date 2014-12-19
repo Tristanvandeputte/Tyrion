@@ -37,6 +37,8 @@ namespace ty {
 
 class World: public Entity {
 private:
+	int score{0};
+	// players' score
 	int texturecounter{0};
 	vector<string> background_spots;
 	vector<EntityPtr> background_tiles;

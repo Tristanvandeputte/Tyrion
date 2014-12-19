@@ -59,7 +59,6 @@ vector<Map> LevelParser::createMaps(string file_name){
     	 }
     	 for(XMLElement background :backgrounds) {
     		 string new_background = background.value();
-    		 cout<<new_background<<endl;
     		 all_backgrounds.push_back(new_background);
     	 }
     	 this_map.BG = all_backgrounds;

@@ -42,7 +42,7 @@ protected:
 	int damage{1};
 	double invincibility_frame{0};
 	double base_invincibility_frame{0};
-	
+	int points_worth{0};
 public:
 	Entity();
 	virtual ~Entity();
@@ -65,6 +65,7 @@ public:
 	void decreaseHealth(int damage);
 	virtual void collide(shared_ptr<Entity> with);
 	bool isDead();
+	int getPoints();
 };
 
 } /* namespace ty */
