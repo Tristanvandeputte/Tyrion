@@ -144,10 +144,6 @@ vector
 tinyxml2.h
 /home/uauser/Desktop/Tyrion/src/parsing/tinyxml2.h
 
-/home/uauser/Desktop/Tyrion/src/parsing/levelparser.cpp
-levelparser.h
-/home/uauser/Desktop/Tyrion/src/parsing/levelparser.h
-
 /home/uauser/Desktop/Tyrion/src/parsing/levelparser.h
 fstream
 -
@@ -194,46 +190,6 @@ android/log.h
 assert.h
 -
 
-/home/uauser/Desktop/Tyrion/src/sfml/Background.cpp
-Background.h
-/home/uauser/Desktop/Tyrion/src/sfml/Background.h
-
-/home/uauser/Desktop/Tyrion/src/sfml/Background.h
-../gamelogic/EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
-../gamelogic/Background.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Background.h
-SFML/Graphics.hpp
--
-
-/home/uauser/Desktop/Tyrion/src/sfml/Bullet.cpp
-Bullet.h
-/home/uauser/Desktop/Tyrion/src/sfml/Bullet.h
-
-/home/uauser/Desktop/Tyrion/src/sfml/Bullet.h
-../gamelogic/EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
-../gamelogic/Bullet.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.h
-SFML/Graphics.hpp
--
-
-/home/uauser/Desktop/Tyrion/src/sfml/Enemy.cpp
-Enemy.h
-/home/uauser/Desktop/Tyrion/src/sfml/Enemy.h
-
-/home/uauser/Desktop/Tyrion/src/sfml/Enemy.h
-../gamelogic/Enemy.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
-SFML/Graphics.hpp
--
-memory
--
-
-/home/uauser/Desktop/Tyrion/src/sfml/EntityFactory.cpp
-EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/sfml/EntityFactory.h
-
 /home/uauser/Desktop/Tyrion/src/sfml/EntityFactory.h
 ../gamelogic/EntityFactory.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
@@ -269,16 +225,14 @@ EntityFactory.h
 /home/uauser/Desktop/Tyrion/src/sfml/EntityFactory.h
 KeyBoard.h
 /home/uauser/Desktop/Tyrion/src/sfml/KeyBoard.h
+sstream
+-
 SFML/Graphics.hpp
 -
 
 /home/uauser/Desktop/Tyrion/src/sfml/KeyBoard.h
 SFML/Graphics.hpp
 -
-
-/home/uauser/Desktop/Tyrion/src/sfml/Player.cpp
-Player.h
-/home/uauser/Desktop/Tyrion/src/sfml/Player.h
 
 /home/uauser/Desktop/Tyrion/src/sfml/Player.h
 ../gamelogic/Player.h
@@ -296,16 +250,6 @@ memory
 unistd.h
 -
 
-/home/uauser/Desktop/Tyrion/src/sfml/Powerup.cpp
-Powerup.h
-/home/uauser/Desktop/Tyrion/src/sfml/Powerup.h
-
-/home/uauser/Desktop/Tyrion/src/sfml/Powerup.h
-../gamelogic/Powerup.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
-SFML/Graphics.hpp
--
-
 /home/uauser/Desktop/Tyrion/src/sfml/StopWatch.h
 iostream
 -
@@ -313,14 +257,4 @@ ctime
 -
 chrono
 -
-
-/home/uauser/Desktop/Tyrion/src/sfml/main.cpp
-SFML/Graphics.hpp
--
-iostream
--
-unistd.h
--
-Game.h
-/home/uauser/Desktop/Tyrion/src/sfml/Game.h
 

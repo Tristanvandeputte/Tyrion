@@ -37,8 +37,9 @@ namespace ty {
 
 class World: public Entity {
 private:
-	int score{0};
 	// players' score
+	int score{0};
+	// counts how many textures we've had already
 	int texturecounter{0};
 	vector<string> background_spots;
 	vector<EntityPtr> background_tiles;
@@ -57,6 +58,8 @@ private:
 	Powerupvec reset_all_powerups;
 	//vector that specifies  spawntime and enemytype of all the powerups in this world
 	double game_time{0};
+	// we store this for moving the player at the end
+	double max_deltaT{0};
 public:
 	World();
 	World(EntityFactory* e_fac, Enemyvec all_enemy_creations);
@@ -76,8 +79,10 @@ public:
 	void playerShoots();
 	void checkDead();
 	bool checkGameEnd();
+	bool FinishedLevel();
 	void push_to_vector(shared_ptr<Entity> bullet);
 	void backgroundPositionCheck();
+	int getScore();
 	
 	void reset();
 	void changeLevel(Enemyvec enemy_creations,vector<string> texture_locs);

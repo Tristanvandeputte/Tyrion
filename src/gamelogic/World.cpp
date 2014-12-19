@@ -98,9 +98,9 @@ void World::backgroundPositionCheck(){
 		texturecounter ++;
 	}
 	if(background_tiles[0]->getPosition().getY()<3 && background_tiles.size()<2){
-		if(texturecounter>=background_spots.size()){
-			texturecounter=0;
-		}
+		//if(texturecounter>=background_spots.size()){
+		//	texturecounter=0;
+		//}
 		EntityPtr bg = e_fac->makeBackground(background_spots[texturecounter]);
 		Vector bg_spot(0,background_tiles[0]->getPosition().getY()+12);
 		bg->setPosition(bg_spot);
@@ -108,21 +108,36 @@ void World::backgroundPositionCheck(){
 		background_tiles.push_back(bg);
 	}
 
-	//cout<<"0:  "<<background_tiles[0]->getPosition().getY()<<endl;
 	//cout<<background_tiles[0]->getPosition().getY()<<endl;
 	if(background_tiles[0]->getPosition().getY()<-3 || background_tiles[0]->getPosition().getY()>100){
 		background_tiles.erase(background_tiles.begin());
 	}
 	if(background_tiles.size()>1){
-		//cout<<"1:  "<<background_tiles[1]->getPosition().getY()<<endl;
+		//cout<<background_tiles[1]->getPosition().getY()<<endl;
 		if(background_tiles[1]->getPosition().getY()<-3 || background_tiles[1]->getPosition().getY()>100){
 			background_tiles.erase(background_tiles.begin()+1);
 		}
 	}
 }
 
+bool World::FinishedLevel(){
+	// if we are at the last background frame
+	if(texturecounter == background_spots.size()-1){
+		if(background_tiles.size()>1){
+			// if the background has moved as far as it can
+			if(background_tiles[0]->getPosition().getY()<-2.8){
+				return true;
+			}
+		}
+	}
+}
+
 void World::update(double deltaT){
 	game_time +=deltaT;
+
+	if(max_deltaT<deltaT){
+		max_deltaT=deltaT;
+	}
 
 	std::vector<std::tuple<::EnemyType,double,double> > create;
 	std::vector<int> to_be_deleted;
@@ -244,6 +259,10 @@ void World::changeLevel(Enemyvec enemy_creations,vector<string> texture_locs){
 	reset_all_enemy_creations = enemy_creations;
 	background_spots = texture_locs;
 	reset();
+}
+
+int World::getScore(){
+	return score;
 }
 
 }/* namespace ty */

@@ -27,11 +27,15 @@ void Game::run(){
 	// MENU STUFF
 	double selection_cooldown=0;
 	sf::Font font;
+	sf::Font number_font;
 	sf::Texture static_background_texture;
 	char cwd[1024];
 	getcwd(cwd,sizeof(cwd));
 	string curdir(cwd);
-	if (!font.loadFromFile(curdir+"/Resources//Spac3 tech free promo.ttf")){ //sla het pad op in de objecten, niet de textures.
+	if (!font.loadFromFile(curdir+"/Resources//Spac3 tech free promo.ttf")){
+		cout<<"ERROR IS KILL"<<endl;
+	}
+	if (!number_font.loadFromFile(curdir+"/Resources//cyberspace.otf")){
 		cout<<"ERROR IS KILL"<<endl;
 	}
 	if (!static_background_texture.loadFromFile(curdir+"/Remastered Tyrian Graphics//double-moons-in-colorful-starry-sky-640x480.jpg")){
@@ -68,7 +72,7 @@ void Game::run(){
 	level_text_2.setCharacterSize(50);
 	level_text_2.setColor(sf::Color::Blue);
 
-	
+
 	vector<sf::Text> levels_text;
 	int levelcount = 0;
 	for(auto level : levels){
@@ -94,7 +98,7 @@ void Game::run(){
 	info3.setOrigin(-20,-210);
 	info3.setCharacterSize(20);
 
-	
+
 	// RUN STUFF
 	shared_ptr<sf::RenderWindow> window(new sf::RenderWindow(sf::VideoMode(640,480), "Tyrian Menu"));
 	window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 ,0) );
@@ -114,7 +118,7 @@ void Game::run(){
 	int current_level_loaded=0;
 	int selectedlevel = 0;
 	int amount_of_levels = levels.size();
-	
+
 	while (window->isOpen()){
 		double deltaT=clock.getTime();
 		if(selection_cooldown>0){
@@ -124,7 +128,7 @@ void Game::run(){
 		sf::Text current_level_text("current level: "+levels[current_level_loaded].map_name, font);
 		current_level_text.setOrigin(-300,-20);
 		current_level_text.setCharacterSize(20);
-		
+
 		// GAME LOOP
 		if(window_state == State::Run){
 			if(reset){
@@ -133,7 +137,7 @@ void Game::run(){
 				game_world.startPlayer();
 				reset = false;
 			}
-			
+
 			sf::Event event;
 			while (window->pollEvent(event)){
 				if (event.type == sf::Event::Closed || input.checkKeyBoardInput(KeyPressed::Escape)){
@@ -178,17 +182,86 @@ void Game::run(){
 			Vector vec(x_mov,y_mov);
 
 			game_world.getCurrentPlayer()->move(vec);
-			
+
 			if(input.checkKeyBoardInput(KeyPressed::Space)){
 				game_world.playerShoots();
 			}
 			game_world.update(deltaT);
 
+			// score display
+			stringstream ss;
+			ss<<game_world.getScore();
+			string score_display_text = ss.str();
+			sf::Text score_display("score: ", font);
+			score_display.setOrigin(-20,-430);
+			score_display.setCharacterSize(15);
+			sf::Text score_number_display(score_display_text, number_font);
+			score_number_display.setOrigin(-90,-431);
+			score_number_display.setCharacterSize(14);
+			// FPS display
+			stringstream ss2;
+			ss2<<1/deltaT;
+			string fps_display_text = ss2.str();
+			sf::Text fps_display("fps: ", font);
+			fps_display.setOrigin(-20,-455);
+			fps_display.setCharacterSize(15);
+			sf::Text fps_number_display(fps_display_text, number_font);
+			fps_number_display.setOrigin(-70,-456);
+			fps_number_display.setCharacterSize(14);
+
+			if(game_world.FinishedLevel()){
+				while(true){
+					window->clear();
+					window->draw(sprite);
+					sf::Text won("you completed the level ", font);
+					won.setOrigin(-100,-160);
+					won.setCharacterSize(30);
+					window->draw(won);
+					sf::Text space_info("press space to continue ", font);
+					space_info.setOrigin(-100,-230);
+					space_info.setCharacterSize(20);
+					window->draw(space_info);
+					window->draw(score_display);
+					window->draw(score_number_display);
+					window->display();
+					if(input.checkKeyBoardInput(KeyPressed::Space)){
+						window_state = State::Menu;
+						selection_cooldown = 2;
+						clock.reset();
+						break;
+					}
+				}
+			}
 			if(game_world.checkGameEnd()){
-				window->close();
+				while(true){
+					window->clear();
+					window->draw(sprite);
+					sf::Text died("you died ", font);
+					died.setOrigin(-150,-160);
+					died.setCharacterSize(50);
+					window->draw(died);
+					sf::Text space_info("press space to continue ", font);
+					space_info.setOrigin(-150,-230);
+					space_info.setCharacterSize(20);
+					window->draw(space_info);
+					window->draw(score_display);
+					window->draw(score_number_display);
+					window->display();
+					if(input.checkKeyBoardInput(KeyPressed::Space)){
+						window_state = State::Menu;
+						selection_cooldown = 2;
+						clock.reset();
+						break;
+					}
+				}
 			}
 
 			game_world.draw();
+
+			window->draw(score_display);
+			window->draw(score_number_display);
+			window->draw(fps_display);
+			window->draw(fps_number_display);
 			window->display();
 		}
 		else if(window_state == State::Menu){
@@ -222,14 +295,6 @@ void Game::run(){
 					}
 					if(selection==0){
 						window->close();
-					}
-				}
-				if (event.type == sf::Event::MouseButtonPressed){
-					if (event.mouseButton.button == sf::Mouse::Left){
-						std::cout << "the right button was pressed" << std::endl;
-						std::cout << "mouse x: " << event.mouseButton.x << std::endl;
-						std::cout << "mouse y: " << event.mouseButton.y << std::endl;
-						//if(event.mouseButton.x<370 && event.mouseButton.x>240)
 					}
 				}
 			}
@@ -360,9 +425,9 @@ void Game::run(){
 			rect.setOutlineThickness(5);
 			rect.setOrigin(levels_text[selectedlevel].getOrigin());
 			rect.move(-10,0);
-			
+
 			window->draw(current_level_text);
-			
+
 
 			window->draw(rect);
 			window->display();

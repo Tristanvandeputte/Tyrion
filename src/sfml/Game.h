@@ -10,6 +10,7 @@
 #include "StopWatch.h"
 #include "EntityFactory.h"
 #include "KeyBoard.h"
+#include <sstream>
 #include <SFML/Graphics.hpp>
 
 #ifndef GAME_H_
