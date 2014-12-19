@@ -351,6 +351,75 @@ src/CMakeFiles/game.dir/sfml/Powerup.cpp.o.provides: src/CMakeFiles/game.dir/sfm
 
 src/CMakeFiles/game.dir/sfml/Powerup.cpp.o.provides.build: src/CMakeFiles/game.dir/sfml/Powerup.cpp.o
 
+src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o: src/CMakeFiles/game.dir/flags.make
+src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o: src/parsing/tinyxml2.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_14)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o"
+	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/parsing/tinyxml2.cpp.o -c /home/uauser/Desktop/Tyrion/src/parsing/tinyxml2.cpp
+
+src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/parsing/tinyxml2.cpp.i"
+	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/Desktop/Tyrion/src/parsing/tinyxml2.cpp > CMakeFiles/game.dir/parsing/tinyxml2.cpp.i
+
+src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/parsing/tinyxml2.cpp.s"
+	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/Desktop/Tyrion/src/parsing/tinyxml2.cpp -o CMakeFiles/game.dir/parsing/tinyxml2.cpp.s
+
+src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o.requires:
+.PHONY : src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o.requires
+
+src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o.provides: src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o.provides.build
+.PHONY : src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o.provides
+
+src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o.provides.build: src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o
+
+src/CMakeFiles/game.dir/parsing/compactxml.cpp.o: src/CMakeFiles/game.dir/flags.make
+src/CMakeFiles/game.dir/parsing/compactxml.cpp.o: src/parsing/compactxml.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_15)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/parsing/compactxml.cpp.o"
+	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/parsing/compactxml.cpp.o -c /home/uauser/Desktop/Tyrion/src/parsing/compactxml.cpp
+
+src/CMakeFiles/game.dir/parsing/compactxml.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/parsing/compactxml.cpp.i"
+	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/Desktop/Tyrion/src/parsing/compactxml.cpp > CMakeFiles/game.dir/parsing/compactxml.cpp.i
+
+src/CMakeFiles/game.dir/parsing/compactxml.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/parsing/compactxml.cpp.s"
+	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/Desktop/Tyrion/src/parsing/compactxml.cpp -o CMakeFiles/game.dir/parsing/compactxml.cpp.s
+
+src/CMakeFiles/game.dir/parsing/compactxml.cpp.o.requires:
+.PHONY : src/CMakeFiles/game.dir/parsing/compactxml.cpp.o.requires
+
+src/CMakeFiles/game.dir/parsing/compactxml.cpp.o.provides: src/CMakeFiles/game.dir/parsing/compactxml.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/parsing/compactxml.cpp.o.provides.build
+.PHONY : src/CMakeFiles/game.dir/parsing/compactxml.cpp.o.provides
+
+src/CMakeFiles/game.dir/parsing/compactxml.cpp.o.provides.build: src/CMakeFiles/game.dir/parsing/compactxml.cpp.o
+
+src/CMakeFiles/game.dir/parsing/levelparser.cpp.o: src/CMakeFiles/game.dir/flags.make
+src/CMakeFiles/game.dir/parsing/levelparser.cpp.o: src/parsing/levelparser.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_16)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/parsing/levelparser.cpp.o"
+	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/parsing/levelparser.cpp.o -c /home/uauser/Desktop/Tyrion/src/parsing/levelparser.cpp
+
+src/CMakeFiles/game.dir/parsing/levelparser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/parsing/levelparser.cpp.i"
+	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/Desktop/Tyrion/src/parsing/levelparser.cpp > CMakeFiles/game.dir/parsing/levelparser.cpp.i
+
+src/CMakeFiles/game.dir/parsing/levelparser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/parsing/levelparser.cpp.s"
+	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/Desktop/Tyrion/src/parsing/levelparser.cpp -o CMakeFiles/game.dir/parsing/levelparser.cpp.s
+
+src/CMakeFiles/game.dir/parsing/levelparser.cpp.o.requires:
+.PHONY : src/CMakeFiles/game.dir/parsing/levelparser.cpp.o.requires
+
+src/CMakeFiles/game.dir/parsing/levelparser.cpp.o.provides: src/CMakeFiles/game.dir/parsing/levelparser.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/parsing/levelparser.cpp.o.provides.build
+.PHONY : src/CMakeFiles/game.dir/parsing/levelparser.cpp.o.provides
+
+src/CMakeFiles/game.dir/parsing/levelparser.cpp.o.provides.build: src/CMakeFiles/game.dir/parsing/levelparser.cpp.o
+
 # Object files for target game
 game_OBJECTS = \
 "CMakeFiles/game.dir/sfml/main.cpp.o" \
@@ -365,7 +434,10 @@ game_OBJECTS = \
 "CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o" \
 "CMakeFiles/game.dir/sfml/Background.cpp.o" \
 "CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o" \
-"CMakeFiles/game.dir/sfml/Powerup.cpp.o"
+"CMakeFiles/game.dir/sfml/Powerup.cpp.o" \
+"CMakeFiles/game.dir/parsing/tinyxml2.cpp.o" \
+"CMakeFiles/game.dir/parsing/compactxml.cpp.o" \
+"CMakeFiles/game.dir/parsing/levelparser.cpp.o"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
@@ -383,6 +455,9 @@ src/game: src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o
 src/game: src/CMakeFiles/game.dir/sfml/Background.cpp.o
 src/game: src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o
 src/game: src/CMakeFiles/game.dir/sfml/Powerup.cpp.o
+src/game: src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o
+src/game: src/CMakeFiles/game.dir/parsing/compactxml.cpp.o
+src/game: src/CMakeFiles/game.dir/parsing/levelparser.cpp.o
 src/game: src/CMakeFiles/game.dir/build.make
 src/game: /usr/lib/x86_64-linux-gnu/libsfml-system.so
 src/game: /usr/lib/x86_64-linux-gnu/libsfml-window.so
@@ -411,6 +486,9 @@ src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/Background.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/Powerup.cpp.o.requires
+src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o.requires
+src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/parsing/compactxml.cpp.o.requires
+src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/parsing/levelparser.cpp.o.requires
 .PHONY : src/CMakeFiles/game.dir/requires
 
 src/CMakeFiles/game.dir/clean:

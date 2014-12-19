@@ -32,7 +32,7 @@ protected:
 	Status status=Status::Foe;
 	double radius{0};
 	Vector position{0,0};
-	Vector movement{1,1};
+	Vector movement{0,0};
 	double speed{5.0};
 	// bullets, for example, are immortal
 	bool immortal{false};

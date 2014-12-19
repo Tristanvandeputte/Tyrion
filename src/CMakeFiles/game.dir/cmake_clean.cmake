@@ -12,6 +12,9 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/game.dir/sfml/Background.cpp.o"
   "CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o"
   "CMakeFiles/game.dir/sfml/Powerup.cpp.o"
+  "CMakeFiles/game.dir/parsing/tinyxml2.cpp.o"
+  "CMakeFiles/game.dir/parsing/compactxml.cpp.o"
+  "CMakeFiles/game.dir/parsing/levelparser.cpp.o"
   "game.pdb"
   "game"
 )

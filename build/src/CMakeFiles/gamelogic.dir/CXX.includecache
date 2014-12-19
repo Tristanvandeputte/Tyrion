@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/uauser/Desktop/Tyrion/src/gamelogic/Background.cpp
+Background.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/Background.h
+
 /home/uauser/Desktop/Tyrion/src/gamelogic/Background.h
 Entity.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
@@ -18,6 +22,10 @@ memory
 unistd.h
 -
 
+/home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.cpp
+Bullet.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.h
+
 /home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.h
 Entity.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
@@ -29,6 +37,10 @@ memory
 -
 unistd.h
 -
+
+/home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.cpp
+Enemy.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
 
 /home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
 Entity.h
@@ -43,6 +55,10 @@ memory
 -
 unistd.h
 -
+
+/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.cpp
+Entity.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
 
 /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
 iostream
@@ -61,6 +77,10 @@ unistd.h
 -
 memory
 -
+
+/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.cpp
+EntityFactory.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
 
 /home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
 memory
@@ -90,6 +110,10 @@ math.h
 memory
 -
 
+/home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.cpp
+Powerup.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
+
 /home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
 Entity.h
 /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
@@ -105,6 +129,10 @@ unistd.h
 -
 
 /home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
+
+/home/uauser/Desktop/Tyrion/src/gamelogic/World.cpp
+World.h
+/home/uauser/Desktop/Tyrion/src/gamelogic/World.h
 
 /home/uauser/Desktop/Tyrion/src/gamelogic/World.h
 Entity.h

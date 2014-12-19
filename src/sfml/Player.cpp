@@ -32,8 +32,8 @@ Player::Player(Vector position, string texture_location,EntityFactory* bullet_fa
 		radius = std::max((sprite.getGlobalBounds().width/2)/80,(sprite.getGlobalBounds().height/2)/80);
 	}
 	sprite.scale(sf::Vector2f(0.7f, 0.7f));
-	cout<<"regplayer   "<<position.getX()<<"  "<<position.getY()<<endl;
-	cout<<"playersfml  "<<(position.getX()*80.0)+320.0-(sprite.getGlobalBounds().width/4)<<"    "<<(-1.0*position.getY()*80.0)+240.0-(sprite.getGlobalBounds().height/4)<<endl;	
+	//cout<<"regplayer   "<<position.getX()<<"  "<<position.getY()<<endl;
+	//cout<<"playersfml  "<<(position.getX()*80.0)+320.0-(sprite.getGlobalBounds().width/4)<<"    "<<(-1.0*position.getY()*80.0)+240.0-(sprite.getGlobalBounds().height/4)<<endl;	
 	
 }
 

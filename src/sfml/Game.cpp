@@ -88,7 +88,7 @@ void Game::run(){
 	// RUN STUFF
 	shared_ptr<sf::RenderWindow> window(new sf::RenderWindow(sf::VideoMode(640,480), "Tyrian Menu"));
 	window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 ,0) );
-	Enemyvec a;/*
+	Enemyvec a;
 	tuple<double,EnemyType,double,double> one(1.0,EnemyType::BasicEnemy,-2,4.0);
 	tuple<double,EnemyType,double,double> two(1.0,EnemyType::BasicEnemy,2,4.0);
 	tuple<double,EnemyType,double,double> three(8.0,EnemyType::BasicEnemy,3.0,4.0);
@@ -106,7 +106,7 @@ void Game::run(){
 	a.push_back(six);
 	a.push_back(seven);
 	a.push_back(eight);
-	a.push_back(nine);*/
+	a.push_back(nine);
 	vector<string> BG({"Focus-Colors-2-640x960.jpg"}); //Background1.png
 	afac=PlayerFactory(window);
 	bfac=BulletFactory(window);
