@@ -16,6 +16,8 @@
 
 namespace ty {
 
+enum class Status;
+
 class Bullet: public Entity {
 protected:
 	//BulletFactory b_fac;

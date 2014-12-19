@@ -14,7 +14,7 @@ World::World() {
 
 }
 
-World::World(EntityFactory* p_fac,EntityFactory* b_fac,EntityFactory* e_fac, Enemyvec all_enemy_creations,EntityFactory* ba_fac):p_fac(p_fac),b_fac(b_fac),e_fac(e_fac),all_enemy_creations(all_enemy_creations),ba_fac(ba_fac){
+World::World(EntityFactory* e_fac, Enemyvec all_enemy_creations):e_fac(e_fac),all_enemy_creations(all_enemy_creations){
 	reset_all_enemy_creations = all_enemy_creations;
 }
 
@@ -27,7 +27,7 @@ std::vector<EntityPtr> World::getEntities(){
 }
 
 void World::startPlayer(){
-	current_player = p_fac->makePlayer(0.0,0.0,"Player.png",b_fac,this);
+	current_player = e_fac->makePlayer(0.0,0.0,"Player.png",this);
 	ally_entities.push_back(current_player);
 }
 
@@ -37,10 +37,10 @@ EntityPtr World::getCurrentPlayer(){
 
 void World::makeBullet(double x,double y,BulletType type,Status status){
 	if(status == Status::Ally){
-		ally_entities.push_back(b_fac->makeBullet(x,y,type, status));
+		ally_entities.push_back(e_fac->makeBullet(x,y,type, status));
 	}
 	if(status == Status::Ally){
-		enemy_entities.push_back(b_fac->makeBullet(x,y,type, status));
+		enemy_entities.push_back(e_fac->makeBullet(x,y,type, status));
 	}
 
 }
@@ -90,7 +90,7 @@ void World::setBackground(vector<string> texture_locations){
 
 void World::backgroundPositionCheck(){
 	if(background_tiles.empty()){
-		EntityPtr bg = ba_fac->makeBackground(background_spots[0]);
+		EntityPtr bg = e_fac->makeBackground(background_spots[0]);
 		Vector initial_bg_spot(0,9);
 		bg->setPosition(initial_bg_spot);
 		background_tiles.push_back(bg);
@@ -100,7 +100,7 @@ void World::backgroundPositionCheck(){
 		if(texturecounter>=background_spots.size()){
 			texturecounter=0;
 		}
-		EntityPtr bg = ba_fac->makeBackground(background_spots[texturecounter]);
+		EntityPtr bg = e_fac->makeBackground(background_spots[texturecounter]);
 		Vector bg_spot(0,background_tiles[0]->getPosition().getY()+12);
 		bg->setPosition(bg_spot);
 		// deze moet setpos op X vorige
@@ -123,7 +123,7 @@ void World::backgroundPositionCheck(){
 void World::update(double deltaT){
 	game_time +=deltaT;
 
-	std::vector<std::tuple<EnemyType,double,double> > create;
+	std::vector<std::tuple<::EnemyType,double,double> > create;
 	std::vector<int> to_be_deleted;
 
 	for(auto& background : background_tiles){
@@ -167,8 +167,8 @@ void World::update(double deltaT){
 void spawnPowerUp(PowerupType type, double x, double y){
 
 }
-void World::createNewEnemy(EnemyType type,double x,double y){
-	EntityPtr one = e_fac->makeEnemy(x,y,type,b_fac,this);
+void World::createNewEnemy(::EnemyType type,double x,double y){
+	EntityPtr one = e_fac->makeEnemy(x,y,type,this);
 	enemy_entities.push_back(one);
 }
 

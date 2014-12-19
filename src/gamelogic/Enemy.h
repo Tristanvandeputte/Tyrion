@@ -25,7 +25,7 @@ class World;
 class Enemy: public Entity {
 protected:
 	//soort animationstate om aan te geven wanneer schieten/opzij moven
-	EnemyType type = EnemyType::BasicEnemy;
+	EnemyType type;// = EnemyType::BasicEnemy;
 	BulletType b_type = BulletType::BasicBullet;
 	EntityFactory* bullet_factory;
 	World* parent;

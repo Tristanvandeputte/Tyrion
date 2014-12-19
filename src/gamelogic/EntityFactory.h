@@ -13,28 +13,29 @@
 #include <unistd.h>
 #include "World.h"
 
-using namespace ty;
+enum class EnemyType;
+
+namespace ty{
 
 enum class BulletType;
 enum class Status;
-enum class EnemyType;
 enum class PowerupType;
 
 using namespace std;
 
-namespace ty {
-	class World;
-}	
+class World;
+
 
 class EntityFactory {
 public:
 	EntityFactory();
 	virtual ~EntityFactory();
-	virtual shared_ptr<ty::Entity> makePlayer(double x, double y, std::string texturespot,EntityFactory* bullet_factory,World* parent);
-	virtual shared_ptr<ty::Entity> makeBullet(double x, double y, BulletType type,Status status);
-	virtual shared_ptr<ty::Entity> makeEnemy(double x, double y,EnemyType type, EntityFactory* bullet_factory,World* parent);
-	virtual shared_ptr<ty::Entity> makeBackground(std::string texturespot);
-	virtual shared_ptr<ty::Entity> makePowerup(Vector position,PowerupType p_type);
+	virtual shared_ptr<Entity> makePlayer(double x, double y, std::string texturespot,World* parent);
+	virtual shared_ptr<Entity> makeBullet(double x, double y, BulletType type,Status status);
+	virtual shared_ptr<Entity> makeEnemy(double x, double y,::EnemyType type,World* parent);
+	virtual shared_ptr<Entity> makeBackground(std::string texturespot);
+	virtual shared_ptr<Entity> makePowerup(Vector position,PowerupType p_type);
 };
+}
 
 #endif /* ENTITYFACTORY_H_ */

@@ -18,7 +18,6 @@
 using namespace std;
 
 struct Map{
-
 	Enemyvec enemies;
 	Powerupvec powerups;
 	string map_name;

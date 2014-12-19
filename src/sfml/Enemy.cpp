@@ -19,7 +19,7 @@ Enemy::~Enemy() {
 	// TODO Auto-generated destructor stub
 }
 
-Enemy::Enemy(Vector position,double speed ,int health, int damage,EnemyType type, EntityFactory* bullet_factory, World* parent,shared_ptr<RenderWindow> window):ty::Enemy(position,speed,health,damage,type,bullet_factory,parent),window(window){
+Enemy::Enemy(Vector position,double speed ,int health, int damage,EnemyType type, ty::EntityFactory* bullet_factory, ty::World* parent,shared_ptr<RenderWindow> window):ty::Enemy(position,speed,health,damage,type,bullet_factory,parent),window(window){
 	//status = Status::Foe;
 	sf::Texture texture;
 	char cwd[1024];

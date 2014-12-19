@@ -19,12 +19,14 @@
 
 using namespace std;
 
+
+namespace ty {
+
+
 enum class BulletType;
 enum class Status{Ally,Foe};
 enum class BulletType{BasicBullet,SpecialBullet,BPBullet};
 class EntityFactory;
-
-namespace ty {
 
 class Entity {
 	// bepaalde entities pointer naar EntityFactory(vb schip nr bullet) + zijn parent zodat sfml bullets safely geadd kunnen worden

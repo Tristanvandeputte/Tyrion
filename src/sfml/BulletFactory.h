@@ -28,7 +28,6 @@ public:
 	BulletFactory();
 	BulletFactory(shared_ptr<RenderWindow> window);
 	virtual ~BulletFactory();
-	shared_ptr<ty::Entity> makeBullet(double x, double y,BulletType type,Status status);
 };
 
 #endif /* BULLETFACTORY_H_ */

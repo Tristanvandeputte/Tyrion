@@ -482,30 +482,6 @@ sfml/Background.cpp.s:
 	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Background.cpp.s
 .PHONY : sfml/Background.cpp.s
 
-sfml/BackgroundFactory.o: sfml/BackgroundFactory.cpp.o
-.PHONY : sfml/BackgroundFactory.o
-
-# target to build an object file
-sfml/BackgroundFactory.cpp.o:
-	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o
-.PHONY : sfml/BackgroundFactory.cpp.o
-
-sfml/BackgroundFactory.i: sfml/BackgroundFactory.cpp.i
-.PHONY : sfml/BackgroundFactory.i
-
-# target to preprocess a source file
-sfml/BackgroundFactory.cpp.i:
-	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.i
-.PHONY : sfml/BackgroundFactory.cpp.i
-
-sfml/BackgroundFactory.s: sfml/BackgroundFactory.cpp.s
-.PHONY : sfml/BackgroundFactory.s
-
-# target to generate assembly for a file
-sfml/BackgroundFactory.cpp.s:
-	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.s
-.PHONY : sfml/BackgroundFactory.cpp.s
-
 sfml/Bullet.o: sfml/Bullet.cpp.o
 .PHONY : sfml/Bullet.o
 
@@ -529,30 +505,6 @@ sfml/Bullet.s: sfml/Bullet.cpp.s
 sfml/Bullet.cpp.s:
 	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Bullet.cpp.s
 .PHONY : sfml/Bullet.cpp.s
-
-sfml/BulletFactory.o: sfml/BulletFactory.cpp.o
-.PHONY : sfml/BulletFactory.o
-
-# target to build an object file
-sfml/BulletFactory.cpp.o:
-	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o
-.PHONY : sfml/BulletFactory.cpp.o
-
-sfml/BulletFactory.i: sfml/BulletFactory.cpp.i
-.PHONY : sfml/BulletFactory.i
-
-# target to preprocess a source file
-sfml/BulletFactory.cpp.i:
-	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.i
-.PHONY : sfml/BulletFactory.cpp.i
-
-sfml/BulletFactory.s: sfml/BulletFactory.cpp.s
-.PHONY : sfml/BulletFactory.s
-
-# target to generate assembly for a file
-sfml/BulletFactory.cpp.s:
-	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.s
-.PHONY : sfml/BulletFactory.cpp.s
 
 sfml/Enemy.o: sfml/Enemy.cpp.o
 .PHONY : sfml/Enemy.o
@@ -578,29 +530,29 @@ sfml/Enemy.cpp.s:
 	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Enemy.cpp.s
 .PHONY : sfml/Enemy.cpp.s
 
-sfml/EnemyFactory.o: sfml/EnemyFactory.cpp.o
-.PHONY : sfml/EnemyFactory.o
+sfml/EntityFactory.o: sfml/EntityFactory.cpp.o
+.PHONY : sfml/EntityFactory.o
 
 # target to build an object file
-sfml/EnemyFactory.cpp.o:
-	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o
-.PHONY : sfml/EnemyFactory.cpp.o
+sfml/EntityFactory.cpp.o:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.o
+.PHONY : sfml/EntityFactory.cpp.o
 
-sfml/EnemyFactory.i: sfml/EnemyFactory.cpp.i
-.PHONY : sfml/EnemyFactory.i
+sfml/EntityFactory.i: sfml/EntityFactory.cpp.i
+.PHONY : sfml/EntityFactory.i
 
 # target to preprocess a source file
-sfml/EnemyFactory.cpp.i:
-	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.i
-.PHONY : sfml/EnemyFactory.cpp.i
+sfml/EntityFactory.cpp.i:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.i
+.PHONY : sfml/EntityFactory.cpp.i
 
-sfml/EnemyFactory.s: sfml/EnemyFactory.cpp.s
-.PHONY : sfml/EnemyFactory.s
+sfml/EntityFactory.s: sfml/EntityFactory.cpp.s
+.PHONY : sfml/EntityFactory.s
 
 # target to generate assembly for a file
-sfml/EnemyFactory.cpp.s:
-	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.s
-.PHONY : sfml/EnemyFactory.cpp.s
+sfml/EntityFactory.cpp.s:
+	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.s
+.PHONY : sfml/EntityFactory.cpp.s
 
 sfml/Game.o: sfml/Game.cpp.o
 .PHONY : sfml/Game.o
@@ -673,30 +625,6 @@ sfml/Player.s: sfml/Player.cpp.s
 sfml/Player.cpp.s:
 	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/Player.cpp.s
 .PHONY : sfml/Player.cpp.s
-
-sfml/PlayerFactory.o: sfml/PlayerFactory.cpp.o
-.PHONY : sfml/PlayerFactory.o
-
-# target to build an object file
-sfml/PlayerFactory.cpp.o:
-	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o
-.PHONY : sfml/PlayerFactory.cpp.o
-
-sfml/PlayerFactory.i: sfml/PlayerFactory.cpp.i
-.PHONY : sfml/PlayerFactory.i
-
-# target to preprocess a source file
-sfml/PlayerFactory.cpp.i:
-	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.i
-.PHONY : sfml/PlayerFactory.cpp.i
-
-sfml/PlayerFactory.s: sfml/PlayerFactory.cpp.s
-.PHONY : sfml/PlayerFactory.s
-
-# target to generate assembly for a file
-sfml/PlayerFactory.cpp.s:
-	cd /home/uauser/Desktop/Tyrion/build && $(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.s
-.PHONY : sfml/PlayerFactory.cpp.s
 
 sfml/Powerup.o: sfml/Powerup.cpp.o
 .PHONY : sfml/Powerup.o
@@ -823,21 +751,15 @@ help:
 	@echo "... sfml/Background.o"
 	@echo "... sfml/Background.i"
 	@echo "... sfml/Background.s"
-	@echo "... sfml/BackgroundFactory.o"
-	@echo "... sfml/BackgroundFactory.i"
-	@echo "... sfml/BackgroundFactory.s"
 	@echo "... sfml/Bullet.o"
 	@echo "... sfml/Bullet.i"
 	@echo "... sfml/Bullet.s"
-	@echo "... sfml/BulletFactory.o"
-	@echo "... sfml/BulletFactory.i"
-	@echo "... sfml/BulletFactory.s"
 	@echo "... sfml/Enemy.o"
 	@echo "... sfml/Enemy.i"
 	@echo "... sfml/Enemy.s"
-	@echo "... sfml/EnemyFactory.o"
-	@echo "... sfml/EnemyFactory.i"
-	@echo "... sfml/EnemyFactory.s"
+	@echo "... sfml/EntityFactory.o"
+	@echo "... sfml/EntityFactory.i"
+	@echo "... sfml/EntityFactory.s"
 	@echo "... sfml/Game.o"
 	@echo "... sfml/Game.i"
 	@echo "... sfml/Game.s"
@@ -847,9 +769,6 @@ help:
 	@echo "... sfml/Player.o"
 	@echo "... sfml/Player.i"
 	@echo "... sfml/Player.s"
-	@echo "... sfml/PlayerFactory.o"
-	@echo "... sfml/PlayerFactory.i"
-	@echo "... sfml/PlayerFactory.s"
 	@echo "... sfml/Powerup.o"
 	@echo "... sfml/Powerup.i"
 	@echo "... sfml/Powerup.s"

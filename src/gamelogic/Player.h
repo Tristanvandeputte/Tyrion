@@ -16,7 +16,11 @@
 #include <memory>
 
 using namespace std;
+
+//enum class Status;
+
 namespace ty {
+
 
 class Player: public Entity {
 protected:

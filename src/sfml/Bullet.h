@@ -24,7 +24,7 @@ private:
 	sf::Sprite sprite;
 public:
 	Bullet();
-	Bullet(Vector position,BulletType type,std::string texture_location,Status status,shared_ptr<RenderWindow> window);
+	Bullet(Vector position,ty::BulletType type,std::string texture_location,ty::Status status,shared_ptr<RenderWindow> window);
 	virtual ~Bullet();
 	void draw();
 };

@@ -20,7 +20,7 @@ Bullet::~Bullet() {
 
 void Bullet::draw(){}
 
-Bullet::Bullet(Vector position,BulletType type,Status status):Entity(position),type(type),status(status){
+Bullet::Bullet(Vector position,BulletType type,ty::Status status):Entity(position),type(type),status(status){
 	health = 1;
 	if(type==BulletType::BasicBullet){
 		health = 1; //bullet heeft 1 health (gaat kapot on-hit)

@@ -12,7 +12,9 @@
 #include <SFML/Graphics.hpp>
 #include <memory>
 using namespace sf;
-
+namespace ty{
+	//class World;
+}
 namespace sfml {
 
 class Enemy: public ty::Enemy {
@@ -22,7 +24,7 @@ private:
 	string texture_location;
 public:
 	Enemy();
-	Enemy(Vector position,double speed ,int health, int damage,EnemyType type, EntityFactory* bullet_factory, World* parent ,shared_ptr<RenderWindow> window);
+	Enemy(Vector position,double speed ,int health, int damage,EnemyType type, ty::EntityFactory* bullet_factory, ty::World* parent ,shared_ptr<RenderWindow> window);
 	virtual ~Enemy();
 	void draw() override;
 };

@@ -108,12 +108,9 @@ void Game::run(){
 	a.push_back(eight);
 	a.push_back(nine);
 	vector<string> BG({"Focus-Colors-2-640x960.jpg"}); //Background1.png
-	afac=PlayerFactory(window);
-	bfac=BulletFactory(window);
-	cfac=EnemyFactory(window);
-	bafac=BackgroundFactory(window);
+	sfml::EntityFactory entity_fac = sfml::EntityFactory(window);
 	//pfac=PowerupFactory(window);
-	game_world = World( &afac, &bfac, &cfac,a,&bafac);
+	game_world = ty::World( &entity_fac,a);
 	game_world.setBackground(BG);
 
 

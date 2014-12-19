@@ -21,12 +21,12 @@ namespace ty {
 
 class Powerup : public Entity{
 private:
-	PowerupType p_type;
+	::PowerupType p_type;
 	BulletType b_type;
 public:
 	Powerup();
 	virtual ~Powerup();
-	Powerup(Vector position,PowerupType p_type);
+	Powerup(Vector position,::PowerupType p_type);
 	void update(double deltaT) override;
 	virtual void draw();
 	void collide(shared_ptr<Entity> with) override;

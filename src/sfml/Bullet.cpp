@@ -13,13 +13,13 @@ Bullet::Bullet() {
 
 }
 
-Bullet::Bullet(Vector position,BulletType type,std::string texture_location,Status status,shared_ptr<RenderWindow> window):ty::Bullet(position,type,status),texture_location(texture_location),window(window){
+Bullet::Bullet(Vector position,ty::BulletType type,std::string texture_location,ty::Status status,shared_ptr<RenderWindow> window):ty::Bullet(position,type,status),texture_location(texture_location),window(window){
 	sf::Texture texture;
 	texture_location="SmallBullet.png";
 	char cwd[1024];
 	getcwd(cwd,sizeof(cwd));
 	string curdir(cwd);
-	if(type==BulletType::BasicBullet){
+	if(type==ty::BulletType::BasicBullet){
 		texture_location="SmallBullet.png";
 	}
 	if (!texture.loadFromFile(curdir+"/Remastered Tyrian Graphics/"+texture_location)){ //sla het pad op in de objecten, niet de textures.

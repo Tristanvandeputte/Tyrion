@@ -8,11 +8,7 @@
 #include "../gamelogic/World.h"
 #include "../parsing/levelparser.h"
 #include "StopWatch.h"
-#include "PlayerFactory.h"
-#include "BulletFactory.h"
-#include "EnemyFactory.h"
-#include "BackgroundFactory.h"
-#include "PowerupFactory.h"
+#include "EntityFactory.h"
 #include "KeyBoard.h"
 #include <SFML/Graphics.hpp>
 
@@ -30,11 +26,7 @@ using namespace sf;
 class Game {
 private:
 	string selected_level="null";
-	PlayerFactory afac;
-	BulletFactory bfac;
-	EnemyFactory cfac;
 	//PowerupFactory pfac;
-	BackgroundFactory bafac;
 	ty::World game_world;
 	StopWatch clock;
 	State window_state;

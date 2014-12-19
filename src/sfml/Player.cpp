@@ -14,7 +14,7 @@ Player::Player() {
 
 }
 
-Player::Player(Vector position, string texture_location,EntityFactory* bullet_factory,ty::World* parent,shared_ptr<RenderWindow> window):ty::Player(position,bullet_factory,parent),texture_location(texture_location),window(window){
+Player::Player(Vector position, string texture_location,ty::EntityFactory* bullet_factory,ty::World* parent,shared_ptr<RenderWindow> window):ty::Player(position,bullet_factory,parent),texture_location(texture_location),window(window){
 	//cout<<"FUKKKK"<<endl;
 	sf::Texture texture;
 	char cwd[1024];

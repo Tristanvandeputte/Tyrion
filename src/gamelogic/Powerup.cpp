@@ -22,7 +22,7 @@ Powerup::~Powerup() {
 void Powerup::draw(){}
 
 
-Powerup::Powerup(Vector position,PowerupType p_type):Entity(position),p_type(p_type){
+Powerup::Powerup(Vector position,::PowerupType p_type):Entity(position),p_type(p_type){
 	speed = 5;
 	immortal=true;
 	status = Status::Foe; //They need to collide with the player

@@ -18,8 +18,13 @@
 
 using namespace sf;
 using namespace std;
-
+namespace ty{
+	class World;
+	enum class BulletType;
+}
 namespace sfml {
+
+class EntityFactory;
 
 class Player: public ty::Player {
 private:
@@ -29,7 +34,7 @@ private:
 	Sprite sprite;
 public:
 	Player();
-	Player(Vector position, string texture_location, EntityFactory* bullet_factory, World* parent,shared_ptr<RenderWindow> window);
+	Player(Vector position, string texture_location, ty::EntityFactory* bullet_factory, ty::World* parent,shared_ptr<RenderWindow> window);
 	virtual ~Player();
 	void draw() override;
 
