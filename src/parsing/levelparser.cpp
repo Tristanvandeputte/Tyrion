@@ -30,13 +30,13 @@ vector<Map> LevelParser::createMaps(string file_name){
     	string name=map.getChild("name").value();
     	// elements for the Enemies
     	XMLElement Enemies = map.getChild("Enemies");
-    	std::vector<XMLElement> enemies = Enemies.getChildren();
+    	std::vector<XMLElement> enemies = Enemies.getChildren("Enemy");
     	// elements for the Powerups
     	XMLElement Powerups = map.getChild("Powerups");
     	std::vector<XMLElement> powerups = Powerups.getChildren();
     	// elements for the BackgroundImages
     	XMLElement BackgroundImages = map.getChild("BackgroundImages");
-    	std::vector<XMLElement> backgrounds = BackgroundImages.getChildren();
+    	std::vector<XMLElement> backgrounds = BackgroundImages.getChildren("Background");
     	 for(XMLElement enemy :enemies) {
     		 EnemyType type;
     		 string enemy_type = enemy.getChild("EnemyType").value();
@@ -58,7 +58,8 @@ vector<Map> LevelParser::createMaps(string file_name){
     		 all_powerups.push_back(new_powerup);
     	 }
     	 for(XMLElement background :backgrounds) {
-    		 string new_background = background.getChild("Background").value();
+    		 string new_background = background.value();
+    		 cout<<new_background<<endl;
     		 all_backgrounds.push_back(new_background);
     	 }
     	 this_map.BG = all_backgrounds;

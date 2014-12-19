@@ -89,29 +89,12 @@ void Game::run(){
 	shared_ptr<sf::RenderWindow> window(new sf::RenderWindow(sf::VideoMode(640,480), "Tyrian Menu"));
 	window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 ,0) );
 	Enemyvec a;
-	tuple<double,EnemyType,double,double> one(1.0,EnemyType::BasicEnemy,-2,4.0);
-	tuple<double,EnemyType,double,double> two(1.0,EnemyType::BasicEnemy,2,4.0);
-	tuple<double,EnemyType,double,double> three(8.0,EnemyType::BasicEnemy,3.0,4.0);
-	tuple<double,EnemyType,double,double> four(8.0,EnemyType::BasicEnemy,-3.0,4.0);
-	tuple<double,EnemyType,double,double> five(2.0,EnemyType::ShootingEnemy,0.0,4.0);
-	tuple<double,EnemyType,double,double> six(10.0,EnemyType::ShootingEnemy,-1.0,4.0);
-	tuple<double,EnemyType,double,double> seven(10.0,EnemyType::ShootingEnemy,-2.0,4.0);
-	tuple<double,EnemyType,double,double> eight(10.0,EnemyType::ShootingEnemy,2.0,4.0);
-	tuple<double,EnemyType,double,double> nine(10.0,EnemyType::ShootingEnemy,1.0,4.0);
-	a.push_back(one);
-	a.push_back(two);
-	a.push_back(three);
-	a.push_back(four);
-	a.push_back(five);
-	a.push_back(six);
-	a.push_back(seven);
-	a.push_back(eight);
-	a.push_back(nine);
-	vector<string> BG({"Focus-Colors-2-640x960.jpg"}); //Background1.png
+
+	a = levels[0].enemies;
 	sfml::EntityFactory entity_fac = sfml::EntityFactory(window);
 	//pfac=PowerupFactory(window);
 	game_world = ty::World( &entity_fac,a);
-	game_world.setBackground(BG);
+	game_world.setBackground(levels[0].BG);
 
 
 	//window->setMouseCursorVisible(false);
@@ -336,16 +319,20 @@ void Game::run(){
 					clock.reset();
 				}
 				if(input.checkKeyBoardInput(KeyPressed::Space) && selection_cooldown<=0){
-					current_level_loaded = selectedlevel; 
+					current_level_loaded = selectedlevel;
+					game_world.changeLevel(levels[current_level_loaded].enemies,levels[current_level_loaded].BG);
 				}
 			}
 			if(input.checkKeyBoardInput(KeyPressed::Up) && selection_cooldown<=0){
-				selectedlevel = (selection-1)%amount_of_levels; // selection 0-3
+				selectedlevel--;
+				if(selectedlevel<0){
+					selectedlevel = amount_of_levels-1;
+				}
 				selection_cooldown = 0.2;
 			}
 			if(input.checkKeyBoardInput(KeyPressed::Down) && selection_cooldown<=0){
 				selectedlevel++;
-				if(selectedlevel>amount_of_levels){
+				if(selectedlevel>amount_of_levels-1){
 					selectedlevel = 0;
 				}
 				selection_cooldown = 0.2;

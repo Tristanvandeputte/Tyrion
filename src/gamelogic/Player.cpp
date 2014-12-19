@@ -36,16 +36,15 @@ void Player::update(double deltaT){
 	if(position.getX()+radius+0.05>4.0){
 		position.setX(4.0-radius-0.05);
 	}
-	if(position.getX()-radius-0.05<-4.0){
-		position.setX(-4+radius+0.05);
+	if(position.getX()-0.05<-4.0){
+		position.setX(-4+0.05);
 	}
 	if(position.getY()-radius-0.05<-3.0){
 		position.setY(-3+radius+0.05);
 	}
-	if(position.getY()+radius+0.05>3.0){
-		position.setY(3+-radius-0.05);
+	if(position.getY()+0.1>3.0){
+		position.setY(3-0.05);
 	}
-	//cout<<position.getX()<<"   "<<position.getY()<<endl;
 	Vector nullmove(0,0);
 	movement = nullmove;
 	if(invincibility_frame>0){
@@ -66,7 +65,6 @@ bool Player::canShoot(){
 
 shared_ptr<Entity> Player::Shoot(){
 	shot_cool_down=base_shot_cool_down;
-	cout<<position.getX()<<"    "<<position.getY()<<endl;
 	return bullet_factory->makeBullet(position.getX(),position.getY(),b_type,Status::Ally);
 }
 } /* namespace ty */

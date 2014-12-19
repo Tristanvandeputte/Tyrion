@@ -238,9 +238,10 @@ void World::reset(){
 	game_time = 0;
 }
 void World::changeLevel(Enemyvec enemy_creations,vector<string> texture_locs){
-	reset();
 	all_enemy_creations = enemy_creations;
+	reset_all_enemy_creations = enemy_creations;
 	background_spots = texture_locs;
+	reset();
 }
 
 }/* namespace ty */
