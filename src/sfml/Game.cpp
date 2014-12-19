@@ -54,7 +54,7 @@ void Game::run(){
 	sf::Text level_text("level select ", font);
 	level_text.setOrigin(-250,-250);
 	level_text.setCharacterSize(30);
-	sf::Text credits_text("credits ", font);
+	sf::Text credits_text("info ", font);
 	credits_text.setOrigin(-250,-300);
 	credits_text.setCharacterSize(30);
 	sf::Text exit_text("exit ", font);
@@ -80,9 +80,19 @@ void Game::run(){
 		levels_text.push_back(new_text);
 	}
 	// CREDITS TEXT
-	sf::Text tristan("tristan ", font);
-	tristan.setOrigin(-60,-80);
-	tristan.setCharacterSize(100);
+	sf::Text tristan("by tristan ", font);
+	tristan.setOrigin(-20,-40);
+	tristan.setCharacterSize(80);
+
+	sf::Text info1("arrows for movement and menu navigation ", font);
+	info1.setOrigin(-20,-150);
+	info1.setCharacterSize(20);
+	sf::Text info2("spacebar to shoot and select ", font);
+	info2.setOrigin(-20,-180);
+	info2.setCharacterSize(20);
+	sf::Text info3("p to pause ", font);
+	info3.setOrigin(-20,-210);
+	info3.setCharacterSize(20);
 
 	
 	// RUN STUFF
@@ -175,7 +185,6 @@ void Game::run(){
 			game_world.update(deltaT);
 
 			if(game_world.checkGameEnd()){
-				cout<<"you lost"<<endl;
 				window->close();
 			}
 
@@ -208,7 +217,7 @@ void Game::run(){
 						window_state = State::LevelSelect;
 					}
 					if(selection==1){
-						window->setTitle("Credits");
+						window->setTitle("Info");
 						window_state = State::Credits;
 					}
 					if(selection==0){
@@ -370,6 +379,9 @@ void Game::run(){
 			window->clear();
 			window->draw(sprite);
 			window->draw(tristan);
+			window->draw(info1);
+			window->draw(info2);
+			window->draw(info3);
 			window->display();
 
 		}

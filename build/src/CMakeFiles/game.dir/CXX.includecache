@@ -144,10 +144,6 @@ vector
 tinyxml2.h
 /home/uauser/Desktop/Tyrion/src/parsing/tinyxml2.h
 
-/home/uauser/Desktop/Tyrion/src/parsing/levelparser.cpp
-levelparser.h
-/home/uauser/Desktop/Tyrion/src/parsing/levelparser.h
-
 /home/uauser/Desktop/Tyrion/src/parsing/levelparser.h
 fstream
 -
@@ -213,6 +209,10 @@ memory
 -
 SFML/Graphics.hpp
 -
+
+/home/uauser/Desktop/Tyrion/src/sfml/Game.cpp
+Game.h
+/home/uauser/Desktop/Tyrion/src/sfml/Game.h
 
 /home/uauser/Desktop/Tyrion/src/sfml/Game.h
 ../gamelogic/World.h
