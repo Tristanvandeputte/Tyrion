@@ -69,6 +69,7 @@ public:
 	void parse_levels();
 	void prepareTextures();
 	vector<sf::Text> scoreDisplay();
+	vector<sf::Text> FPSDisplay();
 	void drawMenuRectangle();
 	void drawLevelRectangle();
 };

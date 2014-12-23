@@ -112,7 +112,10 @@ void Game::prepareTextures(){
 	info3.setOrigin(-20,-210);
 	info3.setCharacterSize(20);
 	
-	info_text.push_back();
+	info_text.push_back(tristan);
+	info_text.push_back(info1);
+	info_text.push_back(info2);
+	info_text.push_back(info3);
 }
 
 void Game::parse_levels(){
@@ -206,16 +209,7 @@ void Game::run(){
 			game_world.update(deltaT);
 
 			vector<sf::Text> current_score = scoreDisplay();
-			// FPS display
-			stringstream ss2;
-			ss2<<1/deltaT;
-			string fps_display_text = ss2.str();
-			sf::Text fps_display("fps: ", font);
-			fps_display.setOrigin(-20,-455);
-			fps_display.setCharacterSize(15);
-			sf::Text fps_number_display(fps_display_text, number_font);
-			fps_number_display.setOrigin(-70,-456);
-			fps_number_display.setCharacterSize(14);
+
 
 			if(game_world.FinishedLevel()){
 				LevelOver(true);
@@ -325,17 +319,9 @@ void Game::run(){
 			for(auto level_text : levels_text){
 				window->draw(level_text);
 			}
-			Vector2f size{float(levels_text[selectedlevel+1].getGlobalBounds().width)+20,float(levels_text[selectedlevel+1].getGlobalBounds().height)+10};
-			RectangleShape rect{size};
-			rect.setFillColor(Color::Transparent);
-			rect.setOutlineColor(Color::Red);
-			rect.setOutlineThickness(5);
-			rect.setOrigin(levels_text[selectedlevel+1].getOrigin());
-			rect.move(-10,0);
 
 			window->draw(current_level_text);
-
-			window->draw(rect);
+			drawLevelRectangle();
 			window->display();
 		}
 		else if(window_state == State::Credits){
@@ -349,14 +335,24 @@ void Game::run(){
 			}
 			window->clear();
 			window->draw(sprite);
-			window->draw(tristan);
-			window->draw(info1);
-			window->draw(info2);
-			window->draw(info3);
+			for(auto text : info_text){
+				window->draw(text);
+			}
 			window->display();
 
 		}
 	}
+}
+
+void Game::drawLevelRectangle(){
+	Vector2f size{float(levels_text[selectedlevel+1].getGlobalBounds().width)+20,float(levels_text[selectedlevel+1].getGlobalBounds().height)+10};
+	RectangleShape rect{size};
+	rect.setFillColor(Color::Transparent);
+	rect.setOutlineColor(Color::Red);
+	rect.setOutlineThickness(5);
+	rect.setOrigin(levels_text[selectedlevel+1].getOrigin());
+	rect.move(-10,0);
+	window->draw(rect);
 }
 
 void Game::drawMenuRectangle(){
@@ -368,6 +364,23 @@ void Game::drawMenuRectangle(){
 	rect.setOrigin(menu_messages[selection+1].getOrigin());
 	rect.move(-10,0);
 	window->draw(rect);			
+}
+
+vector<sf::Text> Game::FPSDisplay(){
+	vector<sf::Text> FPS_text;
+	// FPS display
+	stringstream ss2;
+	ss2<<1/deltaT;
+	string fps_display_text = ss2.str();
+	sf::Text fps_display("fps: ", font);
+	fps_display.setOrigin(-20,-455);
+	fps_display.setCharacterSize(15);
+	sf::Text fps_number_display(fps_display_text, number_font);
+	fps_number_display.setOrigin(-70,-456);
+	fps_number_display.setCharacterSize(14);
+	FPS_text.push_back(fps_display);
+	FPS_text.push_back(fps_number_display);
+	return FPS_text;
 }
 
 vector<sf::Text> Game::scoreDisplay(){
