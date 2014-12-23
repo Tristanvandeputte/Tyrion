@@ -23,6 +23,10 @@ class Powerup : public Entity{
 private:
 	::PowerupType p_type;
 	BulletType b_type;
+	double bullet_cooldown_reduction{0};
+	int health_increase{0};
+	double speed_increase{0};
+	BulletType new_bullet=BulletType::BasicBullet;
 public:
 	Powerup();
 	virtual ~Powerup();

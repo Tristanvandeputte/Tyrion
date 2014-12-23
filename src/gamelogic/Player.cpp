@@ -30,6 +30,16 @@ Player::Player(Vector position,EntityFactory* bullet_factory,World* parent):Enti
 
 void Player::draw(){}
 
+void Player::obtainPowerup(int hp, double spd, double scd,BulletType new_gun){
+	health += hp;
+	cout<<scd<<endl;
+	speed +=spd;
+	base_shot_cool_down -= scd;
+	if(base_shot_cool_down < 0){
+		base_shot_cool_down = 0;
+	}
+	b_type = new_gun;
+}
 
 void Player::update(double deltaT){
 	position = position+(movement*deltaT*speed);

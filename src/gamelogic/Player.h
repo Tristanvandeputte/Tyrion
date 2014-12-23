@@ -38,6 +38,7 @@ public:
 	shared_ptr<Entity> Shoot();
 	void move(Vector vec);
 	void update(double deltaT);
+	void obtainPowerup(int hp, double spd, double scd,BulletType new_gun) override;
 	bool canShoot();
 };
 

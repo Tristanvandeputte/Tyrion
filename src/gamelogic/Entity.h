@@ -66,6 +66,7 @@ public:
 	virtual void collide(shared_ptr<Entity> with);
 	bool isDead();
 	int getPoints();
+	virtual void obtainPowerup(int hp, double spd, double scd,BulletType new_gun);
 };
 
 } /* namespace ty */

@@ -65,6 +65,8 @@ Status Entity::getStatus(){
 bool Entity::getImmortal(){
 	return immortal;
 }
+void Entity::obtainPowerup(int hp, double spd, double scd,BulletType new_gun){}
+
 bool Entity::isDead(){
 	if(not immortal){
 		return (health <= 0);
