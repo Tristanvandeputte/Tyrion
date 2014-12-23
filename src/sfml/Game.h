@@ -89,9 +89,6 @@ public:
 	void gameLoop();
 	void infoLoop();
 	void levelsLoop();
-	
-	void startGameMusic();
-	void startMenuMusic();
 };
 
 #endif /* GAME_H_ */

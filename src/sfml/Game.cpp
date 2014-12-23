@@ -27,13 +27,6 @@ void Game::parse_levels(){
 	levels = parser->createMaps("./src/parsing/maps.xml");
 }
 
-void startGameMusic(){
-	
-}
-void startMenuMusic(){
-	
-}
-
 void Game::run(){
 	// The user starts out on the menu screen
 	window_state = State::Menu;
@@ -453,7 +446,7 @@ void Game::prepareSFML(){
 	if (!game_theme.openFromFile(curdir+"/Music//Theme.ogg")){
 		cout<<"ERROR IS KILL"<<endl;
 	}
-	if (!menu_theme.openFromFile(curdir+"/Music//Theme.ogg")){
+	if (!menu_theme.openFromFile(curdir+"/Music//MenuTheme.ogg")){
 		cout<<"ERROR IS KILL"<<endl;
 	}
 	
