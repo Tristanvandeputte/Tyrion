@@ -144,32 +144,9 @@ src/CMakeFiles/game.dir/sfml/Game.cpp.o.provides: src/CMakeFiles/game.dir/sfml/G
 
 src/CMakeFiles/game.dir/sfml/Game.cpp.o.provides.build: src/CMakeFiles/game.dir/sfml/Game.cpp.o
 
-src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: src/CMakeFiles/game.dir/flags.make
-src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o: src/sfml/PlayerFactory.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o"
-	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o -c /home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.cpp
-
-src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/sfml/PlayerFactory.cpp.i"
-	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.cpp > CMakeFiles/game.dir/sfml/PlayerFactory.cpp.i
-
-src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/sfml/PlayerFactory.cpp.s"
-	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/Desktop/Tyrion/src/sfml/PlayerFactory.cpp -o CMakeFiles/game.dir/sfml/PlayerFactory.cpp.s
-
-src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o.requires:
-.PHONY : src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o.requires
-
-src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o.provides: src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o.provides.build
-.PHONY : src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o.provides
-
-src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o.provides.build: src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o
-
 src/CMakeFiles/game.dir/sfml/StopWatch.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/sfml/StopWatch.cpp.o: src/sfml/StopWatch.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/sfml/StopWatch.cpp.o"
 	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/sfml/StopWatch.cpp.o -c /home/uauser/Desktop/Tyrion/src/sfml/StopWatch.cpp
 
@@ -192,7 +169,7 @@ src/CMakeFiles/game.dir/sfml/StopWatch.cpp.o.provides.build: src/CMakeFiles/game
 
 src/CMakeFiles/game.dir/sfml/Bullet.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/sfml/Bullet.cpp.o: src/sfml/Bullet.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/sfml/Bullet.cpp.o"
 	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/sfml/Bullet.cpp.o -c /home/uauser/Desktop/Tyrion/src/sfml/Bullet.cpp
 
@@ -213,32 +190,9 @@ src/CMakeFiles/game.dir/sfml/Bullet.cpp.o.provides: src/CMakeFiles/game.dir/sfml
 
 src/CMakeFiles/game.dir/sfml/Bullet.cpp.o.provides.build: src/CMakeFiles/game.dir/sfml/Bullet.cpp.o
 
-src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: src/CMakeFiles/game.dir/flags.make
-src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o: src/sfml/BulletFactory.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o"
-	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/sfml/BulletFactory.cpp.o -c /home/uauser/Desktop/Tyrion/src/sfml/BulletFactory.cpp
-
-src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/sfml/BulletFactory.cpp.i"
-	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/Desktop/Tyrion/src/sfml/BulletFactory.cpp > CMakeFiles/game.dir/sfml/BulletFactory.cpp.i
-
-src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/sfml/BulletFactory.cpp.s"
-	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/Desktop/Tyrion/src/sfml/BulletFactory.cpp -o CMakeFiles/game.dir/sfml/BulletFactory.cpp.s
-
-src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o.requires:
-.PHONY : src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o.requires
-
-src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o.provides: src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o.provides.build
-.PHONY : src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o.provides
-
-src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o.provides.build: src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o
-
 src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/sfml/Enemy.cpp.o: src/sfml/Enemy.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/sfml/Enemy.cpp.o"
 	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/sfml/Enemy.cpp.o -c /home/uauser/Desktop/Tyrion/src/sfml/Enemy.cpp
 
@@ -259,32 +213,32 @@ src/CMakeFiles/game.dir/sfml/Enemy.cpp.o.provides: src/CMakeFiles/game.dir/sfml/
 
 src/CMakeFiles/game.dir/sfml/Enemy.cpp.o.provides.build: src/CMakeFiles/game.dir/sfml/Enemy.cpp.o
 
-src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: src/CMakeFiles/game.dir/flags.make
-src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o: src/sfml/EnemyFactory.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_10)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o"
-	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o -c /home/uauser/Desktop/Tyrion/src/sfml/EnemyFactory.cpp
+src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.o: src/CMakeFiles/game.dir/flags.make
+src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.o: src/sfml/EntityFactory.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.o"
+	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/sfml/EntityFactory.cpp.o -c /home/uauser/Desktop/Tyrion/src/sfml/EntityFactory.cpp
 
-src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/sfml/EnemyFactory.cpp.i"
-	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/Desktop/Tyrion/src/sfml/EnemyFactory.cpp > CMakeFiles/game.dir/sfml/EnemyFactory.cpp.i
+src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/sfml/EntityFactory.cpp.i"
+	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/Desktop/Tyrion/src/sfml/EntityFactory.cpp > CMakeFiles/game.dir/sfml/EntityFactory.cpp.i
 
-src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/sfml/EnemyFactory.cpp.s"
-	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/Desktop/Tyrion/src/sfml/EnemyFactory.cpp -o CMakeFiles/game.dir/sfml/EnemyFactory.cpp.s
+src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/sfml/EntityFactory.cpp.s"
+	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/Desktop/Tyrion/src/sfml/EntityFactory.cpp -o CMakeFiles/game.dir/sfml/EntityFactory.cpp.s
 
-src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o.requires:
-.PHONY : src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o.requires
+src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.o.requires:
+.PHONY : src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.o.requires
 
-src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o.provides: src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o.provides.build
-.PHONY : src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o.provides
+src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.o.provides: src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.o.provides.build
+.PHONY : src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.o.provides
 
-src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o.provides.build: src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o
+src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.o.provides.build: src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.o
 
 src/CMakeFiles/game.dir/sfml/Background.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/sfml/Background.cpp.o: src/sfml/Background.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/sfml/Background.cpp.o"
 	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/sfml/Background.cpp.o -c /home/uauser/Desktop/Tyrion/src/sfml/Background.cpp
 
@@ -305,32 +259,9 @@ src/CMakeFiles/game.dir/sfml/Background.cpp.o.provides: src/CMakeFiles/game.dir/
 
 src/CMakeFiles/game.dir/sfml/Background.cpp.o.provides.build: src/CMakeFiles/game.dir/sfml/Background.cpp.o
 
-src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o: src/CMakeFiles/game.dir/flags.make
-src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o: src/sfml/BackgroundFactory.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_12)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o"
-	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o -c /home/uauser/Desktop/Tyrion/src/sfml/BackgroundFactory.cpp
-
-src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.i"
-	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/uauser/Desktop/Tyrion/src/sfml/BackgroundFactory.cpp > CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.i
-
-src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.s"
-	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/uauser/Desktop/Tyrion/src/sfml/BackgroundFactory.cpp -o CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.s
-
-src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o.requires:
-.PHONY : src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o.requires
-
-src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o.provides: src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/game.dir/build.make src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o.provides.build
-.PHONY : src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o.provides
-
-src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o.provides.build: src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o
-
 src/CMakeFiles/game.dir/sfml/Powerup.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/sfml/Powerup.cpp.o: src/sfml/Powerup.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/sfml/Powerup.cpp.o"
 	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/sfml/Powerup.cpp.o -c /home/uauser/Desktop/Tyrion/src/sfml/Powerup.cpp
 
@@ -353,7 +284,7 @@ src/CMakeFiles/game.dir/sfml/Powerup.cpp.o.provides.build: src/CMakeFiles/game.d
 
 src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o: src/parsing/tinyxml2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o"
 	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/parsing/tinyxml2.cpp.o -c /home/uauser/Desktop/Tyrion/src/parsing/tinyxml2.cpp
 
@@ -376,7 +307,7 @@ src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o.provides.build: src/CMakeFiles/ga
 
 src/CMakeFiles/game.dir/parsing/compactxml.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/parsing/compactxml.cpp.o: src/parsing/compactxml.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/parsing/compactxml.cpp.o"
 	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/parsing/compactxml.cpp.o -c /home/uauser/Desktop/Tyrion/src/parsing/compactxml.cpp
 
@@ -399,7 +330,7 @@ src/CMakeFiles/game.dir/parsing/compactxml.cpp.o.provides.build: src/CMakeFiles/
 
 src/CMakeFiles/game.dir/parsing/levelparser.cpp.o: src/CMakeFiles/game.dir/flags.make
 src/CMakeFiles/game.dir/parsing/levelparser.cpp.o: src/parsing/levelparser.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/uauser/Desktop/Tyrion/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/game.dir/parsing/levelparser.cpp.o"
 	cd /home/uauser/Desktop/Tyrion/src && /usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/parsing/levelparser.cpp.o -c /home/uauser/Desktop/Tyrion/src/parsing/levelparser.cpp
 
@@ -426,14 +357,11 @@ game_OBJECTS = \
 "CMakeFiles/game.dir/sfml/KeyBoard.cpp.o" \
 "CMakeFiles/game.dir/sfml/Player.cpp.o" \
 "CMakeFiles/game.dir/sfml/Game.cpp.o" \
-"CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o" \
 "CMakeFiles/game.dir/sfml/StopWatch.cpp.o" \
 "CMakeFiles/game.dir/sfml/Bullet.cpp.o" \
-"CMakeFiles/game.dir/sfml/BulletFactory.cpp.o" \
 "CMakeFiles/game.dir/sfml/Enemy.cpp.o" \
-"CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o" \
+"CMakeFiles/game.dir/sfml/EntityFactory.cpp.o" \
 "CMakeFiles/game.dir/sfml/Background.cpp.o" \
-"CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o" \
 "CMakeFiles/game.dir/sfml/Powerup.cpp.o" \
 "CMakeFiles/game.dir/parsing/tinyxml2.cpp.o" \
 "CMakeFiles/game.dir/parsing/compactxml.cpp.o" \
@@ -446,14 +374,11 @@ src/game: src/CMakeFiles/game.dir/sfml/main.cpp.o
 src/game: src/CMakeFiles/game.dir/sfml/KeyBoard.cpp.o
 src/game: src/CMakeFiles/game.dir/sfml/Player.cpp.o
 src/game: src/CMakeFiles/game.dir/sfml/Game.cpp.o
-src/game: src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o
 src/game: src/CMakeFiles/game.dir/sfml/StopWatch.cpp.o
 src/game: src/CMakeFiles/game.dir/sfml/Bullet.cpp.o
-src/game: src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o
 src/game: src/CMakeFiles/game.dir/sfml/Enemy.cpp.o
-src/game: src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o
+src/game: src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.o
 src/game: src/CMakeFiles/game.dir/sfml/Background.cpp.o
-src/game: src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o
 src/game: src/CMakeFiles/game.dir/sfml/Powerup.cpp.o
 src/game: src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o
 src/game: src/CMakeFiles/game.dir/parsing/compactxml.cpp.o
@@ -477,14 +402,11 @@ src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/main.cpp.o.requir
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/KeyBoard.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/Player.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/Game.cpp.o.requires
-src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/PlayerFactory.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/StopWatch.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/Bullet.cpp.o.requires
-src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/BulletFactory.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/Enemy.cpp.o.requires
-src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/EnemyFactory.cpp.o.requires
+src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/EntityFactory.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/Background.cpp.o.requires
-src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/BackgroundFactory.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/sfml/Powerup.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/parsing/tinyxml2.cpp.o.requires
 src/CMakeFiles/game.dir/requires: src/CMakeFiles/game.dir/parsing/compactxml.cpp.o.requires

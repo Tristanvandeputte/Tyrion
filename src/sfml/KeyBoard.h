@@ -10,19 +10,24 @@
 #include <SFML/Graphics.hpp>
 
 enum class KeyPressed{Left,Right,Up,Down,Space,Escape,Null,RightUp,RightDown,LeftUp,LeftDown,P};
+namespace IO{
 
 class KeyBoard {
 private:
 	KeyBoard(){}
+	static KeyBoard* instance;
+	KeyBoard(KeyBoard const&);             
+	void operator=(KeyBoard const&);
 public:
-    static KeyBoard& getInstance(){
-        static KeyBoard instance;
-        return instance;
-    }
-	//KeyBoard(KeyBoard const&);             
-    //void operator=(KeyBoard const&);
+	static KeyBoard* getInstance(){
+		if(!instance){
+			instance = new KeyBoard;
+		}
+		return instance;
+	}
 	virtual ~KeyBoard();
 	bool checkKeyBoardInput(KeyPressed input);
 };
+} // namspace IO
 
 #endif /* KEYBOARD_H_ */

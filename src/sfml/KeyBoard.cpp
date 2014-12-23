@@ -7,6 +7,10 @@
 
 #include "KeyBoard.h"
 
+namespace IO{
+
+KeyBoard* KeyBoard::instance = nullptr;
+
 KeyBoard::~KeyBoard() {
 	// TODO Auto-generated destructor stub
 }
@@ -33,4 +37,6 @@ bool KeyBoard::checkKeyBoardInput(KeyPressed input){
 	else if (KeyPressed::P==input){
 		return sf::Keyboard::isKeyPressed(sf::Keyboard::P);
 	}
+}
+
 }

@@ -229,6 +229,8 @@ sstream
 -
 SFML/Graphics.hpp
 -
+SFML/Audio.hpp
+-
 
 /home/uauser/Desktop/Tyrion/src/sfml/KeyBoard.h
 SFML/Graphics.hpp

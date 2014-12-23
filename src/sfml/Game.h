@@ -12,6 +12,7 @@
 #include "KeyBoard.h"
 #include <sstream>
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 
 #ifndef GAME_H_
 #define GAME_H_
@@ -31,17 +32,21 @@ private:
 	ty::World game_world;
 	StopWatch clock;
 	State window_state;
-	KeyBoard input=KeyBoard::getInstance();
+	IO::KeyBoard* input=IO::KeyBoard::getInstance();;
 	// static function to enforce singelton
 	shared_ptr<sf::RenderWindow> window;
 	vector<Map> levels;
 	LevelParser* parser;
+
+	// Prevents you from issuing move comments when the game screen is opening
 	double selection_cooldown{0};
 	int selection{3}; //bovenste selection
 	int selectedlevel{0};
 	bool reset{false};
 	bool paused{false};
 	int current_level_loaded{0};
+	double deltaT{0};
+	int amount_of_levels;
 	
 	// set Text/images goe here
 		// Fonts for numbers and regular text
@@ -55,10 +60,15 @@ private:
 		// level selection text
 	vector<sf::Text> levels_text;
 	// info text
-vector<sf::Text> info_text;
+	vector<sf::Text> info_text;
 	
 	sf::Sprite sprite;
 	sf::Texture static_background_texture;
+	
+	
+	// Music
+	sf::Music game_theme;
+	sf::Music menu_theme;
 public:
 	Game();
 
@@ -67,11 +77,21 @@ public:
 	void run();
 	void LevelOver(bool alive);
 	void parse_levels();
-	void prepareTextures();
+	void prepareSFML();
+	// these are texts that can change over the course of the game
 	vector<sf::Text> scoreDisplay();
 	vector<sf::Text> FPSDisplay();
+	sf::Text currentLevel();
 	void drawMenuRectangle();
 	void drawLevelRectangle();
+	
+	void menuLoop();
+	void gameLoop();
+	void infoLoop();
+	void levelsLoop();
+	
+	void startGameMusic();
+	void startMenuMusic();
 };
 
 #endif /* GAME_H_ */

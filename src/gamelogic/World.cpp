@@ -105,13 +105,10 @@ void World::backgroundPositionCheck(){
 		background_tiles.push_back(bg);
 		texturecounter ++;
 	}
-
-	//cout<<background_tiles[0]->getPosition().getY()<<endl;
 	if(background_tiles[0]->getPosition().getY()<-3 || background_tiles[0]->getPosition().getY()>100){
 		background_tiles.erase(background_tiles.begin());
 	}
 	if(background_tiles.size()>1){
-		//cout<<background_tiles[1]->getPosition().getY()<<endl;
 		if(background_tiles[1]->getPosition().getY()<-3 || background_tiles[1]->getPosition().getY()>100){
 			background_tiles.erase(background_tiles.begin()+1);
 		}
