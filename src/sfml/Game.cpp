@@ -15,7 +15,8 @@ Game::Game() {
 
 	// RUN STUFF
 	window = make_shared<sf::RenderWindow>(sf::VideoMode(640,480), "Tyrian Menu");
-	window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/4 + sf::VideoMode::getDesktopMode().width/16 ,0) );
+	//window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/2 + sf::VideoMode::getDesktopMode().height/2 ,0) );
+	window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/2 - window->getSize().x/2,sf::VideoMode::getDesktopMode().height/2 - window->getSize().y/2 -100) );
 	
 }
 
@@ -30,7 +31,7 @@ void Game::parse_levels(){
 void Game::run(){
 	// The user starts out on the menu screen
 	window_state = State::Menu;
-	clock.reset();
+	clock->reset();
 	menu_theme.play();
 
 	// The level is set to level 1 when the game starts running, thus the enemies/BG of that first level are loaded in
@@ -44,7 +45,7 @@ void Game::run(){
 	window->setFramerateLimit(60);
 
 	while (window->isOpen()){
-		deltaT=clock.getTime();
+		deltaT=clock->getTime();
 		if(selection_cooldown>0){
 			selection_cooldown-=deltaT;
 		}
@@ -117,7 +118,7 @@ void Game::menuLoop(){
 
 void Game::gameLoop(){
 	if(reset){
-		clock.reset();
+		clock->reset();
 		game_world.reset();
 		game_world.startPlayer();
 		reset = false;
@@ -130,7 +131,7 @@ void Game::gameLoop(){
 			game_theme.stop();
 			menu_theme.play();
 			window->setTitle("Tyrian Menu");
-			clock.reset();
+			clock->reset();
 		}
 	}
 	if(input->checkKeyBoardInput(KeyPressed::P) && selection_cooldown<=0){
@@ -199,7 +200,7 @@ void Game::infoLoop(){
 		if (event.type == sf::Event::Closed || input->checkKeyBoardInput(KeyPressed::Escape)){
 			window_state = State::Menu;
 			window->setTitle("Tyrian Menu");
-			clock.reset();
+			clock->reset();
 			selection_cooldown = 0.2;
 		}
 	}
@@ -218,7 +219,7 @@ void Game::levelsLoop(){
 		if (event.type == sf::Event::Closed || input->checkKeyBoardInput(KeyPressed::Escape)){
 			window_state = State::Menu;
 			window->setTitle("Tyrian Menu");
-			clock.reset();
+			clock->reset();
 			selection_cooldown = 0.2;
 		}
 		if(input->checkKeyBoardInput(KeyPressed::Space) && selection_cooldown<=0){
@@ -335,7 +336,7 @@ void Game::LevelOver(bool alive){
 		if(input->checkKeyBoardInput(KeyPressed::Space)){
 			window_state = State::Menu;
 			selection_cooldown = 2;
-			clock.reset();
+			clock->reset();
 			break;
 		}
 	}

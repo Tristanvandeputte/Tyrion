@@ -6,6 +6,8 @@
  */
 #include "Background.h"
 
+std::map<string,Texture> sfml::Background::all_textures = {};
+
 namespace sfml {
 
 Background::Background() {

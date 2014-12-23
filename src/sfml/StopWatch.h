@@ -16,12 +16,23 @@ using namespace std;
 
 class StopWatch {
 private:
+	StopWatch();
+	static StopWatch* instance;
+	StopWatch(StopWatch const&);             
+	void operator=(StopWatch const&);
+	
 	 std::chrono::steady_clock::time_point previous_time;
 public:
-	StopWatch();
 	virtual ~StopWatch();
 	double getTime();
 	void reset();
+	
+	static StopWatch* getInstance(){
+		if(!instance){
+			instance = new StopWatch;
+		}
+		return instance;
+	}
 };
 
 #endif /* STOPWATCH_H_ */

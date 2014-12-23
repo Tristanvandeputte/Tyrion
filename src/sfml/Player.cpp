@@ -9,6 +9,8 @@
 
 namespace sfml {
 
+std::map<string,Texture> sfml::Player::all_textures = {};
+
 Player::Player() {
 	// TODO Auto-generated constructor stub
 

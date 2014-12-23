@@ -7,6 +7,8 @@
 
 #include "StopWatch.h"
 
+StopWatch* StopWatch::instance = nullptr;
+
 StopWatch::StopWatch() {
 	previous_time = std::chrono::steady_clock::now();
 	// TODO Auto-generated constructor stub

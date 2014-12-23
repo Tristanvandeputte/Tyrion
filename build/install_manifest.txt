@@ -1,2 +1,0 @@
-/home/uauser/Desktop/Tyrion/bin/game
-/home/uauser/Desktop/Tyrion/lib/libgamelogic.a

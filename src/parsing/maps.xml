@@ -11,6 +11,8 @@
 			<Background>7.png</Background>
 			<Background>8.png</Background>
 			<Background>9.png</Background>
+			<Background>10.png</Background>
+			<Background>10.png</Background>
 		</BackgroundImages>
 		<Enemies>
 			<Enemy>
@@ -20,28 +22,34 @@
 				<EnemyType>BasicEnemy</EnemyType>
 			</Enemy>
 			<Enemy>
-				<Time>5</Time>
+				<Time>1</Time>
 				<x>2</x>
 				<y>4</y>
 				<EnemyType>BasicEnemy</EnemyType>
 			</Enemy>
 			<Enemy>
-				<Time>1</Time>
-				<x>3</x>
+				<Time>3</Time>
+				<x>0</x>
 				<y>4</y>
-				<EnemyType>BasicEnemy</EnemyType>
+				<EnemyType>ShootingEnemy</EnemyType>
 			</Enemy>
 			<Enemy>
-				<Time>-3</Time>
-				<x>-2</x>
+				<Time>4</Time>
+				<x>-3</x>
 				<y>4</y>
-				<EnemyType>BasicEnemy</EnemyType>
+				<EnemyType>ShootingEnemy</EnemyType>
+			</Enemy>
+			<Enemy>
+				<Time>4</Time>
+				<x>3</x>
+				<y>4</y>
+				<EnemyType>ShootingEnemy</EnemyType>
 			</Enemy>
 		</Enemies>
 		<Powerups>
 			<Powerup>
-				<Time>-3</Time>
-				<x>12</x>
+				<Time>2</Time>
+				<x>0</x>
 				<y>4</y>
 				<PowerupType>BasicPowerup</PowerupType>
 			</Powerup>
@@ -60,6 +68,8 @@
 			<Background>16.png</Background>
 			<Background>17.png</Background>
 			<Background>18.png</Background>
+			<Background>19.png</Background>
+			<Background>19.png</Background>
 		</BackgroundImages>
 		<Enemies>
 			<Enemy>
@@ -108,6 +118,7 @@
 			<Background>24.png</Background>
 			<Background>25.png</Background>
 			<Background>26.png</Background>
+			<Background>27.png</Background>
 			<Background>27.png</Background>
 		</BackgroundImages>
 		<Enemies>

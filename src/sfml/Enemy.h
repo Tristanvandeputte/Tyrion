@@ -22,6 +22,7 @@ private:
 	static std::map<string,Texture> all_textures;
 	shared_ptr<RenderWindow> window;
 	string texture_location;
+	sf::Sprite sprite;
 public:
 	Enemy();
 	Enemy(Vector position,double speed ,int health, int damage,EnemyType type, ty::EntityFactory* bullet_factory, ty::World* parent ,shared_ptr<RenderWindow> window);

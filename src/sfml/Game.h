@@ -30,9 +30,9 @@ private:
 	string selected_level="null";
 	//PowerupFactory pfac;
 	ty::World game_world;
-	StopWatch clock;
+	StopWatch* clock = StopWatch::getInstance();
 	State window_state;
-	IO::KeyBoard* input=IO::KeyBoard::getInstance();;
+	IO::KeyBoard* input=IO::KeyBoard::getInstance();
 	// static function to enforce singelton
 	shared_ptr<sf::RenderWindow> window;
 	vector<Map> levels;

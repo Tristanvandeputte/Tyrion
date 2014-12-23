@@ -1,6 +1,0 @@
-#include "levelparser.h"
-using namespace std;
-int main(){
-	LevelParser parser;
-	return 0;
-}

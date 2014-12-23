@@ -15,7 +15,7 @@
 #include <memory>
 #include <unistd.h>
 
-enum class PowerupType{BetterBullet,MoreHealth,MoreSpeed};
+enum class PowerupType{BetterBullet,MoreHealth,MoreSpeed,ShootCooldownReduction};
 
 namespace ty {
 

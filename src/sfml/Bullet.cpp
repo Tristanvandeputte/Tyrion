@@ -6,6 +6,8 @@
  */
 #include "Bullet.h"
 
+std::map<string,Texture> sfml::Bullet::all_textures = {};
+
 namespace sfml {
 
 Bullet::Bullet() {

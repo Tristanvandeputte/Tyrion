@@ -14,6 +14,7 @@
 #include "World.h"
 
 enum class EnemyType;
+enum class PowerupType;
 
 namespace ty{
 
@@ -34,7 +35,7 @@ public:
 	virtual shared_ptr<Entity> makeBullet(double x, double y, BulletType type,Status status);
 	virtual shared_ptr<Entity> makeEnemy(double x, double y,::EnemyType type,World* parent);
 	virtual shared_ptr<Entity> makeBackground(std::string texturespot);
-	virtual shared_ptr<Entity> makePowerup(Vector position,PowerupType p_type);
+	virtual shared_ptr<Entity> makePowerup(Vector position,::PowerupType p_type);
 };
 }
 

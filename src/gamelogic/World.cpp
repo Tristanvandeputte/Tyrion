@@ -135,16 +135,13 @@ void World::update(double deltaT){
 		max_deltaT=deltaT;
 	}
 
-	std::vector<std::tuple<::EnemyType,double,double> > create;
-	std::vector<int> to_be_deleted;
-
 	for(auto& background : background_tiles){
 		background->update(deltaT);
 	}
 
 	checkOutOfBounds();
 	collisionCheck();
-
+	// checking which enemies to create
 	for (auto to_be_created = all_enemy_creations.begin(); to_be_created != all_enemy_creations.end();){
 		if (game_time>=get<0>(*to_be_created)){
 			createNewEnemy(get<1>(*to_be_created),get<2>(*to_be_created),get<3>(*to_be_created));
@@ -154,9 +151,11 @@ void World::update(double deltaT){
 			++to_be_created;
 		}
 	}
+
+	// checking which powerups to create
 	for (auto to_be_created = all_powerups.begin(); to_be_created != all_powerups.end();){
 		if (game_time>=get<0>(*to_be_created)){
-			//createNewEnemy(get<1>(*to_be_created),get<2>(*to_be_created),get<3>(*to_be_created));
+			createNewPowerup(get<1>(*to_be_created),get<2>(*to_be_created),get<3>(*to_be_created));
 			to_be_created = all_powerups.erase(to_be_created);
 		}
 		else{
@@ -181,6 +180,11 @@ void spawnPowerUp(PowerupType type, double x, double y){
 }
 void World::createNewEnemy(::EnemyType type,double x,double y){
 	EntityPtr one = e_fac->makeEnemy(x,y,type,this);
+	enemy_entities.push_back(one);
+}
+void World::createNewPowerup(::PowerupType type,double x,double y){
+	Vector pos(x,y);
+	EntityPtr one = e_fac->makePowerup(pos,type);
 	enemy_entities.push_back(one);
 }
 

@@ -74,7 +74,8 @@ public:
 	void collisionCheck();
 	void setBackground(vector<string> texture_locations);
 	void createNewEnemy(::EnemyType type,double x,double y);
-	void spawnPowerUp(PowerupType type, double x, double y);
+	void createNewPowerup(::PowerupType type,double x,double y);
+	//void spawnPowerUp(::PowerupType type, double x, double y);
 	void draw();
 	void playerShoots();
 	void checkDead();

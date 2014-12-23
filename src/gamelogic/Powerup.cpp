@@ -35,7 +35,6 @@ void Powerup::update(double deltaT){
 }
 
 void Powerup::collide(shared_ptr<Entity> with){
-	with->decreaseHealth(damage);
-	immortal=true;
+	
 }
 } /* namespace ty */

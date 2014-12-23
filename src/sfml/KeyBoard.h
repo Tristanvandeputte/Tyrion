@@ -28,6 +28,6 @@ public:
 	virtual ~KeyBoard();
 	bool checkKeyBoardInput(KeyPressed input);
 };
-} // namspace IO
+} // namespace IO
 
 #endif /* KEYBOARD_H_ */

@@ -56,10 +56,6 @@ memory
 unistd.h
 -
 
-/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.cpp
-Entity.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
-
 /home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
 iostream
 -
@@ -127,10 +123,6 @@ memory
 -
 unistd.h
 -
-
-/home/uauser/Desktop/Tyrion/src/gamelogic/Vector.cpp
-Vector.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
 
 /home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
 
