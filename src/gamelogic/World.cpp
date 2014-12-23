@@ -98,14 +98,12 @@ void World::backgroundPositionCheck(){
 		texturecounter ++;
 	}
 	if(background_tiles[0]->getPosition().getY()<3 && background_tiles.size()<2){
-		//if(texturecounter>=background_spots.size()){
-		//	texturecounter=0;
-		//}
 		EntityPtr bg = e_fac->makeBackground(background_spots[texturecounter]);
 		Vector bg_spot(0,background_tiles[0]->getPosition().getY()+12);
 		bg->setPosition(bg_spot);
 		// deze moet setpos op X vorige
 		background_tiles.push_back(bg);
+		texturecounter ++;
 	}
 
 	//cout<<background_tiles[0]->getPosition().getY()<<endl;
@@ -130,6 +128,7 @@ bool World::FinishedLevel(){
 			}
 		}
 	}
+	return false;
 }
 
 void World::update(double deltaT){

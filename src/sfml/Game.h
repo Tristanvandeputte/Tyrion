@@ -37,11 +37,26 @@ private:
 	vector<Map> levels;
 	LevelParser* parser;
 	double selection_cooldown{0};
+	int selection{3}; //bovenste selection
+	int selectedlevel{0};
+	bool reset{false};
+	bool paused{false};
+	int current_level_loaded{0};
 	
 	// set Text/images goe here
+		// Fonts for numbers and regular text
 	sf::Font font;
+	sf::Font number_font;
+	
 		// text when a level complete/you die
 	vector<sf::Text> messages;
+		// text on the options menu
+	vector<sf::Text> menu_messages;
+		// level selection text
+	vector<sf::Text> levels_text;
+	// info text
+vector<sf::Text> info_text;
+	
 	sf::Sprite sprite;
 	sf::Texture static_background_texture;
 public:
@@ -52,6 +67,10 @@ public:
 	void run();
 	void LevelOver(bool alive);
 	void parse_levels();
+	void prepareTextures();
+	vector<sf::Text> scoreDisplay();
+	void drawMenuRectangle();
+	void drawLevelRectangle();
 };
 
 #endif /* GAME_H_ */

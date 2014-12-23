@@ -1,9 +1,16 @@
 <Maps>
 	<Map>
-		<name>basicmap</name>
+		<name>ocean</name>
 		<BackgroundImages>
-			<Background>Focus-Colors-2-640x960.jpg</Background>
-			<Background>Focus-Colors-2-640x960.jpg</Background>
+			<Background>1.png</Background>
+			<Background>2.png</Background>
+			<Background>3.png</Background>
+			<Background>4.png</Background>
+			<Background>5.png</Background>
+			<Background>6.png</Background>
+			<Background>7.png</Background>
+			<Background>8.png</Background>
+			<Background>9.png</Background>
 		</BackgroundImages>
 		<Enemies>
 			<Enemy>
@@ -42,10 +49,17 @@
 	</Map>
 	
 	<Map>
-		<name>water level</name>
+		<name>jungle</name>
 		<BackgroundImages>
-			<Background>Focus-Colors-2-640x960.jpg</Background>
-			<Background>Focus-Colors-2-640x960.jpg</Background>
+			<Background>10.png</Background>
+			<Background>11.png</Background>
+			<Background>12.png</Background>
+			<Background>13.png</Background>
+			<Background>14.png</Background>
+			<Background>15.png</Background>
+			<Background>16.png</Background>
+			<Background>17.png</Background>
+			<Background>18.png</Background>
 		</BackgroundImages>
 		<Enemies>
 			<Enemy>
@@ -84,10 +98,17 @@
 	</Map>
 	
 	<Map>
-		<name>forest level</name>
+		<name>volcano</name>
 		<BackgroundImages>
-			<Background>Focus-Colors-2-640x960.jpg</Background>
-			<Background>Focus-Colors-2-640x960.jpg</Background>
+			<Background>19.png</Background>
+			<Background>20.png</Background>
+			<Background>21.png</Background>
+			<Background>22.png</Background>
+			<Background>23.png</Background>
+			<Background>24.png</Background>
+			<Background>25.png</Background>
+			<Background>26.png</Background>
+			<Background>27.png</Background>
 		</BackgroundImages>
 		<Enemies>
 			<Enemy>

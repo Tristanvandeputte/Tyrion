@@ -10,12 +10,21 @@
 Game::Game() {
 	input=KeyBoard::getInstance();
 	parser = new LevelParser();
+	parse_levels();
+	prepareTextures();
 
+	
+}
+
+Game::~Game() {
+	// TODO Auto-generated destructor stub
+}
+
+void Game::prepareTextures(){
 	// constructing all the set sf things, TODO move to function
 	char cwd[1024];
 	getcwd(cwd,sizeof(cwd));
 	string curdir(cwd);
-	
 	
 	if (!static_background_texture.loadFromFile(curdir+"/Remastered Tyrian Graphics//double-moons-in-colorful-starry-sky-640x480.jpg")){
 		cout<<"ERROR IS KILL"<<endl;
@@ -23,10 +32,14 @@ Game::Game() {
 	if (!font.loadFromFile(curdir+"/Resources//Spac3 tech free promo.ttf")){
 		cout<<"ERROR IS KILL"<<endl;
 	}
+	if (!number_font.loadFromFile(curdir+"/Resources//cyberspace.otf")){
+		cout<<"ERROR IS KILL"<<endl;
+	}
 	static_background_texture.setSmooth(true);
 	sprite.setTexture(static_background_texture);
 	sprite.scale(sf::Vector2f(0.45f, 0.45f));
 
+	// vectors voor text bij sterver/ level completion
 	sf::Text died("you died ", font);
 	died.setOrigin(-100,-160);
 	died.setCharacterSize(50);
@@ -41,33 +54,8 @@ Game::Game() {
 	messages.push_back(space_info);
 	messages.push_back(won);
 	messages.push_back(died);
-}
-
-Game::~Game() {
-	// TODO Auto-generated destructor stub
-}
-
-void Game::parse_levels(){
-	levels = parser->createMaps("./src/parsing/maps.xml");
-}
-
-void Game::run(){
-	parse_levels();
-	window_state = State::Menu;
-	clock.reset();
-	// MENU STUFF
-	sf::Font number_font;
-
-	char cwd[1024];
-	getcwd(cwd,sizeof(cwd));
-	string curdir(cwd);
-	if (!number_font.loadFromFile(curdir+"/Resources//cyberspace.otf")){
-		cout<<"ERROR IS KILL"<<endl;
-	}
-
-	int selection = 3; //bovenste selection
-
-	// vectors vr text
+	
+	// vectors voor text v/h menu
 	sf::Text menu_text("menu ", font);
 	menu_text.setOrigin(-250,-50);
 	menu_text.setCharacterSize(50);
@@ -84,17 +72,23 @@ void Game::run(){
 	exit_text.setOrigin(-250,-350);
 	exit_text.setCharacterSize(30);
 	menu_text.setColor(sf::Color::Blue);
-
-	// LEVEL SELECT TEXT
+	
+	menu_messages.push_back(menu_text);
+	menu_messages.push_back(exit_text);
+	menu_messages.push_back(credits_text);
+	menu_messages.push_back(level_text);
+	menu_messages.push_back(play_text);
+	
+	// level selection text 
 	sf::Text level_text_2("level select ", font);
 	level_text_2.setOrigin(-100,-50);
 	level_text_2.setCharacterSize(50);
 	level_text_2.setColor(sf::Color::Blue);
-
-
-	vector<sf::Text> levels_text;
+	levels_text.push_back(level_text_2);
+	
 	int levelcount = 0;
 	for(auto level : levels){
+		cout<<"meh"<<endl;
 		levelcount++;
 		sf::Text new_text(level.map_name, font);
 		new_text.setOrigin(-100,-80-(50*levelcount));
@@ -102,7 +96,8 @@ void Game::run(){
 		//new_text.setColor(sf::Color::Red);
 		levels_text.push_back(new_text);
 	}
-	// CREDITS TEXT
+	
+	//  info text
 	sf::Text tristan("by tristan ", font);
 	tristan.setOrigin(-20,-40);
 	tristan.setCharacterSize(80);
@@ -116,8 +111,17 @@ void Game::run(){
 	sf::Text info3("p to pause ", font);
 	info3.setOrigin(-20,-210);
 	info3.setCharacterSize(20);
+	
+	info_text.push_back();
+}
 
-	// DIED / COMPLETED LEVEL TEXT
+void Game::parse_levels(){
+	levels = parser->createMaps("./src/parsing/maps.xml");
+}
+
+void Game::run(){
+	window_state = State::Menu;
+	clock.reset();
 
 	// RUN STUFF
 	window = make_shared<sf::RenderWindow>(sf::VideoMode(640,480), "Tyrian Menu");
@@ -133,10 +137,6 @@ void Game::run(){
 
 	//window->setMouseCursorVisible(false);
 	window->setFramerateLimit(60);
-	bool reset = false;
-	bool paused = false;
-	int current_level_loaded=0;
-	int selectedlevel = 0;
 	int amount_of_levels = levels.size();
 
 	while (window->isOpen()){
@@ -205,16 +205,7 @@ void Game::run(){
 			}
 			game_world.update(deltaT);
 
-			// score display
-			stringstream ss;
-			ss<<game_world.getScore();
-			string score_display_text = ss.str();
-			sf::Text score_display("score: ", font);
-			score_display.setOrigin(-20,-430);
-			score_display.setCharacterSize(15);
-			sf::Text score_number_display(score_display_text, number_font);
-			score_number_display.setOrigin(-90,-431);
-			score_number_display.setCharacterSize(14);
+			vector<sf::Text> current_score = scoreDisplay();
 			// FPS display
 			stringstream ss2;
 			ss2<<1/deltaT;
@@ -235,8 +226,9 @@ void Game::run(){
 
 			game_world.draw();
 
-			window->draw(score_display);
-			window->draw(score_number_display);
+			for(auto text : current_score){
+				window->draw(text);
+			}
 			window->draw(fps_display);
 			window->draw(fps_number_display);
 			window->display();
@@ -294,61 +286,10 @@ void Game::run(){
 			}
 			window->clear();
 			window->draw(sprite);
-			window->draw(menu_text);
-			window->draw(play_text);
-			window->draw(level_text);
-			window->draw(credits_text);
-			window->draw(exit_text);
-			switch (selection){
-			case 0:
-			{
-				Vector2f size{float(exit_text.getGlobalBounds().width)+20,float(exit_text.getGlobalBounds().height)+20};
-				RectangleShape rect{size};
-				rect.setFillColor(Color::Transparent);
-				rect.setOutlineColor(Color::Red);
-				rect.setOutlineThickness(5);
-				rect.setOrigin(exit_text.getOrigin());
-				rect.move(-10,0);
-				window->draw(rect);
-				break;
+			for(auto menu_selection : menu_messages){
+				window->draw(menu_selection);
 			}
-			case 1:
-			{
-				Vector2f size{float(credits_text.getGlobalBounds().width)+20,float(credits_text.getGlobalBounds().height)+20};
-				RectangleShape rect{size};
-				rect.setFillColor(Color::Transparent);
-				rect.setOutlineColor(Color::Red);
-				rect.setOutlineThickness(5);
-				rect.setOrigin(credits_text.getOrigin());
-				rect.move(-10,0);
-				window->draw(rect);
-				break;
-			}
-			case 2:
-			{
-				Vector2f size{float(level_text.getGlobalBounds().width)+20,float(level_text.getGlobalBounds().height)+20};
-				RectangleShape rect{size};
-				rect.setFillColor(Color::Transparent);
-				rect.setOutlineColor(Color::Red);
-				rect.setOutlineThickness(5);
-				rect.setOrigin(level_text.getOrigin());
-				rect.move(-10,0);
-				window->draw(rect);
-				break;
-			}
-			case 3:
-			{
-				Vector2f size{float(play_text.getGlobalBounds().width)+20,float(play_text.getGlobalBounds().height)+20};
-				RectangleShape rect{size};
-				rect.setFillColor(Color::Transparent);
-				rect.setOutlineColor(Color::Red);
-				rect.setOutlineThickness(5);
-				rect.setOrigin(play_text.getOrigin());
-				rect.move(-10,0);
-				window->draw(rect);
-				break;
-			}
-			}
+			drawMenuRectangle();
 			window->display();
 		}
 		else if(window_state == State::LevelSelect){
@@ -381,20 +322,18 @@ void Game::run(){
 			//amount_of_levels;
 			window->clear();
 			window->draw(sprite);
-			window->draw(level_text_2);
-			for(auto level_name : levels_text){
-				window->draw(level_name);
+			for(auto level_text : levels_text){
+				window->draw(level_text);
 			}
-			Vector2f size{float(levels_text[selectedlevel].getGlobalBounds().width)+20,float(levels_text[selectedlevel].getGlobalBounds().height)+10};
+			Vector2f size{float(levels_text[selectedlevel+1].getGlobalBounds().width)+20,float(levels_text[selectedlevel+1].getGlobalBounds().height)+10};
 			RectangleShape rect{size};
 			rect.setFillColor(Color::Transparent);
 			rect.setOutlineColor(Color::Red);
 			rect.setOutlineThickness(5);
-			rect.setOrigin(levels_text[selectedlevel].getOrigin());
+			rect.setOrigin(levels_text[selectedlevel+1].getOrigin());
 			rect.move(-10,0);
 
 			window->draw(current_level_text);
-
 
 			window->draw(rect);
 			window->display();
@@ -420,6 +359,33 @@ void Game::run(){
 	}
 }
 
+void Game::drawMenuRectangle(){
+	Vector2f size{float(menu_messages[selection+1].getGlobalBounds().width)+20,float(menu_messages[selection+1].getGlobalBounds().height)+20};
+	RectangleShape rect{size};
+	rect.setFillColor(Color::Transparent);
+	rect.setOutlineColor(Color::Red);
+	rect.setOutlineThickness(5);
+	rect.setOrigin(menu_messages[selection+1].getOrigin());
+	rect.move(-10,0);
+	window->draw(rect);			
+}
+
+vector<sf::Text> Game::scoreDisplay(){
+	vector<sf::Text> score_text;
+	// score display
+	stringstream ss;
+	ss<<game_world.getScore();
+	string score_display_text = ss.str();
+	sf::Text score_display("score: ", font);
+	score_display.setOrigin(-20,-430);
+	score_display.setCharacterSize(15);
+	sf::Text score_number_display(score_display_text, number_font);
+	score_number_display.setOrigin(-90,-431);
+	score_number_display.setCharacterSize(14);
+	score_text.push_back(score_display);
+	score_text.push_back(score_number_display);
+	return score_text;
+}
 
 void Game::LevelOver(bool alive){
 	window->clear();
@@ -433,6 +399,9 @@ void Game::LevelOver(bool alive){
 	else{
 		// score text
 		window->draw(messages[2]);
+		for(auto text : scoreDisplay()){
+			window->draw(text);
+		}
 	}
 	window->display();
 	while(true){
