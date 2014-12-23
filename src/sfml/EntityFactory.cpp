@@ -62,7 +62,7 @@ shared_ptr<ty::Entity> EntityFactory::makeBullet(double x, double y,ty::BulletTy
 }
 
 shared_ptr<ty::Entity> EntityFactory::makePowerup(Vector position,PowerupType p_type){
-
+	return make_shared<sfml::Powerup>( position, p_type,window);
 }
 
 shared_ptr<ty::Entity> EntityFactory::makeBackground(std::string texturespot){

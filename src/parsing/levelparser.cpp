@@ -52,7 +52,17 @@ vector<Map> LevelParser::createMaps(string file_name){
     	for(XMLElement powerup :powerups) {
     		 PowerupType type;
     		 string powerup_type = powerup.getChild("PowerupType").value();
-    		 if(powerup_type == ""){
+    		 if(powerup_type == "BetterBullet"){
+    			 type = PowerupType::BetterBullet;
+    		 }
+    		 if(powerup_type == "MoreHealth"){
+    			 type = PowerupType::MoreHealth;
+    		 }
+    		 if(powerup_type == "MoreSpeed"){
+    			 type = PowerupType::MoreSpeed;
+    		 }
+    		 if(powerup_type == "ShootCooldownReduction"){
+    			 type = PowerupType::ShootCooldownReduction;
     		 }
     		 tuple<double,PowerupType,double,double> new_powerup(powerup.getChild("Time").valueAsDouble(),type,powerup.getChild("x").valueAsDouble(),powerup.getChild("y").valueAsDouble());
     		 all_powerups.push_back(new_powerup);

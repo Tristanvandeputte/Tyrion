@@ -14,7 +14,7 @@ World::World() {
 
 }
 
-World::World(EntityFactory* e_fac, Enemyvec all_enemy_creations):e_fac(e_fac),all_enemy_creations(all_enemy_creations){
+World::World(EntityFactory* e_fac, Enemyvec all_enemy_creations,Powerupvec all_powerups):e_fac(e_fac),all_enemy_creations(all_enemy_creations),all_powerups(all_powerups){
 	reset_all_enemy_creations = all_enemy_creations;
 }
 
@@ -42,7 +42,6 @@ void World::makeBullet(double x,double y,BulletType type,Status status){
 	if(status == Status::Ally){
 		enemy_entities.push_back(e_fac->makeBullet(x,y,type, status));
 	}
-
 }
 
 void World::checkOutOfBounds(){

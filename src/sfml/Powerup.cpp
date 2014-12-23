@@ -30,6 +30,7 @@ Powerup::Powerup(Vector position,PowerupType p_type,shared_ptr<RenderWindow> win
 		texture_location="MovingEnemy.png";
 	}
 	if(p_type == PowerupType::ShootCooldownReduction){
+		cout<<"a"<<endl;
 		texture_location="MovingEnemy.png";
 	}
 	if (!texture.loadFromFile(curdir+"/Remastered Tyrian Graphics/"+texture_location)){ //sla het pad op in de objecten, niet de textures.

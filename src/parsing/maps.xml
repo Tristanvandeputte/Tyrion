@@ -1,5 +1,5 @@
 <Maps>
-	<Map>
+	<Map>"/home/uauser/Desktop/Tyrion/src/parsing/levelparser.cpp"
 		<name>ocean</name>
 		<BackgroundImages>
 			<Background>1.png</Background>
@@ -51,7 +51,7 @@
 				<Time>2</Time>
 				<x>0</x>
 				<y>4</y>
-				<PowerupType>BasicPowerup</PowerupType>
+				<PowerupType>ShootCooldownReduction</PowerupType>
 			</Powerup>
 		</Powerups>
 	</Map>

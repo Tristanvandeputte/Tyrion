@@ -42,8 +42,6 @@ void Background::draw(){
 
 void Background::update(double deltaT){
 	ty::Background::update(deltaT);
-	//Vector2f move(1.0f*deltaT, 1.0f*deltaT);
-	//sprite.move(move);
 }
 
 } /* namespace sfml */

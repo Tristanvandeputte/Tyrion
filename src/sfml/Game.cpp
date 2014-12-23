@@ -36,9 +36,10 @@ void Game::run(){
 
 	// The level is set to level 1 when the game starts running, thus the enemies/BG of that first level are loaded in
 	// we also create the world with it's Entityfactory
-	Enemyvec a = levels[0].enemies;
+	Enemyvec en = levels[0].enemies;
+	Powerupvec po = levels[0].powerups;
 	sfml::EntityFactory entity_fac = sfml::EntityFactory(window);
-	game_world = ty::World( &entity_fac,a);
+	game_world = ty::World( &entity_fac,en,po);
 	game_world.setBackground(levels[0].BG);
 
 	window->setMouseCursorVisible(false);
@@ -316,6 +317,7 @@ vector<sf::Text> Game::scoreDisplay(){
 }
 
 void Game::LevelOver(bool alive){
+	selection_cooldown = 1;
 	window->clear();
 	// the background
 	window->draw(sprite);
@@ -333,7 +335,7 @@ void Game::LevelOver(bool alive){
 	}
 	window->display();
 	while(true){
-		if(input->checkKeyBoardInput(KeyPressed::Space)){
+		if(input->checkKeyBoardInput(KeyPressed::Space) && selection_cooldown<0){
 			window_state = State::Menu;
 			selection_cooldown = 2;
 			clock->reset();

@@ -62,7 +62,7 @@ private:
 	double max_deltaT{0};
 public:
 	World();
-	World(EntityFactory* e_fac, Enemyvec all_enemy_creations);
+	World(EntityFactory* e_fac, Enemyvec all_enemy_creations,Powerupvec all_powerups);
 	virtual ~World();
 	std::vector<EntityPtr> getEntities();
 	void startPlayer();
