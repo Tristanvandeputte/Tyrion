@@ -28,6 +28,8 @@ vector<Map> LevelParser::createMaps(string file_name){
     	vector<string> all_backgrounds;
     	// mapname
     	string name=map.getChild("name").value();
+			// music_file
+			string music_file=map.getChild("musicfile").value();
     	// elements for the Enemies
     	XMLElement Enemies = map.getChild("Enemies");
     	std::vector<XMLElement> enemies = Enemies.getChildren("Enemy");
@@ -74,6 +76,7 @@ vector<Map> LevelParser::createMaps(string file_name){
     	 this_map.BG = all_backgrounds;
     	 this_map.enemies = all_enemies;
     	 this_map.map_name = name;
+			 this_map.music_file = music_file;
     	 this_map.powerups = all_powerups;
     	 all_maps.push_back(this_map);
     }

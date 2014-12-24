@@ -1,6 +1,7 @@
 <Maps>
 	<Map>"/home/uauser/Desktop/Tyrion/src/parsing/levelparser.cpp"
 		<name>ocean</name>
+		<musicfile>Theme.ogg</musicfile>
 		<BackgroundImages>
 			<Background>1.png</Background>
 			<Background>2.png</Background>
@@ -55,7 +56,7 @@
 			</Powerup>
 		</Powerups>
 	</Map>
-	
+
 	<Map>
 		<name>jungle</name>
 		<BackgroundImages>
@@ -106,7 +107,7 @@
 			</Powerup>
 		</Powerups>
 	</Map>
-	
+
 	<Map>
 		<name>volcano</name>
 		<BackgroundImages>

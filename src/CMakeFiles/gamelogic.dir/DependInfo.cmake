@@ -4,15 +4,15 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/uauser/Desktop/Tyrion/src/gamelogic/Background.cpp" "/home/uauser/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o"
-  "/home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.cpp" "/home/uauser/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Bullet.cpp.o"
-  "/home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.cpp" "/home/uauser/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.o"
-  "/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.cpp" "/home/uauser/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Entity.cpp.o"
-  "/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.cpp" "/home/uauser/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.o"
-  "/home/uauser/Desktop/Tyrion/src/gamelogic/Player.cpp" "/home/uauser/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.o"
-  "/home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.cpp" "/home/uauser/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o"
-  "/home/uauser/Desktop/Tyrion/src/gamelogic/Vector.cpp" "/home/uauser/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Vector.cpp.o"
-  "/home/uauser/Desktop/Tyrion/src/gamelogic/World.cpp" "/home/uauser/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.o"
+  "/home/tristan/Desktop/Tyrion/src/gamelogic/Background.cpp" "/home/tristan/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Background.cpp.o"
+  "/home/tristan/Desktop/Tyrion/src/gamelogic/Bullet.cpp" "/home/tristan/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Bullet.cpp.o"
+  "/home/tristan/Desktop/Tyrion/src/gamelogic/Enemy.cpp" "/home/tristan/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Enemy.cpp.o"
+  "/home/tristan/Desktop/Tyrion/src/gamelogic/Entity.cpp" "/home/tristan/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Entity.cpp.o"
+  "/home/tristan/Desktop/Tyrion/src/gamelogic/EntityFactory.cpp" "/home/tristan/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/EntityFactory.cpp.o"
+  "/home/tristan/Desktop/Tyrion/src/gamelogic/Player.cpp" "/home/tristan/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Player.cpp.o"
+  "/home/tristan/Desktop/Tyrion/src/gamelogic/Powerup.cpp" "/home/tristan/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Powerup.cpp.o"
+  "/home/tristan/Desktop/Tyrion/src/gamelogic/Vector.cpp" "/home/tristan/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/Vector.cpp.o"
+  "/home/tristan/Desktop/Tyrion/src/gamelogic/World.cpp" "/home/tristan/Desktop/Tyrion/src/CMakeFiles/gamelogic.dir/gamelogic/World.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

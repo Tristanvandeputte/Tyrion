@@ -22,6 +22,7 @@ struct Map{
 	Powerupvec powerups;
 	string map_name;
 	vector<string> BG;
+	string music_file;
 };
 
 class LevelParser {

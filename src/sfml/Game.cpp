@@ -17,7 +17,7 @@ Game::Game() {
 	window = make_shared<sf::RenderWindow>(sf::VideoMode(640,480), "Tyrian Menu");
 	//window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/2 + sf::VideoMode::getDesktopMode().height/2 ,0) );
 	window->setPosition( sf::Vector2i(sf::VideoMode::getDesktopMode().width/2 - window->getSize().x/2,sf::VideoMode::getDesktopMode().height/2 - window->getSize().y/2 -100) );
-	
+
 }
 
 Game::~Game() {
@@ -124,7 +124,7 @@ void Game::gameLoop(){
 		game_world.startPlayer();
 		reset = false;
 	}
-	
+
 	sf::Event event;
 	while (window->pollEvent(event)){
 		if (event.type == sf::Event::Closed || input->checkKeyBoardInput(KeyPressed::Escape)){
@@ -146,7 +146,7 @@ void Game::gameLoop(){
 		}
 	}
 	window->clear();
-	
+
 	//INPUT
 	if(paused){
 		deltaT = 0;
@@ -166,26 +166,18 @@ void Game::gameLoop(){
 		y_mov--;
 	}
 	Vector vec(x_mov,y_mov);
-	
+
 	game_world.getCurrentPlayer()->move(vec);
-	
+
 	if(input->checkKeyBoardInput(KeyPressed::Space)){
 		game_world.playerShoots();
 	}
 	game_world.update(deltaT);
-	
+
 	vector<sf::Text> current_score = scoreDisplay();
-	
-	
-	if(game_world.FinishedLevel()){
-		LevelOver(true);
-	}
-	if(game_world.checkGameEnd()){
-		LevelOver(false);
-	}
-	
+
 	game_world.draw();
-	
+
 	for(auto text : current_score){
 		window->draw(text);
 	}
@@ -193,6 +185,13 @@ void Game::gameLoop(){
 		window->draw(text);
 	}
 	window->display();
+
+	if(game_world.FinishedLevel()){
+		LevelOver(true);
+	}
+	if(game_world.checkGameEnd()){
+		LevelOver(false);
+	}
 }
 
 void Game::infoLoop(){
@@ -225,6 +224,12 @@ void Game::levelsLoop(){
 		}
 		if(input->checkKeyBoardInput(KeyPressed::Space) && selection_cooldown<=0){
 			current_level_loaded = selectedlevel;
+			char cwd[1024];
+			getcwd(cwd,sizeof(cwd));
+			string curdir(cwd);
+			if (!game_theme.openFromFile(curdir+"/Music//"+levels[selectedlevel].music_file)){
+				cout<<"ERROR IS KILL"<<endl;
+			}
 			game_world.changeLevel(levels[current_level_loaded].enemies,levels[current_level_loaded].BG);
 		}
 	}
@@ -271,7 +276,7 @@ void Game::drawMenuRectangle(){
 	rect.setOutlineThickness(5);
 	rect.setOrigin(menu_messages[selection+1].getOrigin());
 	rect.move(-10,0);
-	window->draw(rect);			
+	window->draw(rect);
 }
 
 sf::Text Game::currentLevel(){
@@ -317,7 +322,6 @@ vector<sf::Text> Game::scoreDisplay(){
 }
 
 void Game::LevelOver(bool alive){
-	selection_cooldown = 1;
 	window->clear();
 	// the background
 	window->draw(sprite);
@@ -337,7 +341,10 @@ void Game::LevelOver(bool alive){
 	while(true){
 		if(input->checkKeyBoardInput(KeyPressed::Space) && selection_cooldown<0){
 			window_state = State::Menu;
+			window->setTitle("Tyrian Menu");
 			selection_cooldown = 2;
+			game_theme.stop();
+			menu_theme.play();
 			clock->reset();
 			break;
 		}
@@ -349,7 +356,7 @@ void Game::prepareSFML(){
 	char cwd[1024];
 	getcwd(cwd,sizeof(cwd));
 	string curdir(cwd);
-	
+
 	if (!static_background_texture.loadFromFile(curdir+"/Remastered Tyrian Graphics//double-moons-in-colorful-starry-sky-640x480.jpg")){
 		cout<<"ERROR IS KILL"<<endl;
 	}
@@ -378,7 +385,7 @@ void Game::prepareSFML(){
 	messages.push_back(space_info);
 	messages.push_back(won);
 	messages.push_back(died);
-	
+
 	// vectors voor text v/h menu
 	sf::Text menu_text("menu ", font);
 	menu_text.setOrigin(-250,-50);
@@ -396,20 +403,20 @@ void Game::prepareSFML(){
 	exit_text.setOrigin(-250,-350);
 	exit_text.setCharacterSize(30);
 	menu_text.setColor(sf::Color::Blue);
-	
+
 	menu_messages.push_back(menu_text);
 	menu_messages.push_back(exit_text);
 	menu_messages.push_back(credits_text);
 	menu_messages.push_back(level_text);
 	menu_messages.push_back(play_text);
-	
-	// level selection text 
+
+	// level selection text
 	sf::Text level_text_2("level select ", font);
 	level_text_2.setOrigin(-100,-50);
 	level_text_2.setCharacterSize(50);
 	level_text_2.setColor(sf::Color::Blue);
 	levels_text.push_back(level_text_2);
-	
+
 	int levelcount = 0;
 	for(auto level : levels){
 		levelcount++;
@@ -419,7 +426,7 @@ void Game::prepareSFML(){
 		//new_text.setColor(sf::Color::Red);
 		levels_text.push_back(new_text);
 	}
-	
+
 	//  info text
 	sf::Text tristan("by tristan ", font);
 	tristan.setOrigin(-20,-40);
@@ -438,19 +445,19 @@ void Game::prepareSFML(){
 	sf::Text info4("escape for exiting menu or closing window ", font);
 	info4.setOrigin(-20,-260);
 	info4.setCharacterSize(20);
-	
+
 	info_text.push_back(tristan);
 	info_text.push_back(info1);
 	info_text.push_back(info2);
 	info_text.push_back(info3);
 	info_text.push_back(info4);
-	
+
 	// Music
-	if (!game_theme.openFromFile(curdir+"/Music//Theme.ogg")){
+	if (!game_theme.openFromFile(curdir+"/Music//"+levels[0].music_file)){
 		cout<<"ERROR IS KILL"<<endl;
 	}
 	if (!menu_theme.openFromFile(curdir+"/Music//MenuTheme.ogg")){
 		cout<<"ERROR IS KILL"<<endl;
 	}
-	
+
 }

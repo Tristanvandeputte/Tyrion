@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/uauser/Desktop/Tyrion/src/gamelogic/Background.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Background.h
 Entity.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Entity.h
 EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/EntityFactory.h
 iostream
 -
 memory
@@ -18,11 +18,11 @@ memory
 unistd.h
 -
 
-/home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Bullet.h
 Entity.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Entity.h
 EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/EntityFactory.h
 iostream
 -
 memory
@@ -30,13 +30,13 @@ memory
 unistd.h
 -
 
-/home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Enemy.h
 Entity.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Entity.h
 EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/EntityFactory.h
 Bullet.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Bullet.h
 iostream
 -
 memory
@@ -44,13 +44,13 @@ memory
 unistd.h
 -
 
-/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Entity.h
 iostream
 -
 map
 -
 Vector.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Vector.h
 vector
 -
 utility
@@ -62,7 +62,7 @@ unistd.h
 memory
 -
 
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/EntityFactory.h
 memory
 -
 vector
@@ -70,15 +70,15 @@ vector
 unistd.h
 -
 World.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/World.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/World.h
 
-/home/uauser/Desktop/Tyrion/src/gamelogic/Player.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Player.h
 Entity.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Entity.h
 EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/EntityFactory.h
 Bullet.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Bullet.h
 iostream
 -
 math.h
@@ -86,13 +86,13 @@ math.h
 memory
 -
 
-/home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Powerup.h
 Entity.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Entity.h
 Bullet.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Bullet.h
 EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/EntityFactory.h
 iostream
 -
 memory
@@ -100,21 +100,21 @@ memory
 unistd.h
 -
 
-/home/uauser/Desktop/Tyrion/src/gamelogic/Vector.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Vector.h
 
-/home/uauser/Desktop/Tyrion/src/gamelogic/World.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/World.h
 Entity.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Entity.h
 Background.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Background.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Background.h
 Enemy.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Enemy.h
 Powerup.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Powerup.h
 EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/EntityFactory.h
 Bullet.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Bullet.h
 vector
 -
 utility
@@ -124,7 +124,7 @@ tuple
 unistd.h
 -
 
-/home/uauser/Desktop/Tyrion/src/parsing/compactxml.h
+/home/tristan/Desktop/Tyrion/src/parsing/compactxml.h
 algorithm
 -
 cctype
@@ -142,13 +142,9 @@ sstream
 vector
 -
 tinyxml2.h
-/home/uauser/Desktop/Tyrion/src/parsing/tinyxml2.h
+/home/tristan/Desktop/Tyrion/src/parsing/tinyxml2.h
 
-/home/uauser/Desktop/Tyrion/src/parsing/levelparser.cpp
-levelparser.h
-/home/uauser/Desktop/Tyrion/src/parsing/levelparser.h
-
-/home/uauser/Desktop/Tyrion/src/parsing/levelparser.h
+/home/tristan/Desktop/Tyrion/src/parsing/levelparser.h
 fstream
 -
 iostream
@@ -160,11 +156,11 @@ string
 vector
 -
 compactxml.h
-/home/uauser/Desktop/Tyrion/src/parsing/compactxml.h
+/home/tristan/Desktop/Tyrion/src/parsing/compactxml.h
 ../sfml/Game.h
-/home/uauser/Desktop/Tyrion/src/sfml/Game.h
+/home/tristan/Desktop/Tyrion/src/sfml/Game.h
 
-/home/uauser/Desktop/Tyrion/src/parsing/tinyxml2.h
+/home/tristan/Desktop/Tyrion/src/parsing/tinyxml2.h
 ctype.h
 -
 limits.h
@@ -194,81 +190,41 @@ android/log.h
 assert.h
 -
 
-/home/uauser/Desktop/Tyrion/src/sfml/Background.cpp
-Background.h
-/home/uauser/Desktop/Tyrion/src/sfml/Background.h
-
-/home/uauser/Desktop/Tyrion/src/sfml/Background.h
+/home/tristan/Desktop/Tyrion/src/sfml/EntityFactory.h
 ../gamelogic/EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
-../gamelogic/Background.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Background.h
-SFML/Graphics.hpp
--
-
-/home/uauser/Desktop/Tyrion/src/sfml/Bullet.cpp
-Bullet.h
-/home/uauser/Desktop/Tyrion/src/sfml/Bullet.h
-
-/home/uauser/Desktop/Tyrion/src/sfml/Bullet.h
-../gamelogic/EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
-../gamelogic/Bullet.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Bullet.h
-SFML/Graphics.hpp
--
-
-/home/uauser/Desktop/Tyrion/src/sfml/Enemy.cpp
-Enemy.h
-/home/uauser/Desktop/Tyrion/src/sfml/Enemy.h
-
-/home/uauser/Desktop/Tyrion/src/sfml/Enemy.h
-../gamelogic/Enemy.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Enemy.h
-SFML/Graphics.hpp
--
-memory
--
-
-/home/uauser/Desktop/Tyrion/src/sfml/EntityFactory.cpp
-EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/sfml/EntityFactory.h
-
-/home/uauser/Desktop/Tyrion/src/sfml/EntityFactory.h
-../gamelogic/EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/EntityFactory.h
 ../gamelogic/Entity.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Entity.h
 Player.h
-/home/uauser/Desktop/Tyrion/src/sfml/Player.h
+/home/tristan/Desktop/Tyrion/src/sfml/Player.h
 Background.h
-/home/uauser/Desktop/Tyrion/src/sfml/Background.h
+/home/tristan/Desktop/Tyrion/src/sfml/Background.h
 Enemy.h
-/home/uauser/Desktop/Tyrion/src/sfml/Enemy.h
+/home/tristan/Desktop/Tyrion/src/sfml/Enemy.h
 Powerup.h
-/home/uauser/Desktop/Tyrion/src/sfml/Powerup.h
+/home/tristan/Desktop/Tyrion/src/sfml/Powerup.h
 Bullet.h
-/home/uauser/Desktop/Tyrion/src/sfml/Bullet.h
+/home/tristan/Desktop/Tyrion/src/sfml/Bullet.h
 memory
 -
 SFML/Graphics.hpp
 -
 
-/home/uauser/Desktop/Tyrion/src/sfml/Game.cpp
+/home/tristan/Desktop/Tyrion/src/sfml/Game.cpp
 Game.h
-/home/uauser/Desktop/Tyrion/src/sfml/Game.h
+/home/tristan/Desktop/Tyrion/src/sfml/Game.h
 
-/home/uauser/Desktop/Tyrion/src/sfml/Game.h
+/home/tristan/Desktop/Tyrion/src/sfml/Game.h
 ../gamelogic/World.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/World.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/World.h
 ../parsing/levelparser.h
-/home/uauser/Desktop/Tyrion/src/parsing/levelparser.h
+/home/tristan/Desktop/Tyrion/src/parsing/levelparser.h
 StopWatch.h
-/home/uauser/Desktop/Tyrion/src/sfml/StopWatch.h
+/home/tristan/Desktop/Tyrion/src/sfml/StopWatch.h
 EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/sfml/EntityFactory.h
+/home/tristan/Desktop/Tyrion/src/sfml/EntityFactory.h
 KeyBoard.h
-/home/uauser/Desktop/Tyrion/src/sfml/KeyBoard.h
+/home/tristan/Desktop/Tyrion/src/sfml/KeyBoard.h
 sstream
 -
 SFML/Graphics.hpp
@@ -276,21 +232,17 @@ SFML/Graphics.hpp
 SFML/Audio.hpp
 -
 
-/home/uauser/Desktop/Tyrion/src/sfml/KeyBoard.h
+/home/tristan/Desktop/Tyrion/src/sfml/KeyBoard.h
 SFML/Graphics.hpp
 -
 
-/home/uauser/Desktop/Tyrion/src/sfml/Player.cpp
-Player.h
-/home/uauser/Desktop/Tyrion/src/sfml/Player.h
-
-/home/uauser/Desktop/Tyrion/src/sfml/Player.h
+/home/tristan/Desktop/Tyrion/src/sfml/Player.h
 ../gamelogic/Player.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Player.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Player.h
 ../gamelogic/Entity.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Entity.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/Entity.h
 ../gamelogic/EntityFactory.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/EntityFactory.h
+/home/tristan/Desktop/Tyrion/src/gamelogic/EntityFactory.h
 SFML/Graphics.hpp
 -
 iostream
@@ -300,25 +252,11 @@ memory
 unistd.h
 -
 
-/home/uauser/Desktop/Tyrion/src/sfml/Powerup.cpp
-Powerup.h
-/home/uauser/Desktop/Tyrion/src/sfml/Powerup.h
-
-/home/uauser/Desktop/Tyrion/src/sfml/Powerup.h
-../gamelogic/Powerup.h
-/home/uauser/Desktop/Tyrion/src/gamelogic/Powerup.h
-SFML/Graphics.hpp
--
-
-/home/uauser/Desktop/Tyrion/src/sfml/StopWatch.h
+/home/tristan/Desktop/Tyrion/src/sfml/StopWatch.h
 iostream
 -
 ctime
 -
 chrono
 -
-
-/home/uauser/Desktop/Tyrion/src/sfml/main.cpp
-Game.h
-/home/uauser/Desktop/Tyrion/src/sfml/Game.h
 
